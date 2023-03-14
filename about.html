@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/about.css">
+    <script src="scripts/nav-toggle.js" defer ></script>
+    <script src="scripts/nav-button.js" defer ></script>
+    <script src="scripts/backtotop.js" defer ></script>
+    <script src="scripts/flip-card.js" defer ></script>
+    <title>Kyle Jussab - About</title>
+    <link rel="icon" href="assets/Icon_V2_Transparent.png">
+</head>
+
+<body>
+    <!--_____________________Navigation Bar_____________________-->
+    <header class="header-bar">
+        <a href="index.html"><div class="home-icon">
+            <img src="assets/left-arrow.png">
+        </div></a>
+
+        <div class="nav-toggle">
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
+            <label for="games">Games</label>
+    
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
+            <label for="stories">Stories</label>
+    
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Blogs" class="blogs" id="blogs" autocomplete="off">
+            <label for="blogs">Blogs</label>
+    
+            <div class="selector">&nbsp;</div>
+        </div>
+
+        <!-- Looks for id of primary navigation -->
+        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
+                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+                </path>
+                <defs>
+                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#800080"/>
+                    <stop offset="100%" stop-color="#FFC0CB"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </button>
+
+        <nav class="primary-navigation hide-on-start" id="primary-navigation">
+            <ul aria-label="Primary" class="nav-list">
+                <a href="index.html">
+                    <li class="nav-option">
+                        <img src="assets/home.png">
+                        <p>Home</p>
+                    </li>
+                </a>
+
+                <a href="about.html">
+                    <li class="nav-option">
+                        <img src="assets/about.png">
+                        <p>About</p>
+                    </li>
+                </a>
+
+                <a href="assets/resume.pdf" target="_blank">
+                    <li class="nav-option">
+                        <img src="assets/resume.png">
+                        <p>Resume</p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Top Ten_____________________-->
+    <section class="top-ten">
+        <div class="favourite-games">
+            <button class="carousel-button carousel-button-left is-hidden">
+                <img src="assets/left-arrow.png">
+            </button>
+            
+            <div class="carousel-track-container">
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>My current top 10 video games</h2>
+                                    <p>(Flip card to reveal more)</p>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="intro-card">
+                                        <div class="flip-card-header">
+                                            <h2>My current top 10 games</h2>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>All games are rated on a scale from 1 - 10. All scores have the following critera that need to be met (spoilers... no game on this list is less than 8/10):</p>
+                                            <p>10. Expertly crafted games just like 9's but only achieved if the game crosses that emotional threshold. Can't be described in any other way than "you'll know when you feel it". These games resonated with me beyond that of the actual game itself, and in someway fundamentally define who I am / who I want to be as a person.</p>
+                                            <p>9. Masterfully crafted games. Near perfection if not perfect. These games produced the best experiences I've ever played… ever. All of these games produce excellent stories (if they're narrative based) that coincides perfectly with the gameplay experience.</p>
+                                            <p>8. Excellent games. The loop of these games is engaging and addictive. Besides being unbelievably fun to play, they offer more than just fun with either a very engaging story or unique gameplay mechanics.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #10</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="ori">
+                                        <div class="flip-card-header">
+                                            <h2>10) Ori and the Will of the Wisps</h2>
+                                            <p>8/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>I could've easily put the first Ori in this spot, as I lump both games into one entire experience, but the sequel is here because of how amazing the mechanics and game sequences are. The additions that were added to the original only enhanced the sequel. I love platformer-esque games but this takes the cake in it's execution and visuals. What an amazing game, no game in a similar vein comes close to Ori.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #9</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="kena">
+                                        <div class="flip-card-header">
+                                            <h2>9) Kena: Bridge of Spirits</h2>
+                                            <p>9/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>Kena for me just ticked every box. Up till this point the only other game I've gotten this excited over it's trailers is The Last of Us Part II. Kena is like playing a Pixar movie, and something about it from the very start had me hooked. The animations trump everything, but how Kena's abilities tie into her exploration of the world is so satisfying. The game not only lived up to the expectation I gave it, but exceeded it in a way I did not expect. Kena is one of the hardest games I've played, it's boss fights are so well designed and so hard to beat; add that to it's beauty… easily one of the best games.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #8</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="zelda">
+                                        <div class="flip-card-header">
+                                            <h2>8) Zelda: Breath of the Wild</h2>
+                                            <p>9/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>This game has got tremendous replay ability. I cant believe how Nintendo manages to make such memorable games. The sounds of this game will be engraved into my brain for life. Zelda accomplishes something that has changed how I view open world games from this point forward. It is the best "game" experience I think I've experienced from an open world game. The mechanics and how all the different systems work together seamlessly is astonishing for an open world game. You cannot put to words the experience you have playing Zelda, it is phenomenal.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+    
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #7</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="uncharted4">
+                                        <div class="flip-card-header">
+                                            <h2>7) Uncharted 4: A Thief's End</h2>
+                                            <p>9/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>Off the bat, the 'video game playing' scene with Elena near the beginning of the game is the best depiction of a love relationship I've ever seen in any form of media. They nailed everything from an emotional stand point. Not only did I resonate with Nathan for not telling Elena sooner, but with exactly how Elena was feeling simultaneously. Uncharted 4 is such a good game, the sequences are again some of the best in the franchise, but the pulling power of this entire game boils down to the relationships between the characters, and how that drives the decisions all of them make.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #6</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="bioshock">
+                                        <div class="flip-card-header">
+                                            <h2>6) Bioshock</h2>
+                                            <p>9/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>Despite playing this game in infrequent bursts, all of the story stuck with me, and by the end of it I couldn't put the game down even if I tried. Bioshock is a game that is so good it's become timeless. This to me will forever be one of the greatest games ever made, with one of, if not the most, unimaginable perfect plot twists in story telling period. The way it all ties in at the end, the gameplay, the now unfolded story, is just the best gaming will ever see. Bioshock released in 2007, I played Bioshock over 10 years after the fact and still have never seen anything that game accomplished. A true masterpiece.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #5</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="witcher">
+                                        <div class="flip-card-header">
+                                            <h2>5) The Witcher 3: Wild Hunt</h2>
+                                            <p>9/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>I love Ciri, I love the story, and I love Gwent. I spent way too long playing Gwent in the main game that I would open the game after I completed it just to play it. This is the only open world game I have played up to this point with "main quest" level side quests. How they managed to tell such engaging side quests is remarkable, the bloody baron one is a great example. That side quest alone could rival many games entire story. The RPG elements in this game only enhance it, forcing me to constantly seek the best armor and equipment before I do any main quests, simply because I wanted to.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #4</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="uncharted-lost-legacy">
+                                        <div class="flip-card-header">
+                                            <h2>4) Uncharted: Lost Legacy</h2>
+                                            <p>9/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>The best Uncharted game in my opinion. It's compact form and simplicity add to just how good the game is. Chloe and Nadine have great chemistry and every other character added to the game in some way. I remember laughing at Sam at the end of the game and being genuinely happy as the credits rolled. It's an example of how getting all the small things perfect can make a really good game. The treasure was the most memorable treasure for me in the franchise, and it's still the one I remember most vividly. Feels weird saying a non Nathan Drake Uncharted is the best, but it was my best experience.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #3</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="lis">
+                                        <div class="flip-card-header">
+                                            <h2>3) Life is Strange: True Colors</h2>
+                                            <p>10/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>This game seemed to have come at the exact right time that I needed it. From the very beginning I didn't know what to expect but played the entire game the way it was meant to played, slowly. At every opportunity to just sit and listen to the music I did. I still listen to the soundtrack of this game to this day. Alex Chen's whole story from the outside looking in mirrors everything I think about myself. The scene where she puts on headphones to block out the sound of her brother and father fighting brought tears to my eyes and is the most I've related to in a game. The moments where I was meant to feel sad I did, the moments when I was meant to feel happy I did, and the joy moment felt by Alex when she kisses her love interest was the apex of that emotion personified, I physically felt it. Somehow other games that aren't The Last of Us can make me feel such impactful emotions, and was a reassuring beacon of light that this is why I'm taking a career in games development. I would happily work for Square Enix and Deck Nine, but before playing this it was only Naughty Dog. Games have the power to mean something more, and I want to be a part of that and only that.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #2</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="last-of-us">
+                                        <div class="flip-card-header">
+                                            <h2>2) The Last of Us</h2>
+                                            <p>10/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>This game defined who I want to be as a person, it defined the career path I wanted to take. I've mentioned other games being something I've never experienced before, and that's usually through interesting and unique gameplay or story choices. This game meant something to me, this is the first game that ever went beyond the game. Watching the behind the scenes and seeing the environment of Naughty Dog is one of the only times I've felt truly at home. I love this game, but more importantly I love what this game did to me, and that's the key point. I want to make video games that strive to potentially have this exact same impact on other players. I've never been so sure of anything I've wanted to do in life like I have been with this. It wasn't even a question, it's this and nothing else. I will mention two experiences that show just how games in general can transcend and be the best way of telling stories. The Ellie scene where she doesn't respond to your call to climb up to get the ladder because she was upset despite having done this mundanely through the whole game, and the Hitchcock saying "There's no terror in the bang, only in the anticipation of it".</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="carousel-slide">
+                        <div class="flip-card">
+                            <div class="flip-card-inner">
+                                <div class="flip-card-face flip-card-face-front">
+                                    <h2>Game #1</h2>
+                                </div>
+                                <div class="flip-card-face flip-card-face-back">
+                                    <div class="flip-card-content" id="last-of-us-2">
+                                        <div class="flip-card-header">
+                                            <h2>1) The Last of Us Part II</h2>
+                                            <p>10/10</p>
+                                        </div>
+                                        <div class="flip-card-body">
+                                            <p>I waited for this game for about 6 years, I watched every trailer and every YouTube video imaginable about the game, whether they were directly from ND or fan theories. From the trailers I had a feeling this game would somehow trump the masterpiece that is the first game, and I held this game to the highest expectation imaginable. This was the sequel to the game that meant everything to me, and I was expecting it to be better. It was not only better, it somehow exceeded everything I expected from it and did more. Having devoted my life to becoming a game developer, this game had me in tears at the end. Not only for what was an emotional rollercoaster of a story, but for what was pure joy in realizing I found my purpose in life. It is understated how bad my mental state was in 2020, yet in probably one of the darkest years of my life, one 40 hour experience over a weekend would make my entire 19 years of existence, and all the years beyond it worth it. The monotony and the meaninglessness of life is gone. I will die a happy person having not only found what I was meant to be, but used every bit of energy I have to learn and craft a similar experience.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+    
+            <button class="carousel-button carousel-button-right">
+                <img src="assets/right-arrow.png">
+            </button>
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________About_____________________-->
+    <main class="about-container">
+        <div class="about">
+            <h1 class="main-heading">Hi again, I'm Kyle.</h1>
+            <p>I am an undergraduate at the University of London, studying a BSc in Computer Science (Games Development). My passions lie with game development, writing, programming and helping people with their mental health. I have always believed a good video game experience can inspire, and all it takes is someone who's inspired to create something truly magical.</p>
+            <p>Video games are for everyone, and everyone should be inspired, this means all video games should be accessible to as many people as feasibly possible. I intend on creating video games that aim to achieve a predetermined experience while maintaining accessibility and maybe... just maybe, I can inspire a few along the way as well.</p>
+            <p>Before I forget, I am also a:</p>
+            <ul>
+                <li>Student Ambassador & Student Blogger (University of London)</li>
+                <li>Member of the Student Voice Group (University of London)</li>
+                <li>TalkCampus buddy</li>
+            </ul>
+            <p>In the near future, I will fill this page with all my achievements and showcase the journey I've been on in my honest attempts to get into the gaming industry.</p>
+            <p>Until then though, I will endure and survive!</p>
+        </div>
+    </main>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Back to top button_____________________-->
+    <div class="progress hide-on-start hide-btt-btn">
+        <span class="progress-value hide-btt-btn">
+            <img src="assets/arrow.png">
+        </span>
+    </div>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Footer_____________________-->
+    <footer>
+        <ul class="social-links" aria-label="social media links">
+            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
+            <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a>
+            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
+            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
+            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+        </ul>
+
+        <p>Copyright &copy; 2022 Kyle Jussab. LLC All rights reserved.</p>
+    </footer>
+    <!--______________________________________________________________________-->
+</body>
+</html>

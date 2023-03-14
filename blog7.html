@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/blog.css">
+    <script src="scripts/nav-toggle.js" defer ></script>
+    <script src="scripts/nav-button.js" defer ></script>
+    <script src="scripts/backtotop.js" defer ></script>
+    <title>Kyle Jussab - Being a better coder</title>
+    <link rel="icon" href="assets/Icon_V2_Transparent.png">
+</head>
+
+<body>
+    <!--_____________________Navigation Bar_____________________-->
+    <header class="header-bar">
+        <a href="index.html"><div class="home-icon">
+            <img src="assets/left-arrow.png">
+        </div></a>
+
+        <div class="nav-toggle">
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
+            <label for="games">Games</label>
+    
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
+            <label for="stories">Stories</label>
+    
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Blogs" class="blogs" id="blogs" autocomplete="off">
+            <label for="blogs">Blogs</label>
+    
+            <div class="selector">&nbsp;</div>
+        </div>
+
+        <!-- Looks for id of primary navigation -->
+        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
+            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
+                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
+                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
+                </path>
+                <defs>
+                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" stop-color="#800080"/>
+                    <stop offset="100%" stop-color="#FFC0CB"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+        </button>
+
+        <nav class="primary-navigation hide-on-start" id="primary-navigation">
+            <ul aria-label="Primary" class="nav-list">
+                <a href="index.html">
+                    <li class="nav-option">
+                        <img src="assets/home.png">
+                        <p>Home</p>
+                    </li>
+                </a>
+
+                <a href="about.html">
+                    <li class="nav-option">
+                        <img src="assets/about.png">
+                        <p>About</p>
+                    </li>
+                </a>
+
+                <a href="assets/resume.pdf" target="_blank">
+                    <li class="nav-option">
+                        <img src="assets/resume.png">
+                        <p>Resume</p>
+                    </li>
+                </a>
+            </ul>
+        </nav>
+    </header>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Introduction_____________________-->
+    <section class="introduction-container">
+        <div class="introduction">
+            <h1 class="main-heading">Being a better coder</h1>
+            <p class="read-time">4 min read</p>
+        </div>
+        <img src="assets/Blog7.png" alt="A desk with a laptop, coffee cup and notebook">
+    </section>
+    <!--______________________________________________________________________-->
+
+    <main class="content-container">
+        <div class="content">
+            <p class="blog-paragraph">I need to preface this by saying that I am not a professional coder, nor have I coded anything on that level at the time of writing. My coding experience is limited and this blog doesn’t aim to improve on a particular language, library, or any technical aspect of coding. It is my idea on how to improve your productivity as a coder. ‘Nuff said… on to being a better coder!</p>
+            <h4>1. Have a dev journal</h4>
+            <p class="blog-paragraph">Write about the things you found challenging and how you overcame them. In the future, recruiters like hearing about your thought process, and not only does documenting it get you in the habit of showing how you overcame obstacles, but it also leaves you with the solution, so if you get stuck on something similar you’ve already got the answer!</p>
+            <h4>2. Compartmentalise</h4>
+            <p class="blog-paragraph">Find a way to break down what you need to do into sub tasks, tackling smaller more manageable tasks is much easier than developing as you go. It gives you distinct goals to reach that are actually reachable, helps avoid feature creep, and lets you “go gold” (as they say in the gaming industry) . You end up building exactly what you planned to build, no less, no more.</p>
+            <h4>3. Eat the frog first</h4>
+            <p class="blog-paragraph">Having compartmentalised, find the task that you believe will be the hardest and do that first. This way all the tasks that follow are literally easier and you would most likely tackle them faster and more efficiently. Eating the frog first also helps you cross a mental barrier, if you can code what you deemed to be the hardest, then you can definitely code the rest of your program.</p>
+            <h4>4. Use flow state, but understand that it comes in waves</h4>
+            <p class="blog-paragraph">When things aren’t quite clicking there’s nothing wrong with taking a break, and stepping away from coding for a while to recharge this “ability”. Figuring out what helps you enter flow state is also vital, maybe it’s in routine, maybe it's in intrigue, but try to find out what puts you in flow state and try to implement that when you don’t have a routine or aren’t particularly intrigued at the task at hand.</p>
+            <h4>5. Code outside of coding</h4>
+            <p class="blog-paragraph">Code completely irrelevant things that do not relate to your studies or work. Code as a hobby! For the most part this forces you to learn how to code something without a “guiding hand” and helps you become more confident in your coding abilities. You would also, inevitably, improve your coding knowledge base by using languages, libraries, tools or technologies that you wouldn’t have used otherwise.</p>
+            <h4>6. Code it simple first</h4>
+            <p class="blog-paragraph">You don’t need to get it extremely efficient the first time round. Get it to work, figure out why it works, and then refactor it to be more efficient. When you learn a new technique it’s normal to want to use it immediately, but that doesn’t necessarily mean you’re ready to use them in your coding. Make it work the way you know how to first, and then see if you can improve on the code with the techniques you learnt later.</p>
+            <h4>7. Keep all your old programs</h4>
+            <p class="blog-paragraph">Over time you’ll get much better at coding, reflecting on your old code and seeing where you could improve it is useful. Not only are you seeing the things you once found challenging, but you’re reading code and trying to understand why that code works. This is an essential skill you’d need when you work on a team, therefore an essential skill to learn as a coder. After reading your old code, why not try to code a better version from one of your old projects?</p>
+            <h4>8. The glass is half full, not half empty</h4>
+            <p class="blog-paragraph">You’re stuck and you don’t know what the solution is… yet. You don’t understand this particular library or language… yet. You don’t know how to improve… yet. Understand your limitations, but know that if you work on them, and learn from them they wont limit you for much longer.</p>
+            <p class="blog-paragraph">No one will reach peak coding skills, meaning you will always be trying to get better at coding. You shouldn’t want to improve to be the best, you should want to improve to be better. There is no one out there that is “the best” but you can always get better and you should always be better!</i></p>
+            <p class="blog-paragraph"><i>“Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.” – Antoine de Saint – Exupéry</i></p>
+        </div>
+
+        <div class="next-prev-blog">
+            <a href="blog6.html">
+                <div class="prev-blog-container">
+                    <div class="prev-blog">
+                        <img src="assets/left-arrow.png">
+                        <p>Previous blog</p>
+                    </div>
+    
+                    <p class="prev-blog-title">Making the most out of your time with UoL</p>
+                </div>
+            </a>
+            
+            <a href="blog7.html" class="hide-blog-link">
+                <div class="next-blog-container">
+                    <div class="next-blog">
+                        <p>Next blog</p>
+                        <img src="assets/right-arrow.png">
+                    </div>
+    
+                    <p class="next-blog-title">None</p>
+                </div>
+            </a>
+        </div>
+    </main>
+
+    <!--_____________________Back to top button_____________________-->
+    <div class="progress hide-on-start hide-btt-btn">
+        <span class="progress-value hide-btt-btn">
+            <img src="assets/arrow.png">
+        </span>
+    </div>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Footer_____________________-->
+    <footer>
+        <ul class="social-links" aria-label="social media links">
+            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
+            <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a>
+            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
+            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
+            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+        </ul>
+
+        <p>Copyright &copy; 2022 Kyle Jussab. LLC All rights reserved.</p>
+    </footer>
+    <!--______________________________________________________________________-->
+</body>
+</html>

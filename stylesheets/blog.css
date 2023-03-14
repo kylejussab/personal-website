@@ -1,0 +1,529 @@
+/** ----------- General styling ------------ **/
+* {
+    font-family: Helvetica, sans-serif;
+    color: #EEEEEE
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #333333;
+}
+
+.blog-paragraph {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 34px;
+    margin-top: 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Site wide animations */
+.card-container, .introduction-container {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.header-bar {
+    margin-top: -50px;
+    animation: slideIn ease-in-out .4s;
+    animation-delay: .7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    0% {
+        margin-top: -50px;
+    }
+
+    100% {
+        margin-top: 50px;
+    }
+}
+/** ------------------------------------------ **/
+
+/** ----------- Navigation bar ------------ **/
+.header-bar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Button back to home */
+.home-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background: #444444;
+    border-radius: 50%;
+    border: none;
+    filter: drop-shadow(0 0 0.75rem #222222);
+    margin-left: 185px;
+    transition: transform 500ms ease;
+}
+
+.home-icon:hover {
+    transform: scale(0.9);
+}
+
+.home-icon img {
+    width: 18px;
+    height: 18px;
+    transition: transform .3s ease-in-out;
+}
+
+.home-icon:hover img {
+    transform: translate(-3px, 0);
+}
+
+/* Middle navigation toggle */
+.nav-toggle {
+    display: none;
+}
+
+/* Hamburger menu */
+.nav-button {
+    --button-color: #EEEEEE;
+    background: #444444;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    filter: drop-shadow(0 0 0.75rem #222222);
+    margin-right: 200px;
+    overflow: hidden;
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    transform: scale(0.9);
+}
+
+.nav-button .hamburger {
+    transition: translate 1s, rotate 1s;
+}
+
+.nav-button[aria-expanded="true"] .hamburger {
+    --button-color: url(#linear);
+    translate: 3px -2px;
+    rotate: .125turn;
+}
+
+.nav-button .line {
+    transition: 1s;
+    stroke-dasharray: 60 31 60 300;
+}
+
+.nav-button[aria-expanded="true"] .line {
+    stroke-dasharray: 60 105 60 300;
+    stroke-dashoffset: -90;
+}
+
+.primary-navigation {
+    position: absolute;
+    right: 200px;
+    top: 60px;
+    background: #444444;
+    width: 210px;
+    height: 155px;
+    border-radius: 10px;
+    transform-origin: top right;
+    filter: drop-shadow(0 0 0.75rem #222222);
+    animation: slideUp ease-in-out .3s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.4);
+        opacity: 0;
+        display: none;
+    }
+}
+
+.primary-navigation[data-visible] {
+    display: block;
+    animation: slideDown ease-in-out .3s;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: scale(0.4);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.nav-list {
+    list-style: none;
+    padding-inline: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    width: 180px;
+    height: 45px;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.nav-option:hover {
+    background: #666666;
+}
+
+.nav-list img {
+    width: 20px;
+    height: 20px;
+}
+/** ------------------------------------------ **/
+
+/** ----------- Introductory piece ------------ **/
+.introduction-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 200px;
+    margin-bottom: 30px;
+}
+
+.introduction {
+    width: 60%;
+    max-width: 1200px;
+    text-align: left;
+}
+
+@keyframes background-pan {
+    from {
+        background-position: 0% center;
+    }
+
+    to {
+        background-position: -200% center;
+    }
+}
+
+.read-time {
+    margin-top: -20px;
+    font-size: 12px;
+}
+
+.introduction-container img{
+    width: 60%;
+}
+/** ------------------------------------------ **/
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    width: 60%;
+    max-width: 1200px;
+    text-align: justify;
+}
+
+.next-prev-blog {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    margin-top: 50px;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.prev-blog, .next-blog {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.prev-blog p, .next-blog p{
+    margin-bottom: 15px;
+}
+
+.prev-blog-title {
+    margin-top: -15px;
+    margin-left: 25px;
+    font-size: 12px;
+}
+
+.next-blog-title {
+    margin-top: -15px;
+    margin-right: 25px;
+    text-align: right;
+    font-size: 12px;
+}
+
+.next-blog {
+    justify-content: right;
+}
+
+.prev-blog img, .next-blog img {
+    width: 15px;
+    height: 15px;
+    transition: transform .3s ease-in-out;
+}
+
+.prev-blog-container:hover img{
+    transform: translate(-5px, 0);
+}
+
+.next-blog-container:hover img{
+    transform: translate(5px, 0);
+}
+
+.hide-blog-link {
+    visibility: hidden;
+}
+/** ------------------------------------------ **/
+
+/** ----------- Back to top button ------------ **/
+.progress {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    border: 3px solid #444444;
+    position: fixed;
+    bottom: 50px;
+    right: 200px;
+    display: grid;
+    place-items: center;
+    z-index: 3;
+    animation: fadeInAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: transform 500ms ease;
+}
+
+.progress-value {
+    display: block;
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    background: #444444;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.progress:hover {
+    transform: scale(0.9);
+}
+
+.progress:hover img{
+    transform: translate(0, -3px);
+}
+
+.progress-value img {
+    height: calc(100% - 20px);
+    width: calc(100% - 20px);
+    transition: transform .3s ease-in-out;
+}
+
+.hide-btt-btn {
+    animation: fadeOutAnimation ease .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: .2s;
+}
+
+/* Hides the btt button when the webpage is first loaded */
+.hide-on-start {
+    visibility: hidden;
+}
+/** ------------------------------------------ **/
+
+/** ----------- Footer ------------ **/
+footer {
+    background: #444444;
+    position: relative;
+    width: 100vw;
+    margin-left: -50vw;
+    left: 50%;
+    bottom: -10vw;
+    padding-block: 50px;
+}
+
+footer ul{
+    padding-left: 0;
+}
+
+footer p {
+    text-align: center;
+    font-size: 12px;
+}
+
+footer li {
+    transition: transform 500ms ease
+}
+
+footer li:hover {
+    transform: scale(0.9);
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.social-links img{
+    width: 35px;
+    height: 35px;
+}
+/** ------------------------------------------ **/
+
+/** ----------- Media Queries ------------ **/
+@media only screen and (max-width: 1054px) {
+    .nav-button {
+        margin-right: 50px;
+    }
+
+    .home-icon {
+        margin-left: 35px;
+    }
+
+    .progress {
+        right: 50px;
+    }
+
+    .primary-navigation {
+        right: 50px;
+    }
+}
+
+@media only screen and (max-width: 784px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .nav-toggle label {
+        font-size: 14px;
+        width: 70px;
+    }
+
+    p, li {
+        font-size: 14px;
+    }
+    
+    .selector {
+        width: 64px;
+    }
+    
+    .stories:checked ~ .selector{
+        left: 78px;
+    }
+    
+    .blogs:checked ~ .selector{
+        left: 151px;
+    }
+
+    .home-icon {
+        margin-left: 10px;
+    }
+
+    .nav-button {
+        margin-right: 20px;
+    }
+
+    .about {
+        width: 80%;
+    }
+
+    .top-ten {
+        margin-top: 50px;
+        margin-bottom: 20px;
+    }
+
+    .flip-card {
+        width: 250px;
+        height: 430px;
+    }
+
+    .favourite-games {
+        width: 250px;
+    }
+
+    .flip-card-face-back h2{
+        margin-top: 20px;
+    }
+
+    #last-of-us-2 .flip-card-body p,
+    #last-of-us .flip-card-body p, 
+    #lis .flip-card-body p {
+        font-size: 9.7px;
+    }
+
+    .flip-card-body p {
+        font-size: 13px;
+    }
+
+    .next-prev-blog {
+        flex-direction: column;
+    }
+}
+/** ------------------------------------------ **/

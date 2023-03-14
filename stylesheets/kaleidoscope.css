@@ -451,5 +451,13 @@ footer li:hover {
     .flip-card-body p {
         font-size: 13px;
     }
+    
+    .introduction-container {
+        margin-top: 150px;
+    }
+
+    .introduction {
+        width: 80%;
+    }
 }
 /** ------------------------------------------ **/

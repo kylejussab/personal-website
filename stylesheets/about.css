@@ -696,12 +696,12 @@ footer li:hover {
     }
 
     .flip-card {
-        width: 250px;
+        width: 240px;
         height: 430px;
     }
 
     .favourite-games {
-        width: 250px;
+        width: 240px;
     }
 
     .flip-card-face-back h2{
@@ -716,6 +716,10 @@ footer li:hover {
 
     .flip-card-body p {
         font-size: 13px;
+    }
+    
+    .introduction {
+        width: 80%;
     }
 }
 /** ------------------------------------------ **/

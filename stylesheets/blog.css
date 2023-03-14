@@ -525,5 +525,21 @@ footer li:hover {
     .next-prev-blog {
         flex-direction: column;
     }
+    
+    .content {
+        width: 80%;
+    }
+
+    .introduction-container {
+        margin-top: 150px;
+    }
+
+    .introduction {
+        width: 80%;
+    }
+
+    .introduction-container img{
+        width: 80%;
+    }
 }
 /** ------------------------------------------ **/

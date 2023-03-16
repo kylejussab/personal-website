@@ -516,5 +516,9 @@ footer li:hover {
         margin-top: -25px;
         margin-bottom: 30px;
     }
+
+    .game-image {
+        border-radius: 10px;
+    }
 }
 /** ------------------------------------------ **/

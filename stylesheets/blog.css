@@ -248,6 +248,29 @@ a {
     text-align: left;
 }
 
+.card-icon {
+    max-height: 25px;
+    max-width: 25px;
+    background: #666666;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.main-heading {
+    animation: background-pan 10s linear infinite;
+    background: linear-gradient(
+        to right,
+        #800080,
+        #EE82EE,
+        #FFC0CB,
+        #800080
+    );
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @keyframes background-pan {
     from {
         background-position: 0% center;
@@ -434,6 +457,10 @@ footer li:hover {
 .social-links img{
     width: 35px;
     height: 35px;
+}
+
+.email-link a:hover {
+    text-decoration: underline;
 }
 /** ------------------------------------------ **/
 

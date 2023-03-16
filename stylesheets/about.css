@@ -631,6 +631,10 @@ footer li:hover {
     width: 35px;
     height: 35px;
 }
+
+.email-link a:hover {
+    text-decoration: underline;
+}
 /** ------------------------------------------ **/
 
 /** ----------- Media Queries ------------ **/

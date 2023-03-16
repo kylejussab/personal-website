@@ -1,12 +1,23 @@
 let gameData = [
     {
         "icon": "assets/unity.png",
+        "icon2": "assets/c-sharp.png",
         "image": "assets/Unity Game.png",
         "alt": "C Sharp code",
         "title": "Unity Game Project",
         "subtitle": "Third Person Shooter",
         "description": "My first game project, under the unity junior pathway.",
         "link": "unitygameproject.html"
+    },
+    {
+        "icon": "assets/p5js.png",
+        "icon2": "assets/js.png",
+        "image": "assets/itp1project.png",
+        "alt": "2d platformer showing character facing right, looking at collectable",
+        "title": "ITP1 Project",
+        "subtitle": "2D Platformer",
+        "description": "The game project I submitted for University of London in their Introduction to Programming 1 module.",
+        "link": "itp1project.html"
     }
 ]
 
@@ -22,9 +33,11 @@ posts = gameData.map(post => {
     const img = card.querySelector("[data-img]")
     const link = card.querySelector("[data-link]")
     const icon = card.querySelector("[data-icon]")
+    const icon2 = card.querySelector("[data-icon2]")
 
     const image = '<img src="' + post.image + '" alt="' + post.alt + '">';
     const iconImage = '<img src="' + post.icon + '" class="card-icon">';
+    const icon2Image = '<img src="' + post.icon2 + '" class="card-icon">';
     const linkElement = '<div class="card-button-container"><a href="' + post.link + '" class="card-button"><p>See more</p><img src="assets/right-arrow.png"></a></div>';
 
     title.textContent = post.title
@@ -32,6 +45,7 @@ posts = gameData.map(post => {
     description.textContent = post.description
     img.innerHTML = image;
     icon.innerHTML = iconImage;
+    icon2.innerHTML = icon2Image;
     link.innerHTML = linkElement;
 
     gameCardContainer.append(card);

@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/itp1project.css">
     <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/blog-data.js" defer ></script>
-    <script src="scripts/game-data.js" defer ></script>
-    <script src="scripts/story-data.js" defer ></script>
     <script src="scripts/nav-button.js" defer ></script>
     <script src="scripts/backtotop.js" defer ></script>
-    <title>Kyle Jussab</title>
+    <title>Kyle Jussab - ITP1 Project</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
 <body>
     <!--_____________________Navigation Bar_____________________-->
     <header class="header-bar">
-        <div class="home-icon">
-            <img src="assets/Icon_V2_Transparent.png" alt="Icon of Kyle Jussab">
-        </div>
+        <a href="index.html"><div class="home-icon">
+            <img src="assets/left-arrow.png">
+        </div></a>
 
         <div class="nav-toggle">
             <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
@@ -76,73 +73,44 @@
         </nav>
     </header>
     <!--______________________________________________________________________-->
-    
+
     <!--_____________________Introduction_____________________-->
-    <section class="introduction-container">
-        <div class="introduction">
-            <h1 class="main-heading">Hi, I'm Kyle.</h1>
-            <p>I am an undergraduate at the University of London, studying a BSc in Computer Science (Games Development).</p>
+    <section class="content-container introduction-container">
+        <div class="content">
+            <img src="assets/itp1-screen1.png" class="game-image">
+            <div class="icon-container">
+                <img src="assets/p5js.png" class="card-icon">
+                <img src="assets/js.png" class="card-icon">
+            </div>
+            <h1 class="main-heading">ITP1 Project</h1>
+            <p class="intro-subheading">2D Platformer</p>
+            <p>This module introduced us to the javascript library p5.js, and the students were set out to design a 2D side scrolling platformer. Getting the bare pieces of code down for character movement and side scrolling, I knew that I wanted to get this game to look as polished as possible (despite not using a game engine). The project requirement felt more of a demonstration of constructor classes for platforms, collectibles and enemies and less of a game. My love of game development shined through this project, and all my efforts were rewarded by scoring 98% in the module overall.</p>
         </div>
     </section>
     <!--______________________________________________________________________-->
 
-    <!--_____________________All cards_____________________-->
-    <main>
-        <div class="all-game-cards" data-game-cards-container></div>
-        <div class="all-story-cards" data-story-cards-container></div>
-        <div class="all-blog-cards" data-blog-cards-container></div>
+    <!--_____________________Role_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <h2 class="main-heading">Role and responsibility</h2>
+            <p>Being the only developer on this project, I was responsible for all of the coding, artwork and level design. Matter.js was not used during this project, so I implemented my own form of gravity, using velocity and acceleration to get a variable speed. All of the artwork was designed in Adobe Illustrator including the main character, game over and tutorial screens, the ability cells and the enemies. I designed the entire level with huge inspiration from levels in Super Mario Bros U.</p>
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
 
-        <template data-game-template>
-            <div class="games-content">
-                <div class="card-container">
-                    <div class="card-content" style="flex-grow: 5">
-                        <div class="icon-container">
-                            <div data-icon></div>
-                            <div data-icon2></div>
-                        </div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                </div>
+    <!--_____________________Design_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <div class="screenshot-container">
+                <img src="assets/itp1-screen2.png" alt="Showing tutorial for picking up energy cells">
+                <img src="assets/itp1-screen3.png" alt="Game character firing projectile towards enemy">
             </div>
-        </template>
-
-        <template data-story-template>
-            <div class="stories-content">
-                <div class="card-container">
-                    <div class="card-content" style="flex-grow: 5">
-                        <div data-icon></div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                </div>
-            </div>
-        </template>
-        
-        <template data-blog-template>
-            <div class="blogs-content">
-                <div class="card-container">
-                    <div class="card-content" style="flex-grow: 5">
-                        <div data-icon></div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                </div>
-            </div>
-        </template>
-    </main>
+            <h2 class="main-heading">The design</h2>
+            <p>The fact I couldn't animate the character walking, forced me to make a creative decision on the game which led to the theme of the game. You play as a mythical character, who collects energy cells, and can gain abilities from specialised cells. The idea being, you are granted your powers as you play, and at the start of each level you would be stripped of your powers. The more explorative you are, the more tools you have at your disposal. In the one and only level your two abilities are double jump and firing projectiles. You can beat the level without the power ups, but having them makes it easier. It also let me get around that walking animation issue, and let me say the character moves around by gliding with their "magical powers".</p>
+            <p>I wanted to cover as many bases as I could. Video games don't just throw you in the deep end and expect you to know how to play. Adding tutorials was a very important addition, though small in it's implementation, you were guided through each ability and energy cell you picked up, as well as how to use your new powers.</p>
+            <p>Mario games are very good at introducing a mechanic to you, and letting you progressively get better at using them. In the short level I designed, I tried to adhere to those rules, giving the player easier and safer jumps in the beginning, but as they progress their skills are tested, with progressively harder and challenging situations.</p>
+        </div>
+    </section>
     <!--______________________________________________________________________-->
 
     <!--_____________________Back to top button_____________________-->

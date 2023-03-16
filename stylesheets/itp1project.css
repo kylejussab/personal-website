@@ -21,6 +21,10 @@ h1 {
     margin-top: 0px;
 }
 
+h2 {
+    font-size: 24px;
+}
+
 a {
     text-decoration: none;
 }
@@ -82,8 +86,11 @@ a {
     align-items: center;
 }
 
-/* Left circle of Kyle */
+/* Button back to home */
 .home-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     height: 50px;
     background: #444444;
@@ -99,78 +106,18 @@ a {
 }
 
 .home-icon img {
-    width: inherit;
-    height: inherit;
+    width: 18px;
+    height: 18px;
+    transition: transform .3s ease-in-out;
+}
+
+.home-icon:hover img {
+    transform: translate(-3px, 0);
 }
 
 /* Middle navigation toggle */
 .nav-toggle {
-    background: #444444;
-    border-radius: 30px;
-    display: inline-block;
-    height: 15px;
-    padding-top: 15px;
-    padding-bottom: 20px;
-    position: relative;
-    filter: drop-shadow(0 0 0.75rem #222222);
-    transition: transform 500ms ease;
-}
-
-.nav-toggle:hover {
-    transform: scale(0.97);
-}
-
-input[type=radio] {
     display: none;
-}
-
-.nav-toggle input[type="radio"]:checked+label {
-    font-weight: bold;
-    background: linear-gradient(
-        to right,
-        #800080,
-        #EE82EE,
-        #FFC0CB,
-        #800080
-    );
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-label {
-    width: 100px;
-    display: inline-block;
-    text-align: center;
-    z-index: 5;
-    position: relative;
-    cursor: pointer;
-    font-size: 16px; 
-    font-weight: normal;
-}
-
-.selector {
-    height: 40px;
-    width: 90px;
-    background: #666666;
-    border-radius: 30px;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-    transition: left 0.25s ease-in-out;
-}
-
-.games:checked ~ .selector{
-    left: 5;
-}
-
-.stories:checked ~ .selector{
-    left: 110px;
-}
-
-.blogs:checked ~ .selector{
-    left: 215px;
 }
 
 /* Hamburger menu */
@@ -288,17 +235,56 @@ label {
 /** ------------------------------------------ **/
 
 /** ----------- Introductory piece ------------ **/
-.introduction-container {
+.content-container {
     display: flex;
     justify-content: center;
-    margin-top: 200px;
-    margin-bottom: 120px;
+    margin-bottom: 30px;
 }
 
-.introduction {
+.introduction-container {
+    margin-top: 120px;
+}
+
+.content {
     width: 60%;
     max-width: 1200px;
-    text-align: center;
+    text-align: left;
+}
+
+.screenshot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.screenshot-container > img:not(.game-image) {
+    width: 80%;
+    border-radius: 10px;
+}
+
+.game-image {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 30px;
+}
+
+.card-icon {
+    max-height: 25px;
+    width: auto;
+    background: #666666;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .main-heading {
@@ -315,6 +301,11 @@ label {
     -webkit-text-fill-color: transparent;
 }
 
+.intro-subheading {
+    margin-top: -40px;
+    margin-bottom: 30px;
+}
+
 @keyframes background-pan {
     from {
         background-position: 0% center;
@@ -323,140 +314,6 @@ label {
     to {
         background-position: -200% center;
     }
-}
-/** ------------------------------------------ **/
-
-/** ----------- All cards ------------ **/
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    min-height: 350px;
-    max-width: 1200px;
-    background: #444444;
-    border-radius: 30px;
-    overflow: hidden;
-    padding-top: 30px;
-    margin-bottom: 100px;
-    transition: transform 500ms ease, background 500ms ease;
-}
-
-.card-container:hover,
-.card-container:focus-within {
-    transform: scale(0.98);
-    background: #666666;
-}
-
-.card-container .card-content {
-    padding-left: 30px;
-}
-
-.card-content .card-icon {
-    max-height: 25px;
-    width: auto;
-    background: #666666;
-    padding: 5px;
-    border-radius: 10px;
-    margin-bottom: -10px;
-}
-
-.icon-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 8px;
-}
-
-.card-container h2{
-    font-size: 28px;
-    margin-bottom: -10px;
-    max-width: 380px;
-}
-
-.card-container .card-heading-subtext {
-    margin-bottom: 30px;
-    color: #AAAAAA;
-    font-size: 14px;
-}
-
-.card-description {
-    font-size: 16px;
-}
-
-.card-container p {
-    max-width: 380px;
-}
-
-.card-button-container {
-    background: #777777;
-    height: 50px;
-    width: 120px;
-    border-radius: 10px;
-    margin-top: 30px;
-    padding-inline: 20px;
-    filter: drop-shadow(0 0 0.5rem #444444);
-    cursor: pointer;
-}
-
-.card-button-container img {
-    width: 18px;
-    height: 18px;
-    transition: transform .3s ease-in-out;
-}
-
-.card-button-container:hover img{
-    transform: translate(5px, 0);
-}
-
-.card-button {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 15px;
-    align-items: center;
-}
-
-.card-container .card-image {
-    text-align: right;
-    height: 300px;
-}
-
-.card-image img {
-    position: relative;
-    top: 100px;
-    height: 250px;
-    object-fit: cover;
-    filter: drop-shadow(0 0 0.75rem #222222);
-}
-
-.games-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.stories-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.blogs-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Hide other content on load */
-.stories-content {
-    display: none;
-}
-
-.blogs-content {
-    display: none;
 }
 /** ------------------------------------------ **/
 
@@ -582,12 +439,12 @@ footer li:hover {
 }
 
 @media only screen and (max-width: 784px) {
-    .card-image img {
-        top: 50px;
-    }
-
     h1 {
         font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 
     .nav-toggle label {
@@ -595,7 +452,7 @@ footer li:hover {
         width: 70px;
     }
 
-    p {
+    p, li {
         font-size: 14px;
     }
     
@@ -619,68 +476,45 @@ footer li:hover {
         margin-right: 20px;
     }
 
-    .card-container h2{
-        font-size: 20px;
-        max-width: 230px;
+    .about {
+        width: 80%;
     }
 
-    .card-container .card-heading-subtext {
-        font-size: 12px;
+    .top-ten {
+        margin-top: 50px;
+        margin-bottom: 20px;
     }
 
-    .card-container p {
-        max-width: 230px;
+    .flip-card {
+        width: 250px;
+        height: 430px;
     }
 
-    .card-image img {
-        top: 50px;
-        height: 200px;
+    .favourite-games {
+        width: 250px;
     }
 
-    .card-button-container { 
-        height: 45px;
-        width: 110px;
+    .flip-card-face-back h2{
+        margin-top: 20px;
     }
 
-    .card-container .card-image {
-        height: 250px;
+    #last-of-us-2 .flip-card-body p,
+    #last-of-us .flip-card-body p, 
+    #lis .flip-card-body p {
+        font-size: 9.7px;
     }
-}
 
-@media only screen and (min-width: 719px) and (max-width: 784px){
-    .card-image img {
-        top: 150px;
-        height: 200px;
+    .flip-card-body p {
+        font-size: 13px;
     }
-}
 
-@media only screen and (min-width: 785px) and (max-width: 1000px){
-    .card-image img {
-        top: 50px;
+    .content {
+        width: 80%;
     }
-}
 
-@media only screen and (min-width: 1144px) and (max-width: 1329px){
-    .card-container {
-        width: 70%;
-    }
-}
-
-@media only screen and (min-width: 856px) and (max-width: 1000px){
-    .stories-content .card-image img{
-        top: 100px;
-    }
-}
-
-@media only screen and (min-width: 603px) and (max-width: 718px){
-    .stories-content .card-image img{
-        top: 150px;
-    }
-}
-
-@media only screen and (min-width: 1330px) {
-    .card-container {
-        width: 60%;
+    .intro-subheading {
+        margin-top: -25px;
+        margin-bottom: 30px;
     }
 }
 /** ------------------------------------------ **/

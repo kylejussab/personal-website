@@ -264,10 +264,27 @@ a {
     border-radius: 10px;
 }
 
-.game-image {
-    width: 100%;
+.game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.game-normal, .game-mobile {
     margin-bottom: 30px;
-    border-radius: 30px;
+}
+
+.game-normal p {
+    margin-top: -20px;
+    text-align: center;
+}
+
+.game-mobile {
+    text-align: center;
+}
+
+#game-window {
+    width: 1024px;
+    height: 576px;
 }
 
 .card-icon {
@@ -519,6 +536,18 @@ footer li:hover {
 
     .game-image {
         border-radius: 10px;
+    }
+}
+
+@media only screen and (max-width: 1136px) {
+    .game-normal {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1137px) {
+    .game-mobile {
+        display: none;
     }
 }
 /** ------------------------------------------ **/

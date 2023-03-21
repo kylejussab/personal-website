@@ -132,14 +132,9 @@ function preload()
 
 function setup()
 {
-    let gameSize = document.getElementById('game-window');
-
-
     let gameCanvas = createCanvas(1024, 576);
     gameCanvas.parent('game-window');
 
-    //Magic numbers 768, 432
-	//createCanvas(1024, 576);
     floorPos_y = height * 3/4;
     
     noStroke();
@@ -273,7 +268,7 @@ function draw()
     //Start Screen
     if(startScreen)
         {
-            image(start_Screen, 0, 0);
+            image(start_Screen, 0, 0, 1024, 576);
             textSize(24);
             text("Game Project (2d Side Scroller)", width/2 - 160, height/2 - 90);
             textSize(18);
@@ -286,7 +281,7 @@ function draw()
     // Game over and game completion
     if(lives < 1)
         {
-            image(game_Over_Screen, 0, 0, game_Over_Screen.width / 4.166, game_Over_Screen.height / 4.166);
+            image(game_Over_Screen, 0, 0, 1024, 576);
             textSize(61);
             textStyle(BOLD);
             text("GAME OVER", width/2 - 185, 165);
@@ -310,7 +305,7 @@ function draw()
     
     if(flagpole.isReached)
         {
-            image(level_Complete_Screen, 0, 0);
+            image(level_Complete_Screen, 0, 0, 1024, 576);
             textSize(30);
             text("Level Complete!", width/2 - 107, height/2 - 55);
             textSize(18);
@@ -342,7 +337,7 @@ function draw()
     //Tutorial screens
     if(game_score == 1 && showCollectableTut == 0 || showCollectableTut ==1)
         {
-            image(collect_tut, 0, 0, collect_tut.width / 4.166, collect_tut.height / 4.166);
+            image(collect_tut, 0, 0, 1024, 576);
             textSize(24);
             text("You picked up an energy cell!", width/2 - 155, height/2 - 85);
             textSize(18);
@@ -372,7 +367,7 @@ function draw()
     
     if(shootPowerUp && showShootTut == 0 || showShootTut == 1)
         {
-            image(shoot_tut, 0, 0, shoot_tut.width / 4.166, shoot_tut.height / 4.166);
+            image(shoot_tut, 0, 0, 1024, 576);
             textSize(24);
             text("You picked up an ability cell!", width/2 - 155, height/2 - 85);
             textSize(18);
@@ -390,7 +385,7 @@ function draw()
     
     if(doubleJump && showJumpTut == 0 || showJumpTut == 1)
         {
-            image(jump_tut, 0, 0, jump_tut.width / 4.166, jump_tut.height / 4.166);
+            image(jump_tut, 0, 0, 1024, 576);
             textSize(24);
             text("You picked up an ability cell!", width/2 - 150, height/2 - 95);
             textSize(18);
@@ -658,24 +653,24 @@ function drawGameChar()
         if(facingRight == false)
             {
         //jumping left
-        image(j_Left, gameChar_x - 25, gameChar_y - 122, j_Left.width / 2.5, j_Left.height / 2.5);
+        image(j_Left, gameChar_x - 25, gameChar_y - 122, 84, 134);
             }
         else if(facingRight)
             {
         //jumping right
-        image(j_Right, gameChar_x - 57, gameChar_y - 122, j_Right.width / 2.5, j_Right.height / 2.5);
+        image(j_Right, gameChar_x - 57, gameChar_y - 122, 84, 134);
             }
     }
 	else if(isLeft)
 	{
 		//walking left
-        image(w_Left, gameChar_x - 25, gameChar_y - 128, w_Left.width / 2.5, w_Left.height / 2.5);
+        image(w_Left, gameChar_x - 25, gameChar_y - 128, 84, 134);
 
 	}
 	else if(isRight)
 	{
         //walking right
-        image(w_Right, gameChar_x - 57, gameChar_y - 128, w_Right.width / 2.5, w_Right.height / 2.5);
+        image(w_Right, gameChar_x - 57, gameChar_y - 128, 84, 134);
 
 	}
     else if(isFalling == false)
@@ -683,12 +678,12 @@ function drawGameChar()
         if(facingRight)
             {
                 //standing right
-                image(s_Right, gameChar_x - 45, gameChar_y - 128, s_Right.width / 2.5, s_Right.height / 2.5);
+                image(s_Right, gameChar_x - 45, gameChar_y - 128, 84, 134);
             }
         else
             {
                 //standing left
-                image(s_Left, gameChar_x - 38, gameChar_y - 128, s_Left.width / 2.5, s_Left.height / 2.5);
+                image(s_Left, gameChar_x - 38, gameChar_y - 128, 84, 134);
             }
 	}
 }
@@ -1111,12 +1106,12 @@ function drawUI()
 {
     for(var i = 0; i < lives; i++)
         {
-            image(life_Icon, 40 + i * 50, -5, life_Icon.width / 4, life_Icon.height / 4);
+            image(life_Icon, 40 + i * 50, -5, 52, 84);
         }
     
     for(var i = 0; i < 3; i++)
         {
-            image(no_Life_Icon, 40 + i * 50, -5, no_Life_Icon.width / 4, no_Life_Icon.height / 4);
+            image(no_Life_Icon, 40 + i * 50, -5, 52, 84);
         }
     var s = 30;
     var x = 930;
@@ -1238,14 +1233,14 @@ function Enemy(x, y, range)
             {
                 push();
                 translate(-22, -32);
-                image(enemy_right, this.currentX, this.y, enemy_right.width / 3, enemy_right.height / 3);
+                image(enemy_right, this.currentX, this.y, 46, 60);
                 pop();
             }
         else
             {
                 push();
                 translate(-22, -32);
-                image(enemy_left, this.currentX, this.y, enemy_left.width / 3, enemy_left.height / 3);
+                image(enemy_left, this.currentX, this.y, 46, 60);
                 pop();
             }
     }
@@ -1290,19 +1285,20 @@ function FlyEnemy(x, y, range)
     this.draw = function()
     {
         this.update();
-        
+
         if(gameChar_world_x > this.x)
             {
                 push();
                 translate(-22, -32);
-                image(fly_enemy_right, this.x, this.currentY, fly_enemy_right.width / 2, fly_enemy_right.height / 2);
+                
+                image(fly_enemy_right, this.x, this.currentY, 69, 90);
                 pop();
             }
         else
             {
                 push();
                 translate(-22, -32);
-                image(fly_enemy_left, this.x, this.currentY, fly_enemy_left.width / 2, fly_enemy_left.height / 2);
+                image(fly_enemy_left, this.x, this.currentY, 69, 90);
                 pop();
             }
     }

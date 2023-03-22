@@ -107,7 +107,7 @@ function preload()
     shoot_tut = loadImage("scripts/itp1-game/Sprites/Shoot_Tutorial_Screen.png");
     jump_tut = loadImage("scripts/itp1-game/Sprites/DD_Tutorial_Screen.png");
     
-    soundFormats('mp3','wav');
+    soundFormats('wav');
     
     //load all game sounds
     jumpSound = loadSound('scripts/itp1-game/Sounds/jump.wav');

@@ -21,6 +21,10 @@ h1 {
     margin-top: 0px;
 }
 
+h2 {
+    font-size: 18px;
+}
+
 a {
     text-decoration: none;
 }
@@ -234,7 +238,6 @@ a {
 .about-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 120px;
 }
 
 .about {
@@ -590,6 +593,119 @@ a {
 }
 /** ------------------------------------------ **/
 
+/** ----------- Certificates ------------ **/
+.all-certificates {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+} 
+
+.heading-container {
+    display: flex;
+    justify-content: center;
+}
+
+.heading-container .main-heading {
+    width: 600px;
+}
+
+.certificate-container {
+    width: 80%;
+}
+
+.certificate-content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    background: #444444;
+    border-radius: 30px;
+    overflow: hidden;
+    padding-top: 30px;
+    transition: transform 500ms ease, background 500ms ease;
+}
+
+.card-container:hover,
+.card-container:focus-within {
+    transform: scale(0.98);
+    background: #666666;
+}
+
+.card-container .card-content {
+    padding-inline: 30px;
+}
+
+.card-content .card-icon {
+    max-height: 25px;
+    width: auto;
+    background: #666666;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: -10px;
+}
+
+.icon-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-container h2{
+    margin-bottom: -10px;
+    max-width: 380px;
+}
+
+.card-container .card-heading-subtext {
+    margin-bottom: 30px;
+    color: #AAAAAA;
+    font-size: 14px;
+}
+
+.card-container p {
+    max-width: 380px;
+}
+
+.card-button-container {
+    background: #777777;
+    height: 50px;
+    width: 150px;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding-inline: 20px;
+    filter: drop-shadow(0 0 0.5rem #444444);
+    cursor: pointer;
+    margin-bottom: 30px;
+}
+
+.card-button-container img {
+    width: 18px;
+    height: 18px;
+    transition: transform .3s ease-in-out;
+}
+
+.card-button-container:hover img{
+    transform: translate(5px, 0);
+}
+
+.card-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
+}
+
+
+/** ------------------------------------------ **/
+
 /** ----------- Footer ------------ **/
 footer {
     background: #444444;
@@ -692,6 +808,18 @@ footer li:hover {
 
     .about {
         width: 80%;
+    }
+
+    .card-container {
+        width: 270px;
+    }
+
+    .heading-container .main-headings {
+        width: 80%;
+    }
+
+    .card-button-container {
+        width: 130px;
     }
 
     .top-ten {

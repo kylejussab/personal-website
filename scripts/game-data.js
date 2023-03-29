@@ -2,12 +2,12 @@ let gameData = [
     {
         "icon": "assets/unity.png",
         "icon2": "assets/c-sharp.png",
-        "image": "assets/Unity Game.png",
+        "image": "assets/Project Phoebe.png",
         "alt": "C Sharp code",
-        "title": "Unity Game Project",
-        "subtitle": "Third Person Shooter",
-        "description": "My first game project, under the unity junior pathway.",
-        "link": "unitygameproject.html"
+        "title": "Project Phoebe",
+        "subtitle": "Third Person Platformer/Puzzler",
+        "description": "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.",
+        "link": "projectphoebe.html"
     },
     {
         "icon": "assets/p5js.png",

@@ -610,8 +610,8 @@ footer li:hover {
 
 @media only screen and (max-width: 878px){
     .card-iframe {
-        width: 350px;
-        height: 197px;
+        width: 250px;
+        height: 141px;
     }
 }
 

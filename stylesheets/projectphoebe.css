@@ -21,6 +21,10 @@ h1 {
     margin-top: 0px;
 }
 
+h2 {
+    font-size: 24px;
+}
+
 a {
     text-decoration: none;
 }
@@ -231,10 +235,27 @@ a {
 /** ------------------------------------------ **/
 
 /** ----------- Introductory piece ------------ **/
+.introduction-iframe  {
+    width: 720px;
+    height: 405px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.download-link {
+    text-decoration: underline;
+}
+
 .content-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .introduction-container {
@@ -245,6 +266,18 @@ a {
     width: 60%;
     max-width: 1200px;
     text-align: left;
+}
+
+.screenshot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.screenshot-container > img:not(.game-image) {
+    width: 80%;
+    border-radius: 10px;
 }
 
 .card-icon {
@@ -293,6 +326,64 @@ a {
     }
 }
 /** ------------------------------------------ **/
+
+/** Video cards **/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    min-height: 250px;
+    max-width: 900px;
+    background: #444444;
+    border-radius: 30px;
+    overflow: hidden;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.card-container .card-content {
+    padding-left: 30px;
+}
+
+.card-container h2{
+    font-size: 28px;
+    margin-bottom: -10px;
+    max-width: 380px;
+}
+
+.card-container .card-heading-subtext {
+    margin-bottom: 30px;
+    color: #AAAAAA;
+    font-size: 14px;
+}
+
+.card-description {
+    font-size: 16px;
+}
+
+.card-container p {
+    max-width: 380px;
+}
+
+.card-iframe-container {
+    display: flex;
+    justify-content: right;
+    align-items: end;
+}
+
+.card-iframe {
+    width: 440px;
+    height: 248px;
+}
+
+.video-card-container {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/**----------------------**/
 
 /** ----------- Back to top button ------------ **/
 .progress {
@@ -415,9 +506,13 @@ footer li:hover {
     }
 }
 
-@media only screen and (max-width: 784px) {
+@media only screen and (max-width: 784px) {    
     h1 {
         font-size: 32px;
+    }
+
+    h2 {
+        font-size: 18px;
     }
 
     .nav-toggle label {
@@ -447,6 +542,11 @@ footer li:hover {
 
     .nav-button {
         margin-right: 20px;
+    }
+
+    .introduction-iframe {
+        width: 280px;
+        height: 158px;
     }
 
     .about {
@@ -488,6 +588,41 @@ footer li:hover {
     .intro-subheading {
         margin-top: -25px;
         margin-bottom: 30px;
+    }
+
+    .card-container h2{
+        font-size: 20px;
+        max-width: 230px;
+    }
+
+    .card-container .card-heading-subtext {
+        font-size: 12px;
+    }
+
+    .card-container p {
+        max-width: inherit;
+    }
+
+    .card-container {
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 878px){
+    .card-iframe {
+        width: 350px;
+        height: 197px;
+    }
+}
+
+@media only screen and (min-width: 785px) and (max-width: 1114px){
+    .introduction-iframe {
+        width: 500px;
+        height: 281px;
+    }
+
+    .card-container p {
+        max-width: 220px;
     }
 }
 /** ------------------------------------------ **/

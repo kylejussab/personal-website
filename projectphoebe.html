@@ -77,15 +77,103 @@
     <!--_____________________Introduction_____________________-->
     <section class="content-container introduction-container">
         <div class="content">
+            <div class="video-container">
+                <iframe class="introduction-iframe" src="https://www.youtube.com/embed/YkWdL7SiPq8" frameborder="0" allowfullscreen></iframe>
+                <p>Download Project Phoebe on <a href="assets/Project Phoebe Mac.zip" class="download-link">Mac</a> or <a href="assets/Project Phoebe Windows.zip" class="download-link">Windows</a></p>
+            </div>
             <div class="icon-container">
                 <img src="assets/unity.png" class="card-icon">
                 <img src="assets/c-sharp.png" class="card-icon">
             </div>
             <h1 class="main-heading">Project Phoebe</h1>
             <p class="intro-subheading">Third Person Platformer/Puzzler</p>
-            <p>Well this is awkward... This project isn't done yet... which poses the question of why it's on my website in the first place, right? Honestly... your guess is as good as mine.</p>
-            <p>About the game... I'm getting there. Currently university is taking all of my time (life of a university student amirite😅). Learning Unity and going through the pathway is entirely off my free time... and well I just don't have any free time at the moment.</p>
-            <p>But fear not! Maybe fear a little... anyway I digress. Soon! It's coming soon.</p>
+            <p>In the Unity Junior Pathway, I was tasked to build my own project as I learnt how to develop games in Unity. The projects used in the pathway were very simple games and I wanted to expand my game a little more than what was required. I added 5 different levels, all unique in their play style, and added general game state. This game requires a controller, and throughout its development I used a PlayStation controller, and even use PlayStation icons. I developed it on Mac, and I was unable to test the game on Windows.</p>
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Role_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <h2 class="main-heading">Role and responsibility</h2>
+            <p>I was the only developer on this project. I was responsible for all the level design, game design, and coding. I implemented a variety of systems including a puzzle system that remembers sequences, an AI system that can target different objects, and a game state system that enables checkpoints. I designed a main menu and various pause menus to allow the player to easily switch between all the different game modes. I finally built the full game for Mac and Windows.</p>
+            <div class="screenshot-container">
+                <img src="assets/pp-screen1.png" alt="Project Phoebe main menu">
+            </div>
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Design_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <h2 class="main-heading">The design</h2>
+            <p>I wanted a game that was minimal enough for me to just worry about the programming. I dabbled in some 3d asset building but quickly lost sight of the full project. This project was meant to be as simple as possible yet feel like more than a demonstration. This is why I ended up building 5 different modes that are all played in a different way, with different systems for each.</p>
+            <p>As stated in my Game Development Journal (that can be found below) during the process of developing this game, I found the methods I used for all my systems could’ve been approached in a better way. One that I will specifically pick out is the sequential puzzle system, which remembers the order in which pressure plates were activated. I used a binary array that was the same length as the number of plates in the puzzle. When a plate was activated in the right order it would change a 0 in the array to a 1. Once the order was incorrect the entire array was reset to all 0s. Though this system works, I felt that using an array was the wrong data structure for this type of system, as it had no information on the plates, just the order in which they needed to be activated.</p>
+            <p>Overall, all the code I typed was made as modular as possible, which allowed me to easily make multiple modes. If needed, I could easily incorporate any of the systems in the individual levels into one single level. It was very important that I had menus and that the game was played with a controller. Up till this point I had never made a game with either, I wanted to push myself to learn as much as I possibly could during development. I’ll never be a good game programmer if I only stick to what I know. To make better games I need to be a more versatile programmer, and this is just the start of that process!</p>
+            <div class="screenshot-container">
+                <img src="assets/pp-screen2.png" alt="The endurance level">
+                <img src="assets/pp-screen3.png" alt="The skill level">
+                <img src="assets/pp-screen4.png" alt="The intellect level">
+            </div>
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Game Dev Journal_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <h2 class="main-heading">Game Development Journal</h2>
+            <p>Read the entire process of developing Project Phoebe in my game development journal <a href="assets/Project Phoebe.pdf" target="_blank" class="download-link">here.</a></p>
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
+
+    <!--_____________________Video cards_____________________-->
+    <section class="video-card-container">
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Skill</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Skill level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/JQw8LDheSvw" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Endurance</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Endurance level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/m8m6am2dGFo" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Intellect</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Intellect level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/IWdNtG_DaVQ" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Time</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Time level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/4TFgYIjvuJs" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Survival</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch the highest score I could achieve in the Survival level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/6SPatmDocI4" frameborder="0" allowfullscreen></iframe></div>
         </div>
     </section>
     <!--______________________________________________________________________-->
@@ -109,8 +197,6 @@
             <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
             <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
         </ul>
-
-        <p>Copyright &copy; 2022 Kyle Jussab. LLC All rights reserved.</p>
     </footer>
     <!--______________________________________________________________________-->
 </body>

@@ -238,7 +238,7 @@ a {
 .content-container {
     display: flex;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .introduction-container {

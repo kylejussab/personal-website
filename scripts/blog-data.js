@@ -1,6 +1,15 @@
 let blogData = [
     {
         "icon": "assets/blog.png",
+        "image": "assets/Blog8.png",
+        "alt": "Multiple hands pointing at one lady",
+        "title": "What is it like to experience social anxiety?",
+        "subtitle": "16th May 2023",
+        "description": "How am I supposed to act normal when it’s pretty obvious that they’re talking about me, laughing at me. Why else would they be whispering to each other?",
+        "link": "blog8.html"
+    },
+    {
+        "icon": "assets/blog.png",
         "image": "assets/Blog7.png",
         "alt": "A desk with a laptop, coffee cup and notebook",
         "title": "Being a better coder",

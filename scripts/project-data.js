@@ -5,8 +5,8 @@ let projectData = [
         "image": "assets/PixelPulse.png",
         "alt": "The homepage of the PixelPulse application",
         "title": "PixelPulse",
-        "subtitle": "Built with the SQLite3 - 2023",
-        "description": "A description on the PixelPulse made for ASP",
+        "subtitle": "View and Share Coding Sketches - September 2023",
+        "description": "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.",
         "link": "pixelpulse.html"
     },
     {
@@ -15,8 +15,8 @@ let projectData = [
         "image": "assets/Microblogger.png",
         "alt": "The homepage of my microblogger application",
         "title": "Microblogger",
-        "subtitle": "Built with the SQLite3 - 2023",
-        "description": "A description on the Microblogger made for DNW",
+        "subtitle": "A Gaming Microblog - September 2023",
+        "description": "A dynamic website for my gaming blogs. Used SQLite3 to store and retrieve relevant information. Improved the styling with vanilla CSS.",
         "link": "microblogger.html"
     },
     {
@@ -25,9 +25,19 @@ let projectData = [
         "image": "assets/DJ Application.png",
         "alt": "The GUI of my DJ application",
         "title": "DJ Application",
-        "subtitle": "Built with the JUCE framework - 2022",
-        "description": "A description on the DJ application made for OOP",
+        "subtitle": "Built with the JUCE Framework - March 2023",
+        "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
         "link": "djapplication.html"
+    },
+    {
+        "icon": "assets/p5js.png",
+        "icon2": "assets/js.png",
+        "image": "assets/DJ Application.png",
+        "alt": "A visualizer from the music visualizer application",
+        "title": "Music Visualizer",
+        "subtitle": "Built with the p5.js Framework - September 2022",
+        "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
+        "link": "musicvisualizer.html"
     }
 ]
 

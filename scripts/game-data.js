@@ -5,7 +5,7 @@ let gameData = [
         "image": "assets/Project Phoebe.png",
         "alt": "C Sharp code",
         "title": "Project Phoebe",
-        "subtitle": "Third Person Platformer/Puzzler",
+        "subtitle": "Third Person Platformer/Puzzler - April 2023",
         "description": "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.",
         "link": "projectphoebe.html"
     },
@@ -15,7 +15,7 @@ let gameData = [
         "image": "assets/itp1project.png",
         "alt": "2d platformer showing character facing right, looking at collectable",
         "title": "ITP1 Project",
-        "subtitle": "2D Platformer",
+        "subtitle": "2D Platformer - September 2021",
         "description": "The game project I submitted for University of London in their Introduction to Programming 1 module.",
         "link": "itp1project.html"
     }

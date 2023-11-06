@@ -4,23 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/index.css">
+    <link rel="stylesheet" href="stylesheets/djapplication.css">
     <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/project-data.js" defer ></script>
-    <script src="scripts/game-data.js" defer ></script>
-    <script src="scripts/story-data.js" defer ></script>
     <script src="scripts/nav-button.js" defer ></script>
     <script src="scripts/backtotop.js" defer ></script>
-    <title>Kyle Jussab</title>
+    <title>Kyle Jussab - DJ Application</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
 <body>
     <!--_____________________Navigation Bar_____________________-->
     <header class="header-bar">
-        <div class="home-icon">
-            <img src="assets/Icon_V2_Transparent.png" alt="Icon of Kyle Jussab">
-        </div>
+        <a href="index.html"><div class="home-icon">
+            <img src="assets/left-arrow.png">
+        </div></a>
 
         <div class="nav-toggle">
             <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
@@ -83,73 +80,97 @@
         </nav>
     </header>
     <!--______________________________________________________________________-->
-    
+
     <!--_____________________Introduction_____________________-->
-    <section class="introduction-container">
-        <div class="introduction">
-            <h1 class="main-heading">Hi, I'm Kyle.</h1>
-            <p>I'm a Game Programmer, a BSc Computer Science student and an ASc Game Design student.</p>
+    <section class="content-container introduction-container">
+        <div class="content">
+            <div class="video-container">
+                <img src="assets/DJ Application Cover Art.png" class="cover-art">
+                <p>View my DJ Application on <a href="https://github.com/kylejussab/DJ-Application" class="download-link" target="_blank">Github</a></p>
+            </div>
+            <div class="icon-container">
+                <img src="assets/c++.png" class="card-icon">
+            </div>
+            <h1 class="main-heading">DJ Application</h1>
+            <p class="intro-subheading">Built with the JUCE framework</p>
+            <p>Coming soon.</p>
         </div>
     </section>
     <!--______________________________________________________________________-->
 
-    <!--_____________________All cards_____________________-->
-    <main>
-        <div class="all-game-cards" data-game-cards-container></div>
-        <div class="all-story-cards" data-story-cards-container></div>
-        <div class="all-project-cards" data-project-cards-container></div>
+    <!--_____________________Role_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <h2 class="main-heading">Role and responsibility</h2>
+            <p>I am the only developer on this project.</p>
+            <!-- <div class="screenshot-container">
+                <img src="assets/pp-screen1.png" alt="Project Phoebe main menu">
+            </div> -->
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
 
-        <template data-game-template>
-            <div class="games-content">
-                <div class="card-container">
-                    <div class="card-content" style="flex-grow: 5">
-                        <div class="icon-container">
-                            <div data-icon></div>
-                            <div data-icon2></div>
-                        </div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                </div>
-            </div>
-        </template>
+    <!--_____________________Design_____________________-->
+    <section class="content-container">
+        <div class="content">
+            <h2 class="main-heading">The design</h2>
+            <p>More to come.</p>
+            <!-- <div class="screenshot-container">
+                <img src="assets/pp-screen2.png" alt="The endurance level">
+                <img src="assets/pp-screen3.png" alt="The skill level">
+                <img src="assets/pp-screen4.png" alt="The intellect level">
+            </div> -->
+        </div>
+    </section>
+    <!--______________________________________________________________________-->
 
-        <template data-story-template>
-            <div class="stories-content">
-                <div class="card-container">
-                    <div class="card-content" style="flex-grow: 5">
-                        <div data-icon></div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                </div>
+    <!--_____________________Video cards_____________________-->
+    <!-- <section class="video-card-container">
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Skill</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Skill level in Project Phoebe.</p>
             </div>
-        </template>
-        
-        <template data-project-template>
-            <div class="projects-content">
-                <div class="card-container">
-                    <div class="card-content" style="flex-grow: 5">
-                        <div data-icon></div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/JQw8LDheSvw" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Endurance</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Endurance level in Project Phoebe.</p>
             </div>
-        </template>
-    </main>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/m8m6am2dGFo" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Intellect</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Intellect level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/IWdNtG_DaVQ" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Time</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch my full playthrough of the Time level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/4TFgYIjvuJs" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-content" style="flex-grow: 5">
+                <h2>Survival</h2>
+                <p class="card-heading-subtext">Project Phoebe</p>
+                <p>Watch the highest score I could achieve in the Survival level in Project Phoebe.</p>
+            </div>
+            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/6SPatmDocI4" frameborder="0" allowfullscreen></iframe></div>
+        </div>
+    </section> -->
     <!--______________________________________________________________________-->
 
     <!--_____________________Back to top button_____________________-->

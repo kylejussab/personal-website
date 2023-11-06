@@ -1,4 +1,13 @@
-let blogData = [
+let projectData = [
+    {
+        "icon": "assets/c++.png",
+        "image": "assets/DJ Application.png",
+        "alt": "The GUI of my DJ application",
+        "title": "DJ Application",
+        "subtitle": "Built with the JUCE framework",
+        "description": "A description on the DJ application made for OOP",
+        "link": "djapplication.html"
+    },
     {
         "icon": "assets/blog.png",
         "image": "assets/Blog8.png",
@@ -73,11 +82,11 @@ let blogData = [
     }
 ]
 
-const blogCardTemplate = document.querySelector("[data-blog-template]");
-const blogCardContainer = document.querySelector("[data-blog-cards-container]");
+const projectCardTemplate = document.querySelector("[data-project-template]");
+const projectCardContainer = document.querySelector("[data-project-cards-container]");
 
-posts = blogData.map(post => {
-    const card = blogCardTemplate.content.cloneNode(true).children[0]
+posts = projectData.map(post => {
+    const card = projectCardTemplate.content.cloneNode(true).children[0]
     
     const title = card.querySelector("[data-title]")
     const subtitle = card.querySelector("[data-subtitle]")
@@ -88,7 +97,7 @@ posts = blogData.map(post => {
 
     const image = '<img src="' + post.image + '" alt="' + post.alt + '">';
     const iconImage = '<img src="' + post.icon + '" class="card-icon">';
-    const linkElement = '<div class="card-button-container"><a href="' + post.link + '" class="card-button"><p>Read more</p><img src="assets/right-arrow.png"></a></div>';
+    const linkElement = '<div class="card-button-container"><a href="' + post.link + '" class="card-button"><p>See more</p><img src="assets/right-arrow.png"></a></div>';
 
     title.textContent = post.title
     subtitle.textContent = post.subtitle
@@ -97,5 +106,5 @@ posts = blogData.map(post => {
     icon.innerHTML = iconImage;
     link.innerHTML = linkElement;
 
-    blogCardContainer.append(card);
+    projectCardContainer.append(card);
 })

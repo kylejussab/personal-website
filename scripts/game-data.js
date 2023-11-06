@@ -2,6 +2,16 @@ let gameData = [
     {
         "icon": "assets/unity.png",
         "icon2": "assets/c-sharp.png",
+        "image": "assets/The Architect Hestia.png",
+        "alt": "C Sharp code",
+        "title": "The Architect Hestia",
+        "subtitle": "Third Person Shooter - Coming soon",
+        "description": "Elian, a Rusthavener, is tired of the opression forced on them by Auravale. Little does he know, with each death he switches sides.",
+        "link": "thearchitecthestia.html"
+    },
+    {
+        "icon": "assets/unity.png",
+        "icon2": "assets/c-sharp.png",
         "image": "assets/Project Phoebe.png",
         "alt": "C Sharp code",
         "title": "Project Phoebe",

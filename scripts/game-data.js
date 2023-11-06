@@ -5,7 +5,7 @@ let gameData = [
         "image": "assets/The Architect Hestia.png",
         "alt": "C Sharp code",
         "title": "The Architect Hestia",
-        "subtitle": "Third Person Shooter - Coming soon",
+        "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
         "description": "Elian, a Rusthavener, is tired of the opression forced on them by Auravale. Little does he know, with each death he switches sides.",
         "link": "thearchitecthestia.html"
     },
@@ -15,7 +15,7 @@ let gameData = [
         "image": "assets/Project Phoebe.png",
         "alt": "C Sharp code",
         "title": "Project Phoebe",
-        "subtitle": "Third Person Platformer/Puzzler - April 2023",
+        "subtitle": "Third Person Platformer / Puzzler - April 2023",
         "description": "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.",
         "link": "projectphoebe.html"
     },

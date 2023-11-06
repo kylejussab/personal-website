@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/index.css">
     <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/blog-data.js" defer ></script>
+    <script src="scripts/project-data.js" defer ></script>
     <script src="scripts/game-data.js" defer ></script>
     <script src="scripts/story-data.js" defer ></script>
     <script src="scripts/nav-button.js" defer ></script>
@@ -29,8 +29,8 @@
             <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
             <label for="stories">Stories</label>
     
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Blogs" class="blogs" id="blogs" autocomplete="off">
-            <label for="blogs">Blogs</label>
+            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
+            <label for="projects">Projects</label>
     
             <div class="selector">&nbsp;</div>
         </div>
@@ -97,7 +97,7 @@
     <main>
         <div class="all-game-cards" data-game-cards-container></div>
         <div class="all-story-cards" data-story-cards-container></div>
-        <div class="all-blog-cards" data-blog-cards-container></div>
+        <div class="all-project-cards" data-project-cards-container></div>
 
         <template data-game-template>
             <div class="games-content">
@@ -134,11 +134,14 @@
             </div>
         </template>
         
-        <template data-blog-template>
-            <div class="blogs-content">
+        <template data-project-template>
+            <div class="projects-content">
                 <div class="card-container">
                     <div class="card-content" style="flex-grow: 5">
-                        <div data-icon></div>
+                        <div class="icon-container">
+                            <div data-icon></div>
+                            <div data-icon2></div>
+                        </div>
                         <h2 data-title></h2>
                         <p class="card-heading-subtext" data-subtitle></p>
                         <p data-description></p>

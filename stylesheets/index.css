@@ -169,7 +169,7 @@ label {
     left: 110px;
 }
 
-.blogs:checked ~ .selector{
+.projects:checked ~ .selector{
     left: 215px;
 }
 
@@ -443,7 +443,7 @@ label {
     align-items: center;
 }
 
-.blogs-content {
+.projects-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -455,7 +455,7 @@ label {
     display: none;
 }
 
-.blogs-content {
+.projects-content {
     display: none;
 }
 /** ------------------------------------------ **/
@@ -608,7 +608,7 @@ footer li:hover {
         left: 78px;
     }
     
-    .blogs:checked ~ .selector{
+    .projects:checked ~ .selector{
         left: 151px;
     }
 

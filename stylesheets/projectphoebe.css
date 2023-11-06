@@ -533,7 +533,7 @@ footer li:hover {
         left: 78px;
     }
     
-    .blogs:checked ~ .selector{
+    .projects:checked ~ .selector{
         left: 151px;
     }
 

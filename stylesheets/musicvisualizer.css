@@ -29,6 +29,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    margin-top: -10px;
+}
+
 /* Site wide animations */
 .card-container, .introduction-container {
     animation: fadeInAnimation ease 2s;

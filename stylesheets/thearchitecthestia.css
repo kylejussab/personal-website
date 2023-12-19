@@ -244,6 +244,17 @@ a {
     width: 100%;
 }
 
+
+.one-pager-container {
+    width: inherit;
+    display: flex;
+    justify-content: center;
+}
+
+.one-pager {
+    width: inherit;
+}
+
 .introduction-iframe  {
     width: 720px;
     height: 405px;

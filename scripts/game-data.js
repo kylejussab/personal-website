@@ -6,7 +6,7 @@ let gameData = [
         "alt": "C Sharp code",
         "title": "The Architect Hestia",
         "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
-        "description": "Elian, a Rusthavener, is tired of the opression forced on them by Auravale. Little does he know, with each death he switches sides.",
+        "description": "Elian, a Rusthavener, is tired of the opression forced on them by Auravale. Little does he know, with each death he switches sides.\n\nContributions:\n- Implemented player movement mechanics and animations.\n- Engineered dynamic camera interactions.\n- Engineered dynamic camera interactions.\n- Created AI systems with idle, pursue, and attack states.\n- Programmed limb-specific damage mechanics",
         "link": "thearchitecthestia.html"
     },
     {
@@ -52,7 +52,7 @@ posts = gameData.map(post => {
 
     title.textContent = post.title
     subtitle.textContent = post.subtitle
-    description.textContent = post.description
+    description.innerHTML = post.description.replace(/\n/g, '<br>');
     img.innerHTML = image;
     icon.innerHTML = iconImage;
     icon2.innerHTML = icon2Image;

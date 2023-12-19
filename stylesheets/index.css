@@ -368,19 +368,19 @@ label {
 }
 
 .card-container h2{
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: -10px;
     max-width: 380px;
 }
 
 .card-container .card-heading-subtext {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #AAAAAA;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .card-description {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .card-container p {

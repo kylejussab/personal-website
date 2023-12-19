@@ -7,7 +7,8 @@ let gameData = [
         "title": "The Architect Hestia",
         "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
         "description": "Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.\n\nContributions:\n- Implemented player movement mechanics and animations.\n- Engineered dynamic camera interactions.\n- Engineered dynamic camera interactions.\n- Created AI systems with idle, pursue, and attack states.\n- Programmed limb-specific damage mechanics",
-        "link": "thearchitecthestia.html"
+        "link": "thearchitecthestia.html",
+        "recommend": "yes"
     },
     {
         "icon": "assets/unity.png",
@@ -37,6 +38,14 @@ const gameCardContainer = document.querySelector("[data-game-cards-container]");
 posts = gameData.map(post => {
     const card = gameCardTemplate.content.cloneNode(true).children[0]
     
+    const recommendFront = card.querySelector("[data-recommend-front]")
+    const recommendBack = card.querySelector("[data-recommend-back]")
+
+    if(post.recommend == "yes"){
+        recommendFront.innerHTML = '<span class="ribbon-front"><p class="ribbon-text">Kyle&apos;s recommendation</p></span>';
+        recommendBack.innerHTML = '<span class="ribbon-back"></span>';
+    }
+
     const title = card.querySelector("[data-title]")
     const subtitle = card.querySelector("[data-subtitle]")
     const description = card.querySelector("[data-description]")

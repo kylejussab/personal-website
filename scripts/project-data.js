@@ -7,7 +7,8 @@ let projectData = [
         "title": "PixelPulse",
         "subtitle": "View and Share Coding Sketches - September 2023",
         "description": "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.\n\nContributions:\n- Crafted an appealing and user-friendly interface achieving an 82.5 SUS score.\n- Created an interactive prototype for iterative and user-centered design.\n- Conducted market research, analyzing trends and user expectations.",
-        "link": "pixelpulse.html"
+        "link": "pixelpulse.html",
+        "recommend": "yes"
     },
     {
         "icon": "assets/html.png",
@@ -27,7 +28,8 @@ let projectData = [
         "title": "DJ Application",
         "subtitle": "Built with the JUCE Framework - March 2023",
         "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.\n\nContributions:\n- Utilized C++ to build core logic, incorporating audio manipulation tools like high/low pass filters and playback controls.\n- Implemented data persistence for efficient song library management.\n- Conducted extensive testing to ensure stability and functionality, rigorously examining features and performance.",
-        "link": "djapplication.html"
+        "link": "djapplication.html",
+        "recommend": "yes"
     },
     {
         "icon": "assets/p5js.png",
@@ -46,7 +48,15 @@ const projectCardContainer = document.querySelector("[data-project-cards-contain
 
 posts = projectData.map(post => {
     const card = projectCardTemplate.content.cloneNode(true).children[0]
-    
+
+    const recommendFront = card.querySelector("[data-recommend-front]")
+    const recommendBack = card.querySelector("[data-recommend-back]")
+
+    if(post.recommend == "yes"){
+        recommendFront.innerHTML = '<span class="ribbon-front"><p class="ribbon-text">Kyle&apos;s recommendation</p></span>';
+        recommendBack.innerHTML = '<span class="ribbon-back"></span>';
+    }
+
     const title = card.querySelector("[data-title]")
     const subtitle = card.querySelector("[data-subtitle]")
     const description = card.querySelector("[data-description]")
@@ -70,3 +80,4 @@ posts = projectData.map(post => {
 
     projectCardContainer.append(card);
 })
+

@@ -328,6 +328,7 @@ label {
 
 /** ----------- All cards ------------ **/
 .card-container {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
     width: 80%;
@@ -335,10 +336,36 @@ label {
     max-width: 1200px;
     background: #444444;
     border-radius: 30px;
-    overflow: hidden;
+    /* overflow: hidden; */
     padding-top: 30px;
     margin-bottom: 100px;
     transition: transform 500ms ease, background 500ms ease;
+}
+
+.ribbon-front{
+    position: absolute;
+    height: 36px;
+    width: 150px;
+    background: #a137a1;
+    top: 30px;
+    right: -12px;
+}
+
+.ribbon-back{
+    position: absolute;
+    top: 34px;
+    right: -44px;
+    height: 0;
+    width: 0;
+    border-right: 12px solid transparent;
+    border-top: 15px solid #801f80;
+    margin: 2rem;
+}
+
+.ribbon-text {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .card-container:hover,
@@ -368,19 +395,19 @@ label {
 }
 
 .card-container h2{
-    font-size: 28px;
+    font-size: 22px;
     margin-bottom: -10px;
     max-width: 380px;
 }
 
 .card-container .card-heading-subtext {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #AAAAAA;
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .card-description {
-    font-size: 16px;
+    font-size: 12px;
 }
 
 .card-container p {

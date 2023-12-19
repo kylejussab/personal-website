@@ -16,6 +16,14 @@ const storyCardContainer = document.querySelector("[data-story-cards-container]"
 posts = storyData.map(post => {
     const card = storyCardTemplate.content.cloneNode(true).children[0]
     
+    const recommendFront = card.querySelector("[data-recommend-front]")
+    const recommendBack = card.querySelector("[data-recommend-back]")
+
+    if(post.recommend == "yes"){
+        recommendFront.innerHTML = '<span class="ribbon-front"><p class="ribbon-text">Kyle&apos;s recommendation</p></span>';
+        recommendBack.innerHTML = '<span class="ribbon-back"></span>';
+    }
+
     const title = card.querySelector("[data-title]")
     const subtitle = card.querySelector("[data-subtitle]")
     const description = card.querySelector("[data-description]")

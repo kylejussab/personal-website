@@ -18,7 +18,7 @@ let gameData = [
         "title": "Project Phoebe",
         "subtitle": "Third Person Platformer / Puzzler - April 2023",
         "description": "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.\n\nContributions:\n- Sole developer overseeing level design, game design, and coding.\n- Implemented a puzzle system with sequence memory.\n- Developed AI capable of targeting objects.\n- Built a game state system enabling checkpoints.\n- Designed the main and pause menus.",
-        "link": "projectphoebe.html"
+        "link": "https://kylejussab.com/projectphoebe"
     },
     {
         "icon": "assets/p5js.png",
@@ -28,7 +28,7 @@ let gameData = [
         "title": "ITP1 Project",
         "subtitle": "2D Platformer - September 2021",
         "description": "The game project I submitted for University of London in their Introduction to Programming 1 module.\n\nContributions:\n- Sole developer responsible for coding, game and level design.\n- Developed custom gravity mechanics using velocity and acceleration.\n- Created the artwork for the main character, enemies, pickups, and UI.\n- Implemented a power up system.",
-        "link": "itp1project.html"
+        "link": "https://kylejussab.com/itp1project"
     }
 ]
 

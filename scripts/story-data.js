@@ -6,7 +6,7 @@ let storyData = [
         "title": "Kaleidoscope - Kayleigh",
         "subtitle": "2020 - Present",
         "description": "Kayleigh; an eager but mindful individual with the desire to speak up, but lacks the courage to do so, navigates the world of Kaleidoscope cautiously but significantly. Her actions, unbeknownst to her, have repercussions to all those around her.",
-        "link": "kaleidoscope.html"
+        "link": "https://kylejussab.com/kaleidoscope"
     }
 ]
 

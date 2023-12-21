@@ -7,7 +7,7 @@ let gameData = [
         "title": "The Architect Hestia",
         "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
         "description": "Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.\n\nContributions:\n- Implemented player movement mechanics and animations.\n- Engineered dynamic camera interactions.\n- Engineered dynamic camera interactions.\n- Created AI systems with idle, pursue, and attack states.\n- Programmed limb-specific damage mechanics",
-        "link": "thearchitecthestia.html",
+        "link": "https://kylejussab.com/thearchitecthestia",
         "recommend": "yes"
     },
     {

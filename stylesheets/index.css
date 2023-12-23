@@ -315,15 +315,16 @@ label {
     opacity: 0;
     object-fit: cover;
     z-index: -198;
+    animation: image-animation linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
 }
 
-@supports (animation-timeline: view()){
+/* @supports (animation-timeline: view()){
     .intro-background{
-        animation: image-animation linear forwards;
-        animation-timeline: view();
-        animation-range: exit;
+        
     }
-}
+} */
 
 @keyframes image-animation {
     25% {opacity: .5;}

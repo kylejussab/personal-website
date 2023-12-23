@@ -291,8 +291,43 @@ label {
 .introduction-container {
     display: flex;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 250px;
     margin-bottom: 120px;
+}
+
+.intro-background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: clip;
+    z-index: -199;
+}
+
+.intro-background {
+    grid-column: 1 / -1;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    object-fit: cover;
+    z-index: -198;
+}
+
+@supports (animation-timeline: view()){
+    .intro-background{
+        animation: image-animation linear forwards;
+        animation-timeline: view();
+        animation-range: exit;
+    }
+}
+
+@keyframes image-animation {
+    25% {opacity: .5;}
+    85%, 100% {opacity: 0; scale: 10}
 }
 
 .introduction {

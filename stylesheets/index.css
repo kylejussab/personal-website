@@ -320,12 +320,6 @@ label {
     animation-range: exit;
 }
 
-/* @supports (animation-timeline: view()){
-    .intro-background{
-        
-    }
-} */
-
 @keyframes image-animation {
     25% {opacity: .5;}
     85%, 100% {opacity: 0; scale: 10}

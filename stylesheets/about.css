@@ -279,6 +279,31 @@ a {
 }
 /** ------------------------------------------ **/
 
+/** ----------- Skills ------------ **/
+.skills {
+    display: flex;
+    justify-content: center;
+}
+
+.skills-heading-container {
+    display: flex;
+    justify-content: center;
+}
+
+.stl-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    gap: 40px;
+}
+
+.stl {
+    width: 270px;
+    text-align: left;
+}
+/** ------------------------------------------ **/
+
 /** ----------- Flip card ------------ **/
 .top-ten {
     display: flex;

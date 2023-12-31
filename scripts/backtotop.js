@@ -22,7 +22,7 @@ let scrollPercentage = () => {
         document.documentElement.scrollTop = 0;
     });
 
-    scrollProgress.style.background = `conic-gradient(#800080, #FFC0CB, #EE82EE, #800080 ${scrollValue}%, #444444 ${scrollValue}%)`;
+    scrollProgress.style.background = `conic-gradient(#800080, #FFC0CB, #EE82EE, #800080 ${scrollValue}%, var(--card-hover-color) ${scrollValue}%)`;
 }
 
 window.onscroll = scrollPercentage;

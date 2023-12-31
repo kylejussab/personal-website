@@ -1,4 +1,12 @@
 /** ----------- General styling ------------ **/
+:root {
+    --background-color: #262626;
+
+    --card-color: #353535;
+    --card-hover-color: #444444;
+    --card-highlight-color: #555555;
+}
+
 * {
     font-family: Helvetica, sans-serif;
     color: #EEEEEE
@@ -9,7 +17,7 @@ html {
 }
 
 body {
-    background: #333333;
+    background: var(--background-color);
 }
 
 p {
@@ -86,7 +94,7 @@ a {
 .home-icon {
     width: 50px;
     height: 50px;
-    background: #444444;
+    background: var(--card-color);
     border-radius: 50%;
     border: none;
     filter: drop-shadow(0 0 0.75rem #222222);
@@ -105,7 +113,7 @@ a {
 
 /* Middle navigation toggle */
 .nav-toggle {
-    background: #444444;
+    background: var(--card-color);
     border-radius: 30px;
     display: inline-block;
     height: 15px;
@@ -152,7 +160,7 @@ label {
 .selector {
     height: 40px;
     width: 90px;
-    background: #666666;
+    background: var(--card-highlight-color);
     border-radius: 30px;
     position: absolute;
     top: 5px;
@@ -165,18 +173,18 @@ label {
     left: 5;
 }
 
-.stories:checked ~ .selector{
+.projects:checked ~ .selector{
     left: 110px;
 }
 
-.projects:checked ~ .selector{
+.stories:checked ~ .selector{
     left: 215px;
 }
 
 /* Hamburger menu */
 .nav-button {
     --button-color: #EEEEEE;
-    background: #444444;
+    background: var(--card-color);
     height: 50px;
     width: 50px;
     border-radius: 50%;
@@ -216,7 +224,7 @@ label {
     position: absolute;
     right: 200px;
     top: 60px;
-    background: #444444;
+    background: var(--card-color);
     width: 210px;
     height: 205px;
     border-radius: 10px;
@@ -278,7 +286,7 @@ label {
 }
 
 .nav-option:hover {
-    background: #666666;
+    background: var(--card-hover-color);
 }
 
 .nav-list img {
@@ -364,9 +372,8 @@ label {
     width: 80%;
     min-height: 350px;
     max-width: 1200px;
-    background: #444444;
+    background: var(--card-color);
     border-radius: 30px;
-    /* overflow: hidden; */
     padding-top: 30px;
     margin-bottom: 100px;
     transition: transform 500ms ease, background 500ms ease;
@@ -401,7 +408,7 @@ label {
 .card-container:hover,
 .card-container:focus-within {
     transform: scale(0.98);
-    background: #666666;
+    background: var(--card-hover-color);
 }
 
 .card-container .card-content {
@@ -411,7 +418,7 @@ label {
 .card-content .card-icon {
     max-height: 25px;
     width: auto;
-    background: #666666;
+    background: var(--card-hover-color);
     padding: 5px;
     border-radius: 10px;
     margin-bottom: -10px;
@@ -445,13 +452,13 @@ label {
 }
 
 .card-button-container {
-    background: #777777;
+    background: var(--card-highlight-color);
     height: 50px;
     width: 120px;
     border-radius: 10px;
     margin-top: 30px;
     padding-inline: 20px;
-    filter: drop-shadow(0 0 0.5rem #444444);
+    filter: drop-shadow(0 0 0.5rem var(--card-color));
     cursor: pointer;
 }
 
@@ -483,7 +490,7 @@ label {
     top: 100px;
     height: 250px;
     object-fit: cover;
-    filter: drop-shadow(0 0 0.75rem #222222);
+    filter: drop-shadow(0 0 0.75rem var(--card-color));
 }
 
 .games-content {
@@ -522,7 +529,7 @@ label {
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    border: 3px solid #444444;
+    border: 3px solid var(--card-hover-color);
     position: fixed;
     bottom: 50px;
     right: 200px;
@@ -539,7 +546,7 @@ label {
     display: block;
     height: calc(100% - 8px);
     width: calc(100% - 8px);
-    background: #444444;
+    background: var(--card-hover-color);
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -575,7 +582,7 @@ label {
 
 /** ----------- Footer ------------ **/
 footer {
-    background: #444444;
+    background: var(--card-color);
     position: relative;
     width: 100vw;
     margin-left: -50vw;

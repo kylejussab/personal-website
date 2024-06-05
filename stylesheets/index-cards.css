@@ -1,0 +1,161 @@
+.card-border, .introduction-container, .about-content {
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+.card-border {
+    position: relative;
+    width: 1050px;
+    height: 650px;
+    border-radius: 20px;
+    background: linear-gradient(to bottom, #171717, #181818);
+    border: #444444 solid .75px;
+    transition: transform .5s ease;
+    margin-bottom: 60px;
+}
+
+.card-container {
+    position: relative;
+    background: linear-gradient(to bottom, #272727, #171717);
+    border: #444444 solid .75px;
+    transition: border-color 0.3s ease-in-out;
+    margin: 8px;
+    width: 1034px;
+    height: 634px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    border-radius: 15px;
+    z-index: 1;
+    background: linear-gradient(to bottom, #3f3f3f, #171717);
+}
+
+.card-container:hover::before {
+    opacity: 1;
+}
+
+.card-container:hover {
+    border: #9f9f9f solid .75px;
+}
+
+.card-container:hover .card-arrow{
+    transform: translate(10px, 0px);
+}
+
+.card-container > * {
+    position: relative;
+    z-index: 2;
+}
+
+.card-content {
+    padding-inline: 30px;
+    padding-top: 15px;
+}
+
+.card-content h2 {
+    margin-bottom: 0px;
+}
+
+.card-content span {
+    color: var(--font-secondary-color);
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.card-arrow {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 35px;
+    transition: transform .2s ease-in-out;
+}
+
+.card-heading-subtext {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 14px;
+    color: var(--font-secondary-color);
+}
+
+.card-description {
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-size: 14px;
+}
+
+.card-image {
+    padding-inline: 50px;
+    transition: transform .3s ease-in-out;
+}
+
+.card-image img{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    width: 100%;
+}
+
+.card-container:hover .card-image{
+    transform: translate(0px, -30px);
+}
+
+.games-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hide other content on load */
+.about-content {
+    display: none;
+}
+
+.projects-content {
+    display: none;
+}

@@ -225,7 +225,7 @@
     color: var(--font-secondary-color);
 }
 
-/** ----------- Media Queries ------------ **/
+/** Media Queries **/
 @media only screen and (max-width: 784px) {
     .about-grid-container {
         grid-template-columns: 100%;

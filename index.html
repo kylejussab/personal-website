@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/index.css">
-    <link rel="stylesheet" href="stylesheets/about.css">
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-header.css">
+    <link rel="stylesheet" href="stylesheets/index-introduction.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/index-about.css">
     <script src="scripts/nav-toggle.js" defer ></script>
     <script src="scripts/project-data.js" defer ></script>
     <script src="scripts/game-data.js" defer ></script>
@@ -15,7 +18,6 @@
 </head>
 
 <body>
-    <!--_____________________Navigation Bar_____________________-->
     <header class="header-bar">
         <div class="nav-identity">
             <div class="home-icon">
@@ -89,65 +91,54 @@
             </ul>
         </nav>
     </header>
-    <!--______________________________________________________________________-->
-    
-    <!--_____________________Introduction_____________________-->
+
     <div class="intro-background-container">
         <img src="assets/homescreen-background.png" class="intro-background">
     </div>    
      
-
     <section class="introduction-container">
         <div class="introduction">
             <h1>I <span class="main-heading"> learn</span>, <span class="main-heading">code</span>, and <span class="main-heading">play</span> video games.</h1>
             <p class="introduction-details">BSc Computer Science. <br> ASc Game Design and Development. <br> <span>Following the paw 🐾</span></p>
         </div>
     </section>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________All cards_____________________-->
     <main>
         <div class="all-game-cards" data-game-cards-container></div>
         <div class="all-project-cards" data-project-cards-container></div>
         
         <template data-game-template>
             <div class="games-content">
-                <div class="card-container">
-                    <div data-recommend-front></div>
-                    <div class="card-content" style="flex-grow: 5">
-                        <div class="icon-container">
-                            <div data-icon></div>
-                            <div data-icon2></div>
+                <div class="card-border">
+                    <a data-link>
+                        <div class="card-container">
+                            <div class="card-content">
+                                <h2 data-title></h2>
+                                <img src="assets/arrow-right.svg" class="card-arrow">
+                                <p data-subtitle class="card-heading-subtext"></p>
+                                <p data-description class="card-description"></p>
+                                <div data-img class="card-image"></div>
+                            </div>
                         </div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description class="card-description"></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                    <div data-recommend-back></div>
+                    </a>
                 </div>
             </div>
         </template>
         
         <template data-project-template>
             <div class="projects-content">
-                <div class="card-container">
-                    <div data-recommend-front ></div>
-                    <div class="card-content" style="flex-grow: 5">
-                        <div class="icon-container">
-                            <div data-icon></div>
-                            <div data-icon2></div>
+                <div class="card-border">
+                    <a data-link>
+                        <div class="card-container">
+                            <div class="card-content">
+                                <h2 data-title></h2>
+                                <img src="assets/arrow-right.svg" class="card-arrow">
+                                <p data-subtitle class="card-heading-subtext"></p>
+                                <p data-description class="card-description"></p>
+                                <div data-img class="card-image"></div>
+                            </div>
                         </div>
-                        <h2 data-title></h2>
-                        <p class="card-heading-subtext" data-subtitle></p>
-                        <p data-description class="card-description"></p>
-                        <div data-link></div>
-                    </div>
-    
-                    <div class="card-image" style="flex-grow: 6" data-img></div>
-                    <div data-recommend-back ></div>
+                    </a>
                 </div>
             </div>
         </template>
@@ -355,9 +346,7 @@
             </div>
         </div>
     </main>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________Footer_____________________-->
     <footer>
         <div class="footer-rights">
             <img src="assets/Icon_V2_Transparent.png">
@@ -386,6 +375,5 @@
             <p>Last updated by Kyle on June 1, 2024, 2:08 AM PST</p>
         </div>
     </footer>
-    <!--______________________________________________________________________-->
 </body>
 </html>

@@ -228,23 +228,23 @@
 /** Media Queries **/
 @media only screen and (max-width: 784px) {
     .about-grid-container {
-        grid-template-columns: 100%;
+        grid-template-columns: 98%;
     }
       
     .grid-item {
-        width: 100%;
+        width: 98%;
     }
 
     .experience-container {
-        width: 100%;
+        width: 98%;
     }
     
     .about-heading {
-        width: 100%;
+        width: 98%;
     }
 
     .about-heading-container {
-        width: 100%;
+        width: 98%;
     }
 
     .about-content {
@@ -262,18 +262,18 @@
     }
 
     .about-content {
-        width: 100%;
+        width: 98%;
     }
 
     .experience-container {
-        width: 100%;
+        width: 98%;
     }
     
     .about-heading-container {
-        width: 100%;
+        width: 98%;
     }
 
     .about-heading {
-        width: 100%;
+        width: 98%;
     }
 }

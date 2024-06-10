@@ -4,207 +4,181 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/projectphoebe.css">
-    <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/nav-button.js" defer ></script>
-    <script src="scripts/backtotop.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
     <title>Kyle Jussab - Project Phoebe</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
-<body>
-    <!--_____________________Navigation Bar_____________________-->
-    <header class="header-bar">
-        <a href="https://kylejussab.com/"><div class="home-icon">
-            <img src="assets/left-arrow.png">
-        </div></a>
-
-        <div class="nav-toggle">
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
-            <label for="games">Games</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
-            <label for="projects">Projects</label>
-
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
-            <label for="stories">Stories</label>
-    
-            <div class="selector">&nbsp;</div>
-        </div>
-
-        <!-- Looks for id of primary navigation -->
-        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
-                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                </path>
-                <defs>
-                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#800080"/>
-                    <stop offset="100%" stop-color="#FFC0CB"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </button>
-
-        <nav class="primary-navigation hide-on-start" id="primary-navigation">
-            <ul aria-label="Primary" class="nav-list">
-                <a href="https://kylejussab.com/">
-                    <li class="nav-option">
-                        <img src="assets/home.png">
-                        <p>Home</p>
-                    </li>
-                </a>
-
-                <a href="https://kylejussab.com/about">
-                    <li class="nav-option">
-                        <img src="assets/about.png">
-                        <p>About</p>
-                    </li>
-                </a>
-
-                <a href="assets/resume.pdf" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/resume.png">
-                        <p>Resume</p>
-                    </li>
-                </a>
-
-                <a href="https://github.com/kylejussab" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/github-icon.png">
-                        <p>Github</p>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+<body id="projectphoebe">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
     </header>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________Introduction_____________________-->
-    <section class="content-container introduction-container">
-        <div class="content">
-            <div class="video-container">
-                <iframe class="introduction-iframe" src="https://www.youtube.com/embed/YkWdL7SiPq8" frameborder="0" allowfullscreen></iframe>
-                <p>View Project Phoebe on <a href="https://github.com/kylejussab/Project-Phoebe" class="download-link">Github</a></p>
-            </div>
-            <div class="icon-container">
-                <img src="assets/unity.png" class="card-icon">
-                <img src="assets/c-sharp.png" class="card-icon">
-            </div>
-            <h1 class="main-heading">Project Phoebe</h1>
-            <p class="intro-subheading">Third Person Platformer / Puzzler</p>
-            <p>In the Unity Junior Pathway, I was tasked to build my own project as I learnt how to develop games in Unity. The projects used in the pathway were very simple games and I wanted to expand my game a little more than what was required. I added 5 different levels, all unique in their play style, and added general game state. This game requires a controller, and throughout its development I used a PlayStation controller, and even use PlayStation icons. I developed it on Mac, and I was unable to test the game on Windows.</p>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Role_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">Role and responsibility</h2>
-            <p>I was the only developer on this project. I was responsible for all the level design, game design, and coding. I implemented a variety of systems including a puzzle system that remembers sequences, an AI system that can target different objects, and a game state system that enables checkpoints. I designed a main menu and various pause menus to allow the player to easily switch between all the different game modes. I finally built the full game for Mac and Windows.</p>
-            <div class="screenshot-container">
-                <img src="assets/pp-screen1.png" alt="Project Phoebe main menu">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Design_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">The design</h2>
-            <p>I wanted a game that was minimal enough for me to just worry about the programming. I dabbled in some 3d asset building but quickly lost sight of the full project. This project was meant to be as simple as possible yet feel like more than a demonstration. This is why I ended up building 5 different modes that are all played in a different way, with different systems for each.</p>
-            <p>As stated in my Game Development Journal (that can be found below) during the process of developing this game, I found the methods I used for all my systems could’ve been approached in a better way. One that I will specifically pick out is the sequential puzzle system, which remembers the order in which pressure plates were activated. I used a binary array that was the same length as the number of plates in the puzzle. When a plate was activated in the right order it would change a 0 in the array to a 1. Once the order was incorrect the entire array was reset to all 0s. Though this system works, I felt that using an array was the wrong data structure for this type of system, as it had no information on the plates, just the order in which they needed to be activated.</p>
-            <p>Overall, all the code I typed was made as modular as possible, which allowed me to easily make multiple modes. If needed, I could easily incorporate any of the systems in the individual levels into one single level. It was very important that I had menus and that the game was played with a controller. Up till this point I had never made a game with either, I wanted to push myself to learn as much as I possibly could during development. I’ll never be a good game programmer if I only stick to what I know. To make better games I need to be a more versatile programmer, and this is just the start of that process!</p>
-            <div class="screenshot-container">
-                <img src="assets/pp-screen2.png" alt="The endurance level">
-                <img src="assets/pp-screen3.png" alt="The skill level">
-                <img src="assets/pp-screen4.png" alt="The intellect level">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Game Dev Journal_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">Game Development Journal</h2>
-            <p>Read the entire process of developing Project Phoebe in my game development journal <a href="assets/Project Phoebe.pdf" target="_blank" class="download-link">here.</a></p>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Video cards_____________________-->
-    <section class="video-card-container">
-        <div class="card-container">
-            <div class="card-content" style="flex-grow: 5">
-                <h2>Skill</h2>
-                <p class="card-heading-subtext">Project Phoebe</p>
-                <p>Watch my full playthrough of the Skill level in Project Phoebe.</p>
-            </div>
-            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/JQw8LDheSvw" frameborder="0" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="card-container">
-            <div class="card-content" style="flex-grow: 5">
-                <h2>Endurance</h2>
-                <p class="card-heading-subtext">Project Phoebe</p>
-                <p>Watch my full playthrough of the Endurance level in Project Phoebe.</p>
-            </div>
-            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/m8m6am2dGFo" frameborder="0" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="card-container">
-            <div class="card-content" style="flex-grow: 5">
-                <h2>Intellect</h2>
-                <p class="card-heading-subtext">Project Phoebe</p>
-                <p>Watch my full playthrough of the Intellect level in Project Phoebe.</p>
-            </div>
-            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/IWdNtG_DaVQ" frameborder="0" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="card-container">
-            <div class="card-content" style="flex-grow: 5">
-                <h2>Time</h2>
-                <p class="card-heading-subtext">Project Phoebe</p>
-                <p>Watch my full playthrough of the Time level in Project Phoebe.</p>
-            </div>
-            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/4TFgYIjvuJs" frameborder="0" allowfullscreen></iframe></div>
-        </div>
-
-        <div class="card-container">
-            <div class="card-content" style="flex-grow: 5">
-                <h2>Survival</h2>
-                <p class="card-heading-subtext">Project Phoebe</p>
-                <p>Watch the highest score I could achieve in the Survival level in Project Phoebe.</p>
-            </div>
-            <div class="card-iframe-container"><iframe class="card-iframe" src="https://www.youtube.com/embed/6SPatmDocI4" frameborder="0" allowfullscreen></iframe></div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Back to top button_____________________-->
-    <div class="progress hide-on-start hide-btt-btn">
-        <span class="progress-value hide-btt-btn">
-            <img src="assets/arrow.png">
-        </span>
-    </div>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Footer_____________________-->
-    <footer>
-        <p class="email-link">Send me an email at <a href="mailto:kylejussab@gmail.com"> kylejussab@gmail.com</a></p>
-        
-        <ul class="social-links" aria-label="social media links">
-            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
-            <!-- <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a> -->
-            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
-            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
-            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#next-game">Next Game</a></li>
         </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>Project Phoebe</h1>
+            <p class="intro-subheading">Third Person Platformer / Puzzler - April 2023</p>
+
+            <img src="assets/Project Phoebe.png">
+
+            <a href="https://www.youtube.com/watch?v=YkWdL7SiPq8" target="_blank" class="external-link">
+                <p>View on YouTube</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab/Project-Phoebe" target="_blank" class="external-link">
+                <p>View on Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <div class="intro-info" id="overview">
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>In the Unity Junior Pathway, I was tasked to build my own project as I learnt how to develop games in Unity. The projects used in the pathway were very simple games and I wanted to expand my game a little more than what was required. I added 5 different levels, all unique in their play style, and added general game state. This game requires a controller, and throughout its development I used a PlayStation controller, and even use PlayStation icons. I developed it on Mac, and I was unable to test the game on Windows.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>Retrospective</h3>
+                    <p>Having improved my Unity skills since this project, it now holds a special place in my heart, even though I know I can create something much greater today. I remember the struggles and the vision I had for it, along with the knowledge I lacked at the time. Despite this, completing the project and learning entirely on my own outside of my studies is something I find truly impressive. Unity used to seem like a daunting tool that appeared very complicated, but now it's a familiar place, and this project was the beginning of that journey. For my first Unity game, it's not a bad 'first' at all. Reflecting on this experience, I realize how important 'first' projects like these are for learning and growth.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Gameplay Programming:</h3>
+                    <p>- Implemented a puzzle system that remembers sequences.</p>
+                    <p>- Developed an AI system capable of targeting different objects.</p>
+                    <p>- Created a game state system enabling checkpoints.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Sole developer responsible for all level design and game design.</p>
+                    <p>- Created a comprehensive game development journal.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>Unity, C#</p>
+                </div>
+            </div> 
+    </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="programming">
+            <div></div>
+            <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>Build good habits</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Improve through iteration.</p>
+            <div>
+                <p>I never intended for this game to have a sphere as its playable character, but creating a full human character with animations was beyond my capabilities at the time. Initially, this was demotivating, but it provided me with a realistic and achievable goal: learning all the fundamentals necessary to develop the third-person experiences I aspire to create in the future. This project also gave me the chance to explore adding puzzle mechanics into a 3D space. Although I implemented these mechanics inefficiently with two arrays and multiple if-else statements, they functioned exactly as intended.</p>
+                <p>Working on this game allowed me to improve essential skills, such as coding camera mechanics, integrating controller support, designing a main menu, and implementing a checkpoint system. These are features common to many games, and mastering them will enhance my abilities in future projects. Through this iterative process, I gained valuable experience and confidence, turning initial setbacks into opportunities for growth.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>The learning curve</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Gaining familiarity.</p>
+            <div>
+                <p>I wanted a game that was minimal enough for me to just worry about the programming. I dabbled in some 3d asset building but quickly lost sight of the full project. This project was meant to be as simple as possible yet feel like more than a demonstration. This is why I ended up building 5 different modes that are all played in a different way, with different systems for each.</p>
+                <p>As stated in my Game Development Journal (that can be found below) during the process of developing this game, I found the methods I used for all my systems could’ve been approached in a better way. One that I will specifically pick out is the sequential puzzle system, which remembers the order in which pressure plates were activated. I used a binary array that was the same length as the number of plates in the puzzle. When a plate was activated in the right order it would change a 0 in the array to a 1. Once the order was incorrect the entire array was reset to all 0s. Though this system works, I felt that using an array was the wrong data structure for this type of system, as it had no information on the plates, just the order in which they needed to be activated.</p>
+                <p>Overall, all the code I typed was made as modular as possible, which allowed me to easily make multiple modes. If needed, I could easily incorporate any of the systems in the individual levels into one single level. It was very important that I had menus and that the game was played with a controller. Up till this point I had never made a game with either, I wanted to push myself to learn as much as I possibly could during development. I’ll never be a good game programmer if I only stick to what I know. To make better games I need to be a more versatile programmer, and this is just the start of that process!</p>
+                <a href="assets/Project Phoebe.pdf" target="_blank" class="game-doc-link">
+                    <p>View my game development journal</p>
+                    <img src="assets//open-in-new-secondary.svg">
+                </a>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-pp">
+            <div class="tloubty-section-five">
+                <img src="assets/pp-screen1.png">
+                <img src="assets/pp-screen2.png">
+                <img src="assets/pp-screen3.png">
+                <img src="assets/pp-screen4.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="next-game">
+            <div></div>
+            <p>NEXT GAME</p>
+        </div>
+    </div>
+
+    <div class="games-content">
+        <div class="card-border" id="next-game-card">
+            <a href="https://kylejussab.com/itp1project">
+                <div class="card-container">
+                    <div class="card-content">
+                        <h2>ITP1 Project <span>p5.js, JavaScript</span></h2>
+                        <img src="assets/arrow-right.svg" class="card-arrow">
+                        <p class="card-heading-subtext">2D Platformer - September 2021</p>
+                        <p class="card-description">The game project I submitted for University of London in their Introduction to Programming 1 module.</p>
+                        <div class="card-image"><img src="assets/itp1project.png" alt="2d platformer showing character facing right, looking at collectable"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on June 9, 2024, 11:27 PM PST</p>
+        </div>
     </footer>
-    <!--______________________________________________________________________-->
 </body>
 </html>

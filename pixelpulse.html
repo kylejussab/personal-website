@@ -4,157 +4,169 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/pixelpulse.css">
-    <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/nav-button.js" defer ></script>
-    <script src="scripts/backtotop.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
     <title>Kyle Jussab - PixelPulse</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
-<body>
-    <!--_____________________Navigation Bar_____________________-->
-    <header class="header-bar">
-        <a href="https://kylejussab.com/"><div class="home-icon">
-            <img src="assets/left-arrow.png">
-        </div></a>
-
-        <div class="nav-toggle">
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
-            <label for="games">Games</label>
-
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
-            <label for="projects">Projects</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
-            <label for="stories">Stories</label>
-    
-            <div class="selector">&nbsp;</div>
-        </div>
-
-        <!-- Looks for id of primary navigation -->
-        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
-                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                </path>
-                <defs>
-                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#800080"/>
-                    <stop offset="100%" stop-color="#FFC0CB"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </button>
-
-        <nav class="primary-navigation hide-on-start" id="primary-navigation">
-            <ul aria-label="Primary" class="nav-list">
-                <a href="https://kylejussab.com/">
-                    <li class="nav-option">
-                        <img src="assets/home.png">
-                        <p>Home</p>
-                    </li>
-                </a>
-
-                <a href="https://kylejussab.com/about">
-                    <li class="nav-option">
-                        <img src="assets/about.png">
-                        <p>About</p>
-                    </li>
-                </a>
-
-                <a href="assets/resume.pdf" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/resume.png">
-                        <p>Resume</p>
-                    </li>
-                </a>
-
-                <a href="https://github.com/kylejussab" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/github-icon.png">
-                        <p>Github</p>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+<body id="pixelpulse">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
     </header>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________Introduction_____________________-->
-    <section class="content-container introduction-container">
-        <div class="content">
-            <div class="video-container">
-                <img src="assets/PixelPulse Cover Art.png" class="cover-art">
-                <p>View PixelPulse on <a href="https://github.com/riccovi/asp-team54" class="download-link" target="_blank">Github</a></p>
-            </div>
-            <div class="icon-container">
-                <img src="assets/html.png" class="card-icon">
-                <img src="assets/css.png" class="card-icon">
-            </div>
-            <h1 class="main-heading">PixelPulse</h1>
-            <p class="intro-subheading">Built with SQLite3 - 2023</p>
-            <p>Designed to meet the lack of helpful resources available to UoL Computer Science, PixelPulse aims to serve as both inspiration (project based modules) and revision (theory based modules). Users can create an account, log in, and post their p5js sketches. Users can also like and comment on others’ posts. After extensive research ASP Team 54 found a lack of interactive educational resources and after multiple user tests we assured our assumptions that this is a product students would benefit from!</p>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Role_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">Role and responsibility</h2>
-            <p>As part of a team of 4, I was responsible for:<br><br>
-                1. Market Research: I conducted extensive market research to understand the needs and preferences of the target audience. This research included checking indirect competitors such as social media platforms like Instagram and coding sites such as Leetcode to identify trends and user expectations. Additionally, I explored existing applications and software available from the university to ensure our project offered a unique value to users.<br><br>
-                2. Resource Gathering: This involved collating all required documents and resources needed to build the project. As part of the the submission I spoke to previous students and relayed their approach to my team ensuring we were set up for success from the beginning.<br><br>
-                3. Document Coordination: As the document coordinator, I organized and maintained all project-related documentation, ensuring that files, reports, and project plans were consistently up to date and readily accessible for the team.<br><br>
-                4. High Fidelity Prototype: I developed the high-fidelity interactive prototype, allowing us to present a visual representation of the app's functionality and design to our stakeholders. This played a pivotal role in receiving feedback for iterative and user centered design. View my high fidelity prototype <a href="https://kylejussab.github.io/ASP54-High-Fi-Prototype/" class="download-link" target="_blank">here</a>.<br><br>
-                5. Styling and UI: I was responsible for the styling and user interface (UI) design of the final project. This included creating a visually appealing and user-friendly interface that aligned with our market research and stakeholder expectations, achieving a SUS score of 82.5.<br><br>
-                6. Project Management: I took on project management responsibilities by setting project milestones in Trello, tracking progress, and ensuring that our team adhered to the established timelines. This helped us maintain focus and meet our deadlines effectively.</p>
-            <div class="screenshot-container">
-                <img src="assets/pixelpulse-screen1.png" alt="PixelPulse project page">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Design_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">The design</h2>
-            <p>The aesthetic was made as minimal as possible, mimicking that of popular social media platforms. This was done for familiarity; we found that users were used to a specific layout and style and if we differed from that too much it wouldn’t have the social media feel.</p>
-
-            <p>All decisions were made with feedback from our stakeholders. As a team we conducted multiple user surveys and tests to which I iterated on. No decision was made without taking into consideration our extensive research and our user responses.</p>
-                
-            <p>Accessibility was a very important feature that I pushed to add. The accessibility menu is something I’ve iterated on over the course of developing multiple websites. It offers much more customizability to try and help users as much as possible. Aside from building an accessible website using ARIA and best practices, it was important to me that users had some level of customization to better tweak the website to their needs. Using localStorage I was able to keep the users’ preferences for the next time they navigated to PixelPulse.</p>
-            <div class="screenshot-container">
-                <img src="assets/pixelpulse-screen2.png" alt="Explore page">
-                <img src="assets/pixelpulse-screen3.png" alt="Login page">
-                <img src="assets/pixelpulse-screen4.png" alt="Accessibility menu">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Back to top button_____________________-->
-    <div class="progress hide-on-start hide-btt-btn">
-        <span class="progress-value hide-btt-btn">
-            <img src="assets/arrow.png">
-        </span>
-    </div>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Footer_____________________-->
-    <footer>
-        <p class="email-link">Send me an email at <a href="mailto:kylejussab@gmail.com"> kylejussab@gmail.com</a></p>
-        
-        <ul class="social-links" aria-label="social media links">
-            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
-            <!-- <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a> -->
-            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
-            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
-            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#next-game">Next Project</a></li>
         </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>PixelPulse</h1>
+            <p class="intro-subheading">View and Share Coding Sketches - September 2023</p>
+
+            <img src="assets/PixelPulse Cover Art.png">
+
+            <a href="https://github.com/riccovi/asp-team54" target="_blank" class="external-link">
+                <p>View on Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <div class="intro-info" id="overview">
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>Designed to meet the lack of helpful resources available to UoL Computer Science, PixelPulse aims to serve as both inspiration (project based modules) and revision (theory based modules). Users can create an account, log in, and post their p5js sketches. Users can also like and comment on others’ posts. After extensive research ASP Team 54 found a lack of interactive educational resources and after multiple user tests we assured our assumptions that this is a product students would benefit from!</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>Retrospective</h3>
+                    <p>The first meaningful team project I’ve been a part of. It was fun to add game elements to a web application and have a significant influence on the look and feel of this project. The team definitely wasn’t perfect, but we all fostered an environment of trust and honest work. We all grew with this application, learning along the way, keeping a schedule, and documenting all our progress. Seeing my visual design skills improve with this project compared to previous projects, and noticing my current design skills being better than they were when I did PixelPulse, is very motivating. I see tangible evidence of my growth as a creator and a designer. And though it can’t technically be seen, I’m getting much better as a programmer as well.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Programming:</h3>
+                    <p>- Developed high-fidelity interactive prototype to visualize app functionality and design, facilitating stakeholder feedback for iterative design.</p>
+                    <p>- Developed the user interface (UI) of the final project, creating a visually appealing and user-friendly interface aligned with market research and stakeholder expectations, achieving a SUS score of 82.5.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Conducted extensive market research to understand target audience needs and preferences, analyzing trends and user expectations from indirect competitors such as social media platforms and coding sites.</p>
+                    <p>- Organized and maintained project-related documentation as the document coordinator, ensuring accessibility and consistency for the team.</p>
+                    <p>- Managed project milestones in Trello, tracked progress, and ensured adherence to established timelines, facilitating effective team focus and deadline management.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>HTML, CSS, JavaScript, SQLite3, Node.js</p>
+                </div>
+            </div> 
+    </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="programming">
+            <div></div>
+            <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>Make it look pretty</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">With what I know, and what others don't.</p>
+            <div>
+                <p>My CSS skills were growing after the two prior web development classes I took. I found that CSS and JS were the more entertaining parts of building the website. Fortunately for me, the rest of the team was more comfortable with backend development, which gave me the platform to grow my skills even further.</p>
+                <p>This project was a place to experiment. I could have used libraries or frameworks that would make the process a lot easier, but I have a mindset of learning the core of it. Yes, you don’t need to reinvent the wheel, but that doesn’t mean having the knowledge of how to make the wheel is a bad thing. I think having a strong foundation in the most basic languages and techniques enables me to learn new frameworks much better and faster. While it’s impossible to be proficient at everything, I would like to make the process of learning something new much more streamlined and effective.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>Keep it modern</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Minimal and accessible.</p>
+            <div>
+                <p>The aesthetic was made as minimal as possible, mimicking that of popular social media platforms. This was done for familiarity; we found that users were used to a specific layout and style and if we differed from that too much it wouldn’t have the social media feel.</p>
+                <p>All decisions were made with feedback from our stakeholders. As a team we conducted multiple user surveys and tests to which I iterated on. No decision was made without taking into consideration our extensive research and our user responses.</p>
+                <p>Accessibility was a very important feature that I pushed to add. The accessibility menu is something I’ve iterated on over the course of developing multiple websites. It offers much more customizability to try and help users as much as possible. Aside from building an accessible website using ARIA and best practices, it was important to me that users had some level of customization to better tweak the website to their needs. Using localStorage I was able to keep the users’ preferences for the next time they navigated to PixelPulse.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-pixelpulse">
+            <div class="tloubty-section-six">
+                <img src="assets/pixelpulse-screen2.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="next-game">
+            <div></div>
+            <p>NEXT PROJECT</p>
+        </div>
+    </div>
+
+    <div class="games-content">
+        <div class="card-border" id="next-game-card">
+            <a href="https://kylejussab.com/djapplication">
+                <div class="card-container">
+                    <div class="card-content">
+                        <h2>DJ Application <span>JUCE, C++</span></h2>
+                        <img src="assets/arrow-right.svg" class="card-arrow">
+                        <p class="card-heading-subtext">Built with the JUCE Framework - March 2023</p>
+                        <p class="card-description">Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.</p>
+                        <div class="card-image"><img src="assets/DJ Application.png" alt="The GUI of my DJ application"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on June 9, 2024, 11:27 PM PST</p>
+        </div>
     </footer>
-    <!--______________________________________________________________________-->
 </body>
 </html>

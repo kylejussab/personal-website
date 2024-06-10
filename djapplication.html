@@ -4,152 +4,172 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/djapplication.css">
-    <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/nav-button.js" defer ></script>
-    <script src="scripts/backtotop.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
     <title>Kyle Jussab - DJ Application</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
-<body>
-    <!--_____________________Navigation Bar_____________________-->
-    <header class="header-bar">
-        <a href="https://kylejussab.com/"><div class="home-icon">
-            <img src="assets/left-arrow.png">
-        </div></a>
-
-        <div class="nav-toggle">
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
-            <label for="games">Games</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
-            <label for="projects">Projects</label>
-
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
-            <label for="stories">Stories</label>            
-    
-            <div class="selector">&nbsp;</div>
-        </div>
-
-        <!-- Looks for id of primary navigation -->
-        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
-                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                </path>
-                <defs>
-                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#800080"/>
-                    <stop offset="100%" stop-color="#FFC0CB"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </button>
-
-        <nav class="primary-navigation hide-on-start" id="primary-navigation">
-            <ul aria-label="Primary" class="nav-list">
-                <a href="https://kylejussab.com/">
-                    <li class="nav-option">
-                        <img src="assets/home.png">
-                        <p>Home</p>
-                    </li>
-                </a>
-
-                <a href="https://kylejussab.com/about">
-                    <li class="nav-option">
-                        <img src="assets/about.png">
-                        <p>About</p>
-                    </li>
-                </a>
-
-                <a href="assets/resume.pdf" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/resume.png">
-                        <p>Resume</p>
-                    </li>
-                </a>
-
-                <a href="https://github.com/kylejussab" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/github-icon.png">
-                        <p>Github</p>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+<body id="djapplication">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
     </header>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________Introduction_____________________-->
-    <section class="content-container introduction-container">
-        <div class="content">
-            <div class="video-container">
-                <img src="assets/DJ Application Cover Art.png" class="cover-art">
-                <p>View my DJ Application on <a href="https://github.com/kylejussab/DJ-Application" class="download-link" target="_blank">Github</a></p>
-            </div>
-            <div class="icon-container">
-                <img src="assets/c++.png" class="card-icon">
-                <img src="assets/apple.png" class="card-icon">
-            </div>
-            <h1 class="main-heading">DJ Application</h1>
-            <p class="intro-subheading">Built with the JUCE framework - 2022</p>
-            <p>A user-friendly DJ application designed for effortless audio manipulation. With a straightforward graphical user interface, the DJ application empowers users to seamlessly blend audio from two decks (expandable for more) simultaneously, unleashing a spectrum of creative possibilities. Users can intuitively cue tracks, create loops with precision, fine-tune audio using high pass filters, and conveniently store their music library in local storage. This application simplifies the art of DJing, making it accessible and enjoyable for both novices and experienced DJs, offering a wide array of features for audio mixing and music exploration.</p>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Role_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">Role and responsibility</h2>
-            <p>As the sole developer on this project, I was responsible for the following:<br><br>
-                1. Development: As the sole developer, I was responsible for the entire development process of the DJ application. This included the implementation of all functionalities, user interface design, and integration with the JUCE framework, following the assignment's requirements and guidelines.<br><br>
-                2. C++ Programming: I played a central role in coding the application using the C++ programming language. This involved creating the core logic and functionality for audio manipulation, including the addition of high and low pass filters, as well as playback controls, providing a range of creative tools for users. Additionally, I programmed data persistence for the song library section of the application, allowing users to save and organize their music library efficiently, ensuring the availability of their music selections across sessions.<br><br>
-                3. Quality Assurance and Testing: I conducted rigorous testing and quality assurance procedures to ensure the application's stability and functionality. This included extensive testing of various features, deck functionality, and overall performance to meet the assignment's criteria, resulting in a reliable application.<br><br>
-                4. User Interface: I dedicated efforts to refining the graphical user interface (GUI) to ensure it was user-friendly, intuitive, and visually engaging. I focused on creating an interface that facilitated seamless interaction for users, enhancing their overall experience with the DJ application.
-            </p>
-            <div class="screenshot-container">
-                <img src="assets/djapplication-screen1.png" alt="Main.cpp code file">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Design_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">The design</h2>
-            <p>The DJ application I created features a design that mirrors the appearance of real DJ setups and professional DJ applications. It revolves around two decks, each equipped with a set of controls. These decks include graphical records that animate as songs play, providing an authentic DJ experience. A seek-able waveform display offers precise control over music playback. It was important for the application to feel intuitive to beginner and experienced DJs.</p>
-            <p>Playback controls, volume adjustments, and high or low pass filters are seamlessly integrated into each deck, ensuring that sound manipulation tools are easily accessible to DJs. Below the decks, a unified song library simplifies music management, allowing users to search, filter, and organize their music effortlessly. The design focuses on user-friendliness and a familiar layout to ensure that the focus is only on audio manipulation.</p>
-            <div class="screenshot-container">
-                <img src="assets/djapplication-screen2.png" alt="Shows one track playing">
-                <img src="assets/djapplication-screen3.png" alt="Shows two tracks playing simultaneously">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Back to top button_____________________-->
-    <div class="progress hide-on-start hide-btt-btn">
-        <span class="progress-value hide-btt-btn">
-            <img src="assets/arrow.png">
-        </span>
-    </div>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Footer_____________________-->
-    <footer>
-        <p class="email-link">Send me an email at <a href="mailto:kylejussab@gmail.com"> kylejussab@gmail.com</a></p>
-        
-        <ul class="social-links" aria-label="social media links">
-            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
-            <!-- <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a> -->
-            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
-            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
-            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#next-game">Next Project</a></li>
         </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>DJ Application</h1>
+            <p class="intro-subheading">Built with the JUCE Framework - March 2023</p>
+
+            <img src="assets/DJ Application.png">
+
+            <a href="https://github.com/kylejussab/DJ-Application" target="_blank" class="external-link">
+                <p>View on Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <div class="intro-info" id="overview">                
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>A user-friendly DJ application designed for effortless audio manipulation. With a straightforward graphical user interface, the DJ application empowers users to seamlessly blend audio from two decks (expandable for more) simultaneously, unleashing a spectrum of creative possibilities. Users can intuitively cue tracks, create loops with precision, fine-tune audio using high pass filters, and conveniently store their music library in local storage. This application simplifies the art of DJing, making it accessible and enjoyable for both novices and experienced DJs, offering a wide array of features for audio mixing and music exploration.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>Retrospective</h3>
+                    <p>A project that impressed many of my peers, which is interesting because it wouldn’t have been the one I felt would be the most impressive to others. That being said, it was my first C++ project, and it did nothing less than show me how much I prefer C++ over the languages I had been learning prior. Was the transition from JavaScript hard? A little, but C++ has become my default language when I code something to solve a small problem. An interpreted language would be faster, but starting it in C++ means I could continue the project if I wanted to. I didn’t find this project hard at all; I loved every minute of it, and this is probably the point at which my coding became a lot more elegant, meaningful, and professional.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Programming:</h3>
+                    <p>- Created core logic for audio manipulation, including high and low pass filters, playback controls, and data persistence for the song library.</p>
+                    <p>- Conducted rigorous testing and quality assurance procedures to ensure application stability and functionality, meeting assignment criteria.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Designed the layout and general style of the application, making it user friendly and intuitive.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>JUCE, C++</p>
+                </div>
+            </div> 
+    </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="programming">
+            <div></div>
+            <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>Functionality > Appearance</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Avoiding novelity.</p>
+            <div>
+                <p>Though I made this application as aesthetically pleasing as possible, it was very important to me that it worked exactly as you would expect it to. I wanted it to be something DJs could use if they wanted to. Although the application is very limited in its current state, its features are useful to its users. Saving a song library isn’t the most flashy feature, but it is one of the most important ones.</p>
+                <p>Built on the principles of OOP, this project is extremely modular and adaptable. Adding new decks is easy, and adding new features is just as straightforward. This modularity will eventually be useful in personalizing and creating a “setup” for future users.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-djapplication">
+            <div class="tloubty-section-three">
+                <img src="assets/djapplication-screen1.png">
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>An aesthetic application</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Making it useful and usable.</p>
+            <div>
+                <p>The DJ application I created features a design that mirrors the appearance of real DJ setups and professional DJ applications. It revolves around two decks, each equipped with a set of controls. These decks include graphical records that animate as songs play, providing an authentic DJ experience. A seek-able waveform display offers precise control over music playback. It was important for the application to feel intuitive to beginner and experienced DJs.</p>
+                <p>Playback controls, volume adjustments, and high or low pass filters are seamlessly integrated into each deck, ensuring that sound manipulation tools are easily accessible to DJs. Below the decks, a unified song library simplifies music management, allowing users to search, filter, and organize their music effortlessly. The design focuses on user-friendliness and a familiar layout to ensure that the focus is only on audio manipulation.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-djapplication">
+            <div class="tloubty-section-three">
+                <img src="assets/djapplication-screen2.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="next-game">
+            <div></div>
+            <p>NEXT PROJECT</p>
+        </div>
+    </div>
+
+    <div class="games-content">
+        <div class="card-border" id="next-game-card">
+            <a href="https://kylejussab.com/musicvisualizer">
+                <div class="card-container">
+                    <div class="card-content">
+                        <h2>Music Visualizer <span>p5.js, JavaScript</span></h2>
+                        <img src="assets/arrow-right.svg" class="card-arrow">
+                        <p class="card-heading-subtext">Built with the p5.js Framework - September 2022</p>
+                        <p class="card-description">Created a range of creative audio visualizations, including one that utilizes the built in camera. All visualizations react to the music being played.</p>
+                        <div class="card-image"><img src="assets/Music Visualizer.png" alt="A visualizer from the music visualizer application"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on June 9, 2024, 11:27 PM PST</p>
+        </div>
     </footer>
-    <!--______________________________________________________________________-->
 </body>
 </html>

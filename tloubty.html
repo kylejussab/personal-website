@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
+    <title>Kyle Jussab - The Last of Us: Between The Years</title>
+    <link rel="icon" href="assets/Icon_V2_Transparent.png">
+</head>
+
+<body id="thelastofusbty">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
+    </header>
+
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#next-game">Next Game</a></li>
+        </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>The Last of Us: Between The Years</h1>
+            <p class="intro-subheading">Side Scroller / Action / Adventure - June 2024</p>
+
+            <img src="assets/The Last of Us Between The Years Page Cover.png">
+
+            <a href="https://kylejussab.itch.io/tloubty" target="_blank" class="external-link">
+                <p>Play The Last of Us: Between The Years on itch.io</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <div class="intro-info" id="overview">
+                <div class="intro-info-section">
+                    <h3>Disclaimer</h3>
+                    <p>This is a fan-made game set within the universe of The Last of Us, developed independently by Kyle Jussab. This project is not affiliated with or endorsed by Naughty Dog, the creators of The Last of Us franchise. I do not claim ownership of any intellectual property belonging to Naughty Dog, including characters, settings, or storyline elements. This game is created out of admiration for the original work and is intended as a non-commercial, fan-made tribute. I do not seek to profit from the use of Naughty Dog's intellectual property. All trademarks and copyrights pertaining to The Last of Us belong to their respective owners.</p>
+                </div>
+                    
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>The Last of Us: Between The Years takes place in the 20 years following Sarah's death and before the main events of the first game. It delves into Joel's character during this period and his grieving process. Explore the relationships Joel forms during this time and uncover some unexpected secrets hidden within the universe of The Last of Us. This game does not contain any spoilers for the main storyline of Part 1 or Part 2.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Gameplay Programming:</h3>
+                    <p>- Developed a combat system allowing players to switch through multiple weapons, craft medkits, and dash through enemies.</p>
+                    <p>- Created an upgrade system letting players enhance Joel's abilities and weapons using pills and parts.</p>
+                    <p>- Implemented a comprehensive collectible system.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Developed storyline, characters, dialogue, and levels.</p>
+                    <p>- Created character and environment artwork.</p>
+                    <p>- Conducted compatibility testing on official hardware.</p>
+                    <p>- Performed playtesting and bug testing, adjusting game balance accordingly.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>GB Studio, GBVM</p>
+                </div>                
+            </div>
+            
+    </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="programming">
+            <div></div>
+            <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>A new engine and scripting language</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">GB Studio and GBVM.</p>
+            <div>
+                <p>Being familiar with Unity and the C language, I built this game in GB Studio, a visual scripting engine that uses its own GBVM scripting language (built on C). My prior skills allowed me to adjust and adapt to the new engine and language with ease, enabling me to expand my skill set and adapt to a new tool for bringing this unique vision to life. I embraced the opportunity to learn and master GBVM, ensuring that the game's mechanics, dialogue, and interactions were seamlessly integrated into the GameBoy experience.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-tloubty">
+            <div class="tloubty-section-three">
+                <img src="assets/tloubty 8.png">
+            </div>
+        </div>
+
+        <div class="game-sub-block">
+            <p class="block-heading">The gameplay experience.</p>
+            <div>
+                <p>The code consists of mixes of GBVM and visual scripting. Reusable "functions" were placed into scripts and SoC was catered to as much as possible in the attempt to maintain object-oriented principles. The limitations of the hardware and engine made keeping a clean code structure challenging, but it was a rewarding task.</p>
+                <p>Programming the combat system involved adding the change in cycles from "down" and "up". The player has 3 weapons (0, 1, 2), and pressing down cycles through them. The player has 3 useables (3, 4, 5) and pressing up cycles through them. Depending on the weapon you have equipped, your action button reacts accordingly.</p>
+                <p>All other programming tasks, such as character interactions, dialogue implementation, and item upgrades, used the same combination of visual scripting and GBVM. This consistent approach allowed me to integrate all gameplay elements seamlessly, making an entertaining and engaging GameBoy experience.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-tloubty">
+            <div class="tloubty-section-four">
+                <img src="assets/tloubty 9.png">
+                <img src="assets/tloubty 10.png">
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>It must feel like The Last of Us</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Demaking and genre flipping.</p>
+            <div>
+                <p>"What if The Last of Us was on the GameBoy?" That question sparked my imagination. It sounded intriguing yet challenging—taking one of the best modern third-person narrative games and squeezing it onto a GameBoy cartridge. It had to be done.</p>
+                <p>With the GameBoy being over 20 years old, the fundamental style of the game had to change. Making it a sidescroller was not only the more limiting option but also turning a narrative story into a game with platformer mechanics was going to be an uphill battle in unknown territory. That’s exactly why I did it.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-tloubty">
+            <div class="tloubty-section-one">
+                <img src="assets/tloubty 1.png">
+                <img src="assets/tloubty 2.png">
+            </div>
+        </div>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Stay true to the original.</p>
+            <div>
+                <p>For this to work, Joel had to feel and sound like Joel. I meticulously crafted the dialogue, ensuring the tone and cadence of each character came through in GameBoy form. I included familiar characters from the lore who would have been around at that time, such as Marlene, Tess, and Tommy.</p>
+                <p>The mechanics had to match as closely as possible. With stealth stripped out, the game needed to retain as much of the original's feel as possible. Cinematic cutscenes are present, resources are still scarce, and Joel can upgrade his weapons and himself. He can craft medkits and trap mines, use a variety of weapons, and stun a clicker with a brick.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-tloubty">
+            <div class="tloubty-section-two">
+                <img src="assets/tloubty 3.png">
+                <img src="assets/tloubty 4.png">
+                <img src="assets/tloubty 5.png">
+            </div>
+        </div>
+
+        <div class="game-sub-block">
+            <p class="block-heading">A unique standalone.</p>
+            <div>
+                <p>I didn’t want to demake one of the already established games. Not only would it not be as good as the original, but players would also know exactly what to expect. I wanted to create a whole new unique story, something that could be played without needing to experience Part 1 or 2. Something that could potentially aid in the lore and world-building already established. I set the game during a time period we’re aware of—Joel’s questionable past, we know “he’s been on both sides,” and that he doesn't like to talk about his grieving process but that’s all we know. Why not explore that further? Why not play through it?</p>
+                <p>In the process, I added new characters, new storylines, and new enemy types. Getting the balance of new and original was what I felt would make the game fun to play. At the end of the day, I love this franchise, I’m one of its biggest fans, and I’m a creator. Combining all of those into one to give a 'Last of Us' experience in a personal way was the goal.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-tloubty">
+            <div class="tloubty-section-one">
+                <img src="assets/tloubty 6.png">
+                <img src="assets/tloubty 7.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="feedback">
+            <div></div>
+            <p>FEEDBACK</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <div class="feedback-container">
+            <div class="feedback-border">
+                <div class="feedback-comment">
+                    <div class="feedback-name">
+                        <img src="assets/user icon.svg">
+                        <p>Peter Gend (Game Design Professor)</p>
+                    </div>
+                    <p>This is fantastic [...] the game is great, the sheer amount of work is staggering [...] and it all works—that’s pretty impressive.</p>
+                </div>
+            </div>
+
+            <div class="feedback-border">
+                <div class="feedback-comment">
+                    <div class="feedback-name">
+                        <img src="assets/user icon.svg">
+                        <p>QA Tester</p>
+                    </div>
+                    <p>Naughty Dog just hire him already.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="next-game">
+            <div></div>
+            <p>NEXT GAME</p>
+        </div>
+    </div>
+
+    <div class="games-content">
+        <div class="card-border" id="next-game-card">
+            <a href="https://kylejussab.com/thearchitecthestia">
+                <div class="card-container">
+                    <div class="card-content">
+                        <h2>The Architect Hestia <span>Unity, C#</span></h2>
+                        <img src="assets/arrow-right.svg" class="card-arrow">
+                        <p class="card-heading-subtext">Third Person Shooter / Survival / Adventure - Coming soon</p>
+                        <p class="card-description">Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.</p>
+                        <div class="card-image"><img src="assets/The Architect Hestia.png" alt="Elian crouched over"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on June 9, 2024, 11:27 PM PST</p>
+        </div>
+    </footer>
+</body>
+</html>

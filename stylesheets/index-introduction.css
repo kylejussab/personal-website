@@ -100,3 +100,28 @@
         text-align: right;
     }
 }
+
+@media only screen and (max-width: 514px) {
+    .introduction-container {
+        margin-top: 150px;
+        margin-bottom: 60px;
+    }
+
+    h1 {
+        font-size: 42px;
+    }
+
+    .main-heading {
+        font-size: 60px;
+        padding-left: 9px;
+        padding-right: 5px;
+    }
+
+    .introduction {
+        min-width: 370px;
+    }
+
+    .introduction-details {
+        font-size: 14px;
+    }
+}

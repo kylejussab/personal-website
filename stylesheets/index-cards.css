@@ -48,6 +48,14 @@
     overflow: hidden;
 }
 
+#next-game-card {
+    width: 70%;
+}
+
+#next-game-card .card-container {
+    width: inherit;
+}
+
 .card-container::before {
     content: '';
     position: absolute;
@@ -158,4 +166,62 @@
 
 .projects-content {
     display: none;
+}
+
+@media only screen and (min-width: 1100px) and (max-width: 1270px){
+    .card-border {
+        width: 900px;
+        height: 650px;
+    }
+
+    .card-container {
+        width: 884px;
+    }
+}
+
+@media only screen and (min-width: 785px) and (max-width: 1099px){
+    .card-border {
+        width: 700px;
+        height: 550px;
+    }
+
+    .card-container {
+        width: 684px;
+        height: 534px;
+    }
+}
+
+@media only screen and (max-width: 784px) {
+    .card-border {
+        width: 370px;
+        height: 360px;
+        margin-bottom: 30px;
+    }
+
+    .card-container {
+        width: 354px;
+        height: 346px;
+    }
+
+    .card-content h2 {
+        font-size: 16px;
+    }
+
+    .card-content p {
+        font-size: 12px;
+    }
+
+    .card-arrow {
+        top: 15px;
+        right: 15px;
+    }
+
+    .card-description {
+        margin-bottom: 30px;
+    }
+
+    .card-image {
+        padding-inline: 10px;
+        transition: transform .3s ease-in-out;
+    }
 }

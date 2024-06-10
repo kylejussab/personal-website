@@ -4,151 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/itp1project.css">
-    <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/nav-button.js" defer ></script>
-    <script src="scripts/backtotop.js" defer ></script>
-    <script src="scripts/itp1-game/p5.min.js" defer ></script>
-    <script src="scripts/itp1-game/p5.sound.min.js" defer ></script>
-
-    <script src="scripts/itp1-game/sketch.js" defer ></script>
-    <script src="scripts/itp1-game.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
     <title>Kyle Jussab - ITP1 Project</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
-<body>
-    <!--_____________________Navigation Bar_____________________-->
-    <header class="header-bar">
-        <a href="https://kylejussab.com/"><div class="home-icon">
-            <img src="assets/left-arrow.png">
-        </div></a>
-
-        <div class="nav-toggle">
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
-            <label for="games">Games</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
-            <label for="projects">Projects</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
-            <label for="stories">Stories</label>
-
-            <div class="selector">&nbsp;</div>
-        </div>
-
-        <!-- Looks for id of primary navigation -->
-        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
-                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                </path>
-                <defs>
-                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#800080"/>
-                    <stop offset="100%" stop-color="#FFC0CB"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </button>
-
-        <nav class="primary-navigation hide-on-start" id="primary-navigation">
-            <ul aria-label="Primary" class="nav-list">
-                <a href="https://kylejussab.com/">
-                    <li class="nav-option">
-                        <img src="assets/home.png">
-                        <p>Home</p>
-                    </li>
-                </a>
-
-                <a href="https://kylejussab.com/about">
-                    <li class="nav-option">
-                        <img src="assets/about.png">
-                        <p>About</p>
-                    </li>
-                </a>
-
-                <a href="assets/resume.pdf" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/resume.png">
-                        <p>Resume</p>
-                    </li>
-                </a>
-
-                <a href="https://github.com/kylejussab" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/github-icon.png">
-                        <p>Github</p>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+<body id="itp1">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
     </header>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________Introduction_____________________-->
-    <section class="content-container introduction-container">
-        <div class="content">
-            <div class="game-container game-mobile"><p>If you see this text that means your display is not big enough to play the game. Please switch to a larger display or increase your browser window size.</p></div>
-            <div class="game-container game-normal"><div id="game-window"></div></div>
-            <div class="game-normal"><p>A playable version of my game!</p></div>
-            <div class="icon-container">
-                <img src="assets/p5js.png" class="card-icon">
-                <img src="assets/js.png" class="card-icon">
-            </div>
-            <h1 class="main-heading">ITP1 Project</h1>
-            <p class="intro-subheading">2D Platformer</p>
-            <p>This module introduced us to the javascript library p5.js, and the students were set out to design a 2D side scrolling platformer. Getting the bare pieces of code down for character movement and side scrolling, I knew that I wanted to get this game to look as polished as possible (despite not using a game engine). The project requirement felt more of a demonstration of constructor classes for platforms, collectibles and enemies and less of a game. My love of game development shined through this project, and all my efforts were rewarded by scoring 98% in the module overall.</p>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Role_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">Role and responsibility</h2>
-            <p>Being the only developer on this project, I was responsible for all of the coding, artwork and level design. Matter.js was not used during this project, so I implemented my own form of gravity, using velocity and acceleration to get a variable speed. All of the artwork was designed in Adobe Illustrator including the main character, game over and tutorial screens, the ability cells and the enemies. I designed the entire level with huge inspiration from levels in Super Mario Bros U.</p>
-            <div class="screenshot-container">
-                <img src="assets/itp1-screen3.png" alt="Game character firing projectile towards enemy">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Design_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">The design</h2>
-            <p>The fact I couldn't animate the character walking, forced me to make a creative decision on the game which led to the theme of the game. You play as a mythical character, who collects energy cells, and can gain abilities from specialised cells. The idea being, you are granted your powers as you play, and at the start of each level you would be stripped of your powers. The more explorative you are, the more tools you have at your disposal. In the one and only level your two abilities are double jump and firing projectiles. You can beat the level without the power ups, but having them makes it easier. It also let me get around that walking animation issue, and let me say the character moves around by gliding with their "magical powers".</p>
-            <p>I wanted to cover as many bases as I could. Video games don't just throw you in the deep end and expect you to know how to play. Adding tutorials was a very important addition, though small in it's implementation, you were guided through each ability and energy cell you picked up, as well as how to use your new powers.</p>
-            <p>Mario games are very good at introducing a mechanic to you, and letting you progressively get better at using them. In the short level I designed, I tried to adhere to those rules, giving the player easier and safer jumps in the beginning, but as they progress their skills are tested, with progressively harder and challenging situations.</p>
-            <div class="screenshot-container">
-                <img src="assets/itp1-screen2.png" alt="Showing tutorial for picking up energy cells">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Back to top button_____________________-->
-    <div class="progress hide-on-start hide-btt-btn">
-        <span class="progress-value hide-btt-btn">
-            <img src="assets/arrow.png">
-        </span>
-    </div>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Footer_____________________-->
-    <footer>
-        <p class="email-link">Send me an email at <a href="mailto:kylejussab@gmail.com"> kylejussab@gmail.com</a></p>
-        
-        <ul class="social-links" aria-label="social media links">
-            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
-            <!-- <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a> -->
-            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
-            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
-            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#design">Design</a></li>
         </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>ITP1 Project</h1>
+            <p class="intro-subheading">2D Platformer - September 2021</p>
+
+            <img src="assets/itp1project.png">
+
+            <div class="intro-info" id="overview">
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>This module introduced us to the javascript library p5.js, and the students were set out to design a 2D side scrolling platformer. Getting the bare pieces of code down for character movement and side scrolling, I knew that I wanted to get this game to look as polished as possible (despite not using a game engine). The project requirement felt more of a demonstration of constructor classes for platforms, collectibles and enemies and less of a game. My love of game development shined through this project, and all my efforts were rewarded by scoring 98% in the module overall.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>Retrospective</h3>
+                    <p>The very first coding project I undertook just happened to be a video game. It contains the most unreadable, inefficient code I’ve probably written to date, yet it’s arguably my favorite. The mentality I had during this project is something I wish to carry forward. It wasn’t about being efficient; it was about making a game. As I’ve grown as a programmer, I’ve become hyper-fixated on being elegant with my solutions, which has sometimes overcomplicated problems and caused me to spend way too much time on trivial issues. This version of myself didn’t even know what efficiency was; I wanted power-ups and used the first method that came to mind to get it done. And hey, it led to a game where I added every single feature I wanted to add, and it all works. At the end of the day, the code served its purpose well, and that’s what matters in the grand scheme of things.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Gameplay Programming:</h3>
+                    <p>- Implemented custom gravity using velocity and acceleration for variable speed.</p>
+                    <p>- Created multiple systems such as collision, collectible, and power-up.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Created all artwork in Adobe Illustrator, including main character, game over and tutorial screens, ability cells, and enemies.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>p5.js, JavaScript</p>
+                </div>
+            </div> 
+    </section>  
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>A statement of intent</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">More with less.</p>
+            <div>
+                <p>In response to the inability to animate the character walking, a creative decision was made to shape the game's theme. Players take on the role of a mythical character who collects energy cells, gaining abilities from specialized cells as they progress. Each level begins with the character stripped of powers, which are gradually regained through exploration. Within the singular level, two abilities, double jump and projectile firing, are available, enhancing gameplay but not essential for completion. This creative workaround also explains character movement as gliding with magical powers.</p>
+                <p>To ensure player understanding and engagement, tutorials were integrated into the game. These tutorials systematically guide players through each new ability and energy cell they encounter, as well as instruct them on utilizing acquired powers effectively. Drawing inspiration from the Mario series, level design focused on gradually introducing and challenging players with new mechanics. The level starts with simpler and safer challenges, progressively ramping up in difficulty to test and improve player skills over time.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-itp1">
+            <div class="tloubty-section-three">
+                <img src="assets/itp1-screen3.png">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on June 8, 2024, 9:58 PM PST</p>
+        </div>
     </footer>
-    <!--______________________________________________________________________-->
 </body>
 </html>

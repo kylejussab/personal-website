@@ -1,8 +1,17 @@
 let gameData = [
     {
+        "techStack": "GB Studio, GBVM",
+        "image": "assets/The Last of Us Between The Years.png",
+        "alt": "Joel looking in the distance",
+        "title": "The Last of Us: Between The Years",
+        "subtitle": "Side Scroller / Action / Adventure - June 2024",
+        "description": "This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game.",
+        "link": "https://kylejussab.com/tloubty"
+    },
+    {
         "techStack": "Unity, C#",
         "image": "assets/The Architect Hestia.png",
-        "alt": "C Sharp code",
+        "alt": "Elian crouched over",
         "title": "The Architect Hestia",
         "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
         "description": "Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.",
@@ -11,7 +20,7 @@ let gameData = [
     {
         "techStack": "Unity, C#",
         "image": "assets/Project Phoebe.png",
-        "alt": "C Sharp code",
+        "alt": "A ball on a tower",
         "title": "Project Phoebe",
         "subtitle": "Third Person Platformer / Puzzler - April 2023",
         "description": "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.",

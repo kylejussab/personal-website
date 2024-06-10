@@ -4,174 +4,124 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/musicvisualizer.css">
-    <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/nav-button.js" defer ></script>
-    <script src="scripts/backtotop.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
     <title>Kyle Jussab - Music Visualizer</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
 
-<body>
-    <!--_____________________Navigation Bar_____________________-->
-    <header class="header-bar">
-        <a href="https://kylejussab.com/"><div class="home-icon">
-            <img src="assets/left-arrow.png">
-        </div></a>
-
-        <div class="nav-toggle">
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
-            <label for="games">Games</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
-            <label for="projects">Projects</label>
-
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Stories" class="stories" id="stories" autocomplete="off">
-            <label for="stories">Stories</label>
-    
-            <div class="selector">&nbsp;</div>
-        </div>
-
-        <!-- Looks for id of primary navigation -->
-        <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-            <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
-                <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                    d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                </path>
-                <defs>
-                    <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                    <stop offset="0%" stop-color="#800080"/>
-                    <stop offset="100%" stop-color="#FFC0CB"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-        </button>
-
-        <nav class="primary-navigation hide-on-start" id="primary-navigation">
-            <ul aria-label="Primary" class="nav-list">
-                <a href="https://kylejussab.com/">
-                    <li class="nav-option">
-                        <img src="assets/home.png">
-                        <p>Home</p>
-                    </li>
-                </a>
-
-                <a href="https://kylejussab.com/about">
-                    <li class="nav-option">
-                        <img src="assets/about.png">
-                        <p>About</p>
-                    </li>
-                </a>
-
-                <a href="assets/resume.pdf" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/resume.png">
-                        <p>Resume</p>
-                    </li>
-                </a>
-
-                <a href="https://github.com/kylejussab" target="_blank">
-                    <li class="nav-option">
-                        <img src="assets/github-icon.png">
-                        <p>Github</p>
-                    </li>
-                </a>
-            </ul>
-        </nav>
+<body id="musicvisualizer">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
     </header>
-    <!--______________________________________________________________________-->
 
-    <!--_____________________Introduction_____________________-->
-    <section class="content-container introduction-container">
-        <div class="content">
-            <div class="video-container">
-                <img src="assets/Music Visualizer Cover Art.png" class="cover-art">
-                <p>View my Music Visualizer on <a href="https://github.com/kylejussab/music-visualizer" class="download-link" target="_blank">Github</a></p>
-            </div>
-            <div class="icon-container">
-                <img src="assets/p5js.png" class="card-icon">
-                <img src="assets/js.png" class="card-icon">
-            </div>
-            <h1 class="main-heading">Music Visualizer</h1>
-            <p class="intro-subheading">Built with the p5.js Framework - September 2022</p>
-            <p>An application made to explore creative ways of visualizing music, and giving users an appealing way of looking at waveforms in many conventional and unconventional ways.</p>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Role_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">Role and responsibility</h2>
-            <p>As the sole developer on this project, I was responsible for the following:<br><br>
-                1. Application Development:
-                <ul>
-                    <li>Developed the music visualizer application using p5.js, ensuring compatibility with various browsers and devices.</li>
-                    <li>Designed and implemented a variety of unique visualizations to enhance the user experience.</li>
-                    <li>Created a modular structure for the application to facilitate ease of maintenance and future updates.</li>
-                </ul>
-            </p>
-            <p>2. Audio and Playback Control:
-                <ul>
-                    <li>Integrated audio playback and control features, enabling users to loop, scrub through tracks, and select specific tracks within the application.</li>
-                </ul>
-            </p>
-            <p>3. Usability Testing:
-                <ul>
-                    <li>Planned the project's timeline and milestones using a Gantt Chart to ensure a structured development process.</li>
-                    <li>Conducted usability testing with end users upon project completion.</li>
-                    <li>Designed a usability form for users to test and provide feedback on the application's features and functionality.</li>
-                </ul>
-            </p>
-            <p>4. Customization and Unique Visualizations:
-                <ul>
-                    <li>Focused on providing users with the ability to customize visualizations, adding a layer of personalization to the app.</li>
-                    <li>Leveraged creative skills to develop distinctive and engaging visualizations that set the application apart.</li>
-                </ul>
-            </p>
-            <div class="screenshot-container">
-                <img src="assets/musicvisualizer-screen1.png" alt="Ridge Plot visualization">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Design_____________________-->
-    <section class="content-container">
-        <div class="content">
-            <h2 class="main-heading">The design</h2>
-            <p>In creating this music visualizer application, I had two primary objectives in mind. First, I aimed for it to have a sleek, music-player-like appearance, reminiscent of platforms like Spotify. I wanted it to look and feel like a natural extension, something that could easily be integrated as a feature.</p>
-            <p>Secondly, I placed a strong emphasis on customizability. I wanted users to have the freedom to personalize their visualizations, allowing them to make it uniquely their own. Each visualization comes with a range of customizable features.</p>
-            <p>Overall, the application was designed to strike a balance between practicality and aesthetics, ensuring it could seamlessly blend in with well-known music platforms like Spotify or Apple Music, rather than appearing overly complex. If I achieved my goals, the application shouldn’t look trivial.</p>
-            <div class="screenshot-container">
-                <img src="assets/musicvisualizer-screen2.png" alt="Camera visualization">
-                <img src="assets/musicvisualizer-screen3.png" alt="Shows customizable settings">
-                <img src="assets/musicvisualizer-screen4.png" alt="Artistic noise visualization">
-            </div>
-        </div>
-    </section>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Back to top button_____________________-->
-    <div class="progress hide-on-start hide-btt-btn">
-        <span class="progress-value hide-btt-btn">
-            <img src="assets/arrow.png">
-        </span>
-    </div>
-    <!--______________________________________________________________________-->
-
-    <!--_____________________Footer_____________________-->
-    <footer>
-        <p class="email-link">Send me an email at <a href="mailto:kylejussab@gmail.com"> kylejussab@gmail.com</a></p>
-        
-        <ul class="social-links" aria-label="social media links">
-            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank"><img src="assets/linkedin.png"></a>
-            <!-- <li><a href="https://kylejussab.itch.io/" target="_blank"><img src="assets/itch.png"></a> -->
-            <li><a href="https://github.com/kylejussab" target="_blank"><img src="assets/github.png"></a>
-            <li><a href="https://twitter.com/kylejussab" target="_blank"><img src="assets/twitter.png"></a>
-            <li><a href="https://www.instagram.com/kylejussab/" target="_blank"><img src="assets/instagram.png"></a>
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#design">Design</a></li>
         </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>Music Visualizer</h1>
+            <p class="intro-subheading">Built with the p5.js Framework - September 2022</p>
+
+            <img src="assets/Music Visualizer.png">
+
+            <a href="https://github.com/kylejussab/music-visualizer" target="_blank" class="external-link">
+                <p>View on Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <div class="intro-info" id="overview">                
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>An application made to explore creative ways of visualizing music, and giving users an appealing way of looking at waveforms in many conventional and unconventional ways.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>Retrospective</h3>
+                    <p>This project allowed me to explore creative solutions to problems. Though I don’t think I did everything as well as I could have, I appreciate the unintentional lessons coding this project taught me. This could be considered "creative coding"—it was exploratory, with a feature-first, code-later approach. That is a very fun and freeing way to build an application, but it also helps to think about the code ahead of time and plan the features more rigorously first. The only visualizer I’m really proud of is the ‘Trap Nation’ clone, which is understandable in hindsight because that’s the one I spent the most time on.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Programming:</h3>
+                    <p>- Integrated audio playback and control features, enabling loop, track scrubbing, and selection functionalities within the application.</p>
+                    <p>- Focused on customization options for users, offering personalized visualizations and leveraging creative skills for engaging user experiences.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Planned project timeline and milestones with Gantt Chart for structured development process.</p>
+                    <p>- Conducted usability testing with end users and designed usability form for feedback collection.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>p5.js, JavaScript</p>
+                </div>
+            </div> 
+    </section>  
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>Your music visualizer</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Making it yours.</p>
+            <div>
+                <p>In creating this music visualizer application, I had two primary objectives in mind. First, I aimed for it to have a sleek, music-player-like appearance, reminiscent of platforms like Spotify. I wanted it to look and feel like a natural extension, something that could easily be integrated as a feature.</p>
+                <p>Secondly, I placed a strong emphasis on customizability. I wanted users to have the freedom to personalize their visualizations, allowing them to make it uniquely their own. Each visualization comes with a range of customizable features.</p>
+                <p>Overall, the application was designed to strike a balance between practicality and aesthetics, ensuring it could seamlessly blend in with well-known music platforms like Spotify or Apple Music, rather than appearing overly complex. If I achieved my goals, the application shouldn’t look trivial.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-musicvisualizer">
+            <div class="tloubty-section-three">
+                <img src="assets/musicvisualizer-screen1.png">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on June 8, 2024, 9:58 PM PST</p>
+        </div>
     </footer>
-    <!--______________________________________________________________________-->
 </body>
 </html>

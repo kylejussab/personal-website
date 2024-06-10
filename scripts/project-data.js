@@ -1,5 +1,14 @@
 let projectData = [
     {
+        "techStack": "Python",
+        "image": "assets/The Last of Us Part 2.png",
+        "alt": "The homepage of the PixelPulse application",
+        "title": "The Last of Us Part 2",
+        "subtitle": "Just how good was The Last of Us Part 2? - January 2024",
+        "description": "An exploratory data analysis evaluating the 'success' of The Last of Us Part 2 using various metrics such as sales, reviews, and comparisons with similar games.",
+        "link": "https://kylejussab.com/tlou2analysis"
+    },
+    {
         "techStack": "HTML, CSS",
         "image": "assets/PixelPulse.png",
         "alt": "The homepage of the PixelPulse application",
@@ -7,15 +16,6 @@ let projectData = [
         "subtitle": "View and Share Coding Sketches - September 2023",
         "description": "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.",
         "link": "https://kylejussab.com/pixelpulse"
-    },
-    {
-        "techStack": "HTML, CSS, SQLite3",
-        "image": "assets/Microblogger.png",
-        "alt": "The homepage of my microblogger application",
-        "title": "Microblogger",
-        "subtitle": "A Gaming Microblog - September 2023",
-        "description": "A dynamic website for my gaming blogs. Used SQLite3 to store and retrieve relevant information. Improved the styling with vanilla CSS.",
-        "link": "https://kylejussab.com/microblogger"
     },
     {
         "techStack": "JUCE, C++",

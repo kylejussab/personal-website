@@ -1,0 +1,8 @@
+{
+    "editor.useTabStops": true,
+    "workbench.editor.showTabs": "single",
+    "workbench.editor.labelFormat": "short",
+    "workbench.editor.untitled.labelFormat": "content",
+    "breadcrumbs.filePath": "off",
+    "breadcrumbs.enabled": false
+}

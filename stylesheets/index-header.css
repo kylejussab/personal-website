@@ -210,25 +210,31 @@ label {
 
     overflow: hidden;
     transition: transform 500ms ease;
+    -webkit-transition: transform 500ms ease;
     cursor: pointer;
 }
 
 .nav-button:hover {
     transform: scale(0.9);
+    -webkit-transform: scale(0.9);
 }
 
 .nav-button .hamburger {
     transition: translate 1s, rotate 1s;
+    -webkit-transition: -webkit-translate 1s, -webkit-rotate 1s;
 }
 
 .nav-button[aria-expanded="true"] .hamburger {
     --button-color: url(#linear);
     translate: 2px -2px;
+    -webkit-translate: 2px -2px;
     rotate: .125turn;
+    -webkit-rotate: 0.125turn;
 }
 
 .nav-button .line {
     transition: 1s;
+    -webkit-transition: 1s;
     stroke-dasharray: 60 31 60 300;
 }
 
@@ -265,6 +271,8 @@ label {
     }
 
     .nav-button {
+        display: block;
+        padding: 0;
         margin: 0;
     }
 

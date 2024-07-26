@@ -10,7 +10,7 @@ let gameData = [
     },
     {
         "techStack": "Unity, C#",
-        "image": "assets/The Architect Hestia.png",
+        "image": "assets/tah2.png",
         "alt": "Elian crouched over",
         "title": "The Architect Hestia",
         "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
@@ -19,7 +19,7 @@ let gameData = [
     },
     {
         "techStack": "Unity, C#",
-        "image": "assets/Project Phoebe.png",
+        "image": "assets/ppwallpaper.png",
         "alt": "A ball on a tower",
         "title": "Project Phoebe",
         "subtitle": "Third Person Platformer / Puzzler - April 2023",

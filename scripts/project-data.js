@@ -1,8 +1,17 @@
 let projectData = [
+    // {
+    //     "techStack": "React Native, Supabase",
+    //     "image": "assets/Give Fund.png",
+    //     "alt": "A title screen showing the text Give Fund",
+    //     "title": "Give Fund",
+    //     "subtitle": "Built for the Snap Engineering Academy - August 2024",
+    //     "description": "A fundraising feature to help foster youth non-profits raise funds from Snap users, built off a mock up of the Snapchat App. Built in a cross-functional team of 7 and presented to over 300 Snap executives.",
+    //     "link": "https://kylejussab.com/givefund"
+    // },
     {
         "techStack": "Python",
         "image": "assets/The Last of Us Part 2.png",
-        "alt": "The homepage of the PixelPulse application",
+        "alt": "The promotional image for The Last of Us Part 2. I do not claim to own this image.",
         "title": "The Last of Us Part 2",
         "subtitle": "Just how good was The Last of Us Part 2? - January 2024",
         "description": "An exploratory data analysis evaluating the 'success' of The Last of Us Part 2 using various metrics such as sales, reviews, and comparisons with similar games.",

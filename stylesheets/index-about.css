@@ -228,23 +228,23 @@
 /** Media Queries **/
 @media only screen and (max-width: 784px) {
     .about-grid-container {
-        grid-template-columns: 98%;
+        grid-template-columns: 350px;
     }
       
     .grid-item {
-        width: 98%;
+        width: 350px;
     }
 
     .experience-container {
-        width: 98%;
+        width: 350px;
     }
     
     .about-heading {
-        width: 98%;
+        width: 350px;
     }
 
     .about-heading-container {
-        width: 98%;
+        width: 350px;
     }
 
     .about-content {
@@ -253,6 +253,14 @@
 
     .about-grid-container .grid-item:nth-child(odd) {
         height: 800px;
+    }
+
+    .achievement-card-border {
+        width: 350px;
+    }
+    
+    .achievement-card-container {
+        width: 340px;
     }
 }
 

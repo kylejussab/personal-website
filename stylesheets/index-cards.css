@@ -193,13 +193,13 @@
 
 @media only screen and (max-width: 784px) {
     .card-border {
-        width: 370px;
+        width: 350px;
         height: 360px;
         margin-bottom: 30px;
     }
 
     .card-container {
-        width: 354px;
+        width: 334px;
         height: 346px;
     }
 

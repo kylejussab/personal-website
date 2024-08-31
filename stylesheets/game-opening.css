@@ -10,6 +10,10 @@ body::before {
     z-index: -1;
 }
 
+#cpucity::before {
+    background: radial-gradient(circle at center, rgba(171, 96, 63, 0.4), rgba(171, 96, 63, 0) 70%);
+}
+
 #thelastofusbty::before {
     background: radial-gradient(circle at center, rgba(48, 104, 80, 0.4), rgba(48, 104, 80, 0) 70%);
 }

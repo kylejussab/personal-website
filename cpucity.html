@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/game-opening.css">
+    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
+    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
+    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
+    <script src="scripts/game-page-navigation.js" defer ></script>
+    <title>Kyle Jussab - CPU City</title>
+    <link rel="icon" href="assets/Icon_V2_Transparent.png">
+</head>
+
+<body id="cpucity">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
+    </header>
+
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#design">Design</a></li>
+            <li><a href="#feedback">Feedback</a></li>
+            <li><a href="#next-game">Next Game</a></li>
+        </ul>
+    </nav>
+
+    <section class="opening">
+            <h1>CPU City</h1>
+            <p class="intro-subheading">Third Person / Adventure / Education - August 2024</p>
+
+            <img src="assets/CPU City.png">
+
+            <a href="https://github.com/MrsFrisby/CPU_City_August" target="_blank" class="external-link">
+                <p>View on Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <div class="intro-info" id="overview">
+                <div class="intro-info-section">
+                    <h3>Overview</h3>
+                    <p>CPU City is an engaging educational game designed to bring GCSE Computer Science concepts to life through dynamic gameplay. Set in a colorful, bustling city, players step into the shoes of Rhi Vyse, a determined teenager tasked with thwarting the nefarious plans of the Pro-Krastor Nation. The game features a single, immersive level centered on Von Neumann Architecture, offering players a hands-on learning experience.</p>
+                    <p>Developed by a dedicated team of four, this project highlights our collaborative efforts in blending educational content with interactive gameplay to create a compelling and enriching experience.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>Potential</h3>
+                    <p>Looking ahead, CPU City has the potential to expand significantly, covering a comprehensive range of topics within the GCSE Computer Science curriculum. Future updates aim to include content areas such as programming concepts, data structures, algorithms, computer networks, and ethical, legal, and environmental impacts of technology. Our goal is to create a valuable supplementary tool for UK classrooms, enhancing students’ understanding of computer science through interactive and engaging gameplay.</p>
+                </div>
+
+                <div class="intro-info-section">
+                    <h3>My Role</h3>
+                    <h3 class="list-heading">Gameplay Programming:</h3>
+                    <p>- Built a quest system to provide players with objectives and track their progress.</p>
+                    <p>- Developed an interaction system allowing players to engage with NPCs and objects.</p>
+                    <p>- Created a hydration mechanic where players must manage hydration levels, impacting their ability to sprint or attack.</p>
+                    <p>- Designed the scoring and timing systems, incorporating a 10-minute timer that influences the final score based on performance.</p>
+                    <h3 class="list-heading second-heading">Non-Programming:</h3>
+                    <p>- Created paper prototypes and mockups establishing the games look and feel.</p>
+                    <p>- Assisted in designing and developing in-game UI elements, including menus such as the main menu, pause screen, and game over screen.</p>
+                    <p>- Contributed to game flow and narrative development, including combat mechanics and health/score penalties.</p>
+                    <br><br>
+                    <h3>Technology Stack</h3>
+                    <p>Unity, C#, Visual Studio, Git</p>
+                </div>                
+            </div>
+            
+    </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="programming">
+            <div></div>
+            <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>The feel of modern gaming</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Quests and combat.</p>
+            <div>
+                <p>It was important to make this feel like a game you would play in 2024 and try to disguise the education part as much as possible because we believe education can be done passively and implicitly while having fun. I built both the quest and combat systems from the ground up to achieve this.</p>
+                <p>The quest system works in harmony with the dialogue system. Game objects are tagged as “quest givers,” and quests are assigned only if their index is one higher than the player’s current quest. This keeps the game linear and makes sure the player goes through a guided path while still being allowed to explore.</p>
+                <p>For combat, I developed a straightforward system that leverages basic enemy AI, utilizing state machines to transition between “idle,” “pursuing,” and “attacking” states. The AI follows the player using navigation meshes but is designed to be more irritating than intelligent, focusing on creating a challenging experience rather than sophisticated tactics.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-cpucity">
+            <div class="cpucity-section-one">
+                <img src="assets/CPU City 1.png">
+            </div>
+        </div>
+
+        <div class="game-sub-block">
+            <p class="block-heading">The interconnected systems.</p>
+            <div>
+                <p>The world is designed to be visually engaging and filled with distractions, encouraging exploration and interaction with various collectible objects. This is balanced by a strict 10-minute time limit and a scoring system that rewards quick decision-making while penalizing distractions. The scoring system fosters friendly competition, making it ideal for classroom settings where students can replay the game to improve their scores. This replayability reinforces the educational content, helping students absorb key concepts more effectively.</p>
+                <p>The hydration system serves as a reminder of the importance of staying hydrated in real life. In-game, a lack of hydration restricts Rhi’s abilities, such as sprinting and using his attack fireball. Players must seek out water droplets to maintain hydration levels. Achieving high scores requires maintaining consistent hydration throughout the gameplay. This blend of collectible items, engaging world elements, and the added pressure of a time limit creates a dynamic and enjoyable balancing act, making the educational experience both fun and effective.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-cpucity">
+            <div class="cpucity-section-two">
+                <img src="assets/CPU City 2.PNG">
+                <img src="assets/CPU City 4.png">
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="design">
+            <div></div>
+            <p>DESIGN</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <h2>Edutainment done right</h2>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Video game first, education second.</p>
+            <div>
+                <p>Our primary goal was to create a captivating video game experience that seamlessly integrates educational content without compromising on fun. By focusing on making the game engaging and enjoyable first, we ensured that learning became an inherent part of the gameplay rather than the primary focus.</p>
+                <p>The game’s design emphasizes exploration and interaction, with a vibrant city setting that naturally draws players in. This approach allows educational elements to be embedded subtly within the gameplay mechanics. For example, the Von Neumann Architecture is represented through intuitive game systems and challenges, making complex concepts more accessible through interactive experiences.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-cpucity">
+            <div class="cpucity-section-one">
+                <img src="assets/CPU City 3.PNG">
+            </div>
+        </div>
+
+        <div class="game-sub-block">
+            <p class="block-heading">Designing for all players.</p>
+            <div>
+                <p>Achieving the right balance between challenge and accessibility was crucial to creating an inclusive and engaging experience for all players. We aimed to ensure that the game is enjoyable and educational for a wide range of skill levels, from newcomers to seasoned gamers.</p>
+                <p>To make the game accessible, we designed intuitive controls and user-friendly interfaces that facilitate easy navigation and interaction. Players can quickly grasp the mechanics and start enjoying the gameplay without a steep learning curve. The quest system and gameplay objectives are structured to be straightforward, allowing players to focus on the fun aspects of exploration and interaction.</p>
+                <p>Additionally, the educational components are integrated in a way that complements the gameplay rather than dominating it. This approach allows players to learn passively through their interactions and achievements, making the game accessible to those who might be hesitant about traditional educational tools.</p>
+            </div>
+        </div>
+
+        <div class="game-sub-image game-image-cpucity">
+            <div class="cpucity-section-two">
+                <img src="assets/CPU City 5.png">
+                <img src="assets/CPU City 6.PNG">
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="feedback">
+            <div></div>
+            <p>FEEDBACK</p>
+        </div>
+    </div>
+
+    <div class="game-sub-content">
+        <div class="feedback-container">
+            <div class="feedback-border">
+                <div class="feedback-comment">
+                    <div class="feedback-name">
+                        <img src="assets/user icon.svg">
+                        <p>QA Tester</p>
+                    </div>
+                    <p>Really cool idea, I think this is great.</p>
+                </div>
+            </div>
+
+            <div class="feedback-border">
+                <div class="feedback-comment">
+                    <div class="feedback-name">
+                        <img src="assets/user icon.svg">
+                        <p>QA Tester</p>
+                    </div>
+                    <p>The thriller dance at the end was really funny.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="next-game">
+            <div></div>
+            <p>NEXT GAME</p>
+        </div>
+    </div>
+
+    <div class="games-content">
+        <div class="card-border" id="next-game-card">
+            <a href="https://kylejussab.com/tloubty">
+                <div class="card-container">
+                    <div class="card-content">
+                        <h2>The Last of Us: Between The Years <span>GB Studio, GBVM</span></h2>
+                        <img src="assets/arrow-right.svg" class="card-arrow">
+                        <p class="card-heading-subtext">Side Scroller / Action / Adventure - June 2024</p>
+                        <p class="card-description">This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game.</p>
+                        <div class="card-image"><img src="assets/The Last of Us Between The Years.png" alt="Joel looking in the distance"></div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/Icon_V2_Transparent.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://github.com/kylejussab" target="_blank">
+                <p>Github</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="assets/resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on August 30, 2024, 6:22 PM PST</p>
+        </div>
+    </footer>
+</body>
+</html>

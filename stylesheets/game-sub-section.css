@@ -75,6 +75,10 @@
     margin-block: 50px;
 }
 
+.game-image-cpucity {
+    background: linear-gradient(to bottom, rgba(171, 96, 63, 0.4), #171717);
+}
+
 .game-image-tloubty {
     background: linear-gradient(to bottom, rgba(48, 104, 80, 0.4), #171717);
 }

@@ -1,11 +1,11 @@
 let gameData = [
     {
         "techStack": "Unity, C#",
-        "image": "assets/The Last of Us Between The Years.png",
-        "alt": "temp for now",
+        "image": "assets/CPU City.png",
+        "alt": "Rhi standing in city control unit",
         "title": "CPU City",
         "subtitle": "Third Person / Adventure / Education - August 2024",
-        "description": "Guide Rhi Vyse through a vibrant city as you master Von Neumann Architecture and thwart the Pro-Krastor Nation's plans.",
+        "description": "Guide Rhi Vyse through a vibrant city as you master Von Neumann Architecture and thwart the Pro-Krastor Nation's plans. Built in a team of 4.",
         "link": "https://kylejussab.com/cpucity"
     },
     {

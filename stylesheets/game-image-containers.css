@@ -1,3 +1,32 @@
+.cpucity-section-one {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+
+.cpucity-section-one img {
+    border: #444444 solid 1.5px;
+    border-radius: 15px;
+    height: auto;
+    width: 70%;
+}
+
+.cpucity-section-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+    gap: 20px;
+}
+
+.cpucity-section-two img {
+    border: #444444 solid 1.5px;
+    border-radius: 15px;
+    height: auto;
+    width: 45%;
+}
+
 .tloubty-section-one {
     display: flex;
     align-items: center;
@@ -87,6 +116,21 @@
 
 
 @media only screen and (max-width: 768px) {
+    .cpucity-section-one img {
+        width: 85%;
+    }
+
+    .cpucity-section-two {
+        flex-direction: column;
+    }
+    
+    .cpucity-section-two img {
+        border: #444444 solid 1.5px;
+        border-radius: 15px;
+        height: auto;
+        width: 60%;
+    }
+
     .tloubty-section-one {
         flex-direction: column;
         gap: 20px;

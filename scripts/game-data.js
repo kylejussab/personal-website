@@ -1,7 +1,7 @@
 let gameData = [
     {
         "techStack": "Unity, C#",
-        "image": "assets/CPU City.png",
+        "image": "assets/CPU City.jpg",
         "alt": "Rhi standing in CPU City staring in the distance",
         "title": "CPU City",
         "subtitle": "Third Person / Adventure / Education - August 2024",

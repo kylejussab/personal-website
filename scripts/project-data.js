@@ -35,15 +35,15 @@ let projectData = [
         "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
         "link": "https://kylejussab.com/djapplication"
     },
-    {
-        "techStack": "p5.js, JavaScript",
-        "image": "assets/Music Visualizer.png",
-        "alt": "A visualizer from the music visualizer application",
-        "title": "Music Visualizer",
-        "subtitle": "Built with the p5.js Framework - September 2022",
-        "description": "Created a range of creative audio visualizations, including one that utilizes the built in camera. All visualizations react to the music being played.",
-        "link": "https://kylejussab.com/musicvisualizer"
-    }
+    // {
+    //     "techStack": "p5.js, JavaScript",
+    //     "image": "assets/Music Visualizer.png",
+    //     "alt": "A visualizer from the music visualizer application",
+    //     "title": "Music Visualizer",
+    //     "subtitle": "Built with the p5.js Framework - September 2022",
+    //     "description": "Created a range of creative audio visualizations, including one that utilizes the built in camera. All visualizations react to the music being played.",
+    //     "link": "https://kylejussab.com/musicvisualizer"
+    // }
 ]
 
 const projectCardTemplate = document.querySelector("[data-project-template]");

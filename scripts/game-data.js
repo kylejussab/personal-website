@@ -17,15 +17,15 @@ let gameData = [
         "description": "This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game.",
         "link": "https://kylejussab.com/tloubty"
     },
-    {
-        "techStack": "Unity, C#",
-        "image": "assets/tah2.png",
-        "alt": "Elian crouched over",
-        "title": "The Architect Hestia",
-        "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
-        "description": "Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.",
-        "link": "https://kylejussab.com/thearchitecthestia"
-    },
+    // {
+    //     "techStack": "Unity, C#",
+    //     "image": "assets/tah2.png",
+    //     "alt": "Elian crouched over",
+    //     "title": "The Architect Hestia",
+    //     "subtitle": "Third Person Shooter / Survival / Adventure - Coming soon",
+    //     "description": "Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.",
+    //     "link": "https://kylejussab.com/thearchitecthestia"
+    // },
     {
         "techStack": "Unity, C#",
         "image": "assets/ppwallpaper.png",
@@ -35,15 +35,15 @@ let gameData = [
         "description": "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.",
         "link": "https://kylejussab.com/projectphoebe"
     },
-    {
-        "techStack": "p5.js, JavaScript",
-        "image": "assets/itp1project.png",
-        "alt": "2d platformer showing character facing right, looking at collectable",
-        "title": "ITP1 Project",
-        "subtitle": "2D Platformer - September 2021",
-        "description": "The game project I submitted for University of London in their Introduction to Programming 1 module.",
-        "link": "https://kylejussab.com/itp1project"
-    }
+    // {
+    //     "techStack": "p5.js, JavaScript",
+    //     "image": "assets/itp1project.png",
+    //     "alt": "2d platformer showing character facing right, looking at collectable",
+    //     "title": "ITP1 Project",
+    //     "subtitle": "2D Platformer - September 2021",
+    //     "description": "The game project I submitted for University of London in their Introduction to Programming 1 module.",
+    //     "link": "https://kylejussab.com/itp1project"
+    // }
 ]
 
 const gameCardTemplate = document.querySelector("[data-game-template]");

@@ -29,7 +29,7 @@ const messages = {
         "Why did the bicycle fall over? Because it was two-tired!",
         "What did the grape do when it got stepped on? Nothing, it just let out a little wine."
     ],
-    "game": "Right now, I'm playing a lot of 'No Return' in 'The Last of Us Part 2'. I'm trying to get my first win on Grounded difficulty!",
+    "game": "I’m currently playing A Plague Tale: Requiem. Initial thoughts are that the crossbow adds to the gameplay from Innocence and changes how I play the game. Really enjoying it so far and I’ll probably end up getting the platinum trophy in the near future.",
     "boredom-corner": "As of right now the Boredom Corner is still being built (blame school for taking up all my time). But when it is ready you would just click my logo in the top left of the page!",
 };
 

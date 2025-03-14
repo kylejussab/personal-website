@@ -2,7 +2,7 @@
     --background-color: #101010;
 
     --font-color: #f2f2f2;
-    --font-secondary-color: #787878;
+    --font-secondary-color: #434343;
 
     --card-color: #353535;
     --card-hover-color: #444444;
@@ -78,11 +78,11 @@ p {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 55px;
     margin-top: 0px;
     font-weight: 500;
     margin-bottom: 0px;
-    line-height: 78px;
+    line-height: 70px;
     text-align: left;
 }
 

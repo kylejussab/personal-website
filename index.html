@@ -99,10 +99,6 @@
             </ul>
         </nav>
     </header>
-
-    <!-- <div class="intro-background-container">
-        <img src="assets/homescreen-background.png" class="intro-background">
-    </div>     -->
      
     <section class="introduction-container">
         <div class="introduction">
@@ -119,25 +115,83 @@
         
         <template data-game-template>
             <div class="games-content">
-                <div class="card-border">
-                    <a data-link>
-                        <div class="card-container">
-                            <div class="card-content">
-                                <h2 data-title></h2>
-                                <img src="assets/arrow-right.svg" class="card-arrow">
-                                <p data-subtitle class="card-heading-subtext"></p>
-                                <p data-description class="card-description"></p>
+                <a data-link>
+                    <div class="card-container">
+                        <div class="card-content">
+                            <p data-role class="card-role"></p>
+                            <img src="assets/arrow-right.svg" class="card-arrow">
+
+                            <div class="card-details">
                                 <div data-img class="card-image"></div>
+
+                                <div class="card-text">
+                                    <h2 data-title></h2>
+                                    <p data-description class="card-description"></p>
+                                    
+                                    <div class="card-meta">
+                                        <div>
+                                            <p class="meta-heading">Release</p>
+                                            <p data-release class="meta-text"></p>
+                                        </div>
+                                        <div>
+                                            <p class="meta-heading">Genre</p>
+                                            <p data-genre1 class="meta-text"></p>
+                                            <p data-genre2 class="meta-text"></p>
+                                            <p data-genre3 class="meta-text"></p>
+                                        </div>
+                                        <div>
+                                            <p class="meta-heading">Tech</p>
+                                            <p data-tech1 class="meta-text"></p>
+                                            <p data-tech2 class="meta-text"></p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
+                    </div>
+                </a>
             </div>
         </template>
         
         <template data-project-template>
             <div class="projects-content">
-                <div class="card-border">
+                <a data-link>
+                    <div class="card-container">
+                        <div class="card-content">
+                            <p data-role class="card-role"></p>
+                            <img src="assets/arrow-right.svg" class="card-arrow">
+
+                            <div class="card-details">
+                                <div data-img class="card-image"></div>
+
+                                <div class="card-text">
+                                    <h2 data-title></h2>
+                                    <p data-description class="card-description"></p>
+                                    
+                                    <div class="card-meta">
+                                        <div>
+                                            <p class="meta-heading">Date</p>
+                                            <p data-date class="meta-text"></p>
+                                        </div>
+                                        <div>
+                                            <p class="meta-heading">Disciplines</p>
+                                            <p data-discipline1 class="meta-text"></p>
+                                            <p data-discipline2 class="meta-text"></p>
+                                            <p data-discipline3 class="meta-text"></p>
+                                        </div>
+                                        <div>
+                                            <p class="meta-heading">Tech</p>
+                                            <p data-tech1 class="meta-text"></p>
+                                            <p data-tech2 class="meta-text"></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- <div class="card-border">
                     <a data-link>
                         <div class="card-container">
                             <div class="card-content">
@@ -148,7 +202,7 @@
                                 <div data-img class="card-image"></div>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
                 </div>
             </div>
         </template>

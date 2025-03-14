@@ -24,28 +24,22 @@
     }
 }
 
+.card-container {
+    overflow: hidden;
+    width: 900px;
+    height: 380px;
+    margin-bottom: 80px;
 
-.card-border {
-    position: relative;
-    width: 1050px;
-    height: 650px;
-    border-radius: 20px;
-    background: linear-gradient(to bottom, #171717, #181818);
-    border: #444444 solid .75px;
-    transition: transform .5s ease;
-    margin-bottom: 60px;
+    background: rgba(30, 29, 28);
+    border: #333333 solid .75px;
+    border-radius: 10px;
+
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.card-container {
-    position: relative;
-    background: linear-gradient(to bottom, #1e1d1c, #1e1d1c);
-    border: #444444 solid .75px;
-    transition: border-color 0.3s ease-in-out;
-    margin: 8px;
-    width: 1034px;
-    height: 634px;
-    border-radius: 15px;
-    overflow: hidden;
+.card-container:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 30px 10px rgba(30, 29, 28, 0.8);
 }
 
 #next-game-card {
@@ -56,44 +50,29 @@
     width: inherit;
 }
 
-.card-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    border-radius: 15px;
-    z-index: 1;
-    background: linear-gradient(to bottom, #3f3f3f, #171717);
+.card-role {
+    font-size: 12px;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 50px;
 }
 
-.card-container:hover::before {
-    opacity: 1;
-}
-
-.card-container:hover {
-    border: #9f9f9f solid .75px;
-}
-
-.card-container:hover .card-arrow{
-    transform: translate(10px, 0px);
-}
-
-.card-container > * {
-    position: relative;
-    z-index: 2;
+.card-details {
+    display: flex;
+    flex-direction: row;
+    margin-inline: -30px; /* Negate the padding of the card */
+    gap: 50px;
 }
 
 .card-content {
+    position: relative;
     padding-inline: 30px;
     padding-top: 15px;
 }
 
 .card-content h2 {
     margin-bottom: 0px;
+    font-size: 24px;
 }
 
 .card-content span {
@@ -104,10 +83,9 @@
 
 .card-arrow {
     position: absolute;
-    top: 30px;
+    top: 22px;
     right: 30px;
-    width: 35px;
-    transition: transform .2s ease-in-out;
+    width: 20px;
 }
 
 .card-heading-subtext {
@@ -118,24 +96,47 @@
 }
 
 .card-description {
-    margin-top: 20px;
-    margin-bottom: 60px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .card-image {
-    padding-inline: 50px;
-    transition: transform .3s ease-in-out;
+    width: 55%;
+}
+
+.card-text {
+    width: 45%;
+    padding-right: 100px;
 }
 
 .card-image img{
     border-top-left-radius: 10px;
-    border-top-right-radius: 10px; 
-    width: 100%;
+    border-top-right-radius: 10px;
+    transform: translateX(-22%); 
+    width: 130%;
+    border: #444444 solid .75px;
 }
 
-.card-container:hover .card-image{
-    transform: translate(0px, -30px);
+.card-meta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 40px;
+    padding-top: 10px;
+}
+
+.meta-heading {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.2);
+    margin-block: 6px;
+    
+}
+
+.meta-text {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-block: 3px;
 }
 
 .games-content {
@@ -168,61 +169,58 @@
     display: none;
 }
 
-@media only screen and (min-width: 1100px) and (max-width: 1270px){
-    .card-border {
-        width: 900px;
-        height: 650px;
-    }
-
+@media only screen and (max-width: 918px) {
     .card-container {
-        width: 884px;
-    }
-}
-
-@media only screen and (min-width: 785px) and (max-width: 1099px){
-    .card-border {
-        width: 700px;
-        height: 550px;
-    }
-
-    .card-container {
-        width: 684px;
-        height: 534px;
-    }
-}
-
-@media only screen and (max-width: 784px) {
-    .card-border {
         width: 350px;
-        height: 360px;
-        margin-bottom: 30px;
+        height: 500px;
+        margin-bottom: 40px;
     }
 
-    .card-container {
-        width: 334px;
-        height: 346px;
+    .card-content {
+        padding-inline: 0px;
     }
 
-    .card-content h2 {
-        font-size: 16px;
-        width: 90%;
+    .card-role {
+        font-size: 9px;
+        letter-spacing: 1.2px;
+        margin-bottom: 25px;
+        padding-inline: 10px;
     }
 
-    .card-content p {
-        font-size: 12px;
+    .card-details {
+        flex-direction: column;
+        margin-inline: 0px;
+        gap: 5px;
     }
 
-    .card-arrow {
-        top: 15px;
-        right: 15px;
-    }
-
-    .card-description {
-        margin-bottom: 30px;
+    .card-details h2 {
+        font-size: 18px;
     }
 
     .card-image {
+        width: 100%;
+        padding-inline: 0px;
+    }
+
+    .card-image img{
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        transform: translateX(0%); 
+        width: 100%;
+    }
+    
+    .card-text {
+        width: 100%;
+        padding-right: 0px;
         padding-inline: 10px;
-        transition: transform .3s ease-in-out;
+    }
+
+    .card-meta {
+        padding-right: 40px;
+    }
+
+    .card-arrow {
+        top: 18px;
+        right: 10px;
     }
 }

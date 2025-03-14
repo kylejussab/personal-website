@@ -35,7 +35,7 @@
 
 .main-heading {
     font-family: Baksoda, cursive;
-    font-size: 65px;
+    font-size: 70px;
     animation: background-pan 10s linear infinite;
     background: linear-gradient(
         to right,
@@ -62,28 +62,6 @@
 }
 
 /* Media Queries */
-/* @media only screen and (max-width: 784px) {
-    h1 {
-        font-size: 48px;
-        line-height: 46px;
-    }
-
-    .introduction {
-        min-width: 330px;
-    }
-
-    .main-heading {
-        font-size: 72px;
-        padding-left: 9px;
-        padding-right: 5px;
-    }
-
-    .introduction-details {
-        font-size: 16px;
-        text-align: right;
-    }
-} */
-
 @media only screen and (max-width: 920px) {
     .introduction-container {
         margin-top: 110px;

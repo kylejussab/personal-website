@@ -40,6 +40,12 @@ body::before {
     align-items: center;
 }
 
+.nav-identity {
+    display: flex;
+    flex: 1;
+    margin-left: 25px;
+}
+
 /* Left circle of Kyle */
 .home-icon{
     width: 50px;
@@ -61,14 +67,6 @@ body::before {
 .home-icon img {
     width: inherit;
     height: inherit;
-}
-
-.nav-identity {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 1;
-    margin-left: 25px;
 }
 
 /* Middle navigation toggle */

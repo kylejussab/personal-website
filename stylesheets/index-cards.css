@@ -38,7 +38,7 @@
 
 .card-container {
     position: relative;
-    background: linear-gradient(to bottom, #272727, #171717);
+    background: linear-gradient(to bottom, #1e1d1c, #1e1d1c);
     border: #444444 solid .75px;
     transition: border-color 0.3s ease-in-out;
     margin: 8px;

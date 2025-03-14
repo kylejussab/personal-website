@@ -5,7 +5,7 @@
     margin-bottom: 120px;
 }
 
-.intro-background-container {
+/* .intro-background-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -28,7 +28,7 @@
     animation: image-animation linear forwards;
     animation-timeline: view();
     animation-range: exit;
-}
+} */
 
 @keyframes image-animation {
     25% {opacity: .5;}

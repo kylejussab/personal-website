@@ -5,49 +5,14 @@ body::before {
     left: 50%;
     width: 100vw;
     height: 200vh;
-    transform: translate(-50%, -25%);
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0) 70%);
+    transform: translate(-50%, -50%);
     pointer-events: none;
     z-index: -1;
 }
 
-#cpucity::before {
-    background: radial-gradient(circle at center, rgba(171, 96, 63, 0.4), rgba(171, 96, 63, 0) 70%);
-}
-
 #thelastofusbty::before {
-    background: radial-gradient(circle at center, rgba(48, 104, 80, 0.4), rgba(48, 104, 80, 0) 70%);
-}
-
-#thearchitecthestia::before {
-    background: radial-gradient(circle at center, rgba(189, 160, 131, 0.4), rgba(189, 160, 131, 0) 70%);
-}
-
-#projectphoebe::before {
-    background: radial-gradient(circle at center, rgba(150, 150, 150, 0.4), rgba(150, 150, 150, 0) 70%);
-}
-
-#itp1::before {
-    background: radial-gradient(circle at center, rgba(50, 100, 85, 0.4), rgba(50, 100, 85, 0) 70%);
-}
-
-#givefund::before {
-    background: radial-gradient(circle at center, rgba(56, 183, 107, 0.4), rgba(56, 183, 107, 0) 70%);
-}
-
-#tlou2analysis::before {
-    background: radial-gradient(circle at center, rgba(39, 63, 79, 0.4), rgba(39, 63, 79, 0) 70%);
-}
-
-#pixelpulse::before {
-    background: radial-gradient(circle at center, rgba(158, 170, 195, 0.4), rgba(158, 170, 195, 0) 70%);
-}
-
-#djapplication::before {
-    background: radial-gradient(circle at center, rgba(0, 130, 130, 0.4), rgba(0, 130, 130, 0) 70%);
-}
-
-#musicvisualizer::before {
-    background: radial-gradient(circle at center, rgba(172, 32, 67, 0.4), rgba(172, 32, 67, 0) 70%);
+    background: radial-gradient(circle at center, rgba(48, 104, 80, 0.1), rgba(48, 104, 80, 0) 70%);
 }
 
 .back-button {
@@ -78,27 +43,45 @@ body::before {
     justify-content: center;
     align-items: center;
     margin: 0px;
-    margin-top: 140px;
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .opening h1 {
-    font-size: 60px;
-    width: 80%;
-    text-align: center;
+    font-size: 40px;
+    line-height: 40px;
     margin-bottom: 0px;
+    text-align: center;
 }
 
 .intro-subheading {
+    text-align: center;
     font-size: 18px;
     color: var(--font-secondary-color);
     font-weight: 400;
-    margin-top: 15px;
-    margin-bottom: 60px;
+    margin-top: 10px;
 }
 
-.opening img {
-    border-radius: 10px;
+.gameboy-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.opening video {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-49.5%, 46.5%);
+    width: 29.6%;
+    height: auto;
+}
+
+.gameboy-image {
     width: 70%;
+    opacity: 0.8;
 }
 
 .external-link {

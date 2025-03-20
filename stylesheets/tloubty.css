@@ -1,0 +1,92 @@
+#thelastofusbty::before {
+    background: radial-gradient(circle at center, rgba(48, 104, 80, 0.1), rgba(48, 104, 80, 0) 70%);
+}
+
+.gameboy-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.opening video {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-49.5%, 46.5%);
+    width: 29.6%;
+    height: auto;
+}
+
+.gameboy-image {
+    width: 70%;
+    opacity: 0.8;
+}
+
+.game-sub-overview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.content {
+    width: 70%;
+    /* background-color: red; */
+    padding-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.content p {
+    color: var(--font-secondary-color);
+    margin-top: 8px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.content-heading {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.highlighted-text {
+    color: var(--font-color);
+}
+
+.overview-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 90px;
+}
+
+.overview-block {
+    width: 25%;
+}
+
+.overview-block > :nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.overview-block p {
+    margin-block: -4px;
+}
+
+
+/* Moodboard section */
+.moodboard-image {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    width: 100%;
+    height: auto;
+}

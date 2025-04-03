@@ -65,6 +65,7 @@
 
 .overview-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     margin-bottom: 90px;
@@ -89,4 +90,130 @@
     margin-bottom: 60px;
     width: 100%;
     height: auto;
+}
+
+.feedback-bento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    row-gap: 10px;
+}
+
+.feedback-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(30, 29, 28);
+    border: #333333 solid .75px;
+    border-radius: 15px;
+
+    width: 200px;
+    height: 200px;
+
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-7deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.feedback-block:hover img {
+    animation: wiggle 0.4s ease;
+}
+
+.feedback-block:hover {
+    background: rgba(40, 39, 38);
+    transform: translateY(-5px);
+}
+
+.feedback-block img {
+    margin-top: 35px;
+    width: 65px;
+    aspect-ratio: 1;
+}
+
+.feedback-block p {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+
+    text-align: center;
+    width: 85%;
+}
+
+@media only screen and (max-width: 918px) {
+    .gameboy-container {
+        width: 100%;
+        height: max-content;
+    }
+    
+    .opening video {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transform: translate(0px, 0px);
+
+        width: 100%;
+        height: auto;
+    }
+    
+    .gameboy-image {
+        display: none;
+    }
+    
+    .overview-container {
+        row-gap: 50px;
+    }
+
+    .overview-block {
+        width: 50%;
+    }
+
+    .content {
+        width: 98%;
+    }
+    
+    .content p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+    .feedback-block {
+        width: 160px;
+        height: 160px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .feedback-block img {
+        margin-top: 20px;
+        width: 50px;
+    }
+
+    .feedback-block p {
+        font-size: 12px;
+        width: 70%;
+    }
+
 }

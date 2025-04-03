@@ -26,8 +26,8 @@
 
 .card-container {
     overflow: hidden;
-    width: 900px;
-    height: 380px;
+    width: 1000px;
+    height: 360px;
     margin-bottom: 80px;
 
     background: rgba(30, 29, 28);
@@ -54,20 +54,20 @@
     font-size: 12px;
     letter-spacing: 1.2px;
     color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 
 .card-details {
     display: flex;
     flex-direction: row;
     margin-inline: -30px; /* Negate the padding of the card */
-    gap: 50px;
+    gap: 20px;
 }
 
 .card-content {
     position: relative;
     padding-inline: 30px;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 .card-content h2 {
@@ -102,19 +102,22 @@
 }
 
 .card-image {
-    width: 55%;
+    width: 65%;
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
 }
 
 .card-text {
-    width: 45%;
-    padding-right: 100px;
+    width: 35%;
+    padding-right: 30px;
+    padding-top: 10px;
 }
 
 .card-image img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    transform: translateX(-22%); 
-    width: 130%;
+    width: 90%;
     border: #444444 solid .75px;
 }
 
@@ -200,6 +203,7 @@
     .card-image {
         width: 100%;
         padding-inline: 0px;
+        padding-top: 0px;
     }
 
     .card-image img{
@@ -220,7 +224,7 @@
     }
 
     .card-arrow {
-        top: 18px;
+        top: 13px;
         right: 10px;
     }
 }

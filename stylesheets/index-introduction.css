@@ -47,7 +47,6 @@
     background-size: 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    /* padding-left: 16px; */
     padding-right: 8px;
 }
 
@@ -85,7 +84,7 @@
     }
 
     .introduction {
-        min-width: 330px;
+        min-width: 97%;
     }
 
     .introduction-details {

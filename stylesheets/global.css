@@ -110,6 +110,7 @@ footer {
     left: 50%;
     bottom: -10vw;
     padding-block: 30px;
+    margin-top: -150px;
 }
 
 .footer-rights {
@@ -185,7 +186,11 @@ footer img {
 }
 
 /** Media Queries **/
-@media only screen and (max-width: 784px) {
+@media only screen and (max-width: 918px) {
+    footer {
+        margin-top: 0px;
+    }
+    
     footer img {
         width: 60px;
         height: 60px;

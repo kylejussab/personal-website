@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="stylesheets/game-image-containers.css">
     <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <script src="scripts/game-page-navigation.js" defer ></script>
     <script src="scripts/bty-design-navigation.js" defer ></script>
+    <script src="scripts/bty-programming-navigation.js" defer ></script>
     <title>Kyle Jussab - The Last of Us: Between The Years</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
@@ -201,7 +206,7 @@
                 
                 <div class="design-right-container">
                     <div class="design-gif">
-                        <img src="assets/tempgif.gif" />
+                        <img />
                     </div>
 
                     <div class="design-indicator-container">
@@ -222,7 +227,188 @@
     <div class="game-sub-overview">
         <div class="content">
             <h4 class="content-heading">Programming</h4>
-            <p>Temp text</p>
+            <p>Since Between The Years was made using GB Studio, a visual scripting engine, all code shown here has been manually translated into JavaScript to give a clearer look into the game’s logic.</p>
+
+            <div class="programming-bento">
+                <div class="code-container">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="window-tab active"><p>attack.js</p></div>
+                        <div class="window-tab"><p>move.js</p></div>
+                        <div class="window-tab"><p>userstuff.js</p></div>
+                    </div>
+
+                    <pre class="code-block">
+<code class="language-javascript">
+//Example usage
+const player = new Player();
+
+const pistol = new Weapon('Revolver', 6, 10);
+player.equipWeapon(pistol);
+
+InputManager.handleAttack('A');
+
+// Snippets of classes are below for further context
+
+class Weapon() {
+    constructor(name, ammo, storedAmmo, clipSize, reloadSpeed) {
+        this.name = name;
+        this.ammo = ammo;
+        this.storedAmmo = storedAmmo;
+        this.clipSize = clipSize;
+        this.isLoaded = ammo > 0;
+        this.reloadSpeed = reloadSpeed;
+    }
+
+    shoot() {
+        if (this.ammo > 0) {
+            this.ammo--;
+            bullet = new Bullet(this.name);
+            bullet.sendProjectile();
+            
+            AnimationManager.playAnimation("shoot");
+        }
+    }
+
+    reload() {
+        if (this.ammo === 0 && this.storedAmmo > 0) {            
+            let timer = this.reloadSpeed;
+
+            let reloadInterval = setInterval(() => {
+                timer--;
+
+                if (timer <= 0){
+                    clearInterval(reloadInterval);
+
+                    AnimationManager.playAnimation("reload");
+
+                    if (storedAmmo >= clipSize) {
+                        this.ammo = this.clipSize;
+                    }
+                    else {
+                        this.ammo = this.storedAmmo;
+                    }
+                    
+                }
+
+            }, 1000);
+        }
+    }
+}
+
+class Player {
+    constructor() {
+        this.weapon = null;
+        this.consumable = null;
+        this.isPunching = false;
+    }
+
+    equipWeapon(weapon) {
+        this.weapon = weapon;
+    }
+
+    equipConsumable(consumable) {
+        this.consumable = consumable;
+    }
+
+    attack() {
+        if (!this.weapon && !this.consumable) {
+            this.punch();
+        } 
+        else if (this.consumable) {
+            this.consumable.use();
+        } 
+        else if (this.weapon) {
+            if (this.weapon.isLoaded) {
+                this.weapon.shoot();
+            } 
+            else {
+                this.weapon.reload();
+            }
+        }
+    }
+
+    punch() {
+        AnimationManager.playAnimation("punch");
+    }
+}
+
+class InputManager {
+    constructor(player) {
+        this.player = player;
+    }
+
+    handleAttack(buttonPress) {
+        if (buttonPress === 'A') {
+            this.player.attack();
+        }
+    }
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-javascript">
+function Move() {
+    openJS();
+
+    if (x != 2) {
+        dontOpenJS();
+    }
+    else {
+        console.log("Whoops");
+    }
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-javascript">
+function Userstuff() {
+    openJS();
+
+    if (x != 2) {
+        dontOpenJS();
+    }
+    else {
+        console.log("Whoops");
+    }
+}
+</code>
+                    </pre>
+                </div>
+
+                <div class="output-description-container">
+                    <div class="output-description">
+                        <div class="window-output">
+                            <div class="dot-container">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <p>output.html</p>
+                        </div>
+                        
+                        <div class="output-image"><img src="assets/familiar.gif" /></div>
+                    </div>
+
+                    <div class="output-description">
+                        <div class="programming-desc-heading">
+                            <img src="assets/code-icon.png" />
+                            <p>How It Works</p>
+                        </div>
+                        <p class="description-text">The attack system handles punching, shooting, and using consumables. When the player presses the attack button the system performs checks. If no weapon or consumable is equipped, the player punches. If a consumable is equipped, it’s used. If a weapon is equipped, the system checks if it’s loaded; if so, it fires and decreases the ammo. If not loaded, the system initiates a reload.</p>
+                        <p class="description-text">Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.</p>
+                        <p class="description-text">In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.</p>
+                    </div>
+                </div>
+
+                
+            </div>
         </div>
     </div>
 

@@ -13,7 +13,8 @@ const messages = {
         "I have a tattoo on my right arm, and it’s Ellie’s tattoo 🌿",
         "I have a completely irrational fear of grasshoppers.",
         "Even with goggles on, I cannot open my eyes under water.",
-        "I do not like eating fish. Sea food is fine, but something about fish itself doesn’t sit well with me."
+        "I do not like eating fish. Sea food is fine, but something about fish itself doesn’t sit well with me.",
+        "I celebrate a personal holiday on April 7th, it is known as 'Inspiration Day' and it is the day I knew I wanted to become a Game Developer. Inspiration Day is April 7th, 2017."
     ],
     "joke": [
         "Why don't skeletons fight each other? They don't have the guts!",
@@ -29,8 +30,7 @@ const messages = {
         "Why did the bicycle fall over? Because it was two-tired!",
         "What did the grape do when it got stepped on? Nothing, it just let out a little wine."
     ],
-    "game": "I’m currently playing A Plague Tale: Requiem. Initial thoughts are that the crossbow adds to the gameplay from Innocence and changes how I play the game. Really enjoying it so far and I’ll probably end up getting the platinum trophy in the near future.",
-    "boredom-corner": "As of right now the Boredom Corner is still being built (blame school for taking up all my time). But when it is ready you would just click my logo in the top left of the page!",
+    "game": "I’m currently playing A Plague Tale: Requiem. Initial thoughts are that the crossbow adds to the gameplay from Innocence and changes how I play the game. Really enjoying it so far and I’ll probably end up getting the platinum trophy in the near future."
 };
 
 const chatButton = document.querySelector('.chat-button');
@@ -105,11 +105,42 @@ chatButton.addEventListener('click', () => {
 chatOptions.forEach(option => {
     option.addEventListener('click', () => {
         const messageKey = option.getAttribute('data-message');
+        let message;
 
-        let message = messages[messageKey];
+        if(messageKey === 'fact'){
+            const allFacts = messages.fact;
+            let seenFacts = getSeenFacts();
 
-        message = Array.isArray(message) ? message[Math.floor(Math.random() * message.length)] : message;
+            if (seenFacts.length === allFacts.length) {
+                seenFacts = [];
+            }
 
+            const unseenFacts = allFacts.filter(fact => !seenFacts.includes(fact));
+            const randomFact = unseenFacts[Math.floor(Math.random() * unseenFacts.length)];
+            seenFacts.push(randomFact);
+            saveSeenFacts(seenFacts);
+
+            message = randomFact;
+        }
+        else if(messageKey === 'joke'){
+            const allJokes = messages.joke;
+            let seenJokes = getSeenJokes();
+
+            if (seenJokes.length === allJokes.length) {
+                seenJokes = [];
+            }
+
+            const unseenJokes = allJokes.filter(joke => !seenJokes.includes(joke));
+            const randomJoke = unseenJokes[Math.floor(Math.random() * unseenJokes.length)];
+            seenJokes.push(randomJoke);
+            saveSeenJokes(seenJokes);
+
+            message = randomJoke;
+        }
+        else {
+            message = Array.isArray(message) ? message[Math.floor(Math.random() * message.length)] : messages[messageKey];
+        }
+        
         chatOptionsContainer.classList.remove('show');
         addUserMessage(option.textContent);
         typeMessage(message);
@@ -179,6 +210,56 @@ function addUserMessage(message){
     chatBubbleContainer.appendChild(bubble);
 }
 
-addBotMessage("Hi there! I’m Kyle, your personal chatbot, and I’m here to answer and tell you more about myself. Feel free to select any of the options below to get to know me better!");
+function getSeenFacts(){
+    const seen = localStorage.getItem('seenFacts');
+    return seen ? JSON.parse(seen) : [];
+}
+
+function saveSeenFacts(seen){
+    localStorage.setItem('seenFacts', JSON.stringify(seen));
+}
+
+function getSeenJokes(){
+    const seen = localStorage.getItem('seenJokes');
+    return seen ? JSON.parse(seen) : [];
+}
+
+function saveSeenJokes(seen){
+    localStorage.setItem('seenJokes', JSON.stringify(seen));
+}
+
+function checkFirstVisit() {
+    const hasVisited = localStorage.getItem('hasVisited');
+    if(!hasVisited) {
+        localStorage.setItem('hasVisited', 'true');
+        return "Hi there! I’m Kyle, your personal chatbot, and I’m here to answer and tell you more about myself. Feel free to select any of the options below to get to know me better!";
+    } 
+    else {
+        return "It's good to have you back! I’m Kyle, and I see you might be starting to like me! Ready to learn more fun facts or hear a new joke?";
+    }
+}
+
+//For later, this will add quirky messages when a user selects the same options multiple times.
+const quirkyMessages = {
+    joke: [
+        "Are you really here to learn about me, or are you only here for the jokes? I wouldn't blame you either way. Here's another one for you.",
+        "You know, they do say my middle name is 'comedy'. Enough about me though, here's another joke.",
+        "Dang if I had a dollar for every time you asked me for a joke... it wouldn't actually be that much but it's flattering that you're asking for more. Here's another one.",
+        
+        "I think I’m starting to see a pattern here... More jokes, huh? Okay, here's another!",
+        "You can't get enough of me, can you? Don't worry, I’ve got a fresh one for you!"
+    ],
+    fact: [
+        "Wow, you must really like these facts! You’re like a trivia master now!",
+        "I see you’re into facts! Keep it up, I’ve got plenty more where that came from!",
+        "It seems you’re a fan of knowledge! Let's see what this fact blows your mind!",
+        "Getting smarter by the minute, huh? Let’s see what other cool facts I’ve got!",
+        "Wow, you're a fact-finding machine! Let's keep this trivia train rolling!"
+    ]
+};
+
+
+const greetingMessage = checkFirstVisit();
+addBotMessage(greetingMessage);
 
 startCycling();

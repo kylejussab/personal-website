@@ -7,18 +7,16 @@
     <link rel="stylesheet" href="stylesheets/global.css">
     <link rel="stylesheet" href="stylesheets/tloubty.css">   
     <link rel="stylesheet" href="stylesheets/index-cards.css">
-    <link rel="stylesheet" href="stylesheets/game-opening.css">
-    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
-    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
-    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
+    <link rel="stylesheet" href="stylesheets/project-page.css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
-    <script src="scripts/game-page-navigation.js" defer ></script>
+    <script src="scripts/project-page-navigation.js" defer ></script>
     <script src="scripts/bty-design-navigation.js" defer ></script>
     <script src="scripts/bty-programming-navigation.js" defer ></script>
+    
     <title>Kyle Jussab - The Last of Us: Between The Years</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
@@ -483,14 +481,80 @@ class InputManager {
 
                     <pre class="code-block">
 <code class="language-javascript">
-function Userstuff() {
-    openJS();
+//Example usage
+// This usage is heavily simplified
+const player = new Player();
 
-    if (x != 2) {
-        dontOpenJS();
+const revolver = new Weapon('Revolver', 6, 8, 10);
+player.equipWeapon(revolver);
+
+player.addParts(15);
+
+const bench = new UpgradeBench(player);
+bench.upgradeWeapon(revolver); // Upgrades to tier 2
+
+// Snippets of classes are below for further context
+class UpgradeBench {
+    constructor(player) {
+        this.player = player;
     }
-    else {
-        console.log("Whoops");
+
+    upgradeWeapon(weapon) {
+        if (!weapon) return;
+
+        const upgradeCost = weapon.getUpgradeCost();
+
+        if (weapon.tier != 3){
+            if (this.player.parts >= upgradeCost) {
+                this.player.parts -= upgradeCost;
+                weapon.upgrade();
+            } 
+            else {
+                console.log("You do not have enough parts.");
+            }
+        }
+        else {
+            console.log("Weapon is fully upgraded.");
+        }
+        
+    }
+}
+
+class Weapon {
+    constructor(name, clipSize, damage, reloadSpeed) {
+        this.name = name;
+        this.clipSize = clipSize;
+        this.damage = damage;
+        this.reloadSpeed = reloadSpeed;
+        this.tier = 1;
+    }
+
+    getUpgradeCost() {
+        const costs = [10, 13, 17];
+        return costs[this.tier - 1] || 0;
+    }
+
+    upgrade() {
+        this.clipSize += 2;
+        this.damage += 5;
+        this.reloadSpeed *= 0.9;
+
+        this.tier++;
+    }
+}
+
+class Player {
+    constructor() {
+        this.weapon = null;
+        this.parts = 0;
+    }
+
+    equipWeapon(weapon) {
+        this.weapon = weapon;
+    }
+
+    addParts(parts) {
+        this.parts += parts;
     }
 }
 </code>
@@ -518,7 +582,7 @@ function Userstuff() {
                         </div>
                         <p class="description-text">The attack system handles punching, shooting, and using consumables. When the player presses the attack button the system performs checks. If no weapon or consumable is equipped, the player punches. If a consumable is equipped, it’s used. If a weapon is equipped, the system checks if it’s loaded; if so, it fires and decreases the ammo. If not loaded, the system initiates a reload.</p>
                         <p class="description-text">The inventory system keeps track of the player’s weapons and consumables. Pressing the up arrow cycles through weapons and equips the next one. Pressing the down arrow does the same for consumables. If the player runs out of items in a category, the system loops back to having nothing equipped. Switching between weapons and consumables updates the item in the player’s hand.</p>
-                        <p class="description-text">In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.</p>
+                        <p class="description-text">The upgrade system allows the player to improve their weapons at upgrade benches. Each weapon has three tiers, and upgrading increases clip size, damage, and reload speed. When the player interacts with a bench, the system checks if they have enough parts to pay for the next tier and if the weapon is not already maxed. If it passes, the parts are deducted and the weapon is upgraded. </p>
                     </div>
                 </div>
 
@@ -590,104 +654,6 @@ function Userstuff() {
             </div>
         </div>
     </div>
-
-
-    <!-- <div class="game-sub-container">
-        <div class="game-sub-heading" id="programming">
-            <div></div>
-            <p>PROGRAMMING</p>
-        </div>
-    </div>
-
-    <div class="game-sub-content">
-        <h2>A new engine and scripting language</h2>
-
-        <div class="game-sub-block">
-            <p class="block-heading">GB Studio and GBVM.</p>
-            <div>
-                <p>Being familiar with Unity and the C language, I built this game in GB Studio, a visual scripting engine that uses its own GBVM scripting language (built on C). My prior skills allowed me to adjust and adapt to the new engine and language with ease, enabling me to expand my skill set and adapt to a new tool for bringing this unique vision to life. I embraced the opportunity to learn and master GBVM, ensuring that the game's mechanics, dialogue, and interactions were seamlessly integrated into the GameBoy experience.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tloubty">
-            <div class="tloubty-section-six">
-                <img src="assets/tloubty 8.png">
-            </div>
-        </div>
-
-        <div class="game-sub-block">
-            <p class="block-heading">The gameplay experience.</p>
-            <div>
-                <p>The code consists of mixes of GBVM and visual scripting. Reusable "functions" were placed into scripts and SoC was catered to as much as possible in the attempt to maintain object-oriented principles. The limitations of the hardware and engine made keeping a clean code structure challenging, but it was a rewarding task.</p>
-                <p>Programming the combat system involved adding the change in cycles from "down" and "up". The player has 3 weapons (0, 1, 2), and pressing down cycles through them. The player has 3 useables (3, 4, 5) and pressing up cycles through them. Depending on the weapon you have equipped, your action button reacts accordingly.</p>
-                <p>All other programming tasks, such as character interactions, dialogue implementation, and item upgrades, used the same combination of visual scripting and GBVM. This consistent approach allowed me to integrate all gameplay elements seamlessly, making an entertaining and engaging GameBoy experience.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tloubty">
-            <div class="tloubty-section-four">
-                <img src="assets/tloubty 9.png">
-                <img src="assets/tloubty 10.png">
-            </div>
-        </div>
-    </div>
-    
-    <div class="game-sub-container">
-        <div class="game-sub-heading" id="design">
-            <div></div>
-            <p>DESIGN</p>
-        </div>
-    </div>
-
-    <div class="game-sub-content">
-        <h2>It must feel like The Last of Us</h2>
-
-        <div class="game-sub-block">
-            <p class="block-heading">Demaking and genre flipping.</p>
-            <div>
-                <p>"What if The Last of Us was on the GameBoy?" That question sparked my imagination. It sounded intriguing yet challenging—taking one of the best modern third-person narrative games and squeezing it onto a GameBoy cartridge. It had to be done.</p>
-                <p>With the GameBoy being over 20 years old, the fundamental style of the game had to change. Making it a sidescroller was not only the more limiting option but also turning a narrative story into a game with platformer mechanics was going to be an uphill battle in unknown territory. That’s exactly why I did it.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tloubty">
-            <div class="tloubty-section-one">
-                <img src="assets/tloubty 1.png">
-                <img src="assets/tloubty 2.png">
-            </div>
-        </div>
-
-        <div class="game-sub-block">
-            <p class="block-heading">Stay true to the original.</p>
-            <div>
-                <p>For this to work, Joel had to feel and sound like Joel. I meticulously crafted the dialogue, ensuring the tone and cadence of each character came through in GameBoy form. I included familiar characters from the lore who would have been around at that time, such as Marlene, Tess, and Tommy.</p>
-                <p>The mechanics had to match as closely as possible. With stealth stripped out, the game needed to retain as much of the original's feel as possible. Cinematic cutscenes are present, resources are still scarce, and Joel can upgrade his weapons and himself. He can craft medkits and trap mines, use a variety of weapons, and stun a clicker with a brick.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tloubty">
-            <div class="tloubty-section-two">
-                <img src="assets/tloubty 3.png">
-                <img src="assets/tloubty 4.png">
-                <img src="assets/tloubty 5.png">
-            </div>
-        </div>
-
-        <div class="game-sub-block">
-            <p class="block-heading">A unique standalone.</p>
-            <div>
-                <p>I didn’t want to demake one of the already established games. Not only would it not be as good as the original, but players would also know exactly what to expect. I wanted to create a whole new unique story, something that could be played without needing to experience Part 1 or 2. Something that could potentially aid in the lore and world-building already established. I set the game during a time period we’re aware of—Joel’s questionable past, we know “he’s been on both sides,” and that he doesn't like to talk about his grieving process but that’s all we know. Why not explore that further? Why not play through it?</p>
-                <p>In the process, I added new characters, new storylines, and new enemy types. Getting the balance of new and original was what I felt would make the game fun to play. At the end of the day, I love this franchise, I’m one of its biggest fans, and I’m a creator. Combining all of those into one to give a 'Last of Us' experience in a personal way was the goal.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tloubty">
-            <div class="tloubty-section-one">
-                <img src="assets/tloubty 6.png">
-                <img src="assets/tloubty 7.png">
-            </div>
-        </div>
-    </div> -->
 
     <div class="game-sub-container">
         <div class="game-sub-heading" id="next-game">

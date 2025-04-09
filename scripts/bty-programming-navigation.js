@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const gifSources = [
             "assets/attack.gif",
-            "assets/in-game.gif",
-            "assets/world-interactions.gif"
+            "assets/inventory.gif",
+            "assets/upgrade.gif"
         ];
 
         tabs[index].classList.add("active");

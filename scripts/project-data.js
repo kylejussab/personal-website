@@ -1,15 +1,20 @@
 let projectData = [
-    // {
-    //     "techStack": "React Native, Supabase",
-    //     "image": "assets/Give Fund.png",
-    //     "alt": "A title screen showing the text Give Fund",
-    //     "title": "Give Fund",
-    //     "subtitle": "Built for the Snap Engineering Academy - August 2024",
-    //     "description": "A fundraising feature to help foster youth non-profits raise funds from Snap users, built off a mock up of the Snapchat App. Built in a cross-functional team of 7 and presented to over 300 Snap executives.",
-    //     "link": "https://kylejussab.com/givefund"
-    // },
     {
-        "role": "01 | RESEARCHER",
+        "role": "01 | FRONTEND DEVELOPER",
+        "image": "assets/Give Fund.png",
+        "alt": "A title screen showing the text Give Fund",
+        "title": "Give Fund",
+        "description": "A fundraising feature to help foster youth non-profits raise funds from Snap users, built off a mock up of the Snapchat App. Built in a cross-functional team of 7 and presented to over 300 Snap executives.",
+        "date": "August 2024",
+        "tech1": "React Native",
+        "tech2": "Supabase",
+        "discipline1": "Mobile Dev",
+        "discipline2": "UI / UX",
+        "discipline3": "Product Design",
+        "link": "https://kylejussab.com/givefund"
+    },
+    {
+        "role": "02 | RESEARCHER",
         "image": "assets/The Last of Us Part 2.png",
         "alt": "The promotional image for The Last of Us Part 2. I do not claim to own this image.",
         "title": "Analyzing The Last of Us Part 2",
@@ -23,7 +28,7 @@ let projectData = [
         "link": "https://kylejussab.com/tlou2analysis"
     },
     {
-        "role": "02 | FRONTEND DEVELOPER",
+        "role": "03 | FRONTEND DEVELOPER",
         "image": "assets/PixelPulse.png",
         "alt": "The homepage of the PixelPulse application",
         "title": "PixelPulse",
@@ -37,7 +42,7 @@ let projectData = [
         "link": "https://kylejussab.com/pixelpulse"
     },
     {
-        "role": "03 | APPLICATION DEVELOPER",
+        "role": "04 | APPLICATION DEVELOPER",
         "image": "assets/DJ Application.png",
         "alt": "The GUI of my DJ application",
         "title": "DJ Application",
@@ -49,16 +54,7 @@ let projectData = [
         "discipline2": "UI / UX",
         "discipline3": "Testing",
         "link": "https://kylejussab.com/djapplication"
-    },
-    // {
-    //     "techStack": "p5.js, JavaScript",
-    //     "image": "assets/Music Visualizer.png",
-    //     "alt": "A visualizer from the music visualizer application",
-    //     "title": "Music Visualizer",
-    //     "subtitle": "Built with the p5.js Framework - September 2022",
-    //     "description": "Created a range of creative audio visualizations, including one that utilizes the built in camera. All visualizations react to the music being played.",
-    //     "link": "https://kylejussab.com/musicvisualizer"
-    // }
+    }
 ]
 
 const projectCardTemplate = document.querySelector("[data-project-template]");

@@ -238,29 +238,52 @@
                             <div class="dot"></div>
                         </div>
                         <div class="window-tab active"><p>attack.js</p></div>
-                        <div class="window-tab"><p>move.js</p></div>
-                        <div class="window-tab"><p>userstuff.js</p></div>
+                        <div class="window-tab"><p>inventory.js</p></div>
+                        <div class="window-tab"><p>upgrade.js</p></div>
                     </div>
 
                     <pre class="code-block">
 <code class="language-javascript">
 //Example usage
 const player = new Player();
+const inputManager = new InputManager(player);
 
-const pistol = new Weapon('Revolver', 6, 10);
-player.equipWeapon(pistol);
+const revolver = new Weapon('Revolver', 6, 10);
+player.equipWeapon(revolver);
 
-InputManager.handleAttack('A');
+inputManager.start();
 
 // Snippets of classes are below for further context
-class Weapon() {
+class HoldableItem {
+    constructor(name, maxAmount, type){
+        this.name = name;
+        this.maxAmount = maxAmount;
+        this.type = type;
+    }
+
+    use() {
+        //Overridden by inherited class
+    }
+}
+
+class Weapon extends HoldableItem {
     constructor(name, ammo, storedAmmo, clipSize, reloadSpeed) {
+        super(name, 1, "weapon");
         this.name = name;
         this.ammo = ammo;
         this.storedAmmo = storedAmmo;
         this.clipSize = clipSize;
         this.isLoaded = ammo > 0;
         this.reloadSpeed = reloadSpeed;
+    }
+
+    use() {
+        if (this.isLoaded) {
+            this.shoot();
+        } 
+        else {
+            this.reload();
+        }
     }
 
     shoot() {
@@ -322,12 +345,7 @@ class Player {
             this.consumable.use();
         } 
         else if (this.weapon) {
-            if (this.weapon.isLoaded) {
-                this.weapon.shoot();
-            } 
-            else {
-                this.weapon.reload();
-            }
+            this.weapon.use();
         }
     }
 
@@ -341,7 +359,11 @@ class InputManager {
         this.player = player;
     }
 
-    handleAttack(buttonPress) {
+    start(){
+        this.handleInput('A');
+    }
+
+    handleInput(buttonPress) {
         if (buttonPress === 'A') {
             this.player.attack();
         }
@@ -352,14 +374,108 @@ class InputManager {
 
                     <pre class="code-block">
 <code class="language-javascript">
-function Move() {
-    openJS();
+//Example usage
+const player = new Player();
+const inputManager = new InputManager(player);
 
-    if (x != 2) {
-        dontOpenJS();
+const revolver = new Weapon('Revolver', 6, 10);
+const medKit = new Medkit(2, 4);
+
+player.equipWeapon(revolver);
+player.equipConsumable(medKit);
+
+inputManager.start();
+
+// Snippets of classes are below for further context
+class Consumable {
+    constructor(name, quantity) {
+        this.name = name;
+        this.quantity = quantity;
     }
-    else {
-        console.log("Whoops");
+
+    use() {
+        //Overridden by inherited class
+    }
+}
+
+class Medkit extends Consumable {
+    constructor(quantity, healTime) {
+        super("Medkit", quantity);
+        this.healTime = healTime;
+    }
+
+    use(player) {
+        if (this.quantity > 0 && player.health < 100){
+            this.quantity --;
+
+            let timer = this.healTime;
+
+            const healInterval = setInterval(() => {
+                timer--;
+
+                if (timer <= 0) {
+                    clearInterval(healInterval);
+                    player.health = 100;
+                }
+            }, 1000);
+        }
+    }
+}
+
+class Player {
+    constructor() {
+        this.weapons = [];
+        this.consumables = [];
+        this.itemInHand = null;
+        this.health = 100;
+    }
+
+    equipWeapon(weapon) {
+        this.weapons.push(weapon);
+        if (!this.itemInHand) {
+            this.itemInHand = weapon;
+        }
+    }
+
+    equipConsumable(consumable) {
+        this.consumables.push(consumable);
+        if (!this.itemInHand) { 
+            this.itemInHand = consumable;
+        }
+    }
+
+    cycleWeapon() {
+        if (this.weapons.length === 0) return;
+        const currentIndex = this.weapons.indexOf(this.itemInHand);
+        const nextIndex = (currentIndex + 1) % this.weapons.length;
+        this.itemInHand = this.weapons[nextIndex];
+    }
+
+    cycleConsumable() {
+        if (this.consumables.length === 0) return; 
+        const currentIndex = this.consumables.indexOf(this.itemInHand);
+        const nextIndex = (currentIndex + 1) % this.consumables.length;
+        this.itemInHand = this.consumables[nextIndex];
+    }
+}
+
+class InputManager {
+    constructor(player) {
+        this.player = player;
+    }
+
+    start(){
+        this.handleInput('UP');
+        this.handleInput('DOWN');
+    }
+
+    handleInput(buttonPress) {
+        if (buttonPress === 'UP') {
+            this.player.cycleWeapon();
+        }
+        else if (buttonPress === 'DOWN'){
+            this.player.cycleConsumable();
+        }
     }
 }
 </code>
@@ -401,7 +517,7 @@ function Userstuff() {
                             <p>How It Works</p>
                         </div>
                         <p class="description-text">The attack system handles punching, shooting, and using consumables. When the player presses the attack button the system performs checks. If no weapon or consumable is equipped, the player punches. If a consumable is equipped, it’s used. If a weapon is equipped, the system checks if it’s loaded; if so, it fires and decreases the ammo. If not loaded, the system initiates a reload.</p>
-                        <p class="description-text">Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.</p>
+                        <p class="description-text">The inventory system keeps track of the player’s weapons and consumables. Pressing the up arrow cycles through weapons and equips the next one. Pressing the down arrow does the same for consumables. If the player runs out of items in a category, the system loops back to having nothing equipped. Switching between weapons and consumables updates the item in the player’s hand.</p>
                         <p class="description-text">In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.</p>
                     </div>
                 </div>

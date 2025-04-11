@@ -15,17 +15,17 @@ let projectData = [
     },
     {
         "role": "02 | RESEARCHER",
-        "image": "assets/The Last of Us Part 2.png",
-        "alt": "The promotional image for The Last of Us Part 2. I do not claim to own this image.",
-        "title": "Analyzing The Last of Us Part 2",
-        "description": "An exploratory data analysis evaluating the 'success' of The Last of Us Part 2 using various metrics such as sales, reviews, and comparisons with similar games.",
+        "image": "assets/The Data of Us.png",
+        "alt": "A word cloud of a Clicker",
+        "title": "The Data of Us",
+        "description": "A data-driven investigation into the success and controversy of The Last of Us Part II using sentiment analysis, sales data, award history, and critical comparisons to explore how and why the sequel became one of the most divisive games in modern history.",
         "date": "January 2024",
         "tech1": "Python",
         "tech2": "NLTK",
         "discipline1": "Data Science",
         "discipline2": "Engineering",
         "discipline3": "Automation",
-        "link": "https://kylejussab.com/tlou2analysis"
+        "link": "https://kylejussab.com/dataofus"
     },
     {
         "role": "03 | FRONTEND DEVELOPER",

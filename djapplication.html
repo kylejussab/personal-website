@@ -6,12 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/global.css">
     <link rel="stylesheet" href="stylesheets/index-cards.css">
-    <link rel="stylesheet" href="stylesheets/game-opening.css">
-    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
-    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
-    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
-    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
-    <script src="scripts/game-page-navigation.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/project-page.css">
+    <link rel="stylesheet" href="stylesheets/deletion-project.css">
+    
+    <script src="scripts/project-page-navigation.js" defer ></script>
     <title>Kyle Jussab - DJ Application</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
@@ -27,48 +25,60 @@
     <nav class="page-navigation">
         <p>CONTENTS</p>
         <ul>
+            <li><a href="#artwork">Artwork</a></li>
             <li><a href="#overview">Overview</a></li>
             <li><a href="#programming">Programming</a></li>
             <li><a href="#design">Design</a></li>
-            <li><a href="#next-game">Next Project</a></li>
         </ul>
     </nav>
 
-    <section class="opening">
-            <h1>DJ Application</h1>
-            <p class="intro-subheading">Built with the JUCE Framework - March 2023</p>
+    <section class="opening" id="artwork">
+        <h1>DJ Application</h1>
+        <p class="intro-subheading">Built with the JUCE Framework - March 2023</p>
+       
+        <div class="deletion-container">
+            <img src="assets/kyle-bitmoji-timeout.png" />
+            <p><span>Time out!</span> <br> This project is scheduled for removal soon as I make room for new and improved work. Most of its content has already been removed, but thanks for stopping by in the meantime!</p>
+        </div>
 
-            <img src="assets/DJ Application.png">
+        <div class="deleting-container">
+            <img src="assets/DJ Application.png" class="deleting-image">
+        </div>
 
-            <a href="https://github.com/kylejussab/DJ-Application" target="_blank" class="external-link">
-                <p>View on Github</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="https://github.com/kylejussab/DJ-Application" target="_blank" class="external-link">
+            <p>View on Github</p>
+            <img src="assets/open-in-new.svg">
+        </a>
+    </section>
 
-            <div class="intro-info" id="overview">                
-                <div class="intro-info-section">
-                    <h3>Overview</h3>
-                    <p>A user-friendly DJ application designed for effortless audio manipulation. With a straightforward graphical user interface, the DJ application empowers users to seamlessly blend audio from two decks (expandable for more) simultaneously, unleashing a spectrum of creative possibilities. Users can intuitively cue tracks, create loops with precision, fine-tune audio using high pass filters, and conveniently store their music library in local storage. This application simplifies the art of DJing, making it accessible and enjoyable for both novices and experienced DJs, offering a wide array of features for audio mixing and music exploration.</p>
-                </div>
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="overview">
+            <div></div>
+            <p>OVERVIEW</p>
+        </div>
+    </div>
 
-                <div class="intro-info-section">
-                    <h3>Retrospective</h3>
-                    <p>A project that impressed many of my peers, which is interesting because it wouldn’t have been the one I felt would be the most impressive to others. That being said, it was my first C++ project, and it did nothing less than show me how much I prefer C++ over the languages I had been learning prior. Was the transition from JavaScript hard? A little, but C++ has become my default language when I code something to solve a small problem. An interpreted language would be faster, but starting it in C++ means I could continue the project if I wanted to. I didn’t find this project hard at all; I loved every minute of it, and this is probably the point at which my coding became a lot more elegant, meaningful, and professional.</p>
-                </div>
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">Description</h4>
+            <p>A user-friendly DJ application designed for effortless audio manipulation. With a straightforward graphical user interface, the DJ application empowers users to seamlessly blend audio from two decks (expandable for more) simultaneously, unleashing a spectrum of creative possibilities. Users can intuitively cue tracks, create loops with precision, fine-tune audio using high pass filters, and conveniently store their music library in local storage. This application simplifies the art of DJing, making it accessible and enjoyable for both novices and experienced DJs, offering a wide array of features for audio mixing and music exploration.</p>
+        </div>
+    </div>
 
-                <div class="intro-info-section">
-                    <h3>My Role</h3>
-                    <h3 class="list-heading">Programming:</h3>
-                    <p>- Created core logic for audio manipulation, including high and low pass filters, playback controls, and data persistence for the song library.</p>
-                    <p>- Conducted rigorous testing and quality assurance procedures to ensure application stability and functionality, meeting assignment criteria.</p>
-                    <h3 class="list-heading second-heading">Non-Programming:</h3>
-                    <p>- Designed the layout and general style of the application, making it user friendly and intuitive.</p>
-                    <br><br>
-                    <h3>Technology Stack</h3>
-                    <p>JUCE, C++</p>
-                </div>
-            </div> 
-    </section>  
+    <div class="game-sub-overview extra-space">
+        <div class="content">
+            <h4 class="content-heading">Retrospective</h4>
+            <p>A project that impressed many of my peers, which is interesting because it wouldn’t have been the one I felt would be the most impressive to others. That being said, it was my first C++ project, and it did nothing less than show me how much I prefer C++ over the languages I had been learning prior. Was the transition from JavaScript hard? A little, but C++ has become my default language when I code something to solve a small problem. An interpreted language would be faster, but starting it in C++ means I could continue the project if I wanted to. I didn’t find this project hard at all; I loved every minute of it, and this is probably the point at which my coding became a lot more elegant, meaningful, and professional.</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview extra-space">
+        <div class="content">
+            <h4 class="content-heading">Tech Stack</h4>
+            <p>JUCE, C++</p>
+        </div>
+    </div>
+
 
     <div class="game-sub-container">
         <div class="game-sub-heading" id="programming">
@@ -77,21 +87,11 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>Functionality > Appearance</h2>
-
-        <div class="game-sub-block">
-            <p class="block-heading">Avoiding novelity.</p>
-            <div>
-                <p>Though I made this application as aesthetically pleasing as possible, it was very important to me that it worked exactly as you would expect it to. I wanted it to be something DJs could use if they wanted to. Although the application is very limited in its current state, its features are useful to its users. Saving a song library isn’t the most flashy feature, but it is one of the most important ones.</p>
-                <p>Built on the principles of OOP, this project is extremely modular and adaptable. Adding new decks is easy, and adding new features is just as straightforward. This modularity will eventually be useful in personalizing and creating a “setup” for future users.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-djapplication">
-            <div class="tloubty-section-three">
-                <img src="assets/djapplication-screen1.png">
-            </div>
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">Functionality > Appearance</h4>
+            <p>Though I made this application as aesthetically pleasing as possible, it was very important to me that it worked exactly as you would expect it to. I wanted it to be something DJs could use if they wanted to. Although the application is very limited in its current state, its features are useful to its users. Saving a song library isn’t the most flashy feature, but it is one of the most important ones.</p>
+            <p>Built on the principles of OOP, this project is extremely modular and adaptable. Adding new decks is easy, and adding new features is just as straightforward. This modularity will eventually be useful in personalizing and creating a “setup” for future users.</p>
         </div>
     </div>
     
@@ -102,44 +102,18 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>An aesthetic application</h2>
-
-        <div class="game-sub-block">
-            <p class="block-heading">Making it useful and usable.</p>
-            <div>
-                <p>The DJ application I created features a design that mirrors the appearance of real DJ setups and professional DJ applications. It revolves around two decks, each equipped with a set of controls. These decks include graphical records that animate as songs play, providing an authentic DJ experience. A seek-able waveform display offers precise control over music playback. It was important for the application to feel intuitive to beginner and experienced DJs.</p>
-                <p>Playback controls, volume adjustments, and high or low pass filters are seamlessly integrated into each deck, ensuring that sound manipulation tools are easily accessible to DJs. Below the decks, a unified song library simplifies music management, allowing users to search, filter, and organize their music effortlessly. The design focuses on user-friendliness and a familiar layout to ensure that the focus is only on audio manipulation.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-djapplication">
-            <div class="tloubty-section-six">
-                <img src="assets/djapplication-screen2.png">
-            </div>
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">An aesthetic application</h4>
+            <p>The DJ application I created features a design that mirrors the appearance of real DJ setups and professional DJ applications. It revolves around two decks, each equipped with a set of controls. These decks include graphical records that animate as songs play, providing an authentic DJ experience. A seek-able waveform display offers precise control over music playback. It was important for the application to feel intuitive to beginner and experienced DJs.</p>
+            <p>Playback controls, volume adjustments, and high or low pass filters are seamlessly integrated into each deck, ensuring that sound manipulation tools are easily accessible to DJs. Below the decks, a unified song library simplifies music management, allowing users to search, filter, and organize their music effortlessly. The design focuses on user-friendliness and a familiar layout to ensure that the focus is only on audio manipulation.</p>
         </div>
     </div>
 
     <div class="game-sub-container">
-        <div class="game-sub-heading" id="next-game">
+        <div class="game-sub-heading">
             <div></div>
-            <p>NEXT PROJECT</p>
-        </div>
-    </div>
-
-    <div class="games-content">
-        <div class="card-border" id="next-game-card">
-            <a href="https://kylejussab.com/musicvisualizer">
-                <div class="card-container">
-                    <div class="card-content">
-                        <h2>Music Visualizer <span>p5.js, JavaScript</span></h2>
-                        <img src="assets/arrow-right.svg" class="card-arrow">
-                        <p class="card-heading-subtext">Built with the p5.js Framework - September 2022</p>
-                        <p class="card-description">Created a range of creative audio visualizations, including one that utilizes the built in camera. All visualizations react to the music being played.</p>
-                        <div class="card-image"><img src="assets/Music Visualizer.png" alt="A visualizer from the music visualizer application"></div>
-                    </div>
-                </div>
-            </a>
+            <p>THE END</p>
         </div>
     </div>
 

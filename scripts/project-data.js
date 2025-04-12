@@ -29,7 +29,7 @@ let projectData = [
     },
     {
         "role": "03 | FRONTEND DEVELOPER",
-        "image": "assets/PixelPulse.png",
+        "image": "assets/PixelPulse Cover Art.png",
         "alt": "The homepage of the PixelPulse application",
         "title": "PixelPulse",
         "description": "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.",

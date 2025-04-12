@@ -14,7 +14,7 @@ const messages = {
         "I have a completely irrational fear of grasshoppers.",
         "Even with goggles on, I cannot open my eyes under water.",
         "I do not like eating fish. Sea food is fine, but something about fish itself doesn’t sit well with me.",
-        "I celebrate a personal holiday on April 7th, it is known as 'Inspiration Day' and it is the day I knew I wanted to become a Game Developer. Inspiration Day is April 7th, 2017."
+        "Every year I celebrate a personal holiday on April 7th, it is known as 'Inspiration Day' and it is the day I knew I wanted to become a Game Developer."
     ],
     "joke": [
         "Why don't skeletons fight each other? They don't have the guts!",

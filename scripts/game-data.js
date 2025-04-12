@@ -49,16 +49,7 @@ let gameData = [
         "tech1": "Unity",
         "tech2": "C#",
         "link": "https://kylejussab.com/projectphoebe"
-    },
-    // {
-    //     "techStack": "p5.js, JavaScript",
-    //     "image": "assets/itp1project.png",
-    //     "alt": "2d platformer showing character facing right, looking at collectable",
-    //     "title": "ITP1 Project",
-    //     "subtitle": "2D Platformer - September 2021",
-    //     "description": "The game project I submitted for University of London in their Introduction to Programming 1 module.",
-    //     "link": "https://kylejussab.com/itp1project"
-    // }
+    }
 ]
 
 const gameCardTemplate = document.querySelector("[data-game-template]");

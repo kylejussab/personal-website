@@ -152,7 +152,7 @@ function typeMessage(message) {
     bubble.classList.add('chat-bot-message-container');
 
     const img = document.createElement('img');
-    img.src = 'assets/bitmoji-nine.png';
+    img.src = 'assets/kyle bot/bitmoji-nine.png';
     bubble.appendChild(img);
 
     const messageText = document.createElement('p');

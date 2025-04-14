@@ -1,13 +1,24 @@
-.experience-container {
+.single-container {
     margin-bottom: 60px;
     padding-top: 50px;
-    border-bottom: 1px solid #242424;
     border-top: 1px solid #242424;
     width: 950px;
 }
 
-.education-container {
-    margin-bottom: -30px;
+.about-text {
+    color: var(--font-secondary-color);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.highlighted-text {
+    color: var(--font-color);
+}
+
+.experience-container {
+    padding-top: 50px;
+    border-top: 1px solid #242424;
     width: 950px;
 }
 
@@ -31,23 +42,23 @@
     font-size: 13px;
 }
 
-.company-container {
+.achievement-container {
     display: flex;
     align-items: start;
     margin-top: 30px;
     margin-bottom: 110px;
 }
 
-.company-container > p {
+.achievement-container > p {
     width: 50%;
     margin-top: 0px;
 }
 
-.company-details {
+.achievement-details {
     width: 50%;
 }
 
-.company-details > p {
+.achievement-details > p {
     margin-top: 0px;
 }
 
@@ -58,7 +69,39 @@
 
 .experience-text {
     color: var(--font-secondary-color);
+    font-weight: 400;
+    line-height: 1.5;
     font-size: 14px;
+}
+
+.signature-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+
+.about-signature {
+    width: 60px;
+}
+
+.mentor-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-top: 40px;
+}
+
+.mentor {
+    width: 200px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.mentor:hover {
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media only screen and (max-width: 970px) {
@@ -67,11 +110,16 @@
         padding-inline: 10px;
     }
 
-    .experience-container, .education-container, .about-heading {
+    .experience-container, .single-container, .about-heading {
         width: 100%;
     }
     
     .experience-heading {
         font-size: 18px;
+    }
+
+
+    .mentor-container {
+        justify-content: center;
     }
 }

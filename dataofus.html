@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="stylesheets/dataofus.css">
     <link rel="stylesheet" href="stylesheets/project-page.css"> 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <script src="scripts/project-page-navigation.js" defer ></script>
+    <script src="scripts/dou-programming-navigation.js" defer ></script>
+
     <title>Kyle Jussab - The Data of Us</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
@@ -66,7 +72,7 @@
                 <div class="overview-block">
                     <p><span class="highlighted-text">Timeline</span></p>
                     <p>12 weeks</p>
-                    <p>November - January 2024</p>
+                    <p>Nov - Jan '24</p>
                 </div>
                 
                 <div class="overview-block">
@@ -104,19 +110,53 @@
     <div class="game-sub-overview">
         <div class="content">
             <h4 class="content-heading">Why?</h4>
-            <p><span class="highlighted-text">This is a fan-made game</span> set within the universe of 
-                <span class="highlighted-text">The Last of Us</span>, developed independently by Kyle Jussab. This project is 
-                <span class="highlighted-text">not affiliated with or endorsed by Naughty Dog</span>, the creators of The Last of Us franchise. 
-                <span class="highlighted-text">I do not claim ownership</span> of any intellectual property belonging to Naughty Dog, including characters, settings, or storyline elements. This game is created out of admiration for the original work and is 
-                <span class="highlighted-text">intended as a non-commercial, fan-made tribute</span>. I do not seek to profit from the use of Naughty Dog's intellectual property. All trademarks and copyrights pertaining to The Last of Us 
-                <span class="highlighted-text">belong to their respective owners</span>.</p>
+            <p>The Last of Us is my 
+                <span class="highlighted-text">all-time favorite game</span>, and when Part II came out it sparked a wave of extreme reactions; praise, hate, celebration, and outrage. I was fascinated by how one game could be so 
+                <span class="highlighted-text">universally acclaimed yet so divisive</span> at the same time. Some called it a masterpiece; others demanded refunds.</p>
+            
+            <p>I wanted to find a way to get a definitive answer. Sales numbers alone don’t tell the whole story, so I set out to 
+                <span class="highlighted-text">explore what the data really says</span>. Are the 10+ million copies sold a true measure of its success? How much do 
+                <span class="highlighted-text">critical acclaim and user sentiment</span> actually align? And what can we learn from how players responded?</p>
+
+            <p>This project was my way of approaching the debate with more than just opinions, using data science to try and answer a question I’ve had since release: 
+                <span class="highlighted-text">Just how good is The Last of Us Part II?</span></p>
         </div>
     </div>
 
     <div class="game-sub-overview extra-space">
         <div class="content">
             <h4 class="content-heading">The Process</h4>
-            <p>Here would have those circles that show the stages of my process.</p>
+            <div class="process-container">
+                <div class="process">
+                    <div class="process-number"><p>1</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Define the Question</span></p>
+                    <p>How successful is The Last of Us Part II? Multiple dimensions of success; sales, reviews, awards, and sentiment.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>2</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Collect the Data</span></p>
+                    <p>Gather publicly available datasets; Metacritic reviews, sales figures, award counts, and performance metrics.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>3</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Clean & Preprocess</span></p>
+                    <p>Filter and clean the data using Python, removing null entries, stopwords, punctuation, and non-English reviews.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>4</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Analyze & Visualize</span></p>
+                    <p>Perform sentiment analysis using VADER and TextBlob. Create multiple visualizations to illustrate unique findings.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>5</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Interpret the Results</span></p>
+                    <p>Compare The Last of Us Part II against similar titles. Evaluate the relationship between sentiment, sales, and awards.</p>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -127,15 +167,242 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>Getting the bigger picture</h2>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="programming-bento">
+                <div class="code-container">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="window-tab active"><p>score.py</p></div>
+                        <div class="window-tab"><p>subjectivity.py</p></div>
+                        <div class="window-tab"><p>negative.py</p></div>
+                        <div class="window-tab"><p>sales.py</p></div>
+                    </div>
 
-        <div class="game-sub-block">
-            <p class="block-heading">Make no assumptions.</p>
-            <div>
-                <p>It was important to include as many factors into this analysis as possible, and one of the most important one I felt was needed, was user reviews. The data collected was scraped from platforms like Metacritic and it must be stated that I personally didn't do the scrapping, I used the data found from another exploratory analysis.</p>
-                <p>I processed and cleaned this data with Pandas, ensuring its integrity by handling missing values, normalizing formats, and removing duplicates. Regular expressions and natural language processing (NLP) techniques from the NLTK library were utilized to preprocess textual data for sentiment analysis.</p>
-                <p>For sentiment analysis, I developed a model using NLTK and TextBlob to analyze user reviews, identifying key themes and sentiments. Custom algorithms were added to detect nuanced sentiments specific to the game's narrative and gameplay. Comparative analysis was performed using Matplotlib and Seaborn to create visualizations that illustrated the game's performance relative to other industry titles while also acknowledging its PlayStation exclusivity.</p>
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def getReviewsDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfEnglish = dfStart[dfStart['language'] == 'English']
+    dfEnglish.reset_index(drop=True, inplace=True)
+
+    dfSimplified = dfEnglish.drop(['type_review', 'views', 'votes', 'language'])
+    dfSimplified = dfSimplified.dropna(subset=['review'])
+
+    return dfSimplified
+
+
+def getAllScores(df):
+    scores = df['score'].value_counts()
+    scoresDf = pd.DataFrame({'count': scores.values}, index=scores.index)
+    scoresDf = scoresDf.sort_index()
+
+    return scoresDf
+
+
+#Taken from Lázaro's own study
+sentimentCSVFilePath = 'tlou2_reviews.csv'
+
+df = getReviewsDataframe(sentimentCSVFilePath)
+scores = getAllScores(df)
+
+#Chart styling altered on portfolio output for visual consistency
+scores.plot(kind='bar', color='skyblue', rot=0)
+plt.xlabel('Score')
+plt.title('Distribution of Scores')
+plt.show()
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+from textblob import TextBlob
+
+def getReviewsDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfEnglish = dfStart[dfStart['language'] == 'English']
+    dfEnglish.reset_index(drop=True, inplace=True)
+
+    dfSimplified = dfEnglish.drop(['type_review', 'views', 'votes', 'language'], axis=1)
+    dfSimplified = dfSimplified.dropna(subset=['review'])
+
+    return dfSimplified
+
+
+def getSubjectivityScores(df):
+    subjectivityScores = []
+    for review in df['review']:
+        blob = TextBlob(review)
+        subjectivityScores.append(blob.sentiment.subjectivity)
+    return subjectivityScores
+
+# Taken from Lázaro's own study
+sentimentCSVFilePath = 'tlou2_reviews.csv'
+
+df = getReviewsDataframe(sentimentCSVFilePath)
+subjectivityScores = getSubjectivityScores(df)
+
+#Chart styling altered on portfolio output for visual consistency
+plt.hist(subjectivityScores, bins=20, color='mediumpurple', alpha=0.8)
+plt.title('Subjectivity Distribution')
+plt.xlabel('Subjectivity Score')
+plt.ylabel('Number of Reviews')
+plt.grid(True)
+plt.show()
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+
+def getReviewsDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfEnglish = dfStart[dfStart['language'] == 'English']
+    dfEnglish.reset_index(drop=True, inplace=True)
+
+    dfSimplified = dfEnglish.drop(['type_review', 'views', 'votes', 'language'], axis=1)
+    dfSimplified = dfSimplified.dropna(subset=['review'])
+
+    return dfSimplified
+
+
+def getNegativeStringOfReviews(df):
+    filteredDf = df[df['score'] < 5]
+
+    combinedReviews = ''
+    for index, row in filteredDf.iterrows():
+        if not pd.isnull(row['review']):
+            combinedReviews += row['review']
+
+    return combinedReviews
+
+sentimentCSVFilePath = 'tlou2_reviews.csv'
+
+df = getReviewsDataframe(sentimentCSVFilePath)
+negative_text = getNegativeStringOfReviews(df)
+
+#Chart styling altered on portfolio output for visual consistency
+wordcloud = WordCloud(
+    width=600, 
+    height=400, 
+    background_color='black', 
+    colormap='Reds',
+    max_words=100
+).generate(negative_text)
+
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.title('Negative Review Keywords')
+plt.show()
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def getGameSalesDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfStart.set_index('Rank', inplace=True)
+
+    dfSimplified = dfStart.drop(['basename', 'Genre', 'ESRB_Rating', 'Publisher', 'Developer',
+                                    'VGChartz_Score', 'Year', 'Last_Update', 'url', 'status',
+                                    'Vgchartzscore', 'img_url'], axis=1)
+
+    salesColumns = ['Global_Sales', 'NA_Sales', 'PAL_Sales', 'JP_Sales', 'Other_Sales']
+    dfFiltered = dfSimplified.dropna(subset=salesColumns, how="all")
+
+    dfFiltered = dfFiltered[dfFiltered[salesColumns].apply(lambda x: (x > 1.0).any(), axis=1)]
+
+    dfFiltered.reset_index(drop=True, inplace=True)
+
+    return dfFiltered
+
+def getGameSalesAbove(dataframe, value):
+    df = dataframe
+    df = df[df['Global_Sales'] > value]
+    return df
+
+def addTLOU2ToDataframe(dataframe):
+    record = {'Name': 'The Last of Us Part II', 'Platform': 'PS4', 'Critic_Score': '10.0', 'Global_Sales': '10.0'}
+    dataframe.loc[len(dataframe)] = record
+
+gameSalesCSVFilePath = 'game_sales_data.csv'
+
+gameSalesDf = getGameSalesDataframe(gameSalesCSVFilePath)
+gameSalesDf = getGameSalesAbove(gameSalesDf, 5.0)
+addTLOU2ToDataframe(gameSalesDf)
+
+gameSalesDf['Global_Sales'] = pd.to_numeric(gameSalesDf['Global_Sales'], errors='coerce')
+gameSalesDf = gameSalesDf.loc[gameSalesDf.groupby('Name')['Global_Sales'].idxmax()]
+gameSalesDf = gameSalesDf.sort_values(by='Global_Sales', ascending=False)
+
+#Chart styling altered on portfolio output for visual consistency
+plt.figure(figsize=(14, 10))
+plt.plot(gameSalesDf['Name'], gameSalesDf['Global_Sales'], label='Global Sales')
+
+highlightIndex = gameSalesDf.index[gameSalesDf['Name'] == 'The Last of Us Part II'].tolist()[0]
+plt.annotate("The Last of Us Part II",
+                xy=(15, gameSalesDf.loc[highlightIndex, 'Global_Sales']),
+                xytext=(15, 12),
+                arrowprops=dict(facecolor='black', shrink=0.05),
+                horizontalalignment='left',
+                verticalalignment='top')
+
+plt.title('Global Sales of Games')
+plt.xlabel('Game Name')
+plt.ylabel('Sales in Millions')
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.show()
+</code>
+                    </pre>
+                </div>
+
+                <div class="output-description-container">
+                    <div class="output-description">
+                        <div class="window-output">
+                            <div class="dot-container">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <p>output.py</p>
+                        </div>
+                        
+                        <div class="output-image"><img /></div>
+                    </div>
+
+                    <div class="output-description">
+                        <div class="programming-desc-heading">
+                            <img src="assets/analysis-icon.png" />
+                            <p>Analysis</p>
+                        </div>
+                        <p class="description-text">A majority of reviews are clustered at either extreme; 0 or 10. This suggests that players weren’t engaging with the game in a nuanced way; instead, they reacted in absolutes, likely fueled by emotional responses to key narrative moments. The middle ground is noticeably sparse, which aligns with the broader discourse labeling the game as one of the most “polarizing” AAA titles of its time.</p>
+                        <p class="description-text">Most reviews fall on the higher end of the subjectivity scale, indicating that players wrote in emotional, opinion-driven language rather than fact-based critique. This emphasizes the personal and often passionate tone of the responses, reflecting how the game impacted players on an emotional level more than a mechanical or technical one.</p>
+                        <p class="description-text">Common words like “Joel,” “story,” “disappointed,” and “ruined” dominate the negative reviews. This suggests that dissatisfaction was less about gameplay or polish, and more centered on narrative choices, especially character fates and plot decisions. The language used in these reviews also supports the earlier subjectivity findings, reinforcing how emotionally charged the criticism was.</p>
+                        <p class="description-text">Despite critical acclaim and strong branding, TLOU2’s global sales trail behind its peers. While 10+ million units is objectively a success, the comparison reveals that its commercial performance didn’t reach the heights of other major Sony exclusives. This may point to how controversy affected word-of-mouth traction, or simply reflect broader market conditions at the time.</p>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
     </div>
@@ -147,37 +414,38 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>Good or bad?</h2>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="findings-bento">
+                <div class="findings-block">
+                    <img src="assets/positive-comment-icon.png" />
+                    <p>Despite controversy, positive reviews outnumbered negative ones nearly 2 to 1</p>
+                </div>
 
-        <div class="game-sub-block">
-            <p class="block-heading">... and the reasons why.</p>
-            <div>
-                <p>A significant majority, 62%, of user reviews falling into the extremes of scores 0 or 10, there is a clear tendency toward polarized opinions. On average, users seem to either regard it as the best game ever or the worst game ever.</p>
-                <p>The sentiment is more positive than negative, indicated by a slight rightward shift in polarity scores. High subjectivity scores suggest a bias towards opinions rather than objective information. However, some negative reviews use polite language, which inflates their sentiment scores towards the positive. While broad insights are evident, this nuance highlights the complexity of sentiment analysis. Despite this, the data indicates that more users expressed favorable opinions about the game than negative ones.</p>
-                <p>The word cloud analysis highlights intriguing patterns, with terms like "character," "game," "story," and "Ellie" common in both positive and negative reviews, suggesting a divisive narrative. "Joel" appears more frequently in negative reviews, reflecting his beloved status from the first game and the controversy over his death in the sequel. Conversely, "Abby" appears more in positive reviews, indicating some users appreciated her role. The analysis suggests that dissatisfaction often stems from Joel's death rather than Abby being the perpetrator, with Joel's death being central to the game's storyline.</p>
-            </div>
-        </div>
+                <div class="findings-block">
+                    <img src="assets/emotion-icon.png" />
+                    <p>High subjectivity means player reviews were more personal, emotional, and opinion-driven</p>
+                </div>
 
-        <div class="game-sub-image game-image-tlou2analysis">
-            <div class="tloubty-section-five">
-                <img src="assets/tlou2analysis 1.png">
-                <img src="assets/tlou2analysis 2.png">
-            </div>
-        </div>
+                <div class="findings-block">
+                    <img src="assets/narrative-icon.png" />
+                    <p>Dissatisfaction was narrative-based, with "Joel", "Story", and "Abby" being the most common words</p>
+                </div>
+    
+                <div class="findings-block">
+                    <img src="assets/low-sales.png" />
+                    <p>Commercial performance fell short, with comparable sequels far outpacing TLoU2’s 10.2 million copies sold</p>
+                </div>
 
-        <div class="game-sub-block">
-            <p class="block-heading">Commercial success?</p>
-            <div>
-                <p>The sales data for The Last of Us on PS3 show approximately 6.27 million units sold. However, considering its PS4 remaster, the game has sold over 17 million units. Comparatively, Red Dead Redemption 2, another single-platform sequel, achieved 13.94 million sales. Historically, the first Red Dead Redemption sold 6.57 million copies, with its sequel surpassing this by 7.37 million units. While precise figures for The Last of Us Part II are unavailable, it has outsold its predecessor by over 3.8 million units, positioning it as a significant success, though it has not matched the sales of Red Dead Redemption 2 despite their similar nature. The Last of Us Part II is a success, ranking among the best-selling titles on its platform. However, it did not surpass the original game's acclaim or sales, falling short of the nearly 14 million units sold by Red Dead Redemption 2. While successful, The Last of Us Part II did not achieve its full potential in sales.</p>
-                <p>The Last of Us Part II, despite having a similar budget to other successful games like God of War, didn't achieve comparable profits. With over 15 million copies sold, God of War outperformed The Last of Us Part II, highlighting its underperformance in budget and profit terms. This shortfall is likely due to the game's divisive reception, marked by negative reviews and the impactful leak of Joel's death, which hindered its potential growth and sales.</p>
-                <p>Despite its sales figures, The Last of Us Part II was the most awarded video game for a significant time, winning 322 awards before being surpassed by Elden Ring. It outperformed games like God of War and Red Dead Redemption 2 in terms of critical acclaim, suggesting that user reception significantly impacted its sales performance. This disparity highlights that sales and critical reception do not always align, underscoring a distinction between the two aspects.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tlou2analysis">
-            <div class="tloubty-section-six">
-                <img src="assets/tlou2analysis 3.png">
+                <div class="findings-block">
+                    <img src="assets/award-icon.png" />
+                    <p>It remains one of the most critically awarded and decorated games of its generation</p>
+                </div>
+    
+                <div class="findings-block">
+                    <img src="assets/think-icon.png" />
+                    <p>All findings suggest that making <em>The Last of Us Part III</em> is justifiable; if not inevitable</p>
+                </div>
             </div>
         </div>
     </div>

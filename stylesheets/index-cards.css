@@ -86,6 +86,12 @@
     top: 22px;
     right: 30px;
     width: 20px;
+
+    transition: transform 0.3s ease-in-out 0.3s;
+}
+
+.card-container:hover .card-arrow {
+    transform: translate(5px, 0px);
 }
 
 .card-heading-subtext {

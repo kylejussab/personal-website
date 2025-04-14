@@ -5,12 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const designGif = document.querySelector(".design-gif img");
 
     const gifSources = [
-        "assets/familiar.gif",
-        "assets/in-game.gif",
-        "assets/world-interactions.gif",
-        "assets/accessibility.gif",
-        "assets/cutscenes.gif",
-        "assets/tutorials.gif"
+        "assets/between the years/familiar.gif",
+        "assets/between the years/in-game.gif",
+        "assets/between the years/world-interactions.gif",
+        "assets/between the years/accessibility.gif",
+        "assets/between the years/cutscenes.gif",
+        "assets/between the years/tutorials.gif"
     ];
 
     function updateActiveState(index) {

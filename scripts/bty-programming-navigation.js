@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded", () => {
         descriptionTexts.forEach(block => block.classList.remove("active"));
 
         const gifSources = [
-            "assets/attack.gif",
-            "assets/inventory.gif",
-            "assets/upgrade.gif"
+            "assets/between the years/attack.gif",
+            "assets/between the years/inventory.gif",
+            "assets/between the years/upgrade.gif"
         ];
 
         tabs[index].classList.add("active");

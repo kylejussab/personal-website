@@ -48,19 +48,19 @@ const SWITCHTIME = 17000;
 const DELAYTIME = 9000;
 
 const bitmojiExpressions = [
-    'assets/bitmoji-one.png',
-    'assets/bitmoji-two.png',
-    'assets/bitmoji-three.png',
-    'assets/bitmoji-four.png',
-    'assets/bitmoji-five.png',
-    'assets/bitmoji-six.png',
-    'assets/bitmoji-seven.png',
-    'assets/bitmoji-eight.png',
-    'assets/bitmoji-nine.png',
-    'assets/bitmoji-ten.png',
+    'assets/kyle bot/bitmoji-one.png',
+    'assets/kyle bot/bitmoji-two.png',
+    'assets/kyle bot/bitmoji-three.png',
+    'assets/kyle bot/bitmoji-four.png',
+    'assets/kyle bot/bitmoji-five.png',
+    'assets/kyle bot/bitmoji-six.png',
+    'assets/kyle bot/bitmoji-seven.png',
+    'assets/kyle bot/bitmoji-eight.png',
+    'assets/kyle bot/bitmoji-nine.png',
+    'assets/kyle bot/bitmoji-ten.png',
 ];
 
-const closeIcon = 'assets/close-icon.png';
+const closeIcon = 'assets/kyle bot/close-icon.png';
 
 // Switch to a random Bitmoji
 function switchToBitmoji() {
@@ -185,7 +185,7 @@ function addBotMessage(message){
     bubble.classList.add('chat-bot-message-container');
 
     const img = document.createElement('img');
-    img.src = 'assets/bitmoji-nine.png';
+    img.src = 'assets/kyle bot/bitmoji-nine.png';
     bubble.appendChild(img);
 
     const messageText = document.createElement('p');

@@ -41,20 +41,20 @@ let projectData = [
         "discipline3": "Research",
         "link": "https://kylejussab.com/pixelpulse"
     },
-    {
-        "role": "04 | APPLICATION DEVELOPER",
-        "image": "assets/DJ Application.png",
-        "alt": "The GUI of my DJ application",
-        "title": "DJ Application",
-        "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
-        "date": "March 2023",
-        "tech1": "JUCE",
-        "tech2": "C++",
-        "discipline1": "DSP",
-        "discipline2": "UI / UX",
-        "discipline3": "Testing",
-        "link": "https://kylejussab.com/djapplication"
-    }
+    // {
+    //     "role": "04 | APPLICATION DEVELOPER",
+    //     "image": "assets/DJ Application.png",
+    //     "alt": "The GUI of my DJ application",
+    //     "title": "DJ Application",
+    //     "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
+    //     "date": "March 2023",
+    //     "tech1": "JUCE",
+    //     "tech2": "C++",
+    //     "discipline1": "DSP",
+    //     "discipline2": "UI / UX",
+    //     "discipline3": "Testing",
+    //     "link": "https://kylejussab.com/djapplication"
+    // }
 ]
 
 const projectCardTemplate = document.querySelector("[data-project-template]");

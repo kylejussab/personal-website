@@ -1,0 +1,185 @@
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-7deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#givefund::before {
+    background: radial-gradient(circle at center, rgba(93, 196, 87, 0.1), rgba(93, 196, 87, 0) 70%);
+}
+
+/* .playstation-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.playstation-image {
+    width: 70%;
+    opacity: 0.8;
+} */
+
+.content {
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.content p {
+    color: var(--font-secondary-color);
+    margin-top: 8px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.content-heading {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.highlighted-text {
+    color: var(--font-color);
+}
+
+.overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.overview-block {
+    width: 25%;
+}
+
+.overview-block > :nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.overview-block p {
+    margin-block: -4px;
+}
+
+.game-sub-overview.extra-space {
+    margin-top: 60px;
+}
+
+
+/* Highlights Section */
+.highlights-bento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    row-gap: 20px;
+}
+
+.highlights-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(30, 29, 28);
+    border: #333333 solid 1px;
+    border-radius: 15px;
+
+    width: 250px;
+    height: 200px;
+
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.highlights-block:hover img {
+    animation: wiggle 0.4s ease;
+}
+
+.highlights-block:hover {
+    background: rgba(40, 39, 38);
+    transform: translateY(-5px);
+}
+
+.highlights-block img {
+    margin-top: 35px;
+    width: 65px;
+    aspect-ratio: 1;
+}
+
+.highlights-block p {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+
+    text-align: center;
+    width: 85%;
+}
+
+@media only screen and (max-width: 918px) {
+    .project-container {
+        width: 100%;
+        height: max-content;
+    }
+    
+    .overview-container {
+        row-gap: 50px;
+    }
+
+    .overview-block {
+        width: 50%;
+    }
+
+    .content {
+        width: 98%;
+    }
+    
+    .content p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+
+    /* Highlights Section */
+    .highlights-block {
+        width: 160px;
+        height: 160px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .highlights-block img {
+        margin-top: 20px;
+        width: 50px;
+    }
+
+    .highlights-block p {
+        font-size: 12px;
+        width: 70%;
+    }
+}

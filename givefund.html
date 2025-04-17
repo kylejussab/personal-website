@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="stylesheets/global.css">
     <link rel="stylesheet" href="stylesheets/index-cards.css">
     <link rel="stylesheet" href="stylesheets/project-page.css">
+    <link rel="stylesheet" href="stylesheets/givefund.css">
 
     <script src="scripts/project-page-navigation.js" defer ></script>
     <title>Kyle Jussab - Give Fund</title>
@@ -24,50 +25,90 @@
     <nav class="page-navigation">
         <p>CONTENTS</p>
         <ul>
+            <li><a href="#artwork">Artwork</a></li>
             <li><a href="#overview">Overview</a></li>
+            <li><a href="#background">Background</a></li>
             <li><a href="#programming">Programming</a></li>
-            <li><a href="#teamwork">Teamwork</a></li>
+            <li><a href="#highlights">Highlights</a></li>
             <li><a href="#next-game">Next Project</a></li>
         </ul>
     </nav>
 
-    <section class="opening">
-            <h1>Give Fund</h1>
-            <p class="intro-subheading">Built for the Snap Engineering Academy - August 2024</p>
-
+    <section class="opening" id="artwork">
+        <h1>Give Fund</h1>
+        <p class="intro-subheading">Built for the Snap Engineering Academy - August 2024</p>
+       
+        <div>
             <img src="assets/Give Fund.png">
+        </div>
 
-            <a href="https://github.com/Snap-Engineering-Academy-2024/FosterYouth" target="_blank" class="external-link">
-                <p>View on Github</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="https://github.com/Snap-Engineering-Academy-2024/FosterYouth" target="_blank" class="external-link">
+            <p>View on Github</p>
+            <img src="assets/open-in-new.svg">
+        </a>
+    </section>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="overview">
+            <div></div>
+            <p>OVERVIEW</p>
+        </div>
+    </div>
 
-            <div class="intro-info" id="overview">
-                <div class="intro-info-section">
-                    <h3>Overview</h3>
-                    <p>Built in a cross-functional team consisting of engineers, designers and marketers, Give Fund was built as an add-on feature to the existing Snapchat architecture to help foster youth nonprofits raise money on Snapchat. By tapping into Snapchat’s unique design for personal connections, Give Fund allows users to engage more closely with nonprofits by viewing Snaps shared when donation goals are achieved. Give Fund not only allows Snap users a seamless, all-in-app, way to donate but gives users the option to watch ad sponsored content to generate Give Coins. These coins allow the user to donate the ad revenue generated from watching sponsored content on Snap directly to a nonprofit of their choice. Although we started with a focus on foster youth nonprofits in the US, Give Fund is built to scale, ready to support a broader range of causes in the future.</p>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="overview-container">
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Timeline</span></p>
+                    <p>3 weeks</p>
+                    <p>Aug '24</p>
                 </div>
-
-                <div class="intro-info-section">
-                    <h3>Retrospective</h3>
-                    <p>To be added in the near future.</p>
-                    <p>To be added in the near future.</p>
-                    <p>To be added in the near future.</p>
+                
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Disciplines</span></p>
+                    <p>UX Engineering</p>
+                    <p>Product Design</p>
+                    <p>Mobile Development</p>
                 </div>
-
-                <div class="intro-info-section">
-                    <h3>My Role</h3>
-                    <h3 class="list-heading">Programming:</h3>
-                    <p>- Built the animations and general styling for the mock-up app, ensuring the frontend aligned with the designers' vision.</p>
-                    <p>- Developed the chat and notification features in the demo app, enabling communication and real-time updates.</p>
-                    <p>- Constructed the profile section page, allowing users to manage their settings and view their donation history.</p>
-                    <p>- Contributed to the backend database architecture, ensuring all relevant data was stored efficiently for the feature to function smoothly.</p>
-                    <br><br>
-                    <h3>Technology Stack</h3>
-                    <p>React Native, Supabase, JavaScript</p>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Responsibilties</span></p>
+                    <p>Front-End Development</p>
+                    <p>Feature Ideation</p>
+                    <p>Prototype Integration</p>
                 </div>
-            </div> 
-    </section>  
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Tech</span></p>
+                    <p>React Native</p>
+                    <p>Supabase</p>
+                    <p>Expo</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="background">
+            <div></div>
+            <p>BACKGROUND</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">Why?</h4>
+            <p>Give Fund was our final project at the end of the 
+                <span class="highlighted-text">9-week Snap Academies program in Summer 2024</span>, where we were challenged to design a feature that could make a meaningful impact through Snap’s platform. In the final 3 weeks, our team set out to prototype a real solution tied to a cause we cared about.</p>
+            
+            <p>We chose to focus on foster youth nonprofits, organizations that are often 
+                <span class="highlighted-text">underfunded and underrepresented</span>. We spoke directly with nonprofit workers and researched what Snapchat could uniquely offer. What we heard consistently: nonprofits needed both visibility and accessibility when it came to donations.</p>
+        
+            <p>That led us to ask: 
+                <span class="highlighted-text">What if giving didn’t have to cost anything?</span> What if Snap users could support causes by watching sponsored content and converting ad revenue into donations? Give Fund was born out of that idea, a way to blend 
+                <span class="highlighted-text">community, design, and generosity</span> into a single feature, built for the people who needed it most.</p>
+        </div>
+    </div>
 
     <div class="game-sub-container">
         <div class="game-sub-heading" id="programming">
@@ -76,57 +117,42 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>Getting the bigger picture</h2>
 
-        <div class="game-sub-block">
-            <p class="block-heading">Make no assumptions.</p>
-            <div>
-                <p>It was important to include as many factors into this analysis as possible, and one of the most important one I felt was needed, was user reviews. The data collected was scraped from platforms like Metacritic and it must be stated that I personally didn't do the scrapping, I used the data found from another exploratory analysis.</p>
-                <p>I processed and cleaned this data with Pandas, ensuring its integrity by handling missing values, normalizing formats, and removing duplicates. Regular expressions and natural language processing (NLP) techniques from the NLTK library were utilized to preprocess textual data for sentiment analysis.</p>
-                <p>For sentiment analysis, I developed a model using NLTK and TextBlob to analyze user reviews, identifying key themes and sentiments. Custom algorithms were added to detect nuanced sentiments specific to the game's narrative and gameplay. Comparative analysis was performed using Matplotlib and Seaborn to create visualizations that illustrated the game's performance relative to other industry titles while also acknowledging its PlayStation exclusivity.</p>
-            </div>
-        </div>
-    </div>
     
     <div class="game-sub-container">
-        <div class="game-sub-heading" id="teamwork">
+        <div class="game-sub-heading" id="highlights">
             <div></div>
-            <p>TEAMWORK</p>
+            <p>HIGHLIGHTS</p>
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>Good or bad?</h2>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="highlights-bento">
+                <div class="highlights-block">
+                    <img src="assets/give fund/acceptance.png" />
+                    <p>Selected with a 6% acceptance rate</p>
+                </div>
 
-        <div class="game-sub-block">
-            <p class="block-heading">... and the reasons why.</p>
-            <div>
-                <p>A significant majority, 62%, of user reviews falling into the extremes of scores 0 or 10, there is a clear tendency toward polarized opinions. On average, users seem to either regard it as the best game ever or the worst game ever.</p>
-                <p>The sentiment is more positive than negative, indicated by a slight rightward shift in polarity scores. High subjectivity scores suggest a bias towards opinions rather than objective information. However, some negative reviews use polite language, which inflates their sentiment scores towards the positive. While broad insights are evident, this nuance highlights the complexity of sentiment analysis. Despite this, the data indicates that more users expressed favorable opinions about the game than negative ones.</p>
-                <p>The word cloud analysis highlights intriguing patterns, with terms like "character," "game," "story," and "Ellie" common in both positive and negative reviews, suggesting a divisive narrative. "Joel" appears more frequently in negative reviews, reflecting his beloved status from the first game and the controversy over his death in the sequel. Conversely, "Abby" appears more in positive reviews, indicating some users appreciated her role. The analysis suggests that dissatisfaction often stems from Joel's death rather than Abby being the perpetrator, with Joel's death being central to the game's storyline.</p>
-            </div>
-        </div>
+                <div class="highlights-block">
+                    <img src="assets/give fund/pitch.png" />
+                    <p>Pitched to 8 Snap executives and a 250+ audience</p>
+                </div>
+    
+                <div class="highlights-block">
+                    <img src="assets/give fund/give.png" />
+                    <p>Users can donate ad revenue by watching sponsored content</p>
+                </div>
 
-        <div class="game-sub-image game-image-tlou2analysis">
-            <div class="tloubty-section-five">
-                <img src="assets/tlou2analysis 1.png">
-                <img src="assets/tlou2analysis 2.png">
-            </div>
-        </div>
-
-        <div class="game-sub-block">
-            <p class="block-heading">Commercial success?</p>
-            <div>
-                <p>The sales data for The Last of Us on PS3 show approximately 6.27 million units sold. However, considering its PS4 remaster, the game has sold over 17 million units. Comparatively, Red Dead Redemption 2, another single-platform sequel, achieved 13.94 million sales. Historically, the first Red Dead Redemption sold 6.57 million copies, with its sequel surpassing this by 7.37 million units. While precise figures for The Last of Us Part II are unavailable, it has outsold its predecessor by over 3.8 million units, positioning it as a significant success, though it has not matched the sales of Red Dead Redemption 2 despite their similar nature. The Last of Us Part II is a success, ranking among the best-selling titles on its platform. However, it did not surpass the original game's acclaim or sales, falling short of the nearly 14 million units sold by Red Dead Redemption 2. While successful, The Last of Us Part II did not achieve its full potential in sales.</p>
-                <p>The Last of Us Part II, despite having a similar budget to other successful games like God of War, didn't achieve comparable profits. With over 15 million copies sold, God of War outperformed The Last of Us Part II, highlighting its underperformance in budget and profit terms. This shortfall is likely due to the game's divisive reception, marked by negative reviews and the impactful leak of Joel's death, which hindered its potential growth and sales.</p>
-                <p>Despite its sales figures, The Last of Us Part II was the most awarded video game for a significant time, winning 322 awards before being surpassed by Elden Ring. It outperformed games like God of War and Red Dead Redemption 2 in terms of critical acclaim, suggesting that user reception significantly impacted its sales performance. This disparity highlights that sales and critical reception do not always align, underscoring a distinction between the two aspects.</p>
-            </div>
-        </div>
-
-        <div class="game-sub-image game-image-tlou2analysis">
-            <div class="tloubty-section-six">
-                <img src="assets/tlou2analysis 3.png">
+                <div class="highlights-block">
+                    <img src="assets/give fund/community.png" />
+                    <p>Supporters' Bitmoji avatars are added to nonprofit campaigns</p>
+                </div>
+    
+                <div class="highlights-block">
+                    <img src="assets/give fund/quote-icon.png" />
+                    <p>"This is really good." - <i>Evan Spiegel, on a feature I developed</i></p>
+                </div>
             </div>
         </div>
     </div>

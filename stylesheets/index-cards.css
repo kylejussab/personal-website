@@ -1,4 +1,4 @@
-.card-border, .introduction-container, .about-content, .chat-button {
+.card-container, .introduction-container, .about-content, .chat-button, footer {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;

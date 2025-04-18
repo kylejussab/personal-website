@@ -93,6 +93,10 @@
     margin-block: -4px;
 }
 
+.game-sub-overview.extra-space {
+    margin-top: 60px;
+}
+
 
 /* Moodboard section */
 .moodboard-image {

@@ -36,6 +36,16 @@
     opacity: 0.8;
 }
 
+.opening .dataofus-image {
+    position: absolute;
+    bottom: 69%;
+    left: 16%;
+    transform: translate(50%, 50%);
+    opacity: 0.9;
+    width: 34%;
+    height: auto;
+}
+
 .content {
     width: 70%;
     padding-bottom: 20px;
@@ -372,8 +382,23 @@ code {
 
 @media only screen and (max-width: 918px) {
     .project-container {
-        width: 100%;
+        width: 98%;
         height: max-content;
+    }
+
+    .opening .dataofus-image  {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transform: translate(0px, 0px);
+
+        width: 98%;
+        height: auto;
+    }
+    
+    .playstation-image {
+        display: none;
     }
     
     .overview-container {

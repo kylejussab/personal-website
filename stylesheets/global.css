@@ -99,6 +99,10 @@ a {
     text-decoration: none;
 }
 
+header {
+    z-index: 990;
+}
+
 footer {
     display: flex;
     align-items: center;

@@ -26,6 +26,9 @@
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 10px;
+    user-select: none;
+    -webkit-user-drag: none;  /* Prevents dragging in Safari/Chrome */
+    pointer-events: none; 
 }
 
 .playstation-image {

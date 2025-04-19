@@ -26,6 +26,9 @@
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none; 
 }
 
 .opening video {

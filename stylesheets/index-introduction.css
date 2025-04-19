@@ -24,7 +24,7 @@
 }
 
 .introduction-details {
-    margin-top: -20px;
+    margin-top: 30px;
     font-size: 16px;
     text-align: right;
 }
@@ -88,7 +88,6 @@
     }
 
     .introduction-details {
-        margin-top: -8px;
         font-size: 12px;
     }
 }

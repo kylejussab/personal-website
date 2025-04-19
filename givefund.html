@@ -9,7 +9,13 @@
     <link rel="stylesheet" href="stylesheets/project-page.css">
     <link rel="stylesheet" href="stylesheets/givefund.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
     <script src="scripts/project-page-navigation.js" defer ></script>
+    <script src="scripts/gf-programming-navigation.js" defer ></script>
+
     <title>Kyle Jussab - Give Fund</title>
     <link rel="icon" href="assets/Icon_V2_Transparent.png">
 </head>
@@ -48,13 +54,19 @@
         <div class="snapchat-container">
             <img src="assets/give fund/background.png" class="snapchat-image">
             <img src="assets/give fund/introducing.gif" class="snapchat-gif">
-
         </div>
 
         <a href="https://github.com/Snap-Engineering-Academy-2024/FosterYouth" target="_blank" class="external-link">
             <p>View on Github</p>
             <img src="assets/open-in-new.svg">
         </a>
+
+        <a href="https://docs.google.com/presentation/d/1duZ5YKnJCWu46ai0pexPW8lhNmaAxc5zL4BkE9qRRoU/edit?usp=sharing" target="_blank" class="external-link">
+            <p>View Pitch Deck</p>
+            <img src="assets/open-in-new.svg">
+        </a>
+
+        
     </section>
     
     <div class="game-sub-container">
@@ -126,7 +138,619 @@
         </div>
     </div>
 
+    <div class="game-sub-overview">
+        <div class="content">
+            <p>All code shown here are 
+                <span class="highlighted-text">selected snippets</span> illustrating the core logic behind Give Fund. It isn’t copy-pasteable as-is, since it references styles, assets, and components from other files not shown here.</p>
+            <div class="programming-bento">
+                <div class="code-container">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="window-tab active"><p>profile.js</p></div>
+                        <div class="window-tab"><p>nonprofit.js</p></div>
+                        <div class="window-tab"><p>confirmation.js</p></div>
+                    </div>
 
+                    <pre class="code-block">
+<code class="language-javascript">
+import { Image, Text, View, Modal, StyleSheet, TouchableOpacity, Dimensions, ImageBackground, ScrollView, Animated } from &quot;react-native&quot;;
+import { supabase } from &quot;../utils/hooks/supabase&quot;;
+import { useEffect, useState, useRef } from &quot;react&quot;;
+import { useNavigation } from &quot;@react-navigation/native&quot;;
+import { useAuthentication } from &quot;../utils/hooks/useAuthentication&quot;;
+import { useSafeAreaInsets } from &quot;react-native-safe-area-context&quot;;
+import Ionicons from &quot;react-native-vector-icons/Ionicons&quot;;
+import BottomSheet, { BottomSheetView, SCREEN_WIDTH } from &quot;@gorhom/bottom-sheet&quot;;
+import ProfileHeader from &quot;../components/ProfileHeader&quot;;
+import { LinearGradient } from 'expo-linear-gradient';
+
+const { height: SCREEN_HEIGHT } = Dimensions.get(&quot;window&quot;);
+
+export default function ProfileScreen(){
+    const navigation = useNavigation();
+    const sheetRef = useRef(null);
+    const [modalVisible, setModalVisible] = useState(false);
+
+    const slideAnim = useState(new Animated.Value(SCREEN_HEIGHT))[0];
+
+    const handleOpenModal = () =&gt; {
+    setModalVisible(true);
+    Animated.timing(slideAnim, {
+        toValue: 0,
+        duration: 200,
+        useNativeDriver: true,
+    }).start();
+    };
+
+    const handleCloseModal = () =&gt; {
+    Animated.timing(slideAnim, {
+        toValue: 500, 
+        duration: 200,
+        useNativeDriver: true,
+    }).start(() =&gt; {setModalVisible(false);});
+    };
+
+    return (
+    &lt;View style={styles.container}&gt;
+        &lt;Modal
+        animationType=&quot;none&quot;
+        transparent={true}
+        visible={modalVisible}
+        onShow={handleOpenModal}
+        onRequestClose={handleCloseModal}
+        &gt;
+        &lt;View style={styles.modalBackground}&gt;
+            &lt;Animated.View style={[styles.modalContent, { transform: [{ translateY: slideAnim }] }]}&gt;
+            &lt;Text style={styles.modalHeading}&gt;Give Coins!&lt;/Text&gt;
+
+            &lt;Image source={require('../../assets/snapchat/Give Coin 2.gif')} style={styles.modalImage}/&gt;
+            
+            &lt;View style={styles.modalTextContainer}&gt;
+                &lt;Image source={require('../../assets/mariah/smileCircle.png')} style={styles.modalImageMariah}/&gt;
+                &lt;View&gt;
+                &lt;Text style={styles.modalText}&gt;Earn Give Coins by watching sponsored videos from non-profits.&lt;/Text&gt;
+                &lt;Text style={{fontSize: 10, color: &quot;grey&quot;, textAlign: &quot;center&quot;, width: 260, marginTop: 5}}&gt;Your views generate Give Coins through ad revenue!&lt;/Text&gt;
+                &lt;/View&gt;
+            &lt;/View&gt;
+
+            &lt;View style={styles.modalTextContainer}&gt;
+                &lt;Image source={require('../../assets/mariah/thumbUp.png')} style={styles.modalImageMariah}/&gt;
+                &lt;Text style={styles.modalText}&gt;Donate to the causes you care most about!&lt;/Text&gt;
+            &lt;/View&gt;
+
+            &lt;View style={styles.modalTextContainer}&gt;
+                &lt;Image source={require('../../assets/mariah/yayCircle.png')} style={styles.modalImageMariah}/&gt;
+                &lt;Text style={styles.modalText}&gt;Support and give back while enjoying content!&lt;/Text&gt;
+            &lt;/View&gt;
+
+            &lt;TouchableOpacity onPress={handleCloseModal} style={styles.modalCloseButton}&gt;
+                &lt;Ionicons name=&quot;close&quot; size={25} color=&quot;gray&quot; /&gt;
+            &lt;/TouchableOpacity&gt;
+            &lt;/Animated.View&gt;
+        &lt;/View&gt;
+        &lt;/Modal&gt;
+
+        &lt;ImageBackground source={require(&quot;../../assets/snapchat/mariahprofilebackground.png&quot;)} style={styles.image}&gt;
+        &lt;BottomSheet
+            ref={sheetRef}
+            index={3}
+            snapPoints={[&quot;35&quot;, &quot;48&quot;, &quot;58&quot;, &quot;68&quot;, &quot;78&quot;, &quot;85&quot;]}
+        &gt;
+            &lt;ScrollView style={styles.profileContainer}&gt;
+            &lt;View style={styles.nameContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/mariahSnapcode.png&quot;)} style={styles.snapcodeImage}/&gt;
+                &lt;View&gt;
+                &lt;Text style={styles.name}&gt;Mariah Gives&lt;/Text&gt;
+                &lt;Text&gt;mariah-gives&lt;/Text&gt;
+                &lt;/View&gt;
+            &lt;/View&gt;
+
+            &lt;View style={styles.tagsContainer}&gt;
+                &lt;View style={[styles.tag, {width: 75}]}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/balloon.png&quot;)} style={styles.tagImage}/&gt;
+                &lt;Text style={styles.tagText}&gt;Aug 7&lt;/Text&gt;
+                &lt;/View&gt;
+
+                &lt;View style={[styles.tag, {width: 75}]}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/snapscore.png&quot;)} style={styles.tagImage}/&gt;
+                &lt;Text style={styles.tagText}&gt;6,869&lt;/Text&gt;
+                &lt;/View&gt;
+
+                &lt;View style={[styles.tag, {width: 60}]}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/leo.png&quot;)} style={styles.tagImage}/&gt;
+                &lt;Text style={styles.tagText}&gt;Leo&lt;/Text&gt;
+                &lt;/View&gt;
+
+                &lt;View style={[styles.tag, {width: 125}]}&gt;
+                &lt;Image source={require(&quot;../../assets/buttons/philanthropistbage1.png&quot;)} style={styles.tagImage}/&gt;
+                &lt;Text style={styles.tagText}&gt;Philanthropist&lt;/Text&gt;
+                &lt;/View&gt;
+            &lt;/View&gt;
+
+            &lt;LinearGradient
+                colors={['#B8860B', '#FFD700']}
+                start={{ x: 0, y: 0.5 }}
+                end={{ x: 0.5, y: 1.5 }}
+                style={styles.gradientBorder}
+            &gt;
+                &lt;TouchableOpacity style={styles.sectionContainer} onPress={handleOpenModal}&gt;
+                &lt;View style={styles.sectionTitleContainer}&gt;
+                    &lt;Image source={require(&quot;../../assets/buttons/givecoin2.png&quot;)} style={styles.sectionImageGiveCoin}/&gt;
+                    &lt;View&gt;
+                    &lt;Text style={styles.sectionTitle}&gt;Give Coins&lt;/Text&gt;
+                    &lt;Text style={styles.sectionDescription}&gt;189&lt;/Text&gt;
+                    &lt;/View&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionNewContainer}&gt;
+                    &lt;Text style={styles.sectionNew}&gt;New Features&lt;/Text&gt;
+                    &lt;Image source={require(&quot;../../assets/snapchat/arrowRight.png&quot;)} style={styles.sectionArrow}/&gt;
+                &lt;/View&gt;
+                &lt;/TouchableOpacity&gt;
+            &lt;/LinearGradient&gt;
+
+            &lt;Text style={styles.heading}&gt;Communities&lt;/Text&gt;
+
+            &lt;TouchableOpacity style={styles.sectionContainer}&gt;
+                &lt;View style={styles.sectionTitleContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/communitiesIcon.png&quot;)} style={styles.sectionImage}/&gt;
+                &lt;View&gt;
+                    &lt;Text style={styles.sectionTitle}&gt;Give Fund&lt;/Text&gt;
+                    &lt;Text style={styles.sectionDescription}&gt;Support a Non-Profit&lt;/Text&gt;
+                &lt;/View&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionNewContainer}&gt;
+                &lt;Text style={styles.sectionNew}&gt;New&lt;/Text&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/arrowRight.png&quot;)} style={styles.sectionArrow}/&gt;
+                &lt;/View&gt;
+            &lt;/TouchableOpacity&gt;
+
+            &lt;TouchableOpacity style={styles.sectionContainer}&gt;
+                &lt;View style={styles.sectionTitleContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/communitiesIcon.png&quot;)} style={styles.sectionImage}/&gt;
+                &lt;View&gt;
+                    &lt;Text style={styles.sectionTitle}&gt;Add School&lt;/Text&gt;
+                    &lt;Text style={styles.sectionDescription}&gt;Meet new friends and view your Communit...&lt;/Text&gt;
+                &lt;/View&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionNewContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/arrowRight.png&quot;)} style={styles.sectionArrow}/&gt;
+                &lt;/View&gt;
+            &lt;/TouchableOpacity&gt;
+
+            &lt;Text style={styles.heading}&gt;Friends&lt;/Text&gt;
+
+            &lt;TouchableOpacity style={styles.sectionContainer}&gt;
+                &lt;View style={styles.sectionTitleContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/addFriend.png&quot;)} style={styles.sectionImageFriend}/&gt;
+                &lt;View&gt;
+                    &lt;Text style={styles.sectionTitle}&gt;Add Friends&lt;/Text&gt;
+                    &lt;Text style={styles.sectionDescription}&gt;2 friend suggestions!&lt;/Text&gt;
+                &lt;/View&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionNewContainer}&gt;
+                &lt;Text style={styles.sectionNewCircle}&gt;2&lt;/Text&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/arrowRight.png&quot;)} style={styles.sectionArrow}/&gt;
+                &lt;/View&gt;
+            &lt;/TouchableOpacity&gt;
+
+            &lt;Text style={styles.heading}&gt;Spotlight &amp; Snap Map&lt;/Text&gt;
+
+            &lt;TouchableOpacity style={styles.sectionContainer}&gt;
+                &lt;View style={styles.sectionTitleContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/spotlightIcon.png&quot;)} style={styles.sectionImageFriend}/&gt;
+                &lt;View&gt;
+                    &lt;Text style={[styles.sectionTitle, {marginBottom: -3}]}&gt;Add To Spotlight&lt;/Text&gt;
+                &lt;/View&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionNewContainer}&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/more.png&quot;)} style={{width: 16, height: 16, marginRight: 6}}/&gt;
+                &lt;/View&gt;
+            &lt;/TouchableOpacity&gt;
+
+            &lt;TouchableOpacity style={styles.sectionMyFriends}&gt;
+                &lt;View&gt;
+                &lt;Image source={require(&quot;../../assets/snapchat/friendsImage.png&quot;)} style={{width: 360, height: 93}}/&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionLargeContainer}&gt;
+                &lt;View style={styles.sectionTitleContainer}&gt;
+                    &lt;Image source={require(&quot;../../assets/snapchat/addFriend.png&quot;)} style={styles.sectionImageFriend}/&gt;
+                    &lt;View&gt;
+                    &lt;Text style={[styles.sectionTitle, {marginBottom: -3}]}&gt;My Friends&lt;/Text&gt;
+                    &lt;/View&gt;
+                &lt;/View&gt;
+                
+                &lt;View style={styles.sectionNewContainer}&gt;
+                    &lt;Image source={require(&quot;../../assets/snapchat/arrowRight.png&quot;)} style={styles.sectionArrow}/&gt;
+                &lt;/View&gt;
+                &lt;/View&gt;
+                
+            &lt;/TouchableOpacity&gt;
+            &lt;/ScrollView&gt;
+        &lt;/BottomSheet&gt;
+        &lt;View style={{ position: &quot;absolute&quot;, top: 50 }}&gt;
+            &lt;ProfileHeader 
+            page=&quot;Chat&quot;
+            /&gt;
+        &lt;/View&gt;
+        &lt;/ImageBackground&gt;
+    &lt;/View&gt;
+    );
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-javascript">
+import { Image, Text, View, Button, StyleSheet, Pressable, Dimensions, ImageBackground, ScrollView, FlatList, Linking, useWindowDimensions } from &quot;react-native&quot;;
+import { supabase } from &quot;../../utils/hooks/supabase&quot;;
+import { useEffect, useState, useRef } from &quot;react&quot;;
+import BottomSheet, { BottomSheetView } from &quot;@gorhom/bottom-sheet&quot;;
+import { fontHeader } from &quot;../../../assets/themes/font&quot;;
+import { colors } from &quot;../../../assets/themes/colors&quot;;
+import Ionicons from &quot;react-native-vector-icons/Ionicons&quot;;
+import ProfileHeader from &quot;../../components/ProfileHeader&quot;;
+import CampaignTestimonials from &quot;../../components/GiveFundComponents/CampaignTestimonials&quot;;
+import FollowButton from &quot;../../components/GiveFundComponents/FollowButton&quot;;
+import * as Progress from &quot;react-native-progress&quot;;
+import { TabBar, TabView, SceneMap } from 'react-native-tab-view';
+import communityList from '../../../assets/communityList'
+
+const { height: SCREEN_HEIGHT } = Dimensions.get(&quot;window&quot;);
+
+export default function NonProfitScreen({ route, navigation }){
+    const sheetRef = useRef(null);
+    const { id, originScreen } = route.params;
+    const [followNum, setFollowNum] = useState(0);
+    const [isFollowing, setIsFollowing] = useState(false);
+    const [nonprofits, setNonprofits] = useState([]);
+
+    const [amount, setAmount] = useState(0);
+    const [crowdImage, setCrowdImage] = useState(require(&quot;../../../assets/crowdWithout.png&quot;));
+    
+    ///SUPABASE CALL
+    async function fetchNonprofits() {
+    try {
+        const { data, error } = await supabase
+        .from(&quot;nonprofits&quot;)
+        .select(&quot;*&quot;)
+        .eq(&quot;registrationNumber&quot;, id);
+        if (error) {
+        console.error(&quot;Error fetching nonprofits:&quot;, error.message);
+        return;
+        }
+        if (data) {
+        setNonprofits(data);
+        setFollowNum(data[0].followers);
+        setAmount(data[0].currentAmount);
+        if(data[0].hasDonated){
+            setCrowdImage(require(&quot;../../../assets/crowdWithMariah.png&quot;))
+        }
+        }
+    } catch (error) {
+        console.error(&quot;Error fetching Nonprofits:&quot;, error.message);
+    }
+    }
+
+    useEffect(() =&gt; {
+    fetchNonprofits();
+    }, [originScreen]);
+
+    //STORIES COMMUNITIES TABS
+    const FirstRoute = () =&gt; (
+    &lt;View style={styles.storiesSection}&gt;
+        {nonprofits[0].stories.length &gt; 0 ? (
+            &lt;FlatList
+            nestedScrollEnabled
+            data={nonprofits[0].stories}
+            horizontal={false}
+            numColumns={3}
+            columnWrapperStyle={{ justifyContent: &quot;space-between&quot; }}
+            ItemSeparatorComponent={() =&gt; &lt;View style={{ height: 5 }} /&gt;}
+            renderItem={({ item }) =&gt; &lt;CampaignTestimonials url={item} /&gt;}
+            keyExtractor={(item) =&gt; item}
+            scrollEnabled={false}
+            contentContainerStyle={{ paddingBottom: 10 }}
+            /&gt;
+        ) : (
+            &lt;Text&gt;No stories data found&lt;/Text&gt;
+        )}
+    &lt;/View&gt;
+    );
+
+    const renderScene = SceneMap({
+    stories: FirstRoute,
+    community: SecondRoute,
+    });
+    const layout = useWindowDimensions();
+    const [index, setIndex] = useState(0);
+    const [routes] = useState([
+    { key: 'stories', title: 'Stories' },
+    { key: 'community', title: 'Community' },
+    ]);
+
+    const renderTabBar = (props) =&gt; (
+    &lt;TabBar
+        {...props}
+        style={{ backgroundColor: '#F0F0F0' }}
+        indicatorStyle={{ backgroundColor: 'blue' }}
+        labelStyle={{ color: 'black' }}
+    /&gt;
+    );
+
+    if (nonprofits.length === 0) {
+    return null;
+    }
+
+    return (
+    &lt;View style={styles.container}&gt;
+        &lt;ImageBackground 
+        source={crowdImage} 
+        style={styles.image}
+        resizeMode=&quot;cover&quot; //contain makes it too small
+        &gt;
+        &lt;BottomSheet
+            ref={sheetRef}
+            index={3}
+            snapPoints={[&quot;35&quot;, &quot;48&quot;, &quot;58&quot;, &quot;68&quot;, &quot;78&quot;, &quot;85&quot;]}
+        &gt;
+            &lt;ScrollView&gt;
+            &lt;View style={styles.mainInfoContainer}&gt;
+            &lt;View style={styles.titleContainer}&gt;
+                &lt;Image
+                style={styles.logo}
+                source={{ uri: nonprofits[0].imageUrl }}
+                /&gt;
+                &lt;View&gt;
+                &lt;View style={styles.row}&gt;
+                    &lt;Text style={styles.mainTitle}&gt;{nonprofits[0].name} &lt;/Text&gt;
+                    &lt;Image source={require('../../../assets/buttons/nonprofitBadge.png')} style={styles.token}/&gt;
+                &lt;/View&gt;
+                    &lt;Text style={styles.followers}&gt;
+                    NonProfit &bull; {followNum} Community Members
+                    &lt;/Text&gt;
+                &lt;/View&gt;
+            &lt;/View&gt;
+
+            &lt;View style={styles.progressSection}&gt;
+            &lt;Progress.Bar
+                progress={amount / nonprofits[0].goals[0]}
+                width={350}
+                height={25}
+                borderRadius={50}
+                color=&quot;#14FF0F&quot;
+            /&gt;
+            &lt;View
+                style={{
+                display:&quot;absolute&quot;, 
+                left:(350*amount / nonprofits[0].goals[0] - 65),
+                marginTop: -65
+                }}
+            &gt;
+            &lt;Image 
+                source={require(&quot;../../../assets/mariah/mariahProfile.png&quot;)}
+                style={[styles.progressIcon]}
+            /&gt;
+            &lt;/View&gt;
+            &lt;Text
+                style={[
+                {
+                    color: colors.primary,
+                    fontSize: fontHeader.fontSize,
+                    fontFamily: fontHeader.fontFamily,
+                    textAlign: &quot;center&quot;,
+                    paddingVertical: 10,
+                    fontSize: 20,
+                },
+                ]}
+            &gt;
+                ${amount} raised out of ${nonprofits[0].goals[0]} goal
+            &lt;/Text&gt;
+            &lt;/View&gt;
+
+        &lt;View style={{height:600}}&gt;
+            &lt;TabView
+            navigationState={{ index, routes }}
+            onIndexChange={setIndex}
+            renderScene={renderScene}
+            style={{height:800}}
+            renderTabBar={renderTabBar}
+            indicatorStyle={{ backgroundColor: 'red' }}
+            /&gt;
+        &lt;/View&gt;
+
+        &lt;/ScrollView&gt;
+        &lt;/BottomSheet&gt;
+        &lt;View style={{ position: &quot;absolute&quot;, top: 50 }}&gt;
+            &lt;ProfileHeader 
+            page=&quot;Stories&quot;
+            /&gt;
+        &lt;/View&gt;
+        &lt;/ImageBackground&gt;
+    &lt;/View&gt;
+    );
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-javascript">
+import React, { useEffect, useRef, useState } from &quot;react&quot;;
+import { View, Text, StyleSheet, Pressable, Image, ScrollView, SafeAreaView, Dimensions, TouchableOpacity } from &quot;react-native&quot;;
+import { useSafeAreaInsets } from &quot;react-native-safe-area-context&quot;;
+import { supabase } from &quot;../../utils/hooks/supabase&quot;;
+import Ionicons from &quot;react-native-vector-icons/Ionicons&quot;;
+
+import ConfettiCannon from 'react-native-confetti-cannon';
+
+export default function ConfirmationScreen({ route, navigation }) {
+    const insets = useSafeAreaInsets();
+    const { id, donation } = route.params; 
+    const [title, setTitle] = useState(&quot;&quot;);
+
+    const { width, height } = Dimensions.get('window');
+    const confettiRef = useRef(null);
+
+    const [emailSelected, setEmailSelected] = useState(false);
+    const [bitmojiSelected, setBitmojiSelected] = useState(false);
+    const [badgeSelected, setBadgeSelected] = useState(false);
+
+    function changeSelectionEmail(){
+    setEmailSelected(!emailSelected);
+    }
+
+    function changeSelectionBitmoji(){
+    setBitmojiSelected(!bitmojiSelected);
+    }
+
+    function changeSelectionBadge(){
+    setBadgeSelected(!badgeSelected);
+    }
+
+    useEffect(() =&gt; {
+    async function fetchNonprofits() {
+        try {
+            const { data, error } = await supabase.from(&quot;nonprofits&quot;).select(&quot;name&quot;).eq(&quot;registrationNumber&quot;, id); 
+            if (error) {
+                console.error(&quot;Error fetching nonprofits:&quot;, error.message);
+                return;
+            }
+            if (data) {
+                setTitle(data[0].name);
+                // console.log(data);
+            }
+        } catch (error) {
+            console.error(&quot;Error fetching Nonprofits:&quot;, error.message);
+        }
+        }
+    
+        fetchNonprofits();
+    if (confettiRef.current) {
+        confettiRef.current.start();
+    }
+    }, []);
+
+    return (
+    &lt;SafeAreaView
+        style={[
+        styles.container,
+        {
+            paddingBottom: insets.bottom,
+            paddingLeft: insets.left,
+            paddingRight: insets.right,
+        },
+        ]}
+    &gt;
+        &lt;ConfettiCannon
+        ref={confettiRef}
+        count={200}
+        origin={{ x: width / 2, y: height / 2 }} 
+        fallSpeed={1000}
+        blastDirection={-1}
+        fadeOut={true} 
+        /&gt;
+
+        &lt;ScrollView&gt;
+        &lt;View style={styles.confirmationContainer}&gt;
+            &lt;Text style={styles.mainHeading}&gt;Your Donation to {title} is Complete!&lt;/Text&gt;
+
+            &lt;Image source={require('../../../assets/buttons/philanthropistbage1.png')} style={styles.image}/&gt;
+
+            &lt;Text style={styles.subHeading}&gt;You've Earned The Philanthropist Badge&lt;/Text&gt;
+
+            &lt;TouchableOpacity onPress={changeSelectionEmail} style={styles.clickableContainer}&gt;
+            &lt;View style={styles.clickableTextContainer}&gt;
+                &lt;Image source={require('../../../assets/snapchat/tax.png')} style={styles.clickableImage}/&gt;
+                &lt;Text style={styles.clickableText}&gt;Send Deduction To Email On File&lt;/Text&gt;
+            &lt;/View&gt;
+            
+            &lt;Ionicons
+                style={styles.circleIcon}
+                name={emailSelected ? &quot;checkmark-circle&quot; : &quot;ellipse-outline&quot;}
+                size={28}
+                color={emailSelected ? &quot;#3CB2E2&quot; : &quot;lightgrey&quot;}
+            /&gt;
+            &lt;/TouchableOpacity&gt;
+
+            &lt;TouchableOpacity onPress={changeSelectionBitmoji} style={styles.clickableContainer}&gt;
+            &lt;View style={styles.clickableTextContainer}&gt;
+                &lt;Image source={require('../../../assets/buttons/philanthropistbage1.png')} style={styles.clickableImageBitmoji}/&gt;
+                &lt;Text style={styles.clickableText}&gt;Add My Bitmoji to Philanthropist Crowd&lt;/Text&gt;
+            &lt;/View&gt;
+            
+            &lt;Ionicons
+                style={styles.circleIcon}
+                name={bitmojiSelected ? &quot;checkmark-circle&quot; : &quot;ellipse-outline&quot;}
+                size={28}
+                color={bitmojiSelected ? &quot;#3CB2E2&quot; : &quot;lightgrey&quot;}
+            /&gt;
+            &lt;/TouchableOpacity&gt;
+
+            &lt;TouchableOpacity onPress={changeSelectionBadge} style={styles.clickableContainer}&gt;
+            &lt;View style={styles.clickableTextContainer}&gt;
+                &lt;Image source={require('../../../assets/mariah/thumbUp.png')} style={styles.clickableImageBitmoji}/&gt;
+                &lt;Text style={styles.clickableText}&gt;Display Philanthropist Badge On Profile&lt;/Text&gt;
+            &lt;/View&gt;
+            
+            &lt;Ionicons
+                style={styles.circleIcon}
+                name={badgeSelected ? &quot;checkmark-circle&quot; : &quot;ellipse-outline&quot;}
+                size={28}
+                color={badgeSelected ? &quot;#3CB2E2&quot; : &quot;lightgrey&quot;}
+            /&gt;
+            &lt;/TouchableOpacity&gt;
+            
+            &lt;View style={styles.donationTextContainer}&gt;
+            &lt;Text style={styles.donationText}&gt;Your Donation&lt;/Text&gt;
+            &lt;Text style={styles.donationText}&gt;{donation} Give Coins&lt;/Text&gt;
+            &lt;/View&gt;
+            
+            &lt;Pressable style={styles.button}&gt;
+            &lt;Text style={styles.buttonText}&gt;Share Now&lt;/Text&gt;
+            &lt;/Pressable&gt;
+
+            &lt;Pressable onPress={() =&gt;{
+                navigation.navigate('NonprofitScreen', {
+                id: id,
+                originScreen: &quot;ConfirmationScreen&quot;
+                })}} style={styles.button}&gt;
+            &lt;Text style={styles.buttonText}&gt;Back to Campaign&lt;/Text&gt;
+            &lt;/Pressable&gt;
+        &lt;/View&gt;
+        
+        &lt;/ScrollView&gt;
+
+    &lt;/SafeAreaView&gt;
+    );
+}
+</code>
+                    </pre>
+                </div>
+
+                <div class="output-description">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <p>Expo Go</p>
+                    </div>
+                    
+                    <div class="output-image"><img /></div>
+                </div>                
+            </div>
+        </div>
+    </div>
     
     <div class="game-sub-container">
         <div class="game-sub-heading" id="highlights">
@@ -150,7 +774,7 @@
     
                 <div class="highlights-block">
                     <img src="assets/give fund/give.png" />
-                    <p>Users can donate ad revenue by watching sponsored content</p>
+                    <p>Users donate ad revenue by watching sponsored content</p>
                 </div>
 
                 <div class="highlights-block">

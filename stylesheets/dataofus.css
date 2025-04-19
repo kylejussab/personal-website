@@ -27,7 +27,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
     user-select: none;
-    -webkit-user-drag: none;  /* Prevents dragging in Safari/Chrome */
+    -webkit-user-drag: none;
     pointer-events: none; 
 }
 

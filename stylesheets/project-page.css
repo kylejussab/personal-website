@@ -172,8 +172,13 @@ body::before {
 
 @media only screen and (max-width: 918px) {
     body {
-        overflow-x: hidden;
-      }
+        overflow-x: hidden !important;
+    }
+
+    .game-sub-overview .card-container {
+        height: max-content;
+        padding-bottom: 15px;
+    }
 
     /* Opening section structure */
     .back-button p {

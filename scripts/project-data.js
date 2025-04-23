@@ -11,7 +11,9 @@ let projectData = [
         "discipline1": "Mobile Dev",
         "discipline2": "UI / UX",
         "discipline3": "Product Design",
-        "link": "https://kylejussab.com/givefund"
+        "link": "https://kylejussab.com/givefund",
+        "customOrder": 1,
+        "dateOrder": 0
     },
     {
         "role": "02 | RESEARCHER",
@@ -25,7 +27,9 @@ let projectData = [
         "discipline1": "Data Science",
         "discipline2": "Engineering",
         "discipline3": "Automation",
-        "link": "https://kylejussab.com/dataofus"
+        "link": "https://kylejussab.com/dataofus",
+        "customOrder": 0,
+        "dateOrder": 1
     },
     {
         "role": "03 | FRONTEND DEVELOPER",
@@ -39,7 +43,9 @@ let projectData = [
         "discipline1": "Web Dev",
         "discipline2": "UI / UX",
         "discipline3": "Research",
-        "link": "https://kylejussab.com/pixelpulse"
+        "link": "https://kylejussab.com/pixelpulse",
+        "customOrder": 2,
+        "dateOrder": 2
     },
     // {
     //     "role": "04 | APPLICATION DEVELOPER",
@@ -60,32 +66,44 @@ let projectData = [
 const projectCardTemplate = document.querySelector("[data-project-template]");
 const projectCardContainer = document.querySelector("[data-project-cards-container]");
 
-posts = projectData.map(post => {
-    const card = projectCardTemplate.content.cloneNode(true).children[0];
+function renderProjectCards() {
+    projectCardContainer.innerHTML = "";
 
-    const role = card.querySelector("[data-role]");
-    const title = card.querySelector("[data-title]");
-    const description = card.querySelector("[data-description]");
-    const image = card.querySelector("[data-img]");
-    const link = card.querySelector("[data-link]");
-    const date = card.querySelector("[data-date]");
-    const discipline1 = card.querySelector("[data-discipline1]");
-    const discipline2 = card.querySelector("[data-discipline2]");
-    const discipline3 = card.querySelector("[data-discipline3]");
-    const tech1 = card.querySelector("[data-tech1]");
-    const tech2 = card.querySelector("[data-tech2]");
+    const sortedData = sortData(projectData, chronologicalOrder);
 
-    role.innerHTML = post.role;
-    title.innerHTML = post.title;
-    description.textContent = post.description;
-    image.innerHTML = '<img src="' + post.image + '" alt="' + post.alt + '">';
-    link.href = post.link;
-    date.innerHTML = post.date;
-    discipline1.innerHTML = post.discipline1;
-    discipline2.innerHTML = post.discipline2;
-    discipline3.innerHTML = post.discipline3;
-    tech1.innerHTML = post.tech1;
-    tech2.innerHTML = post.tech2;
+    sortedData.forEach((post, index) => {
+        const card = projectCardTemplate.content.cloneNode(true).children[0];
 
-    projectCardContainer.append(card);
-});
+        const role = card.querySelector("[data-role]");
+        const title = card.querySelector("[data-title]");
+        const description = card.querySelector("[data-description]");
+        const image = card.querySelector("[data-img]");
+        const link = card.querySelector("[data-link]");
+        const date = card.querySelector("[data-date]");
+        const discipline1 = card.querySelector("[data-discipline1]");
+        const discipline2 = card.querySelector("[data-discipline2]");
+        const discipline3 = card.querySelector("[data-discipline3]");
+        const tech1 = card.querySelector("[data-tech1]");
+        const tech2 = card.querySelector("[data-tech2]");
+
+        const roleText = post.role.split("|")[1]?.trim() || post.role;
+        const newRoleNumber = String(index + 1).padStart(2, "0");
+        role.innerHTML = `${newRoleNumber} | ${roleText}`;
+
+        title.innerHTML = post.title;
+
+        description.textContent = post.description;
+        image.innerHTML = '<img src="' + post.image + '" alt="' + post.alt + '">';
+        link.href = post.link;
+        date.innerHTML = post.date;
+        discipline1.innerHTML = post.discipline1;
+        discipline2.innerHTML = post.discipline2;
+        discipline3.innerHTML = post.discipline3;
+        tech1.innerHTML = post.tech1;
+        tech2.innerHTML = post.tech2;
+
+        projectCardContainer.append(card);
+    });
+}
+
+renderProjectCards();

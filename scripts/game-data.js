@@ -25,7 +25,9 @@ let gameData = [
         "genre3": "Education",
         "tech1": "Unity",
         "tech2": "C#",
-        "link": "https://kylejussab.com/cpucity"
+        "link": "https://kylejussab.com/cpucity",
+        "customOrder": 1,
+        "dateOrder": 0
     },
     {
         "role": "02 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
@@ -39,7 +41,9 @@ let gameData = [
         "genre3": "Adventure",
         "tech1": "GB Studio",
         "tech2": "GBVM",
-        "link": "https://kylejussab.com/tloubty"
+        "link": "https://kylejussab.com/tloubty",
+        "customOrder": 0,
+        "dateOrder": 1
     },
     // {
     //     "techStack": "Unity, C#",
@@ -62,39 +66,52 @@ let gameData = [
         "genre3": "Puzzler",
         "tech1": "Unity",
         "tech2": "C#",
-        "link": "https://kylejussab.com/projectphoebe"
+        "link": "https://kylejussab.com/projectphoebe",
+        "customOrder": 2,
+        "dateOrder": 2
     }
 ]
 
 const gameCardTemplate = document.querySelector("[data-game-template]");
 const gameCardContainer = document.querySelector("[data-game-cards-container]");
 
-posts = gameData.map(post => {
-    const card = gameCardTemplate.content.cloneNode(true).children[0];
+function renderGameCards() {
+    gameCardContainer.innerHTML = "";
+  
+    const sortedData = sortData(gameData, chronologicalOrder);
+  
+    sortedData.forEach((post, index) => {
+        const card = gameCardTemplate.content.cloneNode(true).children[0];
 
-    const title = card.querySelector("[data-title]");
-    const role = card.querySelector("[data-role]");
-    const description = card.querySelector("[data-description]");
-    const image = card.querySelector("[data-img]");
-    const link = card.querySelector("[data-link]");
-    const release = card.querySelector("[data-release]");
-    const genre1 = card.querySelector("[data-genre1]");
-    const genre2 = card.querySelector("[data-genre2]");
-    const genre3 = card.querySelector("[data-genre3]");
-    const tech1 = card.querySelector("[data-tech1]");
-    const tech2 = card.querySelector("[data-tech2]");
+        const title = card.querySelector("[data-title]");
+        const role = card.querySelector("[data-role]");
+        const description = card.querySelector("[data-description]");
+        const image = card.querySelector("[data-img]");
+        const link = card.querySelector("[data-link]");
+        const release = card.querySelector("[data-release]");
+        const genre1 = card.querySelector("[data-genre1]");
+        const genre2 = card.querySelector("[data-genre2]");
+        const genre3 = card.querySelector("[data-genre3]");
+        const tech1 = card.querySelector("[data-tech1]");
+        const tech2 = card.querySelector("[data-tech2]");
 
-    title.innerHTML = post.title;
-    role.innerHTML = post.role;
-    description.textContent = post.description;
-    image.innerHTML = '<img src="' + post.image + '" alt="' + post.alt + '">';
-    link.href = post.link;
-    release.innerHTML = post.release;
-    genre1.innerHTML = post.genre1;
-    genre2.innerHTML = post.genre2;
-    genre3.innerHTML = post.genre3;
-    tech1.innerHTML = post.tech1;
-    tech2.innerHTML = post.tech2;
+        const roleText = post.role.split("|")[1]?.trim() || post.role;
+        const newRoleNumber = String(index + 1).padStart(2, "0");
+        role.innerHTML = `${newRoleNumber} | ${roleText}`;
+  
+        title.innerHTML = post.title;
+        description.textContent = post.description;
+        image.innerHTML = `<img src="${post.image}" alt="${post.alt}">`;
+        link.href = post.link;
+        release.innerHTML = post.release;
+        genre1.innerHTML = post.genre1;
+        genre2.innerHTML = post.genre2;
+        genre3.innerHTML = post.genre3;
+        tech1.innerHTML = post.tech1;
+        tech2.innerHTML = post.tech2;
 
-    gameCardContainer.append(card);
-});
+        gameCardContainer.append(card);
+    });
+}
+
+renderGameCards();

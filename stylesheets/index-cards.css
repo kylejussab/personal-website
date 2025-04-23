@@ -1,4 +1,4 @@
-.card-container, .introduction-container, .about-content, .chat-button, footer {
+.card-container, .introduction-container, .switch-content, .about-content, .chat-button, footer {
     animation: fadeInAnimation ease 2s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -24,6 +24,97 @@
     }
 }
 
+/* Sorting toggle switch */
+.switch-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+.switch-content-container {
+    width: 1000px;
+}
+
+.switch-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    width: max-content;
+}
+
+.preload-toggle {
+    display: none;
+}
+
+.switch-label {
+    font-size: 13px;
+    color: var(--font-secondary-color);
+}
+
+#toggleLabel {
+    width: 40px;
+    text-align: left;
+    font-size: 12px;
+    color: var(--font-secondary-color);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 24px;
+}
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    border: #333333 solid 1px;
+    border-radius: 34px;
+
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--font-color);
+    -webkit-transition: .3s;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #800080;
+    border: #800080 solid 1px;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+  
+
+/* Cards */
 .card-container {
     overflow: hidden;
     width: 1000px;
@@ -179,6 +270,18 @@
 }
 
 @media only screen and (max-width: 918px) {
+    .switch-wrapper {
+        margin-top: 30px;
+    }
+
+    .switch-content-container {
+        width: 350px;
+    }
+
+    .switch-label, #toggleLabel  {
+        font-size: 11px;
+    }
+
     .card-container {
         width: 350px;
         height: 500px;

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="stylesheets/index-cards.css">
     <link rel="stylesheet" href="stylesheets/index-about.css">
     <link rel="stylesheet" href="stylesheets/index-chat.css">
+    <script src="scripts/sort-data.js" defer ></script>
     <script src="scripts/nav-toggle.js" defer ></script>
     <script src="scripts/project-data.js" defer ></script>
     <script src="scripts/game-data.js" defer ></script>
@@ -109,6 +110,21 @@
     </section>
 
     <main>
+        <div class="switch-wrapper">
+            <div class="switch-content-container">
+                <label class="switch-content preload-toggle" id="switch-content" for="orderToggle">
+                    <p class="switch-label">Chronological Order</p>
+                    
+                    <div class="switch">
+                        <input type="checkbox" id="orderToggle">
+                        <span class="slider"></span>
+                    </div>
+    
+                    <p id="toggleLabel">OFF</p>
+                </div>
+            </div>
+        </label>
+
         <div class="all-game-cards" data-game-cards-container></div>
         <div class="all-project-cards" data-project-cards-container></div>
         

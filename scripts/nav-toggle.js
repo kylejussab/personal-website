@@ -5,6 +5,8 @@ let projectElements = document.getElementsByClassName('projects-content');
 let aboutContent = document.getElementsByClassName('about-content');
 
 function selected(){
+    let toggleContent = document.getElementById("switch-content");
+
     if(document.getElementById('games').checked){
         for(let i = 0; i < gameElements.length; i++){
             gameElements[i].style.display = 'flex';
@@ -17,6 +19,8 @@ function selected(){
         for(let i = 0; i < aboutContent.length; i++){
             aboutContent[i].style.display = 'none';
         }
+
+        toggleContent.style.display = 'flex';
     }
     else if(document.getElementById('about').checked){
         for(let i = 0; i < gameElements.length; i++){
@@ -30,6 +34,8 @@ function selected(){
         for(let i = 0; i < aboutContent.length; i++){
             aboutContent[i].style.display = 'flex';
         }
+
+        toggleContent.style.display = 'none';
     }
     else if(document.getElementById('projects').checked){
         for(let i = 0; i < gameElements.length; i++){
@@ -43,5 +49,7 @@ function selected(){
         for(let i = 0; i < aboutContent.length; i++){
             aboutContent[i].style.display = 'none';
         }
+
+        toggleContent.style.display = 'flex';
     }
 }

@@ -1,0 +1,142 @@
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(7deg);
+    }
+    50% {
+        transform: rotate(-7deg);
+    }
+    75% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+#cpucity::before {
+    background: radial-gradient(circle at center, rgba(230, 168, 80, 0.1), rgba(230, 168, 80, 0) 70%);
+}
+
+.motherboard-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    user-select: none;
+    -webkit-user-drag: none;
+    pointer-events: none; 
+}
+
+.motherboard-image {
+    width: 70%;
+    opacity: 0.8;
+}
+
+.opening .cpucity-image {
+    position: absolute;
+    bottom: 69%;
+    left: 16%;
+    transform: translate(50%, 50%);
+    opacity: 0.9;
+    width: 34%;
+    height: auto;
+}
+
+.content {
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.content p {
+    color: var(--font-secondary-color);
+    margin-top: 8px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.content-heading {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.highlighted-text {
+    color: var(--font-color);
+}
+
+.overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.overview-block {
+    width: 25%;
+}
+
+.overview-block > :nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.overview-block p {
+    margin-block: -4px;
+}
+
+.game-sub-overview.extra-space {
+    margin-top: 60px;
+}
+
+
+@media only screen and (max-width: 918px) {
+    .project-container {
+        width: 98%;
+        height: max-content;
+    }
+
+    .opening .cpucity-image  {
+        display: block;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        transform: translate(0px, 0px);
+
+        width: 98%;
+        height: auto;
+    }
+    
+    .motherboard-image {
+        display: none;
+    }
+    
+    .overview-container {
+        row-gap: 50px;
+    }
+
+    .overview-block {
+        width: 50%;
+    }
+
+    .content {
+        width: 98%;
+    }
+    
+    .content p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+}

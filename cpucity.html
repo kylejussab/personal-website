@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="stylesheets/global.css">
     <link rel="stylesheet" href="stylesheets/index-cards.css">
     <link rel="stylesheet" href="stylesheets/project-page.css">
+    <link rel="stylesheet" href="stylesheets/cpucity.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     
     <script src="scripts/project-page-navigation.js" defer ></script>
     <title>Kyle Jussab - CPU City</title>
@@ -24,9 +29,10 @@
     <nav class="page-navigation">
         <p>CONTENTS</p>
         <ul>
+            <li><a href="#artwork">Artwork</a></li>
             <li><a href="#overview">Overview</a></li>
+            <li><a href="#background">Background</a></li>
             <li><a href="#programming">Programming</a></li>
-            <li><a href="#design">Design</a></li>
             <li><a href="#feedback">Feedback</a></li>
             <li><a href="#next-game">Next Game</a></li>
         </ul>
@@ -39,47 +45,99 @@
         </ul>
     </nav>
 
-    <section class="opening">
+    <section class="opening" id="artwork">
             <h1>CPU City</h1>
             <p class="intro-subheading">Third Person / Adventure / Education - August 2024</p>
 
-            <img src="assets/CPU City.jpg">
+            <div class="motherboard-container">
+                <img src="assets/data of us/background.png" class="motherboard-image">
+                <img src="assets/CPU City.jpg" class="cpucity-image">
+            </div>
 
             <a href="https://github.com/MrsFrisby/CPU_City_August" target="_blank" class="external-link">
                 <p>View on Github</p>
                 <img src="assets/open-in-new.svg">
             </a>
-
-            <div class="intro-info" id="overview">
-                <div class="intro-info-section">
-                    <h3>Overview</h3>
-                    <p>CPU City is an engaging educational game designed to bring GCSE Computer Science concepts to life through dynamic gameplay. Set in a colorful, bustling city, players step into the shoes of Rhi Vyse, a determined teenager tasked with thwarting the nefarious plans of the Pro-Krastor Nation. The game features a single, immersive level centered on Von Neumann Architecture, offering players a hands-on learning experience.</p>
-                    <p>Developed by a dedicated team of four, this project highlights our collaborative efforts in blending educational content with interactive gameplay to create a compelling and enriching experience.</p>
-                </div>
-
-                <div class="intro-info-section">
-                    <h3>Potential</h3>
-                    <p>Looking ahead, CPU City has the potential to expand significantly, covering a comprehensive range of topics within the GCSE Computer Science curriculum. Future updates aim to include content areas such as programming concepts, data structures, algorithms, computer networks, and ethical, legal, and environmental impacts of technology. Our goal is to create a valuable supplementary tool for UK classrooms, enhancing students’ understanding of computer science through interactive and engaging gameplay.</p>
-                </div>
-
-                <div class="intro-info-section">
-                    <h3>My Role</h3>
-                    <h3 class="list-heading">Gameplay Programming:</h3>
-                    <p>- Built a quest system to provide players with objectives and track their progress.</p>
-                    <p>- Developed an interaction system allowing players to engage with NPCs and objects.</p>
-                    <p>- Created a hydration mechanic where players must manage hydration levels, impacting their ability to sprint or attack.</p>
-                    <p>- Designed the scoring and timing systems, incorporating a 10-minute timer that influences the final score based on performance.</p>
-                    <h3 class="list-heading second-heading">Non-Programming:</h3>
-                    <p>- Created paper prototypes and mockups establishing the games look and feel.</p>
-                    <p>- Assisted in designing and developing in-game UI elements, including menus such as the main menu, pause screen, and game over screen.</p>
-                    <p>- Contributed to game flow and narrative development, including combat mechanics and health/score penalties.</p>
-                    <br><br>
-                    <h3>Technology Stack</h3>
-                    <p>Unity, C#, Visual Studio, Git</p>
-                </div>                
-            </div>
-            
     </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="overview">
+            <div></div>
+            <p>OVERVIEW</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="overview-container">
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Timeline</span></p>
+                    <p>20 weeks</p>
+                    <p>Apr - Aug '24</p>
+                </div>
+                
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Genre</span></p>
+                    <p>Third Person</p>
+                    <p>Adventure</p>
+                    <p>Education</p>
+                </div>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Responsibilities</span></p>
+                    <p>Team Lead</p>
+                    <p>Gameplay Programmer</p>
+                    <p>UI Designer</p>
+                    <p>Prototyper</p>
+                </div>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Tech</span></p>
+                    <p>Unity</p>
+                    <p>C#</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-overview extra-space">
+        <div class="content">
+            <h4 class="content-heading">Narrative Overview</h4>
+            <p>CPU City follows the journey of 
+                <span class="highlighted-text">Rhi Vyse</span>, a determined teenager living in a vibrant city powered by technology. When the mysterious 
+                <span class="highlighted-text">Pro-Krastor Nation</span> begins to sabotage the city's systems, Rhi must step up to stop their plans by navigating the city to uncover its secrets; the 
+                <span class="highlighted-text">Von Neumann Architecture</span> that keeps it running. The educational adventure 
+                <span class="highlighted-text">teaches computing concepts</span> through a hero-driven narrative set in a colorful, fun, and engaging world.
+            </p>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="background">
+            <div></div>
+            <p>BACKGROUND</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">Why?</h4>
+            <p>The idea for CPU City came from a collaboration between myself and teammate 
+                <span class="highlighted-text">Jess</span>, a GCSE Computer Science teacher. While I was passionate about 
+                <span class="highlighted-text">edutainment</span>, Jess brought deep insight into the classroom struggles students faced. 
+                Together, we saw an opportunity to turn difficult concepts into something 
+                <span class="highlighted-text">playful, accessible, and fun</span>. 
+                Jess also provided direct access to our target audience, allowing for meaningful playtesting throughout development.
+            </p>
+            <p>
+                We envisioned our game as a long-term project; a gamified city where each level teaches a different part of the 
+                <span class="highlighted-text">GCSE Computer Science syllabus</span>. 
+                For this version, we focused on a single level covering the 
+                <span class="highlighted-text">Von Neumann Architecture</span>, one of the first topics students encounter. 
+                This choice allowed us to illustrate the game's full potential while keeping the project scoped and achievable.
+            </p>
+        </div>
+    </div>
 
     <div class="game-sub-container">
         <div class="game-sub-heading" id="programming">
@@ -100,12 +158,6 @@
             </div>
         </div>
 
-        <div class="game-sub-image game-image-cpucity">
-            <div class="cpucity-section-one">
-                <img src="assets/CPUCity1.jpg">
-            </div>
-        </div>
-
         <div class="game-sub-block">
             <p class="block-heading">The interconnected systems.</p>
             <div>
@@ -113,16 +165,9 @@
                 <p>The hydration system serves as a reminder of the importance of staying hydrated in real life. In-game, a lack of hydration restricts Rhi’s abilities, such as sprinting and using his attack fireball. Players must seek out water droplets to maintain hydration levels. Achieving high scores requires maintaining consistent hydration throughout the gameplay. This blend of collectible items, engaging world elements, and the added pressure of a time limit creates a dynamic and enjoyable balancing act, making the educational experience both fun and effective.</p>
             </div>
         </div>
-
-        <div class="game-sub-image game-image-cpucity">
-            <div class="cpucity-section-two">
-                <img src="assets/CPUCity2.jpg">
-                <img src="assets/CPUCity4.jpg">
-            </div>
-        </div>
     </div>
     
-    <div class="game-sub-container">
+    <!-- <div class="game-sub-container">
         <div class="game-sub-heading" id="design">
             <div></div>
             <p>DESIGN</p>
@@ -161,7 +206,7 @@
                 <img src="assets/CPUCity6.jpg">
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="game-sub-container">
         <div class="game-sub-heading" id="feedback">
@@ -175,7 +220,6 @@
             <div class="feedback-border">
                 <div class="feedback-comment">
                     <div class="feedback-name">
-                        <img src="assets/user icon.svg">
                         <p>QA Tester</p>
                     </div>
                     <p>Really cool idea, I think this is great.</p>
@@ -185,7 +229,6 @@
             <div class="feedback-border">
                 <div class="feedback-comment">
                     <div class="feedback-name">
-                        <img src="assets/user icon.svg">
                         <p>QA Tester</p>
                     </div>
                     <p>The thriller dance at the end was really funny.</p>

@@ -91,7 +91,7 @@ body::before {
     justify-content: center;
     align-items: center;
     margin: 0px;
-    margin-top: 100px;
+    padding-top: 100px;
     margin-bottom: 20px;
 }
 
@@ -199,7 +199,7 @@ body::before {
     }
 
     .opening {
-        margin-top: 100px;
+        padding-top: 100px;
     }
     
     .opening h1 {

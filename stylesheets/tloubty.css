@@ -28,7 +28,14 @@
     margin-bottom: 10px;
     user-select: none;
     -webkit-user-drag: none;
-    pointer-events: none; 
+    pointer-events: none;
+}
+
+.gameboy-container video {
+    user-select: text;
+    -webkit-user-drag: auto;
+    pointer-events: auto;
+    z-index: 20;
 }
 
 .opening video {
@@ -43,6 +50,7 @@
 .gameboy-image {
     width: 70%;
     opacity: 0.8;
+    z-index: 18;
 }
 
 .content {

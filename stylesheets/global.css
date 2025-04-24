@@ -184,8 +184,7 @@ footer {
 }
 
 footer img {
-    width: 80px;
-    height: 80px;
+    width: 100px;
 }
 
 /** Media Queries **/
@@ -194,7 +193,6 @@ footer img {
         width: 60px;
         height: 60px;
     }
-
 
     p {
         font-size: 11px;

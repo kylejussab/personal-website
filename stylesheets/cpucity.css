@@ -38,11 +38,11 @@
 
 .opening .cpucity-image {
     position: absolute;
-    bottom: 69%;
-    left: 16%;
+    bottom: 48.5%;
+    left: 24.25%;
     transform: translate(50%, 50%);
     opacity: 0.9;
-    width: 34%;
+    width: 26.5%;
     height: auto;
 }
 
@@ -102,6 +102,59 @@
 }
 
 
+/* Feedback Section */
+.feedback-bento {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 20px;
+    row-gap: 10px;
+}
+
+.feedback-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    gap: 10px;
+
+    background: rgba(30, 29, 28);
+    border: #333333 solid 1px;
+    border-radius: 15px;
+
+    width: 300px;
+    height: 200px;
+
+    transition: background 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.feedback-block:hover img {
+    animation: wiggle 0.4s ease;
+}
+
+.feedback-block:hover {
+    background: rgba(40, 39, 38);
+    transform: translateY(-5px);
+}
+
+.feedback-block img {
+    margin-top: 35px;
+    width: 65px;
+    aspect-ratio: 1;
+}
+
+.feedback-block p {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+
+    text-align: center;
+    width: 85%;
+}
+
+
 @media only screen and (max-width: 918px) {
     .project-container {
         width: 98%;
@@ -138,5 +191,24 @@
     .content p {
         line-height: 1.7;
         font-size: 16px;
+    }
+
+
+    /* Feedback Section */
+    .feedback-block {
+        width: 180px;
+        height: 180px;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .feedback-block img {
+        margin-top: 20px;
+        width: 50px;
+    }
+
+    .feedback-block p {
+        font-size: 12px;
+        width: 70%;
     }
 }

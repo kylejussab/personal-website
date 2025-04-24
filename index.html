@@ -17,16 +17,24 @@
     <script src="scripts/nav-button.js" defer ></script>
     <script src="scripts/kyle-bot.js" defer ></script>
     <title>Kyle Jussab</title>
-    <link rel="icon" href="assets/Icon_V2_Transparent.png">
+    <link rel="icon" href="assets/main-icon.png">
 </head>
 
 <body>
     <header class="header-bar">
         <div class="nav-identity">
-            <div class="home-icon">
-                <img src="assets/Icon_V2_Transparent.png" alt="Icon of Kyle Jussab">
+            <div class="home-icon-wrapper">
+                <div class="home-icon" id="homeIcon">
+                    <img src="assets/main-icon.png" alt="Icon of Kyle Jussab">
+                </div>
+                <p class="kyle-click" id="kyle-click">sup</p>
             </div>
+            
+            
         </div>
+
+        
+        
 
         <div class="nav-toggle">
             <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
@@ -329,7 +337,7 @@
 
     <footer>
         <div class="footer-rights">
-            <img src="assets/Icon_V2_Transparent.png">
+            <img src="assets/footer-icon.png">
             <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
             <p>A promise kept to the dreams of my 14-year-old self.</p>
         </div>
@@ -347,7 +355,7 @@
                 <img src="assets/open-in-new.svg">
             </a>
 
-            <a href="assets/resume.pdf" target="_blank">
+            <a href="resume.pdf" target="_blank">
                 <p>Resume</p>
                 <img src="assets/open-in-new.svg">
             </a>

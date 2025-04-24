@@ -91,7 +91,6 @@ function renderProjectCards() {
         role.innerHTML = `${newRoleNumber} | ${roleText}`;
 
         title.innerHTML = post.title;
-
         description.textContent = post.description;
         image.innerHTML = '<img src="' + post.image + '" alt="' + post.alt + '">';
         link.href = post.link;

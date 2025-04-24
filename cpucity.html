@@ -14,6 +14,7 @@
     <script>hljs.highlightAll();</script>
     
     <script src="scripts/project-page-navigation.js" defer ></script>
+    <script src="scripts/cc-programming-navigation.js" defer ></script>
     <title>Kyle Jussab - CPU City</title>
     <link rel="icon" href="assets/main-icon.png">
 </head>
@@ -146,23 +147,426 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>The feel of modern gaming</h2>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="programming-bento">
+                <div class="code-container">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="window-tab active"><p>dialogue.cs</p></div>
+                        <div class="window-tab"><p>interaction.cs</p></div>
+                        <div class="window-tab"><p>quest.cs</p></div>
+                    </div>
 
-        <div class="game-sub-block">
-            <p class="block-heading">Quests and combat.</p>
-            <div>
-                <p>It was important to make this feel like a game you would play in 2024 and try to disguise the education part as much as possible because we believe education can be done passively and implicitly while having fun. I built both the quest and combat systems from the ground up to achieve this.</p>
-                <p>The quest system works in harmony with the dialogue system. Game objects are tagged as “quest givers,” and quests are assigned only if their index is one higher than the player’s current quest. This keeps the game linear and makes sure the player goes through a guided path while still being allowed to explore.</p>
-                <p>For combat, I developed a straightforward system that leverages basic enemy AI, utilizing state machines to transition between “idle,” “pursuing,” and “attacking” states. The AI follows the player using navigation meshes but is designed to be more irritating than intelligent, focusing on creating a challenging experience rather than sophisticated tactics.</p>
-            </div>
-        </div>
+                    <pre class="code-block">
+<code class="language-csharp">
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using Cinemachine;
 
-        <div class="game-sub-block">
-            <p class="block-heading">The interconnected systems.</p>
-            <div>
-                <p>The world is designed to be visually engaging and filled with distractions, encouraging exploration and interaction with various collectible objects. This is balanced by a strict 10-minute time limit and a scoring system that rewards quick decision-making while penalizing distractions. The scoring system fosters friendly competition, making it ideal for classroom settings where students can replay the game to improve their scores. This replayability reinforces the educational content, helping students absorb key concepts more effectively.</p>
-                <p>The hydration system serves as a reminder of the importance of staying hydrated in real life. In-game, a lack of hydration restricts Rhi’s abilities, such as sprinting and using his attack fireball. Players must seek out water droplets to maintain hydration levels. Achieving high scores requires maintaining consistent hydration throughout the gameplay. This blend of collectible items, engaging world elements, and the added pressure of a time limit creates a dynamic and enjoyable balancing act, making the educational experience both fun and effective.</p>
+public class DialogueManager : MonoBehaviour
+{
+    public TextMeshProUGUI actorName;
+    public TextMeshProUGUI messageText;
+    public RectTransform backgroundBox;
+
+    public Animator dialogueAnimator;
+    public OneWheelMovement playerController;
+
+    public CinemachineFreeLook freeLookCamera;
+    private string originalXAxisName;
+    private string originalYAxisName;
+
+    Message[] currentMessages;
+    Actor[] currentActors;
+    int activeMessage = 0;
+
+    public bool inConversation = false;
+    bool isWritingMessage = false;
+
+    public float dialogueSpeed;
+    private bool startAnimation = true;
+
+    private bool questDialogue;
+    private int givenQuestIndex;
+
+    void Start()
+    {
+        dialogueSpeed = 0.04f;
+        originalXAxisName = freeLookCamera.m_XAxis.m_InputAxisName;
+        originalYAxisName = freeLookCamera.m_YAxis.m_InputAxisName;
+    }
+
+    void Update()
+    {
+        if (inConversation)
+        {
+            if (startAnimation)
+            {
+                dialogueAnimator.SetTrigger(&quot;Enter&quot;);
+                startAnimation = false;
+            }
+            else
+            {
+                // This skips the animation if you press space
+                if (isWritingMessage)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        dialogueSpeed = 0f;
+                    }
+                }
+                else
+                {
+                    dialogueSpeed = 0.04f;
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space) &amp;&amp; !isWritingMessage)
+                {
+                    NextMessage();
+                }
+            }
+        }
+    }
+
+    public void OpenDialogue(Message[] messages, Actor[] actors)
+    {
+        questDialogue = false;
+        currentMessages = messages;
+        currentActors = actors;
+        activeMessage = 0;
+        inConversation = true;
+        playerController.allowMovement = false;
+        freeLookCamera.m_XAxis.m_InputAxisName = &quot;&quot;;
+        freeLookCamera.m_YAxis.m_InputAxisName = &quot;&quot;;
+
+        DisplayMessage();
+    }
+
+    public void OpenDialogue(Message[] messages, Actor[] actors, int questIndex)
+    {
+        if(questIndex &gt; 0)
+        {
+            givenQuestIndex = questIndex;
+            questDialogue = true;
+        }
+        else
+        {
+            questDialogue = false;
+        }
+        
+        currentMessages = messages;
+        currentActors = actors;
+        activeMessage = 0;
+        inConversation = true;
+        playerController.allowMovement = false;
+        freeLookCamera.m_XAxis.m_InputAxisName = &quot;&quot;;
+        freeLookCamera.m_YAxis.m_InputAxisName = &quot;&quot;;
+
+        DisplayMessage();
+    }
+
+    void DisplayMessage()
+    {
+        Message messageToDisplay = currentMessages[activeMessage];
+        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
+
+        messageText.text = &quot;&quot;;
+        StartCoroutine(WriteSentence(messageToDisplay.message));
+        actorName.text = actorToDisplay.name;
+
+    }
+
+    public void NextMessage()
+    {
+        activeMessage++;
+        if(activeMessage &lt; currentMessages.Length)
+        {
+            DisplayMessage();
+        }
+        else
+        {
+            if (questDialogue &amp;&amp; (GameManager.Instance.currentQuestIndex == givenQuestIndex - 1))
+            {
+                GameManager.Instance.currentQuestIndex = givenQuestIndex;
+            }
+
+            inConversation = false;
+            startAnimation = true;
+            dialogueAnimator.SetTrigger(&quot;Exit&quot;);
+            startAnimation = true;
+            playerController.allowMovement = true;
+            freeLookCamera.m_XAxis.m_InputAxisName = originalXAxisName;
+            freeLookCamera.m_YAxis.m_InputAxisName = originalYAxisName;
+        }
+    }
+
+    IEnumerator WriteSentence(string message)
+    {
+        isWritingMessage = true;
+
+        foreach(char Character in message.ToCharArray())
+        {
+            messageText.text += Character;
+            yield return new WaitForSeconds(dialogueSpeed);
+        }
+
+        isWritingMessage = false;
+    } 
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-csharp">
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerInteract : MonoBehaviour
+{
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E)){
+            float interactRange = 2f;
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+            foreach(Collider collider in colliderArray){
+                if(collider.TryGetComponent(out NPCInteractable npcInteractable)){
+                    npcInteractable.Interact();
+                }
+            }
+        }
+    }
+
+    public NPCInteractable GetInteractableObject()
+    {
+        List&lt;NPCInteractable&gt; npcInteractableList = new List&lt;NPCInteractable&gt;();
+
+        float interactRange = 2f;
+        Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+        foreach (Collider collider in colliderArray)
+        {
+            if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+            {
+                npcInteractableList.Add(npcInteractable);
+            }
+        }
+
+        NPCInteractable closestNPCInteractable = null;
+        foreach(NPCInteractable npcInteractable in npcInteractableList)
+        {
+            if(closestNPCInteractable == null)
+            {
+                closestNPCInteractable = npcInteractable;
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, npcInteractable.transform.position) &lt; Vector3.Distance(transform.position, closestNPCInteractable.transform.position))
+                {
+                    closestNPCInteractable = npcInteractable;
+                }
+            }
+        }
+
+        return closestNPCInteractable;
+    }
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-csharp">
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance { get; private set; }
+    public TextMeshProUGUI questText;
+    public TextMeshProUGUI timerText;
+    public Image timerImage;
+
+    public GameObject timerObject;
+
+    public string[] quests = { &quot;Talk to Copper&quot;, &quot;Check in with PC Reg Ister at the Police Station&quot;, &quot;Talk to Marvin about the pigeon&quot;, &quot;Speak to the caretaker at the RAM headquarters&quot;, &quot;Collect the pigeon in location 38&quot;, &quot;Talk to Copper&quot;, &quot;All tasks done!&quot; };
+    public int currentQuestIndex = 0;
+
+    private float timerDuration = 600f;
+    private float timeRemaining;
+    private bool timerActive = false;
+    private bool timerStarted = false;
+
+    public Color startColor = Color.white;
+    public Color endColor = Color.red;
+
+    private bool endOfGame = false;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        DisplayMainQuests();
+
+        if(currentQuestIndex == quests.Length - 1 &amp;&amp; !Initiate.areWeFading &amp;&amp; !endOfGame)
+        {
+            timerActive = false;
+            endOfGame = true;
+            Initiate.Fade(&quot;11_Congratulations&quot;, new Color(105f / 255f, 131f / 255f, 204f / 255f), 0.5f);
+        }
+
+        if(timerActive)
+        {
+            timerObject.SetActive(true);
+            UpdateTimer();
+        }
+        else
+        {
+            if(currentQuestIndex != quests.Length - 1)
+                timerObject.SetActive(false);
+        }
+    }
+
+
+    private void DisplayMainQuests()
+    {
+        if (currentQuestIndex &lt;= quests.Length)
+        {
+            questText.text = quests[currentQuestIndex];
+            if (currentQuestIndex &gt; 0 &amp;&amp; !timerActive &amp;&amp; !timerStarted)
+            {
+                StartTimer();
+                timerStarted = true;
+            }
+        }
+    }
+
+    private void StartTimer()
+    {
+        timeRemaining = timerDuration;
+        timerActive = true;
+    }
+
+    private void UpdateTimer()
+    {
+        if (timeRemaining &gt; 0)
+        {
+            timeRemaining -= Time.deltaTime;
+            DisplayTime(timeRemaining);
+        }
+        else
+        {
+            timeRemaining = 0;
+            timerActive = false;
+            DisplayTime(timeRemaining);
+            TimerHasEnded();
+        }
+    }
+
+    private void DisplayTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+        timerText.text = string.Format(&quot;{0:00}:{1:00}&quot;, minutes, seconds);
+
+        timerImage.fillAmount = timeRemaining / timerDuration;
+        Color timerColor = Color.Lerp(endColor, startColor, time / timerDuration);
+        timerImage.color = timerColor;
+    }
+
+        private void TimerHasEnded()
+    {
+        Debug.Log(&quot;Timer has ended!&quot;);
+        SceneManager.LoadScene(&quot;12_TimesUp&quot;);
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (currentQuestIndex == 4)
+        {
+            currentQuestIndex = 5;
+        }
+
+        if (currentQuestIndex != quests.Length - 1)
+        {
+            questText = GameObject.Find(&quot;Quest Text&quot;).GetComponent&lt;TextMeshProUGUI&gt;();
+            timerText = GameObject.Find(&quot;Timer Text&quot;).GetComponent&lt;TextMeshProUGUI&gt;();
+            timerImage = GameObject.Find(&quot;Timer Bar&quot;).GetComponent&lt;Image&gt;();
+            timerObject = GameObject.Find(&quot;Timer&quot;);
+
+            DisplayMainQuests();
+        }     
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public void RestartGameTimer()
+    {
+        currentQuestIndex = 0;
+        endOfGame = false;
+        timerStarted = false;
+        timerActive = false;
+        timeRemaining = timerDuration;
+        DisplayMainQuests();
+    }
+} 
+</code>
+                    </pre>
+                </div>
+
+                <div class="output-description-container">
+                    <div class="output-description">
+                        <div class="window-output">
+                            <div class="dot-container">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <p>CPU City.exe</p>
+                        </div>
+                        
+                        <div class="output-image"><img /></div>
+                    </div>
+
+                    <div class="output-description">
+                        <div class="programming-desc-heading">
+                            <img src="assets/between the years/code-icon.png" />
+                            <p>How It Works</p>
+                        </div>
+                        <p class="description-text">The DialogueManager controls all in-game conversations by linking the text display, camera behavior, and player movement. When a dialogue starts, it disables player controls and camera input, then animates the UI and types out each message character-by-character. Players can press space to skip or advance messages. The system supports both regular and quest-related dialogues, updating the player’s quest progress if needed. Once the conversation ends, control is handed back to the player.</p>
+                        <p class="description-text">The PlayerInteract script enables player interaction with nearby NPCs. When the player presses E, it checks for any NPCInteractable objects within a short radius using a physics overlap sphere. If one is found, it calls their Interact() method. The GetInteractableObject function returns the closest interactable NPC in range; useful for UI prompts or targeting the nearest character.</p>
+                        <p class="description-text">This script manages the game’s linear quest progression. It updates the current quest display based on a predefined list and starts a countdown timer once the first quest is completed. The timer appears only during active quests and adds urgency by transitioning from white to red as time runs out. If the timer reaches zero, the game shifts to a “time’s up” scene. When the player completes all quests, it transitions to a final “congratulations” scene, effectively signaling the end of the game.</p>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
     </div>

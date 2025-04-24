@@ -134,7 +134,8 @@
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    width: 402px;
+    width: 100%;
+    max-width: 420px;
     height: 622px;
 }
 
@@ -230,6 +231,11 @@
 }
 
 /* Programming section */
+/* * {
+    scrollbar-gutter: stable;
+    border: 2px solid red;
+} */
+
 .programming-bento {
     display: flex;
     flex-direction: row;

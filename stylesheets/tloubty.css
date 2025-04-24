@@ -240,14 +240,16 @@
 }
 
 .output-description-container {
-    width: max-content;
+    width: 100%;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
 }
 
 .output-description {
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     height: 400px;
 
     background-color: rgba(30, 29, 28);

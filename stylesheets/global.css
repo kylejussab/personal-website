@@ -2,9 +2,9 @@
     --background-color: #101010;
 
     --font-color: #f2f2f2;
-    --font-secondary-color: #787878;
+    --font-secondary-color: #6e6e6e;
 
-    --card-color: #353535;
+    --card-color: #1E1D1C;
     --card-hover-color: #444444;
     --card-highlight-color: #555555;
 }
@@ -13,49 +13,49 @@
     font-family: 'Baksoda';
     font-weight: normal;
     font-style: normal;
-    src: url("Baksoda.ttf") format("truetype");
+    src: url("../fonts/Baksoda.ttf") format("truetype");
 }
 
 @font-face {
     font-family: 'Neue Montreal';
     font-weight: bold;
     font-style: normal;
-    src: url("PPNeueMontreal-Bold.otf") format("opentype");
+    src: url("../fonts/PPNeueMontreal-Bold.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Neue Montreal';
     font-weight: normal;
     font-style: normal;
-    src: url("PPNeueMontreal-Book.otf") format("opentype");
+    src: url("../fonts/PPNeueMontreal-Book.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Neue Montreal';
     font-weight: 500;
     font-style: normal;
-    src: url("PPNeueMontreal-Medium.otf") format("opentype");
+    src: url("../fonts/PPNeueMontreal-Medium.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Neue Montreal';
     font-weight: 100;
     font-style: normal;
-    src: url("PPNeueMontreal-Thin.otf") format("opentype");
+    src: url("../fonts/PPNeueMontreal-Thin.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Neue Montreal';
     font-weight: 600;
     font-style: italic;
-    src: url("PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
+    src: url("../fonts/PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
 }
 
 @font-face {
     font-family: 'Neue Montreal';
     font-weight: normal;
     font-style: italic;
-    src: url("PPNeueMontreal-Italic.otf") format("opentype");
+    src: url("../fonts/PPNeueMontreal-Italic.otf") format("opentype");
 }
 
 * {
@@ -78,11 +78,11 @@ p {
 }
 
 h1 {
-    font-size: 80px;
+    font-size: 55px;
     margin-top: 0px;
     font-weight: 500;
     margin-bottom: 0px;
-    line-height: 78px;
+    line-height: 70px;
     text-align: left;
 }
 
@@ -97,6 +97,10 @@ h3 {
 
 a {
     text-decoration: none;
+}
+
+header {
+    z-index: 990;
 }
 
 footer {
@@ -173,7 +177,7 @@ footer {
 }
 
 .footer-contact > p:last-child{
-    margin-top: 110px;
+    margin-top: 50px;
     color: var(--font-secondary-color);
     text-align: right;
     font-size: 11px;
@@ -181,20 +185,41 @@ footer {
 
 footer img {
     width: 100px;
-    height: 100px;
 }
 
 /** Media Queries **/
-@media only screen and (max-width: 784px) {
+@media only screen and (max-width: 918px) {    
+    footer img {
+        width: 60px;
+        height: 60px;
+    }
+
     p {
-        font-size: 14px;
+        font-size: 11px;
     }
 
     .footer-rights {
         margin-left: 10px;
     }
 
+    .footer-rights p:nth-of-type(1){
+        margin-top: 30px;
+        font-size: 13px;
+    }
+    
+    .footer-rights p:nth-of-type(2){
+        font-size: 10px;
+    }
+
     .footer-contact {
         margin-right: 10px;
+    }
+
+    .footer-contact a p {
+        font-size: 13px;
+    }
+
+    .footer-contact > p:last-child{
+        font-size: 9px;
     }
 }

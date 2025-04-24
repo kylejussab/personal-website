@@ -1,180 +1,32 @@
-.achievement-card-border {
-    position: relative;
-    width: 400px;
-    height: 180px;
-    border-radius: 20px;
-    background: linear-gradient(to bottom, #171717, #181818);
-    border: #444444 solid .75px;
-    transition: transform .5s ease;
-    margin-bottom: 10px;
+.single-container {
+    margin-bottom: 60px;
+    padding-top: 50px;
+    border-top: 1px solid #242424;
+    width: 950px;
 }
 
-.achievement-card-border:hover {
-    transform: scale(0.97);
-}
-
-.achievement-card-container {
-    position: relative;
-    background: linear-gradient(to bottom, #181818, #171717);
-    border: #444444 solid .75px;
-    margin: 5px;
-    width: 390px;
-    height: 170px;
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.achievement-card-container::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    border-radius: 15px;
-    z-index: 1;
-}
-
-#bsc::before {
-    background: linear-gradient(to bottom, #282b7a, #171717);
-}
-
-#coursera::before {
-    background: linear-gradient(to bottom, #28727a, #171717);
-}
-
-#la::before {
-    background: linear-gradient(to bottom, #7a6328, #171717);
-}
-
-#pcc::before {
-    background: linear-gradient(to bottom, #7a3228, #171717);
-}
-
-#snapchat::before {
-    background: linear-gradient(to bottom, #7a7a28, #171717);
-}
-
-.achievement-card-container:hover::before {
-    opacity: 1;
-}
-
-.achievement-card-container > * {
-    position: relative;
-    z-index: 2;
-}
-
-.achievement-heading {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    padding-inline: 15px;
-    margin-top: 15px;
-}
-
-.achievement-card-container p {
-    padding-inline: 15px;
-}
-
-.achievement-card-container p span{
+.about-text {
     color: var(--font-secondary-color);
-    font-size: 14px;
-}
-
-.achievement-card-container p:nth-of-type(2) {
-    color: var(--font-secondary-color);
-    font-size: 14px;
-    margin-top: -5px;
-}
-
-.achievement-card-container p:nth-of-type(3) {
-    text-align: right;
-    font-size: 14px;
-}
-
-.about-grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    margin-top: 30px;
-}
-  
-.grid-item {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    flex-direction: column;
-    width: 500px;
-}
-
-.grid-item .about-words{
-    font-size: 20px;
-    text-align: center;
-    text-align: left;
-}
-
-.grid-item .about-words span{
+    font-weight: 400;
+    line-height: 1.5;
     font-size: 18px;
-    color: var(--font-secondary-color);
 }
 
-.about-grid-container .grid-item:nth-child(odd) {
-    height: 660px;
-    grid-row: span 2;
-}
-
-.about-grid-container .grid-item:nth-child(even) {
-    height: max-content;
-}
-
-#before-last {
-    height: max-content;
-}
-
-.about-card-border {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
-    background: linear-gradient(to bottom, #171717, #181818);
-    border: #444444 solid .75px;
-}
-
-.about-card-container {
-    background: linear-gradient(to bottom, #181818, #171717);
-    border: #444444 solid .75px;
-    margin: 5px;
-    width: calc(100% - 10px);
-    height: calc(100% - 10px);
-    border-radius: 15px;
-    overflow: hidden;
-}
-
-.about-card-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.highlighted-text {
+    color: var(--font-color);
 }
 
 .experience-container {
-    margin-bottom: 60px;
     padding-top: 50px;
-    border-bottom: 1px solid #242424;
     border-top: 1px solid #242424;
-    width: 1050px;
-}
-
-.education-container {
-    margin-bottom: -30px;
-    width: 1050px;
+    width: 950px;
 }
 
 .about-heading {
     display: flex;
     align-items: center;
     gap: 10px;
-    width: 1050px;
+    width: 950px;
 }
 
 .about-heading > div:first-child{
@@ -190,104 +42,84 @@
     font-size: 13px;
 }
 
-.about-signature {
-    width: 50px;
-    margin-bottom: 10px;
-}
-
-.company-container {
+.achievement-container {
     display: flex;
     align-items: start;
     margin-top: 30px;
     margin-bottom: 110px;
 }
 
-.company-container > p {
+.achievement-container > p {
     width: 50%;
-    font-size: 32px;
     margin-top: 0px;
 }
 
-.company-details {
+.achievement-details {
     width: 50%;
 }
 
-.company-details > p {
+.achievement-details > p {
     margin-top: 0px;
 }
 
-.company-details > p:nth-child(1) {
-    font-size: 26px;
+.experience-heading {
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
-.company-details > p:nth-child(2) {
-    margin-top: -15px;
-    font-size: 18px;
+.experience-text {
     color: var(--font-secondary-color);
+    font-weight: 400;
+    line-height: 1.5;
+    font-size: 14px;
 }
 
-.company-details > p:nth-child(3) {
+.signature-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -10px;
+}
+
+.about-signature {
+    width: 60px;
+}
+
+.mentor-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 30px;
+    margin-top: 40px;
+}
+
+.mentor {
+    width: 200px;
+    text-align: center;
     font-size: 18px;
-    color: var(--font-secondary-color);
 }
 
-/** Media Queries **/
-@media only screen and (max-width: 784px) {
-    .about-grid-container {
-        grid-template-columns: 350px;
-    }
-      
-    .grid-item {
-        width: 350px;
-    }
+.mentor:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
-    .experience-container {
-        width: 350px;
-    }
-    
-    .about-heading {
-        width: 350px;
-    }
-
-    .about-heading-container {
-        width: 350px;
-    }
-
+@media only screen and (max-width: 970px) {
     .about-content {
+        width: 98%;
         padding-inline: 10px;
     }
 
-    .about-grid-container .grid-item:nth-child(odd) {
-        height: 800px;
-    }
-
-    .achievement-card-border {
-        width: 350px;
+    .experience-container, .single-container, .about-heading {
+        width: 100%;
     }
     
-    .achievement-card-container {
-        width: 340px;
-    }
-}
-
-@media only screen and (min-width: 785px) and (max-width: 1090px){
-    .grid-item {
-        width: 350px;
+    .experience-heading {
+        font-size: 18px;
     }
 
-    .about-content {
-        width: 98%;
-    }
 
-    .experience-container {
-        width: 98%;
-    }
-    
-    .about-heading-container {
-        width: 98%;
-    }
-
-    .about-heading {
-        width: 98%;
+    .mentor-container {
+        justify-content: center;
     }
 }

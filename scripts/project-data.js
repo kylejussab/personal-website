@@ -1,68 +1,108 @@
 let projectData = [
-    // {
-    //     "techStack": "React Native, Supabase",
-    //     "image": "assets/Give Fund.png",
-    //     "alt": "A title screen showing the text Give Fund",
-    //     "title": "Give Fund",
-    //     "subtitle": "Built for the Snap Engineering Academy - August 2024",
-    //     "description": "A fundraising feature to help foster youth non-profits raise funds from Snap users, built off a mock up of the Snapchat App. Built in a cross-functional team of 7 and presented to over 300 Snap executives.",
-    //     "link": "https://kylejussab.com/givefund"
-    // },
     {
-        "techStack": "Python",
-        "image": "assets/The Last of Us Part 2.png",
-        "alt": "The promotional image for The Last of Us Part 2. I do not claim to own this image.",
-        "title": "The Last of Us Part 2",
-        "subtitle": "Just how good was The Last of Us Part 2? - January 2024",
-        "description": "An exploratory data analysis evaluating the 'success' of The Last of Us Part 2 using various metrics such as sales, reviews, and comparisons with similar games.",
-        "link": "https://kylejussab.com/tlou2analysis"
+        "role": "01 | FRONTEND DEVELOPER",
+        "image": "assets/Give Fund.png",
+        "alt": "A title screen showing the text Give Fund",
+        "title": "Give Fund",
+        "description": "A fundraising feature to help foster youth non-profits raise funds from Snap users, built off a mock up of the Snapchat App. Built in a cross-functional team of 7 and presented to over 300 Snap executives.",
+        "date": "August 2024",
+        "tech1": "React Native",
+        "tech2": "Supabase",
+        "discipline1": "Mobile Dev",
+        "discipline2": "UI / UX",
+        "discipline3": "Product Design",
+        "link": "https://kylejussab.com/givefund",
+        "customOrder": 1,
+        "dateOrder": 0
     },
     {
-        "techStack": "HTML, CSS",
-        "image": "assets/PixelPulse.png",
+        "role": "02 | RESEARCHER",
+        "image": "assets/The Data of Us.png",
+        "alt": "A word cloud of a Clicker",
+        "title": "The Data of Us",
+        "description": "A data-driven investigation into the success and controversy of The Last of Us Part II using sentiment analysis, sales data, award history, and critical comparisons to explore how and why the sequel became one of the most divisive games in modern history.",
+        "date": "January 2024",
+        "tech1": "Python",
+        "tech2": "NLTK",
+        "discipline1": "Data Science",
+        "discipline2": "Engineering",
+        "discipline3": "Automation",
+        "link": "https://kylejussab.com/dataofus",
+        "customOrder": 0,
+        "dateOrder": 1
+    },
+    {
+        "role": "03 | FRONTEND DEVELOPER",
+        "image": "assets/PixelPulse Cover Art.png",
         "alt": "The homepage of the PixelPulse application",
         "title": "PixelPulse",
-        "subtitle": "View and Share Coding Sketches - September 2023",
         "description": "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.",
-        "link": "https://kylejussab.com/pixelpulse"
-    },
-    {
-        "techStack": "JUCE, C++",
-        "image": "assets/DJ Application.png",
-        "alt": "The GUI of my DJ application",
-        "title": "DJ Application",
-        "subtitle": "Built with the JUCE Framework - March 2023",
-        "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
-        "link": "https://kylejussab.com/djapplication"
+        "date": "September 2023",
+        "tech1": "HTML / CSS",
+        "tech2": "JavaScript",
+        "discipline1": "Web Dev",
+        "discipline2": "UI / UX",
+        "discipline3": "Research",
+        "link": "https://kylejussab.com/pixelpulse",
+        "customOrder": 2,
+        "dateOrder": 2
     },
     // {
-    //     "techStack": "p5.js, JavaScript",
-    //     "image": "assets/Music Visualizer.png",
-    //     "alt": "A visualizer from the music visualizer application",
-    //     "title": "Music Visualizer",
-    //     "subtitle": "Built with the p5.js Framework - September 2022",
-    //     "description": "Created a range of creative audio visualizations, including one that utilizes the built in camera. All visualizations react to the music being played.",
-    //     "link": "https://kylejussab.com/musicvisualizer"
+    //     "role": "04 | APPLICATION DEVELOPER",
+    //     "image": "assets/DJ Application.png",
+    //     "alt": "The GUI of my DJ application",
+    //     "title": "DJ Application",
+    //     "description": "Utilized OOP techniques throughout. Improved the application by adding data persistence and spinning records.",
+    //     "date": "March 2023",
+    //     "tech1": "JUCE",
+    //     "tech2": "C++",
+    //     "discipline1": "DSP",
+    //     "discipline2": "UI / UX",
+    //     "discipline3": "Testing",
+    //     "link": "https://kylejussab.com/djapplication"
     // }
 ]
 
 const projectCardTemplate = document.querySelector("[data-project-template]");
 const projectCardContainer = document.querySelector("[data-project-cards-container]");
 
-posts = projectData.map(post => {
-    const card = projectCardTemplate.content.cloneNode(true).children[0];
+function renderProjectCards() {
+    projectCardContainer.innerHTML = "";
 
-    const title = card.querySelector("[data-title]");
-    const subtitle = card.querySelector("[data-subtitle]");
-    const description = card.querySelector("[data-description]");
-    const image = card.querySelector("[data-img]");
-    const link = card.querySelector("[data-link]");
+    const sortedData = sortData(projectData, chronologicalOrder);
 
-    title.innerHTML = post.title + ' <span>' + post.techStack + '</span>';
-    subtitle.textContent = post.subtitle;
-    description.textContent = post.description;
-    image.innerHTML = '<img src="' + post.image + '" alt="' + post.alt + '">';
-    link.href = post.link;
+    sortedData.forEach((post, index) => {
+        const card = projectCardTemplate.content.cloneNode(true).children[0];
 
-    projectCardContainer.append(card);
-});
+        const role = card.querySelector("[data-role]");
+        const title = card.querySelector("[data-title]");
+        const description = card.querySelector("[data-description]");
+        const image = card.querySelector("[data-img]");
+        const link = card.querySelector("[data-link]");
+        const date = card.querySelector("[data-date]");
+        const discipline1 = card.querySelector("[data-discipline1]");
+        const discipline2 = card.querySelector("[data-discipline2]");
+        const discipline3 = card.querySelector("[data-discipline3]");
+        const tech1 = card.querySelector("[data-tech1]");
+        const tech2 = card.querySelector("[data-tech2]");
+
+        const roleText = post.role.split("|")[1]?.trim() || post.role;
+        const newRoleNumber = String(index + 1).padStart(2, "0");
+        role.innerHTML = `${newRoleNumber} | ${roleText}`;
+
+        title.innerHTML = post.title;
+        description.textContent = post.description;
+        image.innerHTML = '<img src="' + post.image + '" alt="' + post.alt + '">';
+        link.href = post.link;
+        date.innerHTML = post.date;
+        discipline1.innerHTML = post.discipline1;
+        discipline2.innerHTML = post.discipline2;
+        discipline3.innerHTML = post.discipline3;
+        tech1.innerHTML = post.tech1;
+        tech2.innerHTML = post.tech2;
+
+        projectCardContainer.append(card);
+    });
+}
+
+renderProjectCards();

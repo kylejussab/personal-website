@@ -1,0 +1,140 @@
+.deleting-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.deleting-image {
+    width: 70%;
+    opacity: 0.8;
+}
+
+.content {
+    width: 70%;
+    padding-bottom: 20px;
+}
+
+.content h3 {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+
+.content p {
+    color: var(--font-secondary-color);
+    margin-top: 8px;
+    font-weight: 400;
+    margin-bottom: 16px;
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+.content-heading {
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
+
+.highlighted-text {
+    color: var(--font-color);
+}
+
+.overview-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 90px;
+}
+
+.overview-block {
+    width: 25%;
+}
+
+.overview-block > :nth-child(1) {
+    margin-bottom: 8px;
+}
+
+.overview-block p {
+    margin-block: -4px;
+}
+
+.game-sub-overview.extra-space {
+    margin-top: 60px;
+}
+
+
+.deletion-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+
+    border-top: 2px solid #242424;
+    border-bottom: 2px solid #242424;
+
+    margin-block: 80px;
+    padding-block: 10px;
+}
+
+.deletion-container img {
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.deletion-container p {
+    font-size: 20px;
+    color: var(--font-secondary-color);
+    font-weight: 400;
+}
+
+.deletion-container p span {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 918px) {
+    .project-container {
+        width: 100%;
+        height: max-content;
+    }
+    
+    .overview-container {
+        row-gap: 50px;
+    }
+
+    .overview-block {
+        width: 50%;
+    }
+
+    .content {
+        width: 98%;
+    }
+    
+    .content p {
+        line-height: 1.7;
+        font-size: 16px;
+    }
+
+}
+
+/* Deletion media */
+@media only screen and (max-width: 918px) {
+    .deletion-container {
+        width: 98%;
+        margin-block: 40px;
+    }
+    
+    .deletion-container p {
+        font-size: 16px;
+    }
+    
+    .deletion-container p span {
+        font-size: 28px;
+    }
+
+}

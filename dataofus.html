@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/global.css">
+    <link rel="stylesheet" href="stylesheets/index-cards.css">
+    <link rel="stylesheet" href="stylesheets/project-page.css"> 
+    <link rel="stylesheet" href="stylesheets/dataofus.css">
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script src="scripts/project-page-navigation.js" defer ></script>
+    <script src="scripts/dou-programming-navigation.js" defer ></script>
+
+    <title>Kyle Jussab - The Data of Us</title>
+    <link rel="icon" href="assets/main-icon.png">
+</head>
+
+<body id="thedataofus">
+    <header>
+        <a href="https://kylejussab.com/" class="back-button">
+            <img src="assets/arrow_left.svg">
+            <p>Back</p>
+        </a>
+    </header>
+
+    <nav class="page-navigation">
+        <p>CONTENTS</p>
+        <ul>
+            <li><a href="#artwork">Artwork</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#programming">Programming</a></li>
+            <li><a href="#findings">Findings</a></li>
+            <li><a href="#next-game">Next Project</a></li>
+        </ul>
+
+        <p class="extras-navigation-heading">EXTRAS</p>
+        <ul>
+            <li><a href="mailto:kylejussab@gmail.com" target="_blank">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank">LinkedIn</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section class="opening" id="artwork">
+        <h1>The Data of Us</h1>
+        <p class="intro-subheading">Just how good was The Last of Us Part 2? - January 2024</p>
+
+        <div class="playstation-container">
+            <img src="assets/data of us/background.png" class="playstation-image">
+            <img src="assets/The Data of Us.png" class="dataofus-image">
+        </div>
+
+        <a href="assets/Just How Good Is The Last of Us Part 2.ipynb" download="Just How Good Is The Last of Us Part 2.ipynb" class="external-link">
+            <p>Download the ipynb file</p>
+            <img src="assets/download.svg" class="download-icon">
+        </a>
+
+        <a href="assets/Just How Good Is The Last of Us Part 2.pdf" target="_blank" class="external-link">
+            <p>View the full report</p>
+            <img src="assets/open-in-new.svg">
+        </a>
+    </section>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="overview">
+            <div></div>
+            <p>OVERVIEW</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="overview-container">
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Timeline</span></p>
+                    <p>12 weeks</p>
+                    <p>Nov - Jan '24</p>
+                </div>
+                
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Disciplines</span></p>
+                    <p>Data Science</p>
+                    <p>NLP</p>
+                    <p>Sentiment Analysis</p>
+                    <p>Data Visualization</p>
+                </div>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Responsibilities</span></p>
+                    <p>Project Author</p>
+                    <p>Data Cleaning</p>
+                    <p>Review Analysis</p>
+                    <p>Report Writing</p>
+                </div>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Tech</span></p>
+                    <p>Python</p>
+                    <p>NLTK</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="background">
+            <div></div>
+            <p>BACKGROUND</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">Why?</h4>
+            <p>The Last of Us is my 
+                <span class="highlighted-text">all-time favorite game</span>, and when Part II came out it sparked a wave of extreme reactions; praise, hate, celebration, and outrage. I was fascinated by how one game could be so 
+                <span class="highlighted-text">universally acclaimed yet so divisive</span> at the same time. Some called it a masterpiece; others demanded refunds.</p>
+            
+            <p>I wanted to find a way to get a definitive answer. Sales numbers alone don’t tell the whole story, so I set out to 
+                <span class="highlighted-text">explore what the data really says</span>. Are the 10+ million copies sold a true measure of its success? How much do 
+                <span class="highlighted-text">critical acclaim and user sentiment</span> actually align? And what can we learn from how players responded?</p>
+
+            <p>This project was my way of approaching the debate with more than just opinions, using data science to try and answer a question I’ve had since release: 
+                <span class="highlighted-text">Just how good is The Last of Us Part II?</span></p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview extra-space">
+        <div class="content">
+            <h4 class="content-heading">The Process</h4>
+            <div class="process-container">
+                <div class="process">
+                    <div class="process-number"><p>1</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Define the Question</span></p>
+                    <p>How successful is The Last of Us Part II? Multiple dimensions of success; sales, reviews, awards, and sentiment.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>2</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Collect the Data</span></p>
+                    <p>Gather publicly available datasets; Metacritic reviews, sales figures, award counts, and performance metrics.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>3</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Clean & Preprocess</span></p>
+                    <p>Filter and clean the data using Python, removing null entries, stopwords, punctuation, and non-English reviews.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>4</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Analyze & Visualize</span></p>
+                    <p>Perform sentiment analysis using VADER and TextBlob. Create multiple visualizations to illustrate unique findings.</p>
+                </div>
+
+                <div class="process">
+                    <div class="process-number"><p>5</p></div>
+                    <p class="process-heading"><span class="highlighted-text">Interpret the Results</span></p>
+                    <p>Compare The Last of Us Part II against similar titles. Evaluate the relationship between sentiment, sales, and awards.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="programming">
+            <div></div>
+            <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="programming-bento">
+                <div class="code-container">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="window-tab active"><p>score.py</p></div>
+                        <div class="window-tab"><p>subjectivity.py</p></div>
+                        <div class="window-tab"><p>negative.py</p></div>
+                        <div class="window-tab"><p>sales.py</p></div>
+                    </div>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def getReviewsDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfEnglish = dfStart[dfStart['language'] == 'English']
+    dfEnglish.reset_index(drop=True, inplace=True)
+
+    dfSimplified = dfEnglish.drop(['type_review', 'views', 'votes', 'language'])
+    dfSimplified = dfSimplified.dropna(subset=['review'])
+
+    return dfSimplified
+
+
+def getAllScores(df):
+    scores = df['score'].value_counts()
+    scoresDf = pd.DataFrame({'count': scores.values}, index=scores.index)
+    scoresDf = scoresDf.sort_index()
+
+    return scoresDf
+
+
+#Taken from Lázaro's own study
+sentimentCSVFilePath = 'tlou2_reviews.csv'
+
+df = getReviewsDataframe(sentimentCSVFilePath)
+scores = getAllScores(df)
+
+#Chart styling altered on portfolio output for visual consistency
+scores.plot(kind='bar', color='skyblue', rot=0)
+plt.xlabel('Score')
+plt.title('Distribution of Scores')
+plt.show()
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+from textblob import TextBlob
+
+def getReviewsDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfEnglish = dfStart[dfStart['language'] == 'English']
+    dfEnglish.reset_index(drop=True, inplace=True)
+
+    dfSimplified = dfEnglish.drop(['type_review', 'views', 'votes', 'language'], axis=1)
+    dfSimplified = dfSimplified.dropna(subset=['review'])
+
+    return dfSimplified
+
+
+def getSubjectivityScores(df):
+    subjectivityScores = []
+    for review in df['review']:
+        blob = TextBlob(review)
+        subjectivityScores.append(blob.sentiment.subjectivity)
+    return subjectivityScores
+
+# Taken from Lázaro's own study
+sentimentCSVFilePath = 'tlou2_reviews.csv'
+
+df = getReviewsDataframe(sentimentCSVFilePath)
+subjectivityScores = getSubjectivityScores(df)
+
+#Chart styling altered on portfolio output for visual consistency
+plt.hist(subjectivityScores, bins=20, color='mediumpurple', alpha=0.8)
+plt.title('Subjectivity Distribution')
+plt.xlabel('Subjectivity Score')
+plt.ylabel('Number of Reviews')
+plt.grid(True)
+plt.show()
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+from wordcloud import WordCloud
+
+def getReviewsDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfEnglish = dfStart[dfStart['language'] == 'English']
+    dfEnglish.reset_index(drop=True, inplace=True)
+
+    dfSimplified = dfEnglish.drop(['type_review', 'views', 'votes', 'language'], axis=1)
+    dfSimplified = dfSimplified.dropna(subset=['review'])
+
+    return dfSimplified
+
+
+def getNegativeStringOfReviews(df):
+    filteredDf = df[df['score'] < 5]
+
+    combinedReviews = ''
+    for index, row in filteredDf.iterrows():
+        if not pd.isnull(row['review']):
+            combinedReviews += row['review']
+
+    return combinedReviews
+
+sentimentCSVFilePath = 'tlou2_reviews.csv'
+
+df = getReviewsDataframe(sentimentCSVFilePath)
+negative_text = getNegativeStringOfReviews(df)
+
+#Chart styling altered on portfolio output for visual consistency
+wordcloud = WordCloud(
+    width=600, 
+    height=400, 
+    background_color='black', 
+    colormap='Reds',
+    max_words=100
+).generate(negative_text)
+
+plt.imshow(wordcloud, interpolation='bilinear')
+plt.axis('off')
+plt.title('Negative Review Keywords')
+plt.show()
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-python">
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def getGameSalesDataframe(filepath):
+    dfStart = pd.read_csv(filepath)
+
+    dfStart.set_index('Rank', inplace=True)
+
+    dfSimplified = dfStart.drop(['basename', 'Genre', 'ESRB_Rating', 'Publisher', 'Developer',
+                                    'VGChartz_Score', 'Year', 'Last_Update', 'url', 'status',
+                                    'Vgchartzscore', 'img_url'], axis=1)
+
+    salesColumns = ['Global_Sales', 'NA_Sales', 'PAL_Sales', 'JP_Sales', 'Other_Sales']
+    dfFiltered = dfSimplified.dropna(subset=salesColumns, how="all")
+
+    dfFiltered = dfFiltered[dfFiltered[salesColumns].apply(lambda x: (x > 1.0).any(), axis=1)]
+
+    dfFiltered.reset_index(drop=True, inplace=True)
+
+    return dfFiltered
+
+def getGameSalesAbove(dataframe, value):
+    df = dataframe
+    df = df[df['Global_Sales'] > value]
+    return df
+
+def addTLOU2ToDataframe(dataframe):
+    record = {'Name': 'The Last of Us Part II', 'Platform': 'PS4', 'Critic_Score': '10.0', 'Global_Sales': '10.0'}
+    dataframe.loc[len(dataframe)] = record
+
+gameSalesCSVFilePath = 'game_sales_data.csv'
+
+gameSalesDf = getGameSalesDataframe(gameSalesCSVFilePath)
+gameSalesDf = getGameSalesAbove(gameSalesDf, 5.0)
+addTLOU2ToDataframe(gameSalesDf)
+
+gameSalesDf['Global_Sales'] = pd.to_numeric(gameSalesDf['Global_Sales'], errors='coerce')
+gameSalesDf = gameSalesDf.loc[gameSalesDf.groupby('Name')['Global_Sales'].idxmax()]
+gameSalesDf = gameSalesDf.sort_values(by='Global_Sales', ascending=False)
+
+#Chart styling altered on portfolio output for visual consistency
+plt.figure(figsize=(14, 10))
+plt.plot(gameSalesDf['Name'], gameSalesDf['Global_Sales'], label='Global Sales')
+
+highlightIndex = gameSalesDf.index[gameSalesDf['Name'] == 'The Last of Us Part II'].tolist()[0]
+plt.annotate("The Last of Us Part II",
+                xy=(15, gameSalesDf.loc[highlightIndex, 'Global_Sales']),
+                xytext=(15, 12),
+                arrowprops=dict(facecolor='black', shrink=0.05),
+                horizontalalignment='left',
+                verticalalignment='top')
+
+plt.title('Global Sales of Games')
+plt.xlabel('Game Name')
+plt.ylabel('Sales in Millions')
+plt.xticks(rotation=90)
+plt.tight_layout()
+plt.show()
+</code>
+                    </pre>
+                </div>
+
+                <div class="output-description-container">
+                    <div class="output-description">
+                        <div class="window-output">
+                            <div class="dot-container">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <p>output.py</p>
+                        </div>
+                        
+                        <div class="output-image"><img /></div>
+                    </div>
+
+                    <div class="output-description">
+                        <div class="programming-desc-heading">
+                            <img src="assets/data of us/analysis-icon.png" />
+                            <p>Analysis</p>
+                        </div>
+                        <p class="description-text">A majority of reviews are clustered at either extreme; 0 or 10. This suggests that players weren’t engaging with the game in a nuanced way; instead, they reacted in absolutes, likely fueled by emotional responses to key narrative moments. The middle ground is noticeably sparse, which aligns with the broader discourse labeling the game as one of the most “polarizing” AAA titles of its time.</p>
+                        <p class="description-text">Most reviews fall on the higher end of the subjectivity scale, indicating that players wrote in emotional, opinion-driven language rather than fact-based critique. This emphasizes the personal and often passionate tone of the responses, reflecting how the game impacted players on an emotional level more than a mechanical or technical one.</p>
+                        <p class="description-text">Common words like “Game", Joel”, "Story” and "Character" dominate the negative reviews. This suggests that dissatisfaction was less about gameplay or polish, and more centered on narrative choices, especially character fates and plot decisions. The language used in these reviews also supports the earlier subjectivity findings, reinforcing how emotionally charged the criticism was.</p>
+                        <p class="description-text">Despite critical acclaim and strong branding, TLOU2’s global sales trail behind its peers. While 10+ million units is objectively a success, the comparison reveals that its commercial performance didn’t reach the heights of other major titles or Sony exclusives. This may point to how controversy affected word-of-mouth traction, or simply reflect broader market conditions at the time.</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="findings">
+            <div></div>
+            <p>FINDINGS</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="findings-bento">
+                <div class="findings-block">
+                    <img src="assets/data of us/positive-comment-icon.png" />
+                    <p>Despite controversy, positive reviews outnumbered negative ones nearly 2 to 1</p>
+                </div>
+
+                <div class="findings-block">
+                    <img src="assets/data of us/emotion-icon.png" />
+                    <p>High subjectivity means player reviews were more personal, emotional, and opinion-driven</p>
+                </div>
+
+                <div class="findings-block">
+                    <img src="assets/data of us/narrative-icon.png" />
+                    <p>Dissatisfaction was narrative-based, with "Joel", "Story", and "Abby" being the most common words</p>
+                </div>
+    
+                <div class="findings-block">
+                    <img src="assets/data of us/low-sales.png" />
+                    <p>Commercial performance fell short, with comparable sequels far outpacing TLoU2’s 10.2 million copies sold</p>
+                </div>
+
+                <div class="findings-block">
+                    <img src="assets/data of us/award-icon.png" />
+                    <p>It remains one of the most critically awarded and decorated games of its generation</p>
+                </div>
+    
+                <div class="findings-block">
+                    <img src="assets/data of us/think-icon.png" />
+                    <p>All findings suggest that making <em>The Last of Us Part III</em> is justifiable; if not inevitable</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="next-game">
+            <div></div>
+            <p>NEXT PROJECT</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <a href="https://kylejussab.com/djapplication">
+            <div class="card-container">
+                <div class="card-content">
+                    <p class="card-role">03 | FRONTEND DEVELOPER</p>
+                    <img src="assets/arrow-right.svg" class="card-arrow">
+    
+                    <div class="card-details">
+                        <div class="card-image"><img src="assets/PixelPulse Cover Art.png" /></div>
+    
+                        <div class="card-text">
+                            <h2>PixelPulse</h2>
+                            <p class="card-description">A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.</p>
+                            
+                            <div class="card-meta">
+                                <div>
+                                    <p class="meta-heading">Date</p>
+                                    <p class="meta-text">September 2023</p>
+                                </div>
+                                <div>
+                                    <p class="meta-heading">Disciplines</p>
+                                    <p class="meta-text">Web Dev</p>
+                                    <p class="meta-text">UI / UX</p>
+                                    <p class="meta-text">Research</p>
+                                </div>
+                                <div>
+                                    <p class="meta-heading">Tech</p>
+                                    <p class="meta-text">HTML / CSS</p>
+                                    <p class="meta-text">JavaScript</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <footer>
+        <div class="footer-rights">
+            <img src="assets/footer-icon.png">
+            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+            <p>A promise kept to the dreams of my 14-year-old self.</p>
+        </div>
+
+        <div class="footer-contact">
+            <p>CONTACT</p>
+
+            <a href="mailto:kylejussab@gmail.com" target="_blank">
+                <p>Email</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+                <p>LinkedIn</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <a href="resume.pdf" target="_blank">
+                <p>Resume</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
+            <p>Last updated by Kyle on April 18, 2025, 5:35 PM PDT</p>
+        </div>
+    </footer>
+</body>
+</html>

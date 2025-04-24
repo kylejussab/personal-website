@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheets/global.css">
     <link rel="stylesheet" href="stylesheets/index-cards.css">
-    <link rel="stylesheet" href="stylesheets/game-opening.css">
-    <link rel="stylesheet" href="stylesheets/game-sub-section.css">
-    <link rel="stylesheet" href="stylesheets/game-image-containers.css">
-    <link rel="stylesheet" href="stylesheets/game-page-navigation.css">
-    <link rel="stylesheet" href="stylesheets/game-feedback-comment.css">  
-    <script src="scripts/game-page-navigation.js" defer ></script>
+    <link rel="stylesheet" href="stylesheets/project-page.css">
+    <link rel="stylesheet" href="stylesheets/cpucity.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <script src="scripts/project-page-navigation.js" defer ></script>
+    <script src="scripts/cc-programming-navigation.js" defer ></script>
     <title>Kyle Jussab - CPU City</title>
-    <link rel="icon" href="assets/Icon_V2_Transparent.png">
+    <link rel="icon" href="assets/main-icon.png">
 </head>
 
 <body id="cpucity">
@@ -27,55 +30,115 @@
     <nav class="page-navigation">
         <p>CONTENTS</p>
         <ul>
+            <li><a href="#artwork">Artwork</a></li>
             <li><a href="#overview">Overview</a></li>
+            <li><a href="#background">Background</a></li>
             <li><a href="#programming">Programming</a></li>
-            <li><a href="#design">Design</a></li>
             <li><a href="#feedback">Feedback</a></li>
             <li><a href="#next-game">Next Game</a></li>
         </ul>
+
+        <p class="extras-navigation-heading">EXTRAS</p>
+        <ul>
+            <li><a href="mailto:kylejussab@gmail.com" target="_blank">Email</a></li>
+            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank">LinkedIn</a></li>
+            <li><a href="resume.pdf" target="_blank">Resume</a></li>
+        </ul>
     </nav>
 
-    <section class="opening">
+    <section class="opening" id="artwork">
             <h1>CPU City</h1>
             <p class="intro-subheading">Third Person / Adventure / Education - August 2024</p>
 
-            <img src="assets/CPU City.jpg">
+            <div class="motherboard-container">
+                <img src="assets/cpu city/Motherboard Background.png" class="motherboard-image">
+                <img src="assets/CPU City.jpg" class="cpucity-image">
+            </div>
 
             <a href="https://github.com/MrsFrisby/CPU_City_August" target="_blank" class="external-link">
                 <p>View on Github</p>
                 <img src="assets/open-in-new.svg">
             </a>
-
-            <div class="intro-info" id="overview">
-                <div class="intro-info-section">
-                    <h3>Overview</h3>
-                    <p>CPU City is an engaging educational game designed to bring GCSE Computer Science concepts to life through dynamic gameplay. Set in a colorful, bustling city, players step into the shoes of Rhi Vyse, a determined teenager tasked with thwarting the nefarious plans of the Pro-Krastor Nation. The game features a single, immersive level centered on Von Neumann Architecture, offering players a hands-on learning experience.</p>
-                    <p>Developed by a dedicated team of four, this project highlights our collaborative efforts in blending educational content with interactive gameplay to create a compelling and enriching experience.</p>
-                </div>
-
-                <div class="intro-info-section">
-                    <h3>Potential</h3>
-                    <p>Looking ahead, CPU City has the potential to expand significantly, covering a comprehensive range of topics within the GCSE Computer Science curriculum. Future updates aim to include content areas such as programming concepts, data structures, algorithms, computer networks, and ethical, legal, and environmental impacts of technology. Our goal is to create a valuable supplementary tool for UK classrooms, enhancing students’ understanding of computer science through interactive and engaging gameplay.</p>
-                </div>
-
-                <div class="intro-info-section">
-                    <h3>My Role</h3>
-                    <h3 class="list-heading">Gameplay Programming:</h3>
-                    <p>- Built a quest system to provide players with objectives and track their progress.</p>
-                    <p>- Developed an interaction system allowing players to engage with NPCs and objects.</p>
-                    <p>- Created a hydration mechanic where players must manage hydration levels, impacting their ability to sprint or attack.</p>
-                    <p>- Designed the scoring and timing systems, incorporating a 10-minute timer that influences the final score based on performance.</p>
-                    <h3 class="list-heading second-heading">Non-Programming:</h3>
-                    <p>- Created paper prototypes and mockups establishing the games look and feel.</p>
-                    <p>- Assisted in designing and developing in-game UI elements, including menus such as the main menu, pause screen, and game over screen.</p>
-                    <p>- Contributed to game flow and narrative development, including combat mechanics and health/score penalties.</p>
-                    <br><br>
-                    <h3>Technology Stack</h3>
-                    <p>Unity, C#, Visual Studio, Git</p>
-                </div>                
-            </div>
-            
     </section>  
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="overview">
+            <div></div>
+            <p>OVERVIEW</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="overview-container">
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Timeline</span></p>
+                    <p>20 weeks</p>
+                    <p>Apr - Aug '24</p>
+                </div>
+                
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Genre</span></p>
+                    <p>Third Person</p>
+                    <p>Adventure</p>
+                    <p>Education</p>
+                </div>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Responsibilities</span></p>
+                    <p>Team Lead</p>
+                    <p>Gameplay Programmer</p>
+                    <p>UI Designer</p>
+                    <p>Prototyper</p>
+                </div>
+    
+                <div class="overview-block">
+                    <p><span class="highlighted-text">Tech</span></p>
+                    <p>Unity</p>
+                    <p>C#</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-sub-overview extra-space">
+        <div class="content">
+            <h4 class="content-heading">Narrative Overview</h4>
+            <p>CPU City follows the journey of 
+                <span class="highlighted-text">Rhi Vyse</span>, a determined teenager living in a vibrant city powered by technology. When the mysterious 
+                <span class="highlighted-text">Pro-Krastor Nation</span> begins to sabotage the city's systems, Rhi must step up to stop their plans by navigating the city to uncover its secrets; the 
+                <span class="highlighted-text">Von Neumann Architecture</span> that keeps it running. The educational adventure 
+                <span class="highlighted-text">teaches computing concepts</span> through a hero-driven narrative set in a colorful, fun, and engaging world.
+            </p>
+        </div>
+    </div>
+
+    <div class="game-sub-container">
+        <div class="game-sub-heading" id="background">
+            <div></div>
+            <p>BACKGROUND</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <h4 class="content-heading">Why?</h4>
+            <p>The idea for CPU City came from a collaboration between myself and teammate 
+                <span class="highlighted-text">Jess</span>, a GCSE Computer Science teacher. While I was passionate about 
+                <span class="highlighted-text">edutainment</span>, Jess brought deep insight into the classroom struggles students faced. 
+                Together, we saw an opportunity to turn difficult concepts into something 
+                <span class="highlighted-text">playful, accessible, and fun</span>. 
+                Jess also provided direct access to our target audience, allowing for meaningful playtesting throughout development.
+            </p>
+            <p>
+                We envisioned our game as a long-term project; a gamified city where each level teaches a different part of the 
+                <span class="highlighted-text">GCSE Computer Science syllabus</span>. 
+                For this version, we focused on a single level covering the 
+                <span class="highlighted-text">Von Neumann Architecture</span>, one of the first topics students encounter. 
+                This choice allowed us to illustrate the game's full potential while keeping the project scoped and achievable.
+            </p>
+        </div>
+    </div>
 
     <div class="game-sub-container">
         <div class="game-sub-heading" id="programming">
@@ -84,77 +147,426 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <h2>The feel of modern gaming</h2>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="programming-bento">
+                <div class="code-container">
+                    <div class="window-output">
+                        <div class="dot-container">
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                            <div class="dot"></div>
+                        </div>
+                        <div class="window-tab active"><p>dialogue.cs</p></div>
+                        <div class="window-tab"><p>interaction.cs</p></div>
+                        <div class="window-tab"><p>quest.cs</p></div>
+                    </div>
 
-        <div class="game-sub-block">
-            <p class="block-heading">Quests and combat.</p>
-            <div>
-                <p>It was important to make this feel like a game you would play in 2024 and try to disguise the education part as much as possible because we believe education can be done passively and implicitly while having fun. I built both the quest and combat systems from the ground up to achieve this.</p>
-                <p>The quest system works in harmony with the dialogue system. Game objects are tagged as “quest givers,” and quests are assigned only if their index is one higher than the player’s current quest. This keeps the game linear and makes sure the player goes through a guided path while still being allowed to explore.</p>
-                <p>For combat, I developed a straightforward system that leverages basic enemy AI, utilizing state machines to transition between “idle,” “pursuing,” and “attacking” states. The AI follows the player using navigation meshes but is designed to be more irritating than intelligent, focusing on creating a challenging experience rather than sophisticated tactics.</p>
-            </div>
-        </div>
+                    <pre class="code-block">
+<code class="language-csharp">
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using Cinemachine;
 
-        <div class="game-sub-image game-image-cpucity">
-            <div class="cpucity-section-one">
-                <img src="assets/CPUCity1.jpg">
-            </div>
-        </div>
+public class DialogueManager : MonoBehaviour
+{
+    public TextMeshProUGUI actorName;
+    public TextMeshProUGUI messageText;
+    public RectTransform backgroundBox;
 
-        <div class="game-sub-block">
-            <p class="block-heading">The interconnected systems.</p>
-            <div>
-                <p>The world is designed to be visually engaging and filled with distractions, encouraging exploration and interaction with various collectible objects. This is balanced by a strict 10-minute time limit and a scoring system that rewards quick decision-making while penalizing distractions. The scoring system fosters friendly competition, making it ideal for classroom settings where students can replay the game to improve their scores. This replayability reinforces the educational content, helping students absorb key concepts more effectively.</p>
-                <p>The hydration system serves as a reminder of the importance of staying hydrated in real life. In-game, a lack of hydration restricts Rhi’s abilities, such as sprinting and using his attack fireball. Players must seek out water droplets to maintain hydration levels. Achieving high scores requires maintaining consistent hydration throughout the gameplay. This blend of collectible items, engaging world elements, and the added pressure of a time limit creates a dynamic and enjoyable balancing act, making the educational experience both fun and effective.</p>
-            </div>
-        </div>
+    public Animator dialogueAnimator;
+    public OneWheelMovement playerController;
 
-        <div class="game-sub-image game-image-cpucity">
-            <div class="cpucity-section-two">
-                <img src="assets/CPUCity2.jpg">
-                <img src="assets/CPUCity4.jpg">
-            </div>
-        </div>
-    </div>
-    
-    <div class="game-sub-container">
-        <div class="game-sub-heading" id="design">
-            <div></div>
-            <p>DESIGN</p>
-        </div>
-    </div>
+    public CinemachineFreeLook freeLookCamera;
+    private string originalXAxisName;
+    private string originalYAxisName;
 
-    <div class="game-sub-content">
-        <h2>Edutainment done right</h2>
+    Message[] currentMessages;
+    Actor[] currentActors;
+    int activeMessage = 0;
 
-        <div class="game-sub-block">
-            <p class="block-heading">Video game first, education second.</p>
-            <div>
-                <p>Our primary goal was to create a captivating video game experience that seamlessly integrates educational content without compromising on fun. By focusing on making the game engaging and enjoyable first, we ensured that learning became an inherent part of the gameplay rather than the primary focus.</p>
-                <p>The game’s design emphasizes exploration and interaction, with a vibrant city setting that naturally draws players in. This approach allows educational elements to be embedded subtly within the gameplay mechanics. For example, the Von Neumann Architecture is represented through intuitive game systems and challenges, making complex concepts more accessible through interactive experiences.</p>
-            </div>
-        </div>
+    public bool inConversation = false;
+    bool isWritingMessage = false;
 
-        <div class="game-sub-image game-image-cpucity">
-            <div class="cpucity-section-one">
-                <img src="assets/CPUCity3.jpg">
-            </div>
-        </div>
+    public float dialogueSpeed;
+    private bool startAnimation = true;
 
-        <div class="game-sub-block">
-            <p class="block-heading">Designing for all players.</p>
-            <div>
-                <p>Achieving the right balance between challenge and accessibility was crucial to creating an inclusive and engaging experience for all players. We aimed to ensure that the game is enjoyable and educational for a wide range of skill levels, from newcomers to seasoned gamers.</p>
-                <p>To make the game accessible, we designed intuitive controls and user-friendly interfaces that facilitate easy navigation and interaction. Players can quickly grasp the mechanics and start enjoying the gameplay without a steep learning curve. The quest system and gameplay objectives are structured to be straightforward, allowing players to focus on the fun aspects of exploration and interaction.</p>
-                <p>Additionally, the educational components are integrated in a way that complements the gameplay rather than dominating it. This approach allows players to learn passively through their interactions and achievements, making the game accessible to those who might be hesitant about traditional educational tools.</p>
-            </div>
-        </div>
+    private bool questDialogue;
+    private int givenQuestIndex;
 
-        <div class="game-sub-image game-image-cpucity">
-            <div class="cpucity-section-two">
-                <img src="assets/CPUCity5.jpg">
-                <img src="assets/CPUCity6.jpg">
+    void Start()
+    {
+        dialogueSpeed = 0.04f;
+        originalXAxisName = freeLookCamera.m_XAxis.m_InputAxisName;
+        originalYAxisName = freeLookCamera.m_YAxis.m_InputAxisName;
+    }
+
+    void Update()
+    {
+        if (inConversation)
+        {
+            if (startAnimation)
+            {
+                dialogueAnimator.SetTrigger(&quot;Enter&quot;);
+                startAnimation = false;
+            }
+            else
+            {
+                // This skips the animation if you press space
+                if (isWritingMessage)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        dialogueSpeed = 0f;
+                    }
+                }
+                else
+                {
+                    dialogueSpeed = 0.04f;
+                }
+
+                if (Input.GetKeyDown(KeyCode.Space) &amp;&amp; !isWritingMessage)
+                {
+                    NextMessage();
+                }
+            }
+        }
+    }
+
+    public void OpenDialogue(Message[] messages, Actor[] actors)
+    {
+        questDialogue = false;
+        currentMessages = messages;
+        currentActors = actors;
+        activeMessage = 0;
+        inConversation = true;
+        playerController.allowMovement = false;
+        freeLookCamera.m_XAxis.m_InputAxisName = &quot;&quot;;
+        freeLookCamera.m_YAxis.m_InputAxisName = &quot;&quot;;
+
+        DisplayMessage();
+    }
+
+    public void OpenDialogue(Message[] messages, Actor[] actors, int questIndex)
+    {
+        if(questIndex &gt; 0)
+        {
+            givenQuestIndex = questIndex;
+            questDialogue = true;
+        }
+        else
+        {
+            questDialogue = false;
+        }
+        
+        currentMessages = messages;
+        currentActors = actors;
+        activeMessage = 0;
+        inConversation = true;
+        playerController.allowMovement = false;
+        freeLookCamera.m_XAxis.m_InputAxisName = &quot;&quot;;
+        freeLookCamera.m_YAxis.m_InputAxisName = &quot;&quot;;
+
+        DisplayMessage();
+    }
+
+    void DisplayMessage()
+    {
+        Message messageToDisplay = currentMessages[activeMessage];
+        Actor actorToDisplay = currentActors[messageToDisplay.actorId];
+
+        messageText.text = &quot;&quot;;
+        StartCoroutine(WriteSentence(messageToDisplay.message));
+        actorName.text = actorToDisplay.name;
+
+    }
+
+    public void NextMessage()
+    {
+        activeMessage++;
+        if(activeMessage &lt; currentMessages.Length)
+        {
+            DisplayMessage();
+        }
+        else
+        {
+            if (questDialogue &amp;&amp; (GameManager.Instance.currentQuestIndex == givenQuestIndex - 1))
+            {
+                GameManager.Instance.currentQuestIndex = givenQuestIndex;
+            }
+
+            inConversation = false;
+            startAnimation = true;
+            dialogueAnimator.SetTrigger(&quot;Exit&quot;);
+            startAnimation = true;
+            playerController.allowMovement = true;
+            freeLookCamera.m_XAxis.m_InputAxisName = originalXAxisName;
+            freeLookCamera.m_YAxis.m_InputAxisName = originalYAxisName;
+        }
+    }
+
+    IEnumerator WriteSentence(string message)
+    {
+        isWritingMessage = true;
+
+        foreach(char Character in message.ToCharArray())
+        {
+            messageText.text += Character;
+            yield return new WaitForSeconds(dialogueSpeed);
+        }
+
+        isWritingMessage = false;
+    } 
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-csharp">
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerInteract : MonoBehaviour
+{
+    void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E)){
+            float interactRange = 2f;
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+            foreach(Collider collider in colliderArray){
+                if(collider.TryGetComponent(out NPCInteractable npcInteractable)){
+                    npcInteractable.Interact();
+                }
+            }
+        }
+    }
+
+    public NPCInteractable GetInteractableObject()
+    {
+        List&lt;NPCInteractable&gt; npcInteractableList = new List&lt;NPCInteractable&gt;();
+
+        float interactRange = 2f;
+        Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+        foreach (Collider collider in colliderArray)
+        {
+            if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+            {
+                npcInteractableList.Add(npcInteractable);
+            }
+        }
+
+        NPCInteractable closestNPCInteractable = null;
+        foreach(NPCInteractable npcInteractable in npcInteractableList)
+        {
+            if(closestNPCInteractable == null)
+            {
+                closestNPCInteractable = npcInteractable;
+            }
+            else
+            {
+                if (Vector3.Distance(transform.position, npcInteractable.transform.position) &lt; Vector3.Distance(transform.position, closestNPCInteractable.transform.position))
+                {
+                    closestNPCInteractable = npcInteractable;
+                }
+            }
+        }
+
+        return closestNPCInteractable;
+    }
+}
+</code>
+                    </pre>
+
+                    <pre class="code-block">
+<code class="language-csharp">
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager Instance { get; private set; }
+    public TextMeshProUGUI questText;
+    public TextMeshProUGUI timerText;
+    public Image timerImage;
+
+    public GameObject timerObject;
+
+    public string[] quests = { &quot;Talk to Copper&quot;, &quot;Check in with PC Reg Ister at the Police Station&quot;, &quot;Talk to Marvin about the pigeon&quot;, &quot;Speak to the caretaker at the RAM headquarters&quot;, &quot;Collect the pigeon in location 38&quot;, &quot;Talk to Copper&quot;, &quot;All tasks done!&quot; };
+    public int currentQuestIndex = 0;
+
+    private float timerDuration = 600f;
+    private float timeRemaining;
+    private bool timerActive = false;
+    private bool timerStarted = false;
+
+    public Color startColor = Color.white;
+    public Color endColor = Color.red;
+
+    private bool endOfGame = false;
+
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    void FixedUpdate()
+    {
+        DisplayMainQuests();
+
+        if(currentQuestIndex == quests.Length - 1 &amp;&amp; !Initiate.areWeFading &amp;&amp; !endOfGame)
+        {
+            timerActive = false;
+            endOfGame = true;
+            Initiate.Fade(&quot;11_Congratulations&quot;, new Color(105f / 255f, 131f / 255f, 204f / 255f), 0.5f);
+        }
+
+        if(timerActive)
+        {
+            timerObject.SetActive(true);
+            UpdateTimer();
+        }
+        else
+        {
+            if(currentQuestIndex != quests.Length - 1)
+                timerObject.SetActive(false);
+        }
+    }
+
+
+    private void DisplayMainQuests()
+    {
+        if (currentQuestIndex &lt;= quests.Length)
+        {
+            questText.text = quests[currentQuestIndex];
+            if (currentQuestIndex &gt; 0 &amp;&amp; !timerActive &amp;&amp; !timerStarted)
+            {
+                StartTimer();
+                timerStarted = true;
+            }
+        }
+    }
+
+    private void StartTimer()
+    {
+        timeRemaining = timerDuration;
+        timerActive = true;
+    }
+
+    private void UpdateTimer()
+    {
+        if (timeRemaining &gt; 0)
+        {
+            timeRemaining -= Time.deltaTime;
+            DisplayTime(timeRemaining);
+        }
+        else
+        {
+            timeRemaining = 0;
+            timerActive = false;
+            DisplayTime(timeRemaining);
+            TimerHasEnded();
+        }
+    }
+
+    private void DisplayTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+        timerText.text = string.Format(&quot;{0:00}:{1:00}&quot;, minutes, seconds);
+
+        timerImage.fillAmount = timeRemaining / timerDuration;
+        Color timerColor = Color.Lerp(endColor, startColor, time / timerDuration);
+        timerImage.color = timerColor;
+    }
+
+        private void TimerHasEnded()
+    {
+        Debug.Log(&quot;Timer has ended!&quot;);
+        SceneManager.LoadScene(&quot;12_TimesUp&quot;);
+    }
+
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        if (currentQuestIndex == 4)
+        {
+            currentQuestIndex = 5;
+        }
+
+        if (currentQuestIndex != quests.Length - 1)
+        {
+            questText = GameObject.Find(&quot;Quest Text&quot;).GetComponent&lt;TextMeshProUGUI&gt;();
+            timerText = GameObject.Find(&quot;Timer Text&quot;).GetComponent&lt;TextMeshProUGUI&gt;();
+            timerImage = GameObject.Find(&quot;Timer Bar&quot;).GetComponent&lt;Image&gt;();
+            timerObject = GameObject.Find(&quot;Timer&quot;);
+
+            DisplayMainQuests();
+        }     
+    }
+
+    private void OnDestroy()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public void RestartGameTimer()
+    {
+        currentQuestIndex = 0;
+        endOfGame = false;
+        timerStarted = false;
+        timerActive = false;
+        timeRemaining = timerDuration;
+        DisplayMainQuests();
+    }
+} 
+</code>
+                    </pre>
+                </div>
+
+                <div class="output-description-container">
+                    <div class="output-description">
+                        <div class="window-output">
+                            <div class="dot-container">
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                                <div class="dot"></div>
+                            </div>
+                            <p>CPU City.exe</p>
+                        </div>
+                        
+                        <div class="output-image"><img /></div>
+                    </div>
+
+                    <div class="output-description">
+                        <div class="programming-desc-heading">
+                            <img src="assets/between the years/code-icon.png" />
+                            <p>How It Works</p>
+                        </div>
+                        <p class="description-text">The DialogueManager controls all in-game conversations by linking the text display, camera behavior, and player movement. When a dialogue starts, it disables player controls and camera input, then animates the UI and types out each message character-by-character. Players can press space to skip or advance messages. The system supports both regular and quest-related dialogues, updating the player’s quest progress if needed. Once the conversation ends, control is handed back to the player.</p>
+                        <p class="description-text">The PlayerInteract script enables player interaction with nearby NPCs. When the player presses E, it checks for any NPCInteractable objects within a short radius using a physics overlap sphere. If one is found, it calls their Interact() method. The GetInteractableObject function returns the closest interactable NPC in range; useful for UI prompts or targeting the nearest character.</p>
+                        <p class="description-text">This script manages the game’s linear quest progression. It updates the current quest display based on a predefined list and starts a countdown timer once the first quest is completed. The timer appears only during active quests and adds urgency by transitioning from white to red as time runs out. If the timer reaches zero, the game shifts to a “time’s up” scene. When the player completes all quests, it transitions to a final “congratulations” scene, effectively signaling the end of the game.</p>
+                    </div>
+                </div>
+
+                
             </div>
         </div>
     </div>
@@ -166,25 +578,27 @@
         </div>
     </div>
 
-    <div class="game-sub-content">
-        <div class="feedback-container">
-            <div class="feedback-border">
-                <div class="feedback-comment">
-                    <div class="feedback-name">
-                        <img src="assets/user icon.svg">
-                        <p>QA Tester</p>
-                    </div>
-                    <p>Really cool idea, I think this is great.</p>
+    <div class="game-sub-overview">
+        <div class="content">
+            <div class="feedback-bento">
+                <div class="feedback-block">
+                    <img src="assets/cpu city/positive-comment-icon.png" />
+                    <p>92% positive feedback from testers in post-play surveys</p>
                 </div>
-            </div>
 
-            <div class="feedback-border">
-                <div class="feedback-comment">
-                    <div class="feedback-name">
-                        <img src="assets/user icon.svg">
-                        <p>QA Tester</p>
-                    </div>
-                    <p>The thriller dance at the end was really funny.</p>
+                <div class="feedback-block">
+                    <img src="assets/cpu city/vna-icon.png" />
+                    <p>3 out of 4 testers found VNA more enjoyable after play</p>
+                </div>
+    
+                <div class="feedback-block">
+                    <img src="assets/cpu city/replay-icon.png" />
+                    <p>40% of total players replayed the level at least once</p>
+                </div>
+    
+                <div class="feedback-block">
+                    <img src="assets/cpu city/quote-icon.png" />
+                    <p>"I found myself having fun without realizing" - Anonymous playtester</p>
                 </div>
             </div>
         </div>
@@ -197,25 +611,47 @@
         </div>
     </div>
 
-    <div class="games-content">
-        <div class="card-border" id="next-game-card">
-            <a href="https://kylejussab.com/tloubty">
-                <div class="card-container">
-                    <div class="card-content">
-                        <h2>The Last of Us: Between The Years <span>GB Studio, GBVM</span></h2>
-                        <img src="assets/arrow-right.svg" class="card-arrow">
-                        <p class="card-heading-subtext">Side Scroller / Action / Adventure - June 2024</p>
-                        <p class="card-description">This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game.</p>
-                        <div class="card-image"><img src="assets/The Last of Us Between The Years.png" alt="Joel looking in the distance"></div>
+    <div class="game-sub-overview">
+        <a href="https://kylejussab.com/tloubty">
+            <div class="card-container">
+                <div class="card-content">
+                    <p class="card-role">02 | GAMEPLAY PROGRAMMER & GAME DESIGNER</p>
+                    <img src="assets/arrow-right.svg" class="card-arrow">
+    
+                    <div class="card-details">
+                        <div class="card-image"><img src="assets/The Last of Us Between The Years Page Cover.png" alt="Joel looking in the distance" /></div>
+    
+                        <div class="card-text">
+                            <h2>The Last of Us: Between The Years</h2>
+                            <p class="card-description">This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game.</p>
+                            
+                            <div class="card-meta">
+                                <div>
+                                    <p class="meta-heading">Release</p>
+                                    <p class="meta-text">June 2024</p>
+                                </div>
+                                <div>
+                                    <p class="meta-heading">Genre</p>
+                                    <p class="meta-text">Side Scroller</p>
+                                    <p class="meta-text">Action</p>
+                                    <p class="meta-text">Adventure</p>
+                                </div>
+                                <div>
+                                    <p class="meta-heading">Tech</p>
+                                    <p class="meta-text">GB Studio</p>
+                                    <p class="meta-text">GBVM</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </a>
-        </div>
+            </div>
+        </a>
     </div>
 
     <footer>
         <div class="footer-rights">
-            <img src="assets/Icon_V2_Transparent.png">
+            <img src="assets/footer-icon.png">
             <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
             <p>A promise kept to the dreams of my 14-year-old self.</p>
         </div>
@@ -223,22 +659,22 @@
         <div class="footer-contact">
             <p>CONTACT</p>
 
+            <a href="mailto:kylejussab@gmail.com" target="_blank">
+                <p>Email</p>
+                <img src="assets/open-in-new.svg">
+            </a>
+
             <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
                 <p>LinkedIn</p>
                 <img src="assets/open-in-new.svg">
             </a>
 
-            <a href="https://github.com/kylejussab" target="_blank">
-                <p>Github</p>
-                <img src="assets/open-in-new.svg">
-            </a>
-
-            <a href="assets/resume.pdf" target="_blank">
+            <a href="resume.pdf" target="_blank">
                 <p>Resume</p>
                 <img src="assets/open-in-new.svg">
             </a>
 
-            <p>Last updated by Kyle on December 7, 2024, 9:38 PM PST</p>
+            <p>Last updated by Kyle on April 18, 2025, 5:35 PM PDT</p>
         </div>
     </footer>
 </body>

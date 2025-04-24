@@ -40,19 +40,30 @@ body::before {
     align-items: center;
 }
 
+.nav-identity {
+    display: flex;
+    flex: 1;
+    margin-left: 25px;
+}
+
 /* Left circle of Kyle */
+.home-icon-wrapper {
+    position: relative;
+}
+
 .home-icon{
     width: 50px;
     height: 50px;
 
     background: rgba(30, 29, 28, 0.4);
-    /* box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.05); */
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 50%;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+    overflow: hidden;
     
     transition: transform 500ms ease;
+    cursor: pointer;
 }
 
 .home-icon:hover{
@@ -64,30 +75,46 @@ body::before {
     height: inherit;
 }
 
-.nav-identity {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex: 1;
-    margin-left: 25px;
+.kyle-click {
+    position: absolute;
+    top: 0px;
+    left: 65px;
+    opacity: 0;
+
+    background: rgba( 255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: #333333 solid .75px;
+    border-radius: 20px;
+    padding: 8px 12px;
+    
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+
+    
+    pointer-events: none;
+    transition: none;
+    animation: none;
+    z-index: 10;
 }
 
-.nav-identity-text p{
-    margin-block: 0px;
+@keyframes tooltipFloat {
+    0% {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateY(2px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
 }
-
-.nav-identity-text{
-    margin-left: 10px;
-}
-
-.nav-name {
-    font-size: 20px;
-}
-
-.nav-role {
-    font-size: 12px;
-    color: var(--font-secondary-color);
-}
+  
 
 /* Middle navigation toggle */
 .nav-toggle {
@@ -249,9 +276,14 @@ label {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 784px) {
+@media only screen and (max-width: 920px) {
     .home-icon {
         margin-left: 10px;
+    }
+
+    .kyle-click {
+        top: 40px;
+        left: 12px;
     }
 
     .desktop-nav {

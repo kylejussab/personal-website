@@ -231,11 +231,6 @@
 }
 
 /* Programming section */
-/* * {
-    scrollbar-gutter: stable;
-    border: 2px solid red;
-} */
-
 .programming-bento {
     display: flex;
     flex-direction: row;

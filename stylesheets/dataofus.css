@@ -115,6 +115,7 @@
 .process {
     width: 200px;
     justify-items: center;
+    align-items: center;
 }
 
 .process-number {

@@ -30,7 +30,8 @@ const messages = {
         "Why did the bicycle fall over? Because it was two-tired!",
         "What did the grape do when it got stepped on? Nothing, it just let out a little wine."
     ],
-    "game": "I’m currently playing A Plague Tale: Requiem. Initial thoughts are that the crossbow adds to the gameplay from Innocence and changes how I play the game. Really enjoying it so far and I’ll probably end up getting the platinum trophy in the near future."
+    "game": "Lost Records: Bloom & Rage. To say I'm enjoying this is an understatement, 'Don't Nod' know exactly what they're doing 🤧",
+    "contact": "The quickest way to reach me is through my email, but LinkedIn works just as well! I’m pretty quick with replies so expect to hear back the same day or by the next one."
 };
 
 const chatButton = document.querySelector('.chat-button');
@@ -173,6 +174,13 @@ function typeMessage(message) {
             setTimeout(addCharacter, typingSpeed);
         }
         else{
+
+            let updatedMessage = messageText.innerHTML;
+            updatedMessage = updatedMessage.replace(/email/g, '<a class="kyle-bot-link" href="mailto:kylejussab@gmail.com">email</a>');
+            updatedMessage = updatedMessage.replace(/LinkedIn/g, '<a class="kyle-bot-link" href="https://www.linkedin.com/in/kylejussab/" target="_blank">LinkedIn</a>');
+            messageText.innerHTML = updatedMessage;
+
+
             chatOptionsContainer.classList.add('show');
         }
     }

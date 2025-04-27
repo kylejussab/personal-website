@@ -59,7 +59,12 @@ const bitmojiExpressions = [
     'assets/kyle bot/bitmoji-eight.png',
     'assets/kyle bot/bitmoji-nine.png',
     'assets/kyle bot/bitmoji-ten.png',
+    'assets/kyle bot/bitmoji-eleven.png',
+    'assets/kyle bot/bitmoji-twelve.png',
+    'assets/kyle bot/bitmoji-thirteen.png',
 ];
+
+let availableBitmojis = [...bitmojiExpressions];
 
 const closeIcon = 'assets/kyle bot/close-icon.png';
 let isSwitching = false;
@@ -71,8 +76,15 @@ function switchToBitmoji() {
 
     isSwitching = true;
 
-    const randomExpression = bitmojiExpressions[Math.floor(Math.random() * bitmojiExpressions.length)];
-    bitmojiIcon.src = randomExpression;
+    // Shuffle without repeats
+    if (availableBitmojis.length === 0) {
+        availableBitmojis = [...bitmojiExpressions];
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableBitmojis.length);
+    const nextBitmoji = availableBitmojis.splice(randomIndex, 1)[0];
+
+    bitmojiIcon.src = nextBitmoji;
 
     defaultIcon.style.opacity = 0;
     bitmojiIcon.style.opacity = 1;
@@ -114,6 +126,8 @@ chatButton.addEventListener('click', () => {
 
     if (isChatOpen) {
         bitmojiIcon.src = closeIcon;
+        bitmojiIcon.style.width = '50px';
+        bitmojiIcon.style.height = '50px';
         defaultIcon.style.opacity = 0;
         bitmojiIcon.style.opacity = 1;
         stopCycling();

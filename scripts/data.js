@@ -11,7 +11,7 @@ let gameData = [
         "genre3": "Adventure",
         "tech1": "Unity",
         "tech2": "C#",
-        "link": "#",
+        "link": "https://kylejussab.com/absoluteminima",
         "customOrder": 3,
         "dateOrder": 0
     },
@@ -89,7 +89,7 @@ let projectData = [
         "discipline1": "Game Dev",
         "discipline2": "Data Science",
         "discipline3": "Fan Projects",
-        "link": "#",
+        "link": "https://kylejussab.com/tributetrilogy",
         "customOrder": 3,
         "dateOrder": 0
     },

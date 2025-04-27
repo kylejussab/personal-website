@@ -239,6 +239,13 @@ function addUserMessage(message){
     bubble.appendChild(messageText);
 
     chatBubbleContainer.appendChild(bubble);
+
+    const chatBoxContent = document.querySelector('.chat-box-content');
+
+    chatBoxContent.scrollTo({
+        top: chatBoxContent.scrollHeight,
+        behavior: 'smooth'
+    });
 }
 
 function getSeenFacts(){

@@ -9,19 +9,22 @@
     <link rel="stylesheet" href="stylesheets/project-page.css"> 
     <link rel="stylesheet" href="stylesheets/dataofus.css">
     
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
+    <script src="scripts/data.js" defer ></script>
+    <script src="scripts/sort-data.js" defer ></script>
+    <script src="scripts/next-project.js" defer ></script>
     <script src="scripts/project-page-navigation.js" defer ></script>
+
     <script src="scripts/dou-programming-navigation.js" defer ></script>
 
     <title>Kyle Jussab - The Data of Us</title>
     <link rel="icon" href="assets/main-icon.png">
 </head>
 
-<body id="thedataofus">
+<body id="thedataofus" data-project="The Data of Us" data-type="project">
     <header>
         <a href="https://kylejussab.com/" class="back-button">
             <img src="assets/arrow_left.svg">
@@ -37,7 +40,7 @@
             <li><a href="#background">Background</a></li>
             <li><a href="#programming">Programming</a></li>
             <li><a href="#findings">Findings</a></li>
-            <li><a href="#next-game">Next Project</a></li>
+            <li class="case-study-navigation"><a href="#next-game">Next Project</a></li>
         </ul>
 
         <p class="extras-navigation-heading">EXTRAS</p>
@@ -459,42 +462,44 @@ plt.show()
         </div>
     </div>
 
-    <div class="game-sub-container">
+    <div class="game-sub-container next-case-study-heading">
         <div class="game-sub-heading" id="next-game">
             <div></div>
             <p>NEXT PROJECT</p>
         </div>
     </div>
 
-    <div class="game-sub-overview">
-        <a href="https://kylejussab.com/pixelpulse">
-            <div class="card-container">
-                <div class="card-content">
-                    <p class="card-role">03 | FRONTEND DEVELOPER</p>
-                    <img src="assets/arrow-right.svg" class="card-arrow">
-    
-                    <div class="card-details">
-                        <div class="card-image"><img src="assets/PixelPulse Cover Art.png" /></div>
-    
-                        <div class="card-text">
-                            <h2>PixelPulse</h2>
-                            <p class="card-description">A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.</p>
-                            
-                            <div class="card-meta">
-                                <div>
-                                    <p class="meta-heading">Date</p>
-                                    <p class="meta-text">September 2023</p>
-                                </div>
-                                <div>
-                                    <p class="meta-heading">Disciplines</p>
-                                    <p class="meta-text">Web Dev</p>
-                                    <p class="meta-text">UI / UX</p>
-                                    <p class="meta-text">Research</p>
-                                </div>
-                                <div>
-                                    <p class="meta-heading">Tech</p>
-                                    <p class="meta-text">HTML / CSS</p>
-                                    <p class="meta-text">JavaScript</p>
+    <div class="game-sub-overview next-case-study">
+        <a href="">
+            <div class="card-wrapper">
+                <div class="card-container">
+                    <div class="card-content">
+                        <p class="card-role"></p>
+                        <img src="assets/arrow-right.svg" class="card-arrow">
+        
+                        <div class="card-details">
+                            <div class="card-image"><img src="" alt="" /></div>
+        
+                            <div class="card-text">
+                                <h2></h2>
+                                <p class="card-description"></p>
+                                
+                                <div class="card-meta">
+                                    <div>
+                                        <p class="meta-heading"></p>
+                                        <p class="meta-text"></p>
+                                    </div>
+                                    <div>
+                                        <p class="meta-heading"></p>
+                                        <p class="meta-text"></p>
+                                        <p class="meta-text"></p>
+                                        <p class="meta-text"></p>
+                                    </div>
+                                    <div>
+                                        <p class="meta-heading"></p>
+                                        <p class="meta-text"></p>
+                                        <p class="meta-text"></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -502,6 +507,13 @@ plt.show()
                 </div>
             </div>
         </a>
+    </div>
+
+    <div class="unique-game-sub-container end-case-study-heading">
+        <div class="game-sub-heading">
+            <div></div>
+            <p>THE END</p>
+        </div>
     </div>
 
     <footer>

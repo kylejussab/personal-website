@@ -1,3 +1,29 @@
+body > * {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
 /* Project page navigation */
 html {
     scroll-behavior: smooth;
@@ -141,6 +167,15 @@ body::before {
 }
 
 .game-sub-container {
+    padding-top: 50px;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* For js purposes */
+.unique-game-sub-container {
     padding-top: 50px;
     margin-top: -30px;
     margin-bottom: 30px;

@@ -4,25 +4,36 @@ const toggleLabel = document.getElementById("toggleLabel");
 const toggleContent = document.getElementById("switch-content");
 
 let chronologicalOrder = localStorage.getItem("chronologicalOrder") === "true";
-orderToggle.checked = chronologicalOrder;
-toggleLabel.textContent = chronologicalOrder ? "ON" : "OFF";
+
+if(orderToggle) {
+    orderToggle.checked = chronologicalOrder;
+}
+
+if(toggleLabel) {
+    toggleLabel.textContent = chronologicalOrder ? "ON" : "OFF";
+}
 
 // Hide the toggle in the beginning so it doesn't show it changes on load
 document.addEventListener("DOMContentLoaded", () => {
-    toggleContent.classList.remove("preload-toggle");
+    if (toggleContent) {
+        toggleContent.classList.remove("preload-toggle");
+    }
 });
 
-orderToggle.addEventListener("change", () => {
-    chronologicalOrder = orderToggle.checked;
-    localStorage.setItem("chronologicalOrder", chronologicalOrder);
+if(orderToggle) {
+    orderToggle.addEventListener("change", () => {
+        chronologicalOrder = orderToggle.checked;
+        localStorage.setItem("chronologicalOrder", chronologicalOrder);
 
-    toggleLabel.textContent = orderToggle.checked ? "ON" : "OFF";
+        if(toggleLabel) {
+            toggleLabel.textContent = orderToggle.checked ? "ON" : "OFF";
+        }
 
-    renderGameCards();
-    renderProjectCards();
-
-    selected();
-});
+        renderGameCards();
+        renderProjectCards();
+        selected();
+    });
+}
 
 function sortData(data, isChronological) {
     return data.slice().sort((a, b) => {

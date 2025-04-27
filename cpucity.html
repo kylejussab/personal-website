@@ -13,13 +13,18 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     
+    <script src="scripts/data.js" defer ></script>
+    <script src="scripts/sort-data.js" defer ></script>
+    <script src="scripts/next-project.js" defer ></script>
     <script src="scripts/project-page-navigation.js" defer ></script>
+
     <script src="scripts/cc-programming-navigation.js" defer ></script>
+
     <title>Kyle Jussab - CPU City</title>
     <link rel="icon" href="assets/main-icon.png">
 </head>
 
-<body id="cpucity">
+<body id="cpucity" data-project="CPU City" data-type="game">
     <header>
         <a href="https://kylejussab.com/" class="back-button">
             <img src="assets/arrow_left.svg">
@@ -35,7 +40,7 @@
             <li><a href="#background">Background</a></li>
             <li><a href="#programming">Programming</a></li>
             <li><a href="#feedback">Feedback</a></li>
-            <li><a href="#next-game">Next Game</a></li>
+            <li class="case-study-navigation"><a href="#next-game">Next Game</a></li>
         </ul>
 
         <p class="extras-navigation-heading">EXTRAS</p>
@@ -604,42 +609,42 @@ public class GameManager : MonoBehaviour
         </div>
     </div>
 
-    <div class="game-sub-container">
+    <div class="game-sub-container next-case-study-heading">
         <div class="game-sub-heading" id="next-game">
             <div></div>
             <p>NEXT GAME</p>
         </div>
     </div>
 
-    <div class="game-sub-overview">
-        <a href="https://kylejussab.com/tloubty">
+    <div class="game-sub-overview next-case-study">
+        <a href="">
             <div class="card-container">
                 <div class="card-content">
-                    <p class="card-role">02 | GAMEPLAY PROGRAMMER & GAME DESIGNER</p>
+                    <p class="card-role"></p>
                     <img src="assets/arrow-right.svg" class="card-arrow">
     
                     <div class="card-details">
-                        <div class="card-image"><img src="assets/The Last of Us Between The Years Page Cover.png" alt="Joel looking in the distance" /></div>
+                        <div class="card-image"><img src="" alt="" /></div>
     
                         <div class="card-text">
-                            <h2>The Last of Us: Between The Years</h2>
-                            <p class="card-description">This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game.</p>
+                            <h2></h2>
+                            <p class="card-description"></p>
                             
                             <div class="card-meta">
                                 <div>
-                                    <p class="meta-heading">Release</p>
-                                    <p class="meta-text">June 2024</p>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
                                 </div>
                                 <div>
-                                    <p class="meta-heading">Genre</p>
-                                    <p class="meta-text">Side Scroller</p>
-                                    <p class="meta-text">Action</p>
-                                    <p class="meta-text">Adventure</p>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
                                 </div>
                                 <div>
-                                    <p class="meta-heading">Tech</p>
-                                    <p class="meta-text">GB Studio</p>
-                                    <p class="meta-text">GBVM</p>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
                                 </div>
                             </div>
                         </div>
@@ -647,6 +652,13 @@ public class GameManager : MonoBehaviour
                 </div>
             </div>
         </a>
+    </div>
+
+    <div class="unique-game-sub-container end-case-study-heading">
+        <div class="game-sub-heading">
+            <div></div>
+            <p>THE END</p>
+        </div>
     </div>
 
     <footer>

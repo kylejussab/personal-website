@@ -5,6 +5,10 @@ let projectElements = document.getElementsByClassName('projects-content');
 let aboutContent = document.getElementsByClassName('about-content');
 
 function selected(){
+    const selectedTab = document.querySelector('input[name="toggle"]:checked').value;
+    localStorage.setItem('selectedTab', selectedTab);
+    localStorage.setItem('selectedTabTime', Date.now());
+
     let toggleContent = document.getElementById("switch-content");
 
     if(document.getElementById('games').checked){
@@ -53,3 +57,25 @@ function selected(){
         toggleContent.style.display = 'flex';
     }
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const savedTab = localStorage.getItem('selectedTab');
+    const savedTime = localStorage.getItem('selectedTabTime');
+
+    if (savedTab && savedTime) {
+        const now = Date.now();
+        const oneHour = 60 * 60 * 1000;
+
+        if (now - savedTime < oneHour) {
+            const radioButton = document.querySelector(`input[value="${savedTab}"]`);
+            if (radioButton) {
+                radioButton.checked = true;
+                selected();
+            }
+        } 
+        else {
+            localStorage.removeItem('selectedTab');
+            localStorage.removeItem('selectedTabTime');
+        }
+    }
+});

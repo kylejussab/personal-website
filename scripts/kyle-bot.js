@@ -62,10 +62,13 @@ const bitmojiExpressions = [
 ];
 
 const closeIcon = 'assets/kyle bot/close-icon.png';
+let isSwitching = false;
 
 // Switch to a random Bitmoji
 function switchToBitmoji() {
-    if (isChatOpen) return;
+    if (isChatOpen || isSwitching) return;
+
+    isSwitching = true;
 
     const randomExpression = bitmojiExpressions[Math.floor(Math.random() * bitmojiExpressions.length)];
     bitmojiIcon.src = randomExpression;
@@ -76,13 +79,20 @@ function switchToBitmoji() {
     setTimeout(() => {
         defaultIcon.style.opacity = 1;
         bitmojiIcon.style.opacity = 0;
+        isSwitching = false;
     }, DELAYTIME);
 }
-
 
 function startCycling() {
     if (!isChatOpen) {
         setInterval(switchToBitmoji, SWITCHTIME);
+    }
+}
+
+function stopCycling() {
+    if (switchInterval) {
+        clearInterval(switchInterval);
+        switchInterval = null;
     }
 }
 
@@ -95,6 +105,7 @@ chatButton.addEventListener('click', () => {
         bitmojiIcon.src = closeIcon;
         defaultIcon.style.opacity = 0;
         bitmojiIcon.style.opacity = 1;
+        stopCycling();
     } else {
         bitmojiIcon.style.opacity = 0;
         defaultIcon.style.opacity = 1;

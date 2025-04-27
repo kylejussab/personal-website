@@ -1,0 +1,42 @@
+.construction-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+
+    margin-top: 80px;
+    padding-block: 10px;
+}
+
+.construction-container img {
+    width: 100px;
+    box-sizing: border-box;
+}
+
+.construction-container p {
+    font-size: 20px;
+    color: var(--font-secondary-color);
+    font-weight: 400;
+}
+
+.construction-container p span {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+/* Construction media */
+@media only screen and (max-width: 918px) {
+    .construction-container {
+        width: 98%;
+        margin-top: 40px;
+    }
+    
+    .construction-container p {
+        font-size: 16px;
+    }
+    
+    .construction-container p span {
+        font-size: 28px;
+    }
+}

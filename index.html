@@ -10,12 +10,16 @@
     <link rel="stylesheet" href="stylesheets/index-cards.css">
     <link rel="stylesheet" href="stylesheets/index-about.css">
     <link rel="stylesheet" href="stylesheets/index-chat.css">
+
     <script src="scripts/sort-data.js" defer ></script>
     <script src="scripts/nav-toggle.js" defer ></script>
-    <script src="scripts/project-data.js" defer ></script>
-    <script src="scripts/game-data.js" defer ></script>
+
+    <script src="scripts/data.js" defer ></script>
+    <script src="scripts/renderHomepageCards.js" defer ></script>
+    
     <script src="scripts/nav-button.js" defer ></script>
     <script src="scripts/kyle-bot.js" defer ></script>
+
     <title>Kyle Jussab</title>
     <link rel="icon" href="assets/main-icon.png">
 </head>
@@ -174,33 +178,35 @@
         <template data-project-template>
             <div class="projects-content">
                 <a data-link>
-                    <div class="card-container">
-                        <div class="card-content">
-                            <p data-role class="card-role"></p>
-                            <img src="assets/arrow-right.svg" class="card-arrow">
+                    <div class="card-wrapper">
+                        <div class="card-container">
+                            <div class="card-content">
+                                <p data-role class="card-role"></p>
+                                <img src="assets/arrow-right.svg" class="card-arrow">
 
-                            <div class="card-details">
-                                <div data-img class="card-image"></div>
+                                <div class="card-details">
+                                    <div data-img class="card-image"></div>
 
-                                <div class="card-text">
-                                    <h2 data-title></h2>
-                                    <p data-description class="card-description"></p>
-                                    
-                                    <div class="card-meta">
-                                        <div>
-                                            <p class="meta-heading">Date</p>
-                                            <p data-date class="meta-text"></p>
-                                        </div>
-                                        <div>
-                                            <p class="meta-heading">Disciplines</p>
-                                            <p data-discipline1 class="meta-text"></p>
-                                            <p data-discipline2 class="meta-text"></p>
-                                            <p data-discipline3 class="meta-text"></p>
-                                        </div>
-                                        <div>
-                                            <p class="meta-heading">Tech</p>
-                                            <p data-tech1 class="meta-text"></p>
-                                            <p data-tech2 class="meta-text"></p>
+                                    <div class="card-text">
+                                        <h2 data-title></h2>
+                                        <p data-description class="card-description"></p>
+                                        
+                                        <div class="card-meta">
+                                            <div>
+                                                <p class="meta-heading">Date</p>
+                                                <p data-date class="meta-text"></p>
+                                            </div>
+                                            <div>
+                                                <p class="meta-heading">Disciplines</p>
+                                                <p data-discipline1 class="meta-text"></p>
+                                                <p data-discipline2 class="meta-text"></p>
+                                                <p data-discipline3 class="meta-text"></p>
+                                            </div>
+                                            <div>
+                                                <p class="meta-heading">Tech</p>
+                                                <p data-tech1 class="meta-text"></p>
+                                                <p data-tech2 class="meta-text"></p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -313,8 +319,8 @@
         <div class="chat-button-images">
             <img src="assets/kyle bot/chat-icon.png" alt="Chat Icon" class="default-icon">
             <img src="assets/kyle bot/bitmoji-one.png" alt="Bitmoji Expression" class="bitmoji-icon">
-            <div class="tooltip">Chat with Kyle!</div>
         </div>
+        <div class="tooltip">Chat with Kyle!</div>
     </div>
 
     <div class="chat-box-content hidden">
@@ -327,6 +333,7 @@
             <p class="chat-option" data-message="fact">Tell me an interesting fact about you.</p>
             <p class="chat-option" data-message="joke">Tell me a joke.</p>
             <p class="chat-option" data-message="game">What game are you currently playing?</p>
+            <p class="chat-option" data-message="contact">How do I get in touch with the *real* Kyle?</p>
         </div>
     </div>
 

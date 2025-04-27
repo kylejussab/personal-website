@@ -260,6 +260,79 @@ input:checked + .slider:before {
     align-items: center;
 }
 
+/* These styles are only for collection cards */
+.card-wrapper {
+    position: relative;
+    overflow: visible;
+}
+
+.card-container.collection-card {
+    background-color: #4b4123;
+    position: relative;
+}
+
+.card-container.collection-card:hover {
+    box-shadow: 0 0 30px 10px rgba(75, 65, 35, 0.8);
+}
+
+.collection-ribbon {
+    content: "COLLECTION";
+    position: absolute;
+    bottom: 30px;
+    right: -10px;
+    --f: 10px; /* control the folded part*/
+    --r: 15px; /* control the ribbon shape */
+    --t: 10px; /* the top offset */
+    
+    clip-path: 
+    polygon(
+        0 0,
+        100% 0,
+        100% calc(100% - var(--f)),
+        calc(100% - var(--f)) 100%,
+        calc(100% - var(--f)) calc(100% - var(--f)),
+        0 calc(100% - var(--f)),
+        var(--r) calc(50% - var(--f)/2)
+    );
+
+    background: #d4af37;
+    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
+    color: white;
+
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.2px;
+    color: rgba(255, 255, 255, 0.8);
+
+    z-index: 10;
+
+    padding: 5px 25px 15px 30px;
+    transition: transform 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.card-wrapper:hover .collection-ribbon {
+    transform: scale(1.03) translateY(3px) translateX(12px);
+}
+
+.card-meta-collection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding-right: 0px;
+}
+
+.card-meta-collection > * {
+    flex: 1;
+}
+
+.card-meta-collection > * p.meta-heading {
+    color: rgba(255, 255, 255, 0.3);
+    width: 65%;
+    height: 36px;
+}
+
 /* Hide other content on load */
 .about-content {
     display: none;
@@ -284,7 +357,9 @@ input:checked + .slider:before {
 
     .card-container {
         width: 350px;
-        height: 500px;
+        height: 100%;
+
+        min-height: 500px;
         margin-bottom: 40px;
     }
 
@@ -323,9 +398,10 @@ input:checked + .slider:before {
     }
     
     .card-text {
-        width: 100%;
+        width: 93%;
         padding-right: 0px;
         padding-inline: 10px;
+        margin-inline: 0px;
     }
 
     .card-meta {
@@ -335,5 +411,16 @@ input:checked + .slider:before {
     .card-arrow {
         top: 13px;
         right: 10px;
+    }
+
+    /* For collection cards */
+    .collection-ribbon {
+        bottom: 400px;
+        font-size: 9px;
+        padding: 5px 15px 15px 25px;
+    }
+
+    .card-wrapper:hover .collection-ribbon {
+        transform: scale(1) translateY(-2px) translateX(5px);
     }
 }

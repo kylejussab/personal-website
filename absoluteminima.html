@@ -9,12 +9,19 @@
     <link rel="stylesheet" href="stylesheets/project-page.css">
     <link rel="stylesheet" href="stylesheets/absoluteminima.css">
 
+    <!-- to be removed -->
+    <link rel="stylesheet" href="stylesheets/construction.css">
+
+    <script src="scripts/data.js" defer ></script>
+    <script src="scripts/sort-data.js" defer ></script>
+    <script src="scripts/next-project.js" defer ></script>
     <script src="scripts/project-page-navigation.js" defer ></script>
+
     <title>Kyle Jussab - Absolute Minima</title>
     <link rel="icon" href="assets/main-icon.png">
 </head>
 
-<body id="absoluteminima">
+<body id="absoluteminima" data-project="Absolute Minima" data-type="game">
     <header>
         <a href="https://kylejussab.com/" class="back-button">
             <img src="assets/arrow_left.svg">
@@ -31,7 +38,7 @@
             <li><a href="#design">Design</a></li>
             <li><a href="#programming">Programming</a></li>
             <li><a href="#feedback">Feedback</a></li>
-            <li><a href="#next-game">Next Project</a></li>
+            <li class="case-study-navigation"><a href="#next-game">Next Project</a></li>
         </ul>
 
         <p class="extras-navigation-heading">EXTRAS</p>
@@ -45,15 +52,20 @@
     <section class="opening" id="artwork">
         <h1>Absolute Minima</h1>
         <p class="intro-subheading">The only true act of freedom is the absolute minima of action - Coming soon</p>
-       
-        <div>
+    
+        <div class="construction-container">
+            <img src="assets/kyle bot/bitmoji-construction.png" />
+            <p><span>Under construction!</span> <br> Well would you look at that, you've discovered a project in the works! It’s not quite finished yet, but don’t worry, this page gets updated as soon as I make progress. Stay tuned!</p>
+        </div>
+
+        <!-- <div>
             <img src="assets/Absolute Minima.png">
         </div>
 
         <a href="#" target="_blank" class="external-link">
             <p>View on itch.io</p>
             <img src="assets/open-in-new.svg">
-        </a>
+        </a> -->
     </section>
     
     <div class="game-sub-container">
@@ -106,8 +118,8 @@
     <div class="game-sub-overview">
         <div class="content">
             <h4 class="content-heading">Why?</h4>
-            <p>Lorem ipsum
-                <span class="highlighted-text"> and more stuff</span> and even more stuff.</p>
+            <p>This part is like your 
+                <span class="highlighted-text">grandmothers secret recipe</span>, you don't just go telling everyone about the recipe now do you? But no worries, I'll share all the secrets when I finish the project!</p>
         </div>
     </div>
 
@@ -118,10 +130,24 @@
         </div>
     </div>
 
+    <div class="game-sub-overview">
+        <div class="content">
+            <p><span class="highlighted-text">1920s Disney!</span> That is all, move along now.</p>
+        </div>
+    </div>
+
     <div class="game-sub-container">
         <div class="game-sub-heading" id="programming">
             <div></div>
             <p>PROGRAMMING</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview">
+        <div class="content">
+            <p>Currently 
+                <span class="highlighted-text">fighting</span> off some serious 
+                <span class="highlighted-text">bugs</span>. No seriously... there's a lot of them.</p>
         </div>
     </div>
 
@@ -133,10 +159,62 @@
         </div>
     </div>
 
-    <div class="game-sub-container">
+    <div class="game-sub-overview">
+        <div class="content">
+            <p>You're an eager beaver. This is to come in the 
+                <span class="highlighted-text">near future</span>!</p>
+        </div>
+    </div>
+
+    <div class="game-sub-container next-case-study-heading">
         <div class="game-sub-heading" id="next-game">
             <div></div>
             <p>NEXT PROJECT</p>
+        </div>
+    </div>
+
+    <div class="game-sub-overview next-case-study">
+        <a href="">
+            <div class="card-container">
+                <div class="card-content">
+                    <p class="card-role"></p>
+                    <img src="assets/arrow-right.svg" class="card-arrow">
+    
+                    <div class="card-details">
+                        <div class="card-image"><img src="" alt="" /></div>
+    
+                        <div class="card-text">
+                            <h2></h2>
+                            <p class="card-description"></p>
+                            
+                            <div class="card-meta">
+                                <div>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                </div>
+                                <div>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
+                                </div>
+                                <div>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="unique-game-sub-container end-case-study-heading">
+        <div class="game-sub-heading">
+            <div></div>
+            <p>THE END</p>
         </div>
     </div>
 

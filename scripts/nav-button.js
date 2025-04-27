@@ -18,26 +18,38 @@ const tooltip = document.getElementById('kyle-click');
 let isAnimating = false;
 
 const phrases = [
-    "did you just click me?",
-    "sup",
-    "what it do",
-    "i'm listening",
-    "still here, yes",
-    "clicked again, huh?",
-  ];
+  "did you just click me?",
+  "sup",
+  "what it do",
+  "i'm listening",
+  "still here, yes",
+  "clicked again, huh?",
+  "touché",
+  "are we... bonding?",
+  "at this rate, we're besties"
+];
+
+let availablePhrases = [...phrases];
 
 homeIcon.addEventListener('click', () => {
-    if (isAnimating) return;
+  if (isAnimating) return;
 
-    isAnimating = true;
+  isAnimating = true;
 
-    let randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
-    tooltip.textContent = randomPhrase;
+  if (availablePhrases.length === 0) {
+    availablePhrases = [...phrases];
+  }
 
-    tooltip.style.animation = 'tooltipFloat 1.2s ease-in-out forwards';
-  
-    setTimeout(() => {
-      tooltip.style.animation = 'none';
-      isAnimating = false;
-    }, 1200);
-  });
+  const randomIndex = Math.floor(Math.random() * availablePhrases.length);
+  const randomPhrase = availablePhrases[randomIndex];
+
+  tooltip.textContent = randomPhrase;
+  availablePhrases.splice(randomIndex, 1);
+
+  tooltip.style.animation = 'tooltipFloat 1.2s ease-in-out forwards';
+
+  setTimeout(() => {
+    tooltip.style.animation = 'none';
+    isAnimating = false;
+  }, 1200);
+});

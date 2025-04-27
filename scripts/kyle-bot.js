@@ -30,7 +30,8 @@ const messages = {
         "Why did the bicycle fall over? Because it was two-tired!",
         "What did the grape do when it got stepped on? Nothing, it just let out a little wine."
     ],
-    "game": "I’m currently playing A Plague Tale: Requiem. Initial thoughts are that the crossbow adds to the gameplay from Innocence and changes how I play the game. Really enjoying it so far and I’ll probably end up getting the platinum trophy in the near future."
+    "game": "Lost Records: Bloom & Rage. To say I'm enjoying this is an understatement, 'Don't Nod' know exactly what they're doing 🤧",
+    "contact": "The quickest way to reach me is through my email, but LinkedIn works just as well! I’m pretty quick with replies so expect to hear back the same day or by the next one."
 };
 
 const chatButton = document.querySelector('.chat-button');
@@ -58,16 +59,32 @@ const bitmojiExpressions = [
     'assets/kyle bot/bitmoji-eight.png',
     'assets/kyle bot/bitmoji-nine.png',
     'assets/kyle bot/bitmoji-ten.png',
+    'assets/kyle bot/bitmoji-eleven.png',
+    'assets/kyle bot/bitmoji-twelve.png',
+    'assets/kyle bot/bitmoji-thirteen.png',
 ];
 
+let availableBitmojis = [...bitmojiExpressions];
+
 const closeIcon = 'assets/kyle bot/close-icon.png';
+let isSwitching = false;
+let switchInterval = null;
 
 // Switch to a random Bitmoji
 function switchToBitmoji() {
-    if (isChatOpen) return;
+    if(isChatOpen || isSwitching) return;
 
-    const randomExpression = bitmojiExpressions[Math.floor(Math.random() * bitmojiExpressions.length)];
-    bitmojiIcon.src = randomExpression;
+    isSwitching = true;
+
+    // Shuffle without repeats
+    if (availableBitmojis.length === 0) {
+        availableBitmojis = [...bitmojiExpressions];
+    }
+
+    const randomIndex = Math.floor(Math.random() * availableBitmojis.length);
+    const nextBitmoji = availableBitmojis.splice(randomIndex, 1)[0];
+
+    bitmojiIcon.src = nextBitmoji;
 
     defaultIcon.style.opacity = 0;
     bitmojiIcon.style.opacity = 1;
@@ -75,26 +92,47 @@ function switchToBitmoji() {
     setTimeout(() => {
         defaultIcon.style.opacity = 1;
         bitmojiIcon.style.opacity = 0;
+        isSwitching = false;
+
+        if(isChatOpen){
+            bitmojiIcon.src = closeIcon;
+            defaultIcon.style.opacity = 0;
+            bitmojiIcon.style.opacity = 1;
+        }
     }, DELAYTIME);
 }
 
-
 function startCycling() {
-    if (!isChatOpen) {
-        setInterval(switchToBitmoji, SWITCHTIME);
+    if (!isChatOpen && !switchInterval) {
+        switchInterval = setInterval(switchToBitmoji, SWITCHTIME);
+    }
+}
+
+function stopCycling() {
+    if (switchInterval) {
+        clearInterval(switchInterval);
+        switchInterval = null;
     }
 }
 
 chatButton.addEventListener('click', () => {
     isChatOpen = !isChatOpen;
+    switchInterval = null;
+    isSwitching = false;
+    clearInterval(switchInterval);
+
     chatBox.classList.toggle('hidden');
     chatButton.classList.toggle('chat-open');
 
     if (isChatOpen) {
         bitmojiIcon.src = closeIcon;
+        bitmojiIcon.style.width = '50px';
+        bitmojiIcon.style.height = '50px';
         defaultIcon.style.opacity = 0;
         bitmojiIcon.style.opacity = 1;
-    } else {
+        stopCycling();
+    } 
+    else {
         bitmojiIcon.style.opacity = 0;
         defaultIcon.style.opacity = 1;
         startCycling();
@@ -173,6 +211,13 @@ function typeMessage(message) {
             setTimeout(addCharacter, typingSpeed);
         }
         else{
+
+            let updatedMessage = messageText.innerHTML;
+            updatedMessage = updatedMessage.replace(/email/g, '<a class="kyle-bot-link" href="mailto:kylejussab@gmail.com">email</a>');
+            updatedMessage = updatedMessage.replace(/LinkedIn/g, '<a class="kyle-bot-link" href="https://www.linkedin.com/in/kylejussab/" target="_blank">LinkedIn</a>');
+            messageText.innerHTML = updatedMessage;
+
+
             chatOptionsContainer.classList.add('show');
         }
     }
@@ -208,6 +253,13 @@ function addUserMessage(message){
     bubble.appendChild(messageText);
 
     chatBubbleContainer.appendChild(bubble);
+
+    const chatBoxContent = document.querySelector('.chat-box-content');
+
+    chatBoxContent.scrollTo({
+        top: chatBoxContent.scrollHeight,
+        behavior: 'smooth'
+    });
 }
 
 function getSeenFacts(){

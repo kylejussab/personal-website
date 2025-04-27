@@ -13,7 +13,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
+    <script src="scripts/data.js" defer ></script>
+    <script src="scripts/sort-data.js" defer ></script>
+    <script src="scripts/next-project.js" defer ></script>
     <script src="scripts/project-page-navigation.js" defer ></script>
+
     <script src="scripts/bty-design-navigation.js" defer ></script>
     <script src="scripts/bty-programming-navigation.js" defer ></script>
     
@@ -21,7 +25,7 @@
     <link rel="icon" href="assets/main-icon.png">
 </head>
 
-<body id="thelastofusbty">
+<body id="thelastofusbty" data-project="The Last of Us: Between The Years" data-type="game">
     <header>
         <a href="https://kylejussab.com/" class="back-button">
             <img src="assets/arrow_left.svg">
@@ -37,7 +41,7 @@
             <li><a href="#creation">Creation</a></li>
             <li><a href="#disclaimer">Disclaimer</a></li>
             <li><a href="#feedback">Feedback</a></li>
-            <li><a href="#next-game">Next Game</a></li>
+            <li class="case-study-navigation"><a href="#next-game">Next Game</a></li>
         </ul>
 
         <p class="extras-navigation-heading">EXTRAS</p>
@@ -660,42 +664,42 @@ class Player {
         </div>
     </div>
 
-    <div class="game-sub-container">
+    <div class="game-sub-container next-case-study-heading">
         <div class="game-sub-heading" id="next-game">
             <div></div>
             <p>NEXT GAME</p>
         </div>
     </div>
 
-    <div class="game-sub-overview">
-        <a href="https://kylejussab.com/projectphoebe">
+    <div class="game-sub-overview next-case-study">
+        <a href="">
             <div class="card-container">
                 <div class="card-content">
-                    <p class="card-role">03 | GAMEPLAY PROGRAMMER & GAME DESIGNER</p>
+                    <p class="card-role"></p>
                     <img src="assets/arrow-right.svg" class="card-arrow">
     
                     <div class="card-details">
-                        <div class="card-image"><img src="assets/pp2.png" alt="A ball on a tower" /></div>
+                        <div class="card-image"><img src="" alt="" /></div>
     
                         <div class="card-text">
-                            <h2>Project Phoebe</h2>
-                            <p class="card-description">Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way.</p>
+                            <h2></h2>
+                            <p class="card-description"></p>
                             
                             <div class="card-meta">
                                 <div>
-                                    <p class="meta-heading">Release</p>
-                                    <p class="meta-text">April 2023</p>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
                                 </div>
                                 <div>
-                                    <p class="meta-heading">Genre</p>
-                                    <p class="meta-text">Third Person</p>
-                                    <p class="meta-text">Platformer</p>
-                                    <p class="meta-text">Puzzler</p>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
                                 </div>
                                 <div>
-                                    <p class="meta-heading">Tech</p>
-                                    <p class="meta-text">Unity</p>
-                                    <p class="meta-text">C#</p>
+                                    <p class="meta-heading"></p>
+                                    <p class="meta-text"></p>
+                                    <p class="meta-text"></p>
                                 </div>
                             </div>
                         </div>
@@ -703,6 +707,13 @@ class Player {
                 </div>
             </div>
         </a>
+    </div>
+
+    <div class="unique-game-sub-container end-case-study-heading">
+        <div class="game-sub-heading">
+            <div></div>
+            <p>THE END</p>
+        </div>
     </div>
 
     <footer>

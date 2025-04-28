@@ -106,18 +106,25 @@
 
 @media only screen and (max-width: 970px) {
     .about-content {
-        width: 98%;
+        width: 96%;
         padding-inline: 10px;
     }
 
     .experience-container, .single-container, .about-heading {
         width: 100%;
     }
+
+    .achievement-container > .experience-heading {
+        padding-right: 20px;
+    }
     
     .experience-heading {
         font-size: 18px;
     }
 
+    .about-text, .mentor-container a {
+        font-size: 14px;
+    }
 
     .mentor-container {
         justify-content: center;

@@ -6,9 +6,7 @@
     width: 60px;
     height: 60px;
 
-    background: rgba(30, 29, 28, 0.4);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
+    background: rgba(30, 29, 28);
     border-radius: 50%;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 
@@ -214,4 +212,23 @@
 .kyle-bot-link {
     text-decoration: underline;
     color: #1a73e8;
+}
+
+@media only screen and (max-width: 970px) {
+    .chat-button, .chat-box-content{
+        right: 10px;
+    }
+
+    .chat-button:hover .tooltip {
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .all-chat-bubbles  {
+        font-size: 20px;
+    }
+
+    .chat-user-message-container p, .chat-bot-message-container p, .chat-options p {
+        font-size: 12px;
+    }
 }

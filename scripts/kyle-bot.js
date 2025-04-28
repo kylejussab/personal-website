@@ -126,8 +126,8 @@ chatButton.addEventListener('click', () => {
 
     if (isChatOpen) {
         bitmojiIcon.src = closeIcon;
-        bitmojiIcon.style.width = '50px';
-        bitmojiIcon.style.height = '50px';
+        bitmojiIcon.style.width = '40px';
+        bitmojiIcon.style.height = '40px';
         defaultIcon.style.opacity = 0;
         bitmojiIcon.style.opacity = 1;
         stopCycling();
@@ -190,7 +190,7 @@ function typeMessage(message) {
     bubble.classList.add('chat-bot-message-container');
 
     const img = document.createElement('img');
-    img.src = 'assets/kyle bot/bitmoji-nine.png';
+    img.src = 'assets/main-icon.png';
     bubble.appendChild(img);
 
     const messageText = document.createElement('p');

@@ -365,6 +365,7 @@ input:checked + .slider:before {
 
     .card-content {
         padding-inline: 0px;
+        padding-bottom: 20px;
     }
 
     .card-role {

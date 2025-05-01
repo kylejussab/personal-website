@@ -134,6 +134,8 @@ chatButton.addEventListener('click', () => {
     } 
     else {
         bitmojiIcon.style.opacity = 0;
+        bitmojiIcon.style.width = '55px';
+        bitmojiIcon.style.height = '55px';
         defaultIcon.style.opacity = 1;
         startCycling();
     }

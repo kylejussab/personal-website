@@ -1,92 +1,90 @@
 .introduction-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
 }
 
 @keyframes image-animation {
-    25% {opacity: .5;}
-    85%, 100% {opacity: 0; scale: 10}
+  25% {
+    opacity: 0.5;
+  }
+  85%,
+  100% {
+    opacity: 0;
+    scale: 10;
+  }
 }
 
 .introduction {
-    width: 100%;
-    max-width: 1000px;
-    text-align: center;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
 }
 
-.introduction > p:first-child{
-    color: var(--font-secondary-color);
-    text-align: left;
-    font-size: 13px;
-    margin-bottom: -5px;
+.introduction > p:first-child {
+  color: var(--font-secondary-color);
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: -5px;
 }
 
 .introduction-details {
-    margin-top: 30px;
-    font-size: 16px;
-    text-align: right;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  text-align: right;
 }
 
 .introduction-details span {
-    color: var(--font-secondary-color)
+  color: var(--font-secondary-color);
 }
 
 .main-heading {
-    font-family: Baksoda, cursive;
-    font-size: 70px;
-    animation: background-pan 10s linear infinite;
-    background: linear-gradient(
-        to right,
-        #800080,
-        #EE82EE,
-        #FFC0CB,
-        #800080
-    );
-    background-size: 200%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    padding-right: 8px;
+  font-family: Baksoda, cursive;
+  font-size: 70px;
+  animation: background-pan 10s linear infinite;
+  background: linear-gradient(to right, #800080, #ee82ee, #ffc0cb, #800080);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding-right: 8px;
 }
 
 @keyframes background-pan {
-    from {
-        background-position: 0% center;
-    }
+  from {
+    background-position: 0% center;
+  }
 
-    to {
-        background-position: -200% center;
-    }
+  to {
+    background-position: -200% center;
+  }
 }
 
 /* Media Queries */
 @media only screen and (max-width: 920px) {
-    .introduction-container {
-        margin-top: 110px;
-    }
+  .introduction-container {
+    margin-top: calc(var(--div-spacing) * 3);
+    margin-bottom: 0;
+  }
 
-    .introduction > p:first-child{
-        margin-bottom: 0px;
-        font-size: 11px;
-    }
+  .introduction > p:first-child {
+    margin-bottom: 0px;
+    font-size: 11px;
+  }
 
-    h1 {
-        font-size: 25px;
-        line-height: 35px;
-    }
+  h1 {
+    font-size: 25px;
+    line-height: 35px;
+  }
 
-    .main-heading {
-        font-size: 35px;
-        padding-left: 9px;
-        padding-right: 5px;
-    }
+  .main-heading {
+    font-size: 35px;
+    padding-left: 9px;
+    padding-right: 5px;
+  }
 
-    .introduction {
-        min-width: 97%;
-    }
-
-    .introduction-details {
-        font-size: 12px;
-    }
+  .introduction-details {
+    font-size: 12px;
+  }
 }

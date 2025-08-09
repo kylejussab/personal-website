@@ -1,427 +1,432 @@
-.card-container, .introduction-container, .switch-content, .about-content, .chat-button, footer {
-    animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+.card-container,
+.introduction-container,
+.switch-content,
+.about-content,
+.chat-button,
+footer {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-        visibility: visible;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @keyframes fadeOutAnimation {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 /* Sorting toggle switch */
 .switch-wrapper {
-    display: flex;
-    justify-content: center;
-    margin-top: 90px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
 }
 
 .switch-content-container {
-    width: 1000px;
+  width: 1000px;
 }
 
 .switch-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: left;
-    gap: 10px;
-    width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 10px;
+  width: max-content;
 }
 
 .preload-toggle {
-    display: none;
+  display: none;
 }
 
 .switch-label {
-    font-size: 13px;
-    color: var(--font-secondary-color);
+  font-size: 13px;
+  color: var(--font-secondary-color);
 }
 
 #toggleLabel {
-    width: 40px;
-    text-align: left;
-    font-size: 12px;
-    color: var(--font-secondary-color);
+  width: 40px;
+  text-align: left;
+  font-size: 12px;
+  color: var(--font-secondary-color);
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 42px;
-    height: 24px;
+  position: relative;
+  display: inline-block;
+  width: 42px;
+  height: 24px;
 }
-  
-.switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-  
-.slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: transparent;
-    border: #333333 solid 1px;
-    border-radius: 34px;
 
-    -webkit-transition: .3s;
-    transition: .3s;
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-  
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: var(--content-border-color) solid var(--content-border-size);
+  border-radius: 34px;
+
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .slider:before {
-    position: absolute;
-    content: "";
-    height: 16px;
-    width: 16px;
-    left: 3px;
-    bottom: 3px;
-    background-color: var(--font-color);
-    -webkit-transition: .3s;
-    transition: .3s;
-    border-radius: 50%;
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3.5px;
+  background-color: var(--font-color);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
-    background-color: #800080;
-    border: #800080 solid 1px;
+  background-color: #800080;
+  border: #800080 solid var(--content-border-size);
 }
 
 input:checked + .slider:before {
-    -webkit-transform: translateX(18px);
-    -ms-transform: translateX(18px);
-    transform: translateX(18px);
+  -webkit-transform: translateX(18px);
+  -ms-transform: translateX(18px);
+  transform: translateX(18px);
 }
-  
 
 /* Cards */
 .card-container {
-    overflow: hidden;
-    width: 1000px;
-    height: 360px;
-    margin-bottom: 80px;
+  overflow: hidden;
+  width: 1000px;
+  height: 360px;
+  margin-top: 80px;
 
-    background: rgba(30, 29, 28);
-    border: #333333 solid .75px;
-    border-radius: 10px;
+  background: rgba(30, 29, 28);
+  border: var(--content-border-color) solid var(--content-border-size);
+  border-radius: 10px;
 
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .card-container:hover {
-    transform: scale(1.03);
-    box-shadow: 0 0 30px 10px rgba(30, 29, 28, 0.8);
+  transform: scale(1.03);
+  box-shadow: 0 0 30px 10px rgba(30, 29, 28, 0.8);
 }
 
 #next-game-card {
-    width: 70%;
+  width: 70%;
 }
 
 #next-game-card .card-container {
-    width: inherit;
+  width: inherit;
 }
 
 .card-role {
-    font-size: 12px;
-    letter-spacing: 1.2px;
-    color: rgba(255, 255, 255, 0.5);
-    margin-bottom: 20px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-bottom: 20px;
 }
 
 .card-details {
-    display: flex;
-    flex-direction: row;
-    margin-inline: -30px; /* Negate the padding of the card */
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  margin-inline: -30px; /* Negate the padding of the card */
+  gap: 20px;
 }
 
 .card-content {
-    position: relative;
-    padding-inline: 30px;
-    padding-top: 10px;
+  position: relative;
+  padding-inline: 30px;
+  padding-top: 10px;
 }
 
 .card-content h2 {
-    margin-bottom: 0px;
-    font-size: 24px;
+  margin-bottom: 0px;
+  font-size: 24px;
 }
 
 .card-content span {
-    color: var(--font-secondary-color);
-    font-size: 16px;
-    margin-left: 10px;
+  color: var(--font-secondary-color);
+  font-size: 16px;
+  margin-left: 10px;
 }
 
 .card-arrow {
-    position: absolute;
-    top: 22px;
-    right: 30px;
-    width: 20px;
+  position: absolute;
+  top: 22px;
+  right: 30px;
+  width: 20px;
 
-    transition: transform 0.3s ease-in-out 0.3s;
+  transition: transform 0.3s ease-in-out 0.3s;
 }
 
 .card-container:hover .card-arrow {
-    transform: translate(5px, 0px);
+  transform: translate(5px, 0px);
 }
 
 .card-heading-subtext {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    font-size: 14px;
-    color: var(--font-secondary-color);
+  margin-top: 10px;
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: var(--font-secondary-color);
 }
 
 .card-description {
-    margin-top: 10px;
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.5);
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .card-image {
-    width: 65%;
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
+  width: 65%;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
 }
 
 .card-text {
-    width: 35%;
-    padding-right: 30px;
-    padding-top: 10px;
+  width: 35%;
+  padding-right: 30px;
+  padding-top: 10px;
 }
 
-.card-image img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    width: 90%;
-    border: #444444 solid .75px;
+.card-image img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 90%;
+  border: var(--content-border-color) solid var(--content-border-size);
 }
 
 .card-meta {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-right: 40px;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 40px;
+  padding-top: 10px;
 }
 
 .meta-heading {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.2);
-    margin-block: 6px;
-    
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.2);
+  margin-block: 6px;
 }
 
 .meta-text {
-    font-size: 13px;
-    color: rgba(255, 255, 255, 0.5);
-    margin-block: 3px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin-block: 3px;
 }
 
 .games-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .about-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .projects-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 /* These styles are only for collection cards */
 .card-wrapper {
-    position: relative;
-    overflow: visible;
+  position: relative;
+  overflow: visible;
 }
 
 .card-container.collection-card {
-    background-color: #4b4123;
-    position: relative;
+  background-color: #4b4123;
+  position: relative;
 }
 
 .card-container.collection-card:hover {
-    box-shadow: 0 0 30px 10px rgba(75, 65, 35, 0.8);
+  box-shadow: 0 0 30px 10px rgba(75, 65, 35, 0.8);
 }
 
 .collection-ribbon {
-    content: "COLLECTION";
-    position: absolute;
-    bottom: 30px;
-    right: -10px;
-    --f: 10px; /* control the folded part*/
-    --r: 15px; /* control the ribbon shape */
-    --t: 10px; /* the top offset */
-    
-    clip-path: 
-    polygon(
-        0 0,
-        100% 0,
-        100% calc(100% - var(--f)),
-        calc(100% - var(--f)) 100%,
-        calc(100% - var(--f)) calc(100% - var(--f)),
-        0 calc(100% - var(--f)),
-        var(--r) calc(50% - var(--f)/2)
-    );
+  content: "COLLECTION";
+  position: absolute;
+  bottom: 30px;
+  right: -10px;
+  --f: 10px; /* control the folded part*/
+  --r: 15px; /* control the ribbon shape */
+  --t: 10px; /* the top offset */
 
-    background: #d4af37;
-    box-shadow: 0 calc(-1*var(--f)) 0 inset #0005;
-    color: white;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - var(--f)),
+    calc(100% - var(--f)) 100%,
+    calc(100% - var(--f)) calc(100% - var(--f)),
+    0 calc(100% - var(--f)),
+    var(--r) calc(50% - var(--f) / 2)
+  );
 
-    font-size: 12px;
-    font-weight: 500;
-    letter-spacing: 1.2px;
-    color: rgba(255, 255, 255, 0.8);
+  background: #d4af37;
+  box-shadow: 0 calc(-1 * var(--f)) 0 inset #0005;
+  color: white;
 
-    z-index: 10;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.8);
 
-    padding: 5px 25px 15px 30px;
-    transition: transform 0.3s ease-in-out;
-    pointer-events: none;
+  z-index: 10;
+
+  padding: 5px 25px 15px 30px;
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .card-wrapper:hover .collection-ribbon {
-    transform: scale(1.03) translateY(3px) translateX(12px);
+  transform: scale(1.03) translateY(3px) translateX(12px);
 }
 
 .card-meta-collection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 20px;
-    padding-right: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding-right: 0px;
 }
 
 .card-meta-collection > * {
-    flex: 1;
+  flex: 1;
 }
 
 .card-meta-collection > * p.meta-heading {
-    color: rgba(255, 255, 255, 0.3);
-    width: 65%;
-    height: 36px;
+  color: rgba(255, 255, 255, 0.3);
+  width: 65%;
+  height: 36px;
 }
 
 /* Hide other content on load */
 .about-content {
-    display: none;
+  display: none;
 }
 
 .projects-content {
-    display: none;
+  display: none;
 }
 
 @media only screen and (max-width: 918px) {
-    .switch-wrapper {
-        margin-top: 30px;
-    }
+  .switch-wrapper {
+    margin-top: var(--div-spacing);
+  }
 
-    .switch-content-container {
-        width: 350px;
-    }
+  .switch-label,
+  #toggleLabel {
+    font-size: 11px;
+  }
 
-    .switch-label, #toggleLabel  {
-        font-size: 11px;
-    }
+  .card-container {
+    width: 99.8%;
+    height: 100%;
+    min-height: 500px;
+    margin-top: var(--div-spacing);
+  }
 
-    .card-container {
-        width: 350px;
-        height: 100%;
+  .card-content {
+    padding-inline: 0px;
+    padding-bottom: 20px;
+  }
 
-        min-height: 500px;
-        margin-bottom: 40px;
-    }
+  .card-role {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    margin-bottom: 25px;
+    padding-inline: 10px;
+  }
 
-    .card-content {
-        padding-inline: 0px;
-        padding-bottom: 20px;
-    }
+  .card-details {
+    flex-direction: column;
+    margin-inline: 0px;
+    gap: 5px;
+  }
 
-    .card-role {
-        font-size: 9px;
-        letter-spacing: 1.2px;
-        margin-bottom: 25px;
-        padding-inline: 10px;
-    }
+  .card-details h2 {
+    font-size: 18px;
+  }
 
-    .card-details {
-        flex-direction: column;
-        margin-inline: 0px;
-        gap: 5px;
-    }
+  .card-image {
+    width: 100%;
+    padding-inline: 0px;
+    padding-top: 0px;
+  }
 
-    .card-details h2 {
-        font-size: 18px;
-    }
+  .card-image img {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    transform: translateX(0%);
+    width: 100%;
+  }
 
-    .card-image {
-        width: 100%;
-        padding-inline: 0px;
-        padding-top: 0px;
-    }
+  .card-text {
+    width: 93%;
+    padding-right: 0px;
+    padding-inline: 10px;
+    margin-inline: 0px;
+  }
 
-    .card-image img{
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-        transform: translateX(0%); 
-        width: 100%;
-    }
-    
-    .card-text {
-        width: 93%;
-        padding-right: 0px;
-        padding-inline: 10px;
-        margin-inline: 0px;
-    }
+  .card-meta {
+    padding-right: 40px;
+  }
 
-    .card-meta {
-        padding-right: 40px;
-    }
+  .card-arrow {
+    top: 13px;
+    right: 10px;
+  }
 
-    .card-arrow {
-        top: 13px;
-        right: 10px;
-    }
+  /* For collection cards */
+  .collection-ribbon {
+    bottom: 175px;
+    font-size: 9px;
+    padding: 5px 15px 15px 25px;
+    right: 0;
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - var(--f)),
+      0 calc(100% - var(--f)),
+      var(--r) calc(50% - var(--f) / 2)
+    );
+  }
 
-    /* For collection cards */
-    .collection-ribbon {
-        bottom: 400px;
-        font-size: 9px;
-        padding: 5px 15px 15px 25px;
-    }
-
-    .card-wrapper:hover .collection-ribbon {
-        transform: scale(1) translateY(-2px) translateX(5px);
-    }
+  .card-wrapper:hover .collection-ribbon {
+    transform: scale(1) translateY(-2px) translateX(5px);
+  }
 }

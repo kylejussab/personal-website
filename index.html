@@ -1,369 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/global.css">
-    <link rel="stylesheet" href="stylesheets/index-header.css">
-    <link rel="stylesheet" href="stylesheets/index-introduction.css">
-    <link rel="stylesheet" href="stylesheets/index-cards.css">
-    <link rel="stylesheet" href="stylesheets/index-about.css">
-    <link rel="stylesheet" href="stylesheets/index-chat.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/global.css" />
+    <link rel="stylesheet" href="stylesheets/index-header.css" />
+    <link rel="stylesheet" href="stylesheets/index-introduction.css" />
+    <link rel="stylesheet" href="stylesheets/index-cards.css" />
+    <link rel="stylesheet" href="stylesheets/index-about.css" />
+    <link rel="stylesheet" href="stylesheets/index-chat.css" />
 
-    <script src="scripts/sort-data.js" defer ></script>
-    <script src="scripts/nav-toggle.js" defer ></script>
+    <script src="scripts/sort-data.js" defer></script>
+    <script src="scripts/nav-toggle.js" defer></script>
 
-    <script src="scripts/data.js" defer ></script>
-    <script src="scripts/renderHomepageCards.js" defer ></script>
-    
-    <script src="scripts/nav-button.js" defer ></script>
-    <script src="scripts/kyle-bot.js" defer ></script>
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/renderHomepageCards.js" defer></script>
+
+    <script src="scripts/nav-button.js" defer></script>
+    <script src="scripts/kyle-bot.js" defer></script>
 
     <title>Kyle Jussab</title>
-    <link rel="icon" href="assets/main-icon.png">
-</head>
+    <link rel="icon" href="assets/main-icon.png" />
+  </head>
 
-<body>
+  <body>
     <header class="header-bar">
-        <div class="nav-identity">
-            <div class="home-icon-wrapper">
-                <div class="home-icon" id="homeIcon">
-                    <img src="assets/main-icon.png" alt="Icon of Kyle Jussab">
-                </div>
-                <p class="kyle-click" id="kyle-click">sup</p>
-            </div>
+      <div class="nav-toggle">
+        <input
+          type="radio"
+          onclick="javascript:selected();"
+          name="toggle"
+          value="Games"
+          class="games"
+          id="games"
+          checked="checked"
+          autocomplete="off"
+        />
+        <label for="games">Games</label>
+
+        <input
+          type="radio"
+          onclick="javascript:selected();"
+          name="toggle"
+          value="Projects"
+          class="projects"
+          id="projects"
+          autocomplete="off"
+        />
+        <label for="projects">Projects</label>
+
+        <input
+          type="radio"
+          onclick="javascript:selected();"
+          name="toggle"
+          value="About"
+          class="about"
+          id="about"
+          autocomplete="off"
+        />
+        <label for="about">About</label>
+
+        <div class="selector">&nbsp;</div>
+      </div>
+
+      <div class="nav-identity">
+        <div class="home-icon-wrapper">
+          <div class="home-icon" id="homeIcon">
+            <img src="assets/main-icon.png" alt="Icon of Kyle Jussab" />
+          </div>
+          <p class="kyle-click" id="kyle-click">sup</p>
         </div>
+      </div>
 
-        <div class="nav-toggle">
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Games" class="games" id="games" checked="checked" autocomplete="off">
-            <label for="games">Games</label>
-    
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="Projects" class="projects" id="projects" autocomplete="off">
-            <label for="projects">Projects</label>
+      <div class="desktop-nav">
+        <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+          <p>LinkedIn</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <input type="radio" onclick="javascript:selected();" name="toggle" value="About" class="about" id="about" autocomplete="off">
-            <label for="about">About</label>
-    
-            <div class="selector">&nbsp;</div>
-        </div>
+        <a href="https://github.com/kylejussab" target="_blank">
+          <p>Github</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-        <div class="desktop-nav">
-            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
-                <p>LinkedIn</p>
-                <img src="assets/open-in-new.svg"> 
-            </a>
+        <a href="resume.pdf" target="_blank">
+          <p>Resume</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
+      </div>
 
-            <a href="https://github.com/kylejussab" target="_blank">
-                <p>Github</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+      <button
+        class="nav-button"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+      >
+        <svg
+          stroke="var(--button-color)"
+          fill="none"
+          class="hamburger"
+          viewbox="-10 -10 120 120"
+          width="38"
+        >
+          <path
+            class="line"
+            stroke-width="5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+          ></path>
+          <defs>
+            <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#800080" />
+              <stop offset="100%" stop-color="#FFC0CB" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </button>
 
-            <a href="resume.pdf" target="_blank">
-                <p>Resume</p>
-                <img src="assets/open-in-new.svg"> 
-            </a>
-        </div>
+      <nav class="primary-navigation hide-on-start" id="primary-navigation">
+        <ul aria-label="Primary" class="nav-list">
+          <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+            <li class="nav-option">
+              <p>LinkedIn</p>
+              <img src="assets/open-in-new.svg" />
+            </li>
+          </a>
 
-        <div class="nav-button-container">
-            <!-- Looks for id of primary navigation -->
-            <button class="nav-button" aria-controls="primary-navigation" aria-expanded="false">
-                <svg stroke="var(--button-color)" fill="none" class="hamburger" viewbox="-10 -10 120 120" width="38">
-                    <path class="line" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"
-                        d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70">
-                    </path>
-                    <defs>
-                        <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#800080"/>
-                        <stop offset="100%" stop-color="#FFC0CB"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </button>
-        </div>
-        
-        <nav class="primary-navigation hide-on-start" id="primary-navigation">
-            <ul aria-label="Primary" class="nav-list">
-                <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
-                    <li class="nav-option">
-                        <p>LinkedIn</p>
-                        <img src="assets/open-in-new.svg">
-                    </li>
-                </a>
+          <a href="https://github.com/kylejussab" target="_blank">
+            <li class="nav-option">
+              <p>Github</p>
+              <img src="assets/open-in-new.svg" />
+            </li>
+          </a>
 
-                <a href="https://github.com/kylejussab" target="_blank">
-                    <li class="nav-option">
-                        <p>Github</p>
-                        <img src="assets/open-in-new.svg">
-                    </li>
-                </a>
-
-                <a href="resume.pdf" target="_blank">
-                    <li class="nav-option">
-                        <p>Resume</p>
-                        <img src="assets/open-in-new.svg">
-                    </li>
-                </a>
-            </ul>
-        </nav>
+          <a href="resume.pdf" target="_blank">
+            <li class="nav-option">
+              <p>Resume</p>
+              <img src="assets/open-in-new.svg" />
+            </li>
+          </a>
+        </ul>
+      </nav>
     </header>
-     
+
     <section class="introduction-container">
-        <div class="introduction">
-            <p>GAMEPLAY PROGRAMMER</p>
-            <h1>"Creativity lives in code, disguised as video games." - <span class="main-heading">Kyle Jussab</span></h1>
-            <p class="introduction-details">Influenced by Snap Inc. 👻 <br> Los Angeles, California 📍 <br> <span>Following the paw 🐾</span></p>
-        </div>
+      <div class="introduction">
+        <p>GAMEPLAY PROGRAMMER</p>
+        <h1>
+          "Creativity lives in code, disguised as video games." -
+          <span class="main-heading">Kyle Jussab</span>
+        </h1>
+        <p class="introduction-details">
+          Influenced by Snap Inc. 👻<br />
+          Los Angeles, California 📍 <br />
+          <span>Following the paw 🐾</span>
+        </p>
+      </div>
     </section>
 
     <main>
-        <div class="switch-wrapper">
-            <div class="switch-content-container">
-                <label class="switch-content preload-toggle" id="switch-content" for="orderToggle">
-                    <p class="switch-label">Chronological Order</p>
-                    
-                    <div class="switch">
-                        <input type="checkbox" id="orderToggle">
-                        <span class="slider"></span>
-                    </div>
-    
-                    <p id="toggleLabel">OFF</p>
-                </label>
+      <div class="switch-wrapper">
+        <div class="switch-content-container">
+          <label
+            class="switch-content preload-toggle"
+            id="switch-content"
+            for="orderToggle"
+          >
+            <p class="switch-label">Chronological Order</p>
+
+            <div class="switch">
+              <input type="checkbox" id="orderToggle" />
+              <span class="slider"></span>
             </div>
+
+            <p id="toggleLabel">OFF</p>
+          </label>
+        </div>
+      </div>
+
+      <div class="all-game-cards" data-game-cards-container></div>
+      <div class="all-project-cards" data-project-cards-container></div>
+
+      <template data-game-template>
+        <div class="games-content">
+          <a data-link>
+            <div class="card-container">
+              <div class="card-content">
+                <p data-role class="card-role"></p>
+                <img src="assets/arrow-right.svg" class="card-arrow" />
+
+                <div class="card-details">
+                  <div data-img class="card-image"></div>
+
+                  <div class="card-text">
+                    <h2 data-title></h2>
+                    <p data-description class="card-description"></p>
+
+                    <div class="card-meta">
+                      <div>
+                        <p class="meta-heading">Release</p>
+                        <p data-release class="meta-text"></p>
+                      </div>
+                      <div>
+                        <p class="meta-heading">Genre</p>
+                        <p data-genre1 class="meta-text"></p>
+                        <p data-genre2 class="meta-text"></p>
+                        <p data-genre3 class="meta-text"></p>
+                      </div>
+                      <div>
+                        <p class="meta-heading">Tech</p>
+                        <p data-tech1 class="meta-text"></p>
+                        <p data-tech2 class="meta-text"></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </template>
+
+      <template data-project-template>
+        <div class="projects-content">
+          <a data-link>
+            <div class="card-wrapper">
+              <div class="card-container">
+                <div class="card-content">
+                  <p data-role class="card-role"></p>
+                  <img src="assets/arrow-right.svg" class="card-arrow" />
+
+                  <div class="card-details">
+                    <div data-img class="card-image"></div>
+
+                    <div class="card-text">
+                      <h2 data-title></h2>
+                      <p data-description class="card-description"></p>
+
+                      <div class="card-meta">
+                        <div>
+                          <p class="meta-heading">Date</p>
+                          <p data-date class="meta-text"></p>
+                        </div>
+                        <div>
+                          <p class="meta-heading">Disciplines</p>
+                          <p data-discipline1 class="meta-text"></p>
+                          <p data-discipline2 class="meta-text"></p>
+                          <p data-discipline3 class="meta-text"></p>
+                        </div>
+                        <div>
+                          <p class="meta-heading">Tech</p>
+                          <p data-tech1 class="meta-text"></p>
+                          <p data-tech2 class="meta-text"></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </template>
+
+      <div class="about-content">
+        <div class="single-container">
+          <div class="about-heading">
+            <div></div>
+            <p>MYSELF</p>
+          </div>
+
+          <div class="single-content">
+            <p class="about-text">
+              I’m a
+              <span class="highlighted-text">Gameplay Programmer</span> inspired
+              by the immersive storytelling and rich experiences that video
+              games can provide. My journey began at 14 when I watched The
+              Making of The Last of Us after finishing the game. Seeing the
+              <span class="highlighted-text">passion and creativity</span> of
+              the developers ignited my own desire to create
+              <span class="highlighted-text">meaningful games</span>; my
+              personal way of repaying the devs for bringing purpose to my
+              career.
+            </p>
+            <p class="about-text">
+              While learning the necessities for creating engaging games, I have
+              been actively honing my craft. With every project, I continuously
+              refine my
+              <span class="highlighted-text"
+                >storytelling techniques and gameplay mechanics</span
+              >
+              to achieve the highest standards set by myself and the game
+              industry.
+            </p>
+            <p class="about-text">
+              I am dedicated to mastering my methods and pushing the boundaries
+              of what games can achieve.
+            </p>
+          </div>
+
+          <div class="signature-container">
+            <img src="assets/Signature.png" class="about-signature" />
+          </div>
         </div>
 
-        <div class="all-game-cards" data-game-cards-container></div>
-        <div class="all-project-cards" data-project-cards-container></div>
-        
-        <template data-game-template>
-            <div class="games-content">
-                <a data-link>
-                    <div class="card-container">
-                        <div class="card-content">
-                            <p data-role class="card-role"></p>
-                            <img src="assets/arrow-right.svg" class="card-arrow">
+        <div class="experience-container">
+          <div class="about-heading">
+            <div></div>
+            <p>EXPERIENCE</p>
+          </div>
 
-                            <div class="card-details">
-                                <div data-img class="card-image"></div>
-
-                                <div class="card-text">
-                                    <h2 data-title></h2>
-                                    <p data-description class="card-description"></p>
-                                    
-                                    <div class="card-meta">
-                                        <div>
-                                            <p class="meta-heading">Release</p>
-                                            <p data-release class="meta-text"></p>
-                                        </div>
-                                        <div>
-                                            <p class="meta-heading">Genre</p>
-                                            <p data-genre1 class="meta-text"></p>
-                                            <p data-genre2 class="meta-text"></p>
-                                            <p data-genre3 class="meta-text"></p>
-                                        </div>
-                                        <div>
-                                            <p class="meta-heading">Tech</p>
-                                            <p data-tech1 class="meta-text"></p>
-                                            <p data-tech2 class="meta-text"></p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+          <div class="achievement-container">
+            <p class="experience-heading">Snap Inc.</p>
+            <div class="achievement-details">
+              <p class="experience-heading">Software Engineer - UX Platform</p>
+              <p class="experience-text">Intern, Summer '25</p>
+              <p class="experience-text">
+                Set to join the UX Platform team on iOS, contributing to
+                internal tools and user-facing platform features that support
+                consistency, accessibility, and performance across Snapchat.
+              </p>
             </div>
-        </template>
-        
-        <template data-project-template>
-            <div class="projects-content">
-                <a data-link>
-                    <div class="card-wrapper">
-                        <div class="card-container">
-                            <div class="card-content">
-                                <p data-role class="card-role"></p>
-                                <img src="assets/arrow-right.svg" class="card-arrow">
+          </div>
 
-                                <div class="card-details">
-                                    <div data-img class="card-image"></div>
-
-                                    <div class="card-text">
-                                        <h2 data-title></h2>
-                                        <p data-description class="card-description"></p>
-                                        
-                                        <div class="card-meta">
-                                            <div>
-                                                <p class="meta-heading">Date</p>
-                                                <p data-date class="meta-text"></p>
-                                            </div>
-                                            <div>
-                                                <p class="meta-heading">Disciplines</p>
-                                                <p data-discipline1 class="meta-text"></p>
-                                                <p data-discipline2 class="meta-text"></p>
-                                                <p data-discipline3 class="meta-text"></p>
-                                            </div>
-                                            <div>
-                                                <p class="meta-heading">Tech</p>
-                                                <p data-tech1 class="meta-text"></p>
-                                                <p data-tech2 class="meta-text"></p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+          <div class="achievement-container">
+            <p class="experience-heading">Snap Inc.</p>
+            <div class="achievement-details">
+              <p class="experience-heading">
+                Software Engineer - Academy Scholar
+              </p>
+              <p class="experience-text">Apprentice, Summer '24</p>
+              <p class="experience-text">
+                Participated in formal programming instruction, technical
+                workshops and exercises, guest lectures, professional
+                development, and a mentorship program with a Snap Inc. team
+                member.
+              </p>
             </div>
-        </template>
-
-        <div class="about-content">
-            <div class="single-container">
-                <div class="about-heading">
-                    <div></div>
-                    <p>MYSELF</p>
-                </div>
-
-                <div class="single-content">
-                    <p class="about-text">I’m a 
-                        <span class="highlighted-text">Gameplay Programmer</span> inspired by the immersive storytelling and rich experiences that video games can provide. My journey began at 14 when I watched The Making of The Last of Us after finishing the game. Seeing the 
-                        <span class="highlighted-text">passion and creativity</span> of the developers ignited my own desire to create 
-                        <span class="highlighted-text">meaningful games</span>; my personal way of repaying the devs for bringing purpose to my career.</p>
-                    <p class="about-text">While learning the necessities for creating engaging games, I have been actively honing my craft. With every project, I continuously refine my 
-                        <span class="highlighted-text">storytelling techniques and gameplay mechanics</span> to achieve the highest standards set by myself and the game industry.</p>
-                    <p class="about-text">I am dedicated to mastering my methods and pushing the boundaries of what games can achieve.</p>
-                </div>
-
-                <div class="signature-container">
-                    <img src="assets/Signature.png" class="about-signature">
-                </div>
-            </div>
-
-            <div class="experience-container">
-                <div class="about-heading">
-                    <div></div>
-                    <p>EXPERIENCE</p>
-                </div>
-
-                <div class="achievement-container">
-                    <p class="experience-heading">Snap Inc.</p>
-                    <div class="achievement-details">
-                        <p class="experience-heading">Software Engineer - UX Platform</p>
-                        <p class="experience-text">Intern, Summer '25</p>
-                        <p class="experience-text">Set to join the UX Platform team on iOS, contributing to internal tools and user-facing platform features that support consistency, accessibility, and performance across Snapchat.</p>
-                    </div>
-                </div>
-
-                <div class="achievement-container">
-                    <p class="experience-heading">Snap Inc.</p>
-                    <div class="achievement-details">
-                        <p class="experience-heading">Software Engineer - Academy Scholar</p>
-                        <p class="experience-text">Apprentice, Summer '24</p>
-                        <p class="experience-text">Participated in formal programming instruction, technical workshops and exercises, guest lectures, professional development, and a mentorship program with a Snap Inc. team member.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experience-container">
-                <div class="about-heading">
-                    <div></div>
-                    <p>EDUCATION</p>
-                </div>
-
-                <div class="achievement-container">
-                    <p class="experience-heading">University of London</p>
-                    <div class="achievement-details">
-                        <p class="experience-heading">BSc Computer Science</p>
-                        <p class="experience-text">2026</p>
-                        <p class="experience-text">A bachelors degree with a specialization in Games Development, combining core computing principles with game design and programming.</p>
-                    </div>
-                </div>
-
-                <div class="achievement-container">
-                    <p class="experience-heading">Pasadena City College</p>
-                    <div class="achievement-details">
-                        <p class="experience-heading">ASc Game Design and Development</p>
-                        <p class="experience-text">2026</p>
-                        <p class="experience-text">An associate degree program emphasizing foundational game design, development, and interactive media skills.</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="single-container">
-                <div class="about-heading">
-                    <div></div>
-                    <p>WALL OF MENTORS</p>
-                </div>
-
-                <div class="single-content">
-                    <p class="about-text">I am the product of an 
-                        <span class="highlighted-text">unbelievable network of creative, hardworking, and talented individuals</span>. I want to take a moment to 
-                        <span class="highlighted-text">recognize and thank</span> the people who’ve guided, inspired, and supported me along the way.</p>
-                </div>
-
-                <div class="mentor-container">
-                    <a href="https://www.linkedin.com/in/richa-wadaskar/" target="_blank" class="mentor">Richa Wadaskar</a>
-                    <a href="https://www.linkedin.com/in/chrpinto/" target="_blank" class="mentor">Christian Pinto</a>
-                    <a href="https://www.linkedin.com/in/lindseyheisser/" target="_blank" class="mentor">Lindsey Heisser</a>
-                    <a href="https://www.linkedin.com/in/peter-gend/" target="_blank" class="mentor">Peter Gend</a>
-                    <a class="mentor">Krishna Yeragudipati</a>
-                    <a href="https://www.linkedin.com/in/jordanrodericks/" target="_blank" class="mentor">Jordan Rodericks</a>
-                    <a href="https://www.linkedin.com/in/spencerjohnson714/" target="_blank" class="mentor">Spencer Johnson</a>
-                    <a href="https://www.linkedin.com/in/dave-taylor-387145/" target="_blank" class="mentor">Dave Taylor</a>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <div class="experience-container">
+          <div class="about-heading">
+            <div></div>
+            <p>EDUCATION</p>
+          </div>
+
+          <div class="achievement-container">
+            <p class="experience-heading">University of London</p>
+            <div class="achievement-details">
+              <p class="experience-heading">BSc Computer Science</p>
+              <p class="experience-text">2025</p>
+              <p class="experience-text">
+                A bachelors degree with a specialization in Games Development,
+                combining core computing principles with game design and
+                programming.
+              </p>
+            </div>
+          </div>
+
+          <div class="achievement-container">
+            <p class="experience-heading">Pasadena City College</p>
+            <div class="achievement-details">
+              <p class="experience-heading">ASc Game Design and Development</p>
+              <p class="experience-text">2025</p>
+              <p class="experience-text">
+                An associate degree program emphasizing foundational game
+                design, development, and interactive media skills.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="single-container">
+          <div class="about-heading">
+            <div></div>
+            <p>WALL OF MENTORS</p>
+          </div>
+
+          <div class="single-content">
+            <p class="about-text">
+              I am the product of an
+              <span class="highlighted-text"
+                >unbelievable network of creative, hardworking, and talented
+                individuals</span
+              >. I want to take a moment to
+              <span class="highlighted-text">recognize and thank</span> the
+              people who’ve guided, inspired, and supported me along the way.
+            </p>
+          </div>
+
+          <div class="mentor-container">
+            <a
+              href="https://www.linkedin.com/in/richa-wadaskar/"
+              target="_blank"
+              class="mentor"
+              >Richa Wadaskar</a
+            >
+            <a
+              href="https://www.linkedin.com/in/chrpinto/"
+              target="_blank"
+              class="mentor"
+              >Christian Pinto</a
+            >
+            <a
+              href="https://www.linkedin.com/in/lindseyheisser/"
+              target="_blank"
+              class="mentor"
+              >Lindsey Heisser</a
+            >
+            <a
+              href="https://www.linkedin.com/in/peter-gend/"
+              target="_blank"
+              class="mentor"
+              >Peter Gend</a
+            >
+            <a class="mentor">Krishna Yeragudipati</a>
+            <a
+              href="https://www.linkedin.com/in/jordanrodericks/"
+              target="_blank"
+              class="mentor"
+              >Jordan Rodericks</a
+            >
+            <a
+              href="https://www.linkedin.com/in/spencerjohnson714/"
+              target="_blank"
+              class="mentor"
+              >Spencer Johnson</a
+            >
+            <a
+              href="https://www.linkedin.com/in/dave-taylor-387145/"
+              target="_blank"
+              class="mentor"
+              >Dave Taylor</a
+            >
+          </div>
+        </div>
+      </div>
     </main>
 
     <div class="chat-button">
-        <div class="chat-button-images">
-            <img src="assets/kyle bot/chat-icon.png" alt="Chat Icon" class="default-icon">
-            <img src="assets/kyle bot/bitmoji-one.png" alt="Bitmoji Expression" class="bitmoji-icon">
-        </div>
-        <div class="tooltip">Chat with Kyle!</div>
+      <div class="chat-button-images">
+        <img
+          src="assets/kyle bot/chat-icon.png"
+          alt="Chat Icon"
+          class="default-icon"
+        />
+        <img
+          src="assets/kyle bot/bitmoji-one.png"
+          alt="Bitmoji Expression"
+          class="bitmoji-icon"
+        />
+      </div>
+      <div class="tooltip">Chat with Kyle!</div>
     </div>
 
     <div class="chat-box-content hidden">
-        <div class="all-chat-bubbles">
-            <!-- Gets filled with Javascript -->
-        </div>
+      <div class="all-chat-bubbles">
+        <!-- Gets filled with Javascript -->
+      </div>
 
-        <div class="chat-options">
-            <p class="chat-option" data-message="brief-breakdown">Give me a brief breakdown of who you are.</p>
-            <p class="chat-option" data-message="fact">Tell me an interesting fact about you.</p>
-            <p class="chat-option" data-message="joke">Tell me a joke.</p>
-            <p class="chat-option" data-message="game">What game are you currently playing?</p>
-            <p class="chat-option" data-message="contact">How do I get in touch with the *real* Kyle?</p>
-        </div>
+      <div class="chat-options">
+        <p class="chat-option" data-message="brief-breakdown">
+          Give me a brief breakdown of who you are.
+        </p>
+        <p class="chat-option" data-message="fact">
+          Tell me an interesting fact about you.
+        </p>
+        <p class="chat-option" data-message="joke">Tell me a joke.</p>
+        <p class="chat-option" data-message="game">
+          What game are you currently playing?
+        </p>
+        <p class="chat-option" data-message="contact">
+          How do I get in touch with the *real* Kyle?
+        </p>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-rights">
-            <img src="assets/footer-icon.png">
-            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
-            <p>A promise kept to the dreams of my 14-year-old self.</p>
-        </div>
+      <div class="footer-rights">
+        <img src="assets/footer-icon.png" />
+        <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+        <p>A promise kept to the dreams of my 14-year-old self.</p>
+      </div>
 
-        <div class="footer-contact">
-            <p>CONTACT</p>
+      <div class="footer-contact">
+        <p>CONTACT</p>
 
-            <a href="mailto:kylejussab@gmail.com" target="_blank">
-                <p>Email</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="mailto:kylejussab@gmail.com" target="_blank">
+          <p>Email</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
-                <p>LinkedIn</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+          <p>LinkedIn</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <a href="resume.pdf" target="_blank">
-                <p>Resume</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="resume.pdf" target="_blank">
+          <p>Resume</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <p>Last updated by Kyle on May 1, 2025, 3:33 PM PDT</p>
-        </div>
+        <p>Last updated by Kyle on May 1, 2025, 3:33 PM PDT</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

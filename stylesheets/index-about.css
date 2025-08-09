@@ -1,132 +1,130 @@
 .single-container {
-    margin-bottom: 60px;
-    padding-top: 50px;
-    border-top: 1px solid #242424;
-    width: 950px;
+  margin-top: var(--div-spacing);
+  padding-top: var(--div-spacing);
+  border-top: var(--content-border-color) solid var(--content-border-size);
+  width: 950px;
 }
 
 .about-text {
-    color: var(--font-secondary-color);
-    font-weight: 400;
-    line-height: 1.5;
-    font-size: 18px;
+  color: var(--font-secondary-color);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 18px;
 }
 
 .highlighted-text {
-    color: var(--font-color);
+  color: var(--font-color);
 }
 
 .experience-container {
-    padding-top: 50px;
-    border-top: 1px solid #242424;
-    width: 950px;
+  margin-top: var(--div-spacing);
+  padding-top: var(--div-spacing);
+  border-top: var(--content-border-color) solid var(--content-border-size);
+  width: 950px;
 }
 
 .about-heading {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 950px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 950px;
 }
 
-.about-heading > div:first-child{
-    border-radius: 50%;
-    height: 10px;
-    width: 10px;
-    background-color: var(--font-color);
-    box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.1);
+.about-heading > div:first-child {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  background-color: var(--font-color);
+  box-shadow: 0 0 7px 7px rgba(255, 255, 255, 0.1);
 }
 
-.about-heading > p:last-child{
-    color: var(--font-secondary-color);
-    font-size: 13px;
+.about-heading > p:last-child {
+  color: var(--font-secondary-color);
+  font-size: 13px;
 }
 
 .achievement-container {
-    display: flex;
-    align-items: start;
-    margin-top: 30px;
-    margin-bottom: 110px;
+  display: flex;
+  align-items: start;
+  margin-top: var(--div-spacing);
 }
 
 .achievement-container > p {
-    width: 50%;
-    margin-top: 0px;
+  width: 50%;
+  margin-top: 0px;
 }
 
 .achievement-details {
-    width: 50%;
+  width: 50%;
 }
 
 .achievement-details > p {
-    margin-top: 0px;
+  margin-top: 0px;
 }
 
 .experience-heading {
-    font-size: 24px;
-    margin-bottom: 5px;
+  font-size: 24px;
+  margin-bottom: 5px;
 }
 
 .experience-text {
-    color: var(--font-secondary-color);
-    font-weight: 400;
-    line-height: 1.5;
-    font-size: 14px;
+  color: var(--font-secondary-color);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 14px;
 }
 
 .signature-container {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -10px;
 }
 
 .about-signature {
-    width: 60px;
+  width: 60px;
 }
 
 .mentor-container {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 40px;
-    row-gap: 30px;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  row-gap: 30px;
+  margin-top: var(--div-spacing);
 }
 
 .mentor {
-    width: 200px;
-    text-align: center;
-    font-size: 18px;
+  width: 200px;
+  text-align: center;
+  font-size: 18px;
 }
 
 .mentor:hover {
-    cursor: pointer;
-    text-decoration: underline;
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 970px) {
-    .about-content {
-        width: 96%;
-        padding-inline: 10px;
-    }
+  .experience-container,
+  .single-container,
+  .about-heading {
+    width: 100%;
+  }
 
-    .experience-container, .single-container, .about-heading {
-        width: 100%;
-    }
+  .achievement-container > .experience-heading {
+    padding-right: 20px;
+  }
 
-    .achievement-container > .experience-heading {
-        padding-right: 20px;
-    }
-    
-    .experience-heading {
-        font-size: 18px;
-    }
+  .experience-heading {
+    font-size: 18px;
+  }
 
-    .about-text, .mentor-container a {
-        font-size: 14px;
-    }
+  .about-text,
+  .mentor-container a {
+    font-size: 14px;
+  }
 
-    .mentor-container {
-        justify-content: center;
-    }
+  .mentor-container {
+    justify-content: center;
+  }
 }

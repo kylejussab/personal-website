@@ -82,7 +82,7 @@
     right: 0;
     bottom: 0;
     background-color: transparent;
-    border: #333333 solid 1px;
+    border: var(--content-border-color) solid var(--content-border-size);
     border-radius: 34px;
 
     -webkit-transition: .3s;
@@ -95,7 +95,7 @@
     height: 16px;
     width: 16px;
     left: 3px;
-    bottom: 3px;
+    bottom: 3.5px;
     background-color: var(--font-color);
     -webkit-transition: .3s;
     transition: .3s;
@@ -104,7 +104,7 @@
 
 input:checked + .slider {
     background-color: #800080;
-    border: #800080 solid 1px;
+    border: #800080 solid var(--content-border-size);
 }
 
 input:checked + .slider:before {
@@ -122,7 +122,7 @@ input:checked + .slider:before {
     margin-bottom: 80px;
 
     background: rgba(30, 29, 28);
-    border: #333333 solid .75px;
+    border: var(--content-border-color) solid var(--content-border-size);
     border-radius: 10px;
 
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -215,7 +215,7 @@ input:checked + .slider:before {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     width: 90%;
-    border: #444444 solid .75px;
+    border: var(--content-border-color) solid var(--content-border-size);
 }
 
 .card-meta {
@@ -347,18 +347,17 @@ input:checked + .slider:before {
         margin-top: 30px;
     }
 
-    .switch-content-container {
-        width: 350px;
-    }
-
     .switch-label, #toggleLabel  {
         font-size: 11px;
     }
 
-    .card-container {
-        width: 350px;
-        height: 100%;
+    .projects-content {
+        background-color: green;
+    }
 
+    .card-container {
+        width: 99.8%;
+        height: 100%;
         min-height: 500px;
         margin-bottom: 40px;
     }
@@ -419,6 +418,15 @@ input:checked + .slider:before {
         bottom: 400px;
         font-size: 9px;
         padding: 5px 15px 15px 25px;
+        right: 0;
+        clip-path: 
+        polygon(
+            0 0,
+            100% 0,
+            100% calc(100% - var(--f)),
+            0 calc(100% - var(--f)),
+            var(--r) calc(50% - var(--f)/2)
+        );
     }
 
     .card-wrapper:hover .collection-ribbon {

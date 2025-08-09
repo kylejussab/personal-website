@@ -1,228 +1,239 @@
 :root {
-    --background-color: #101010;
+  --background-color: #101010;
 
-    --font-color: #f2f2f2;
-    --font-secondary-color: #6e6e6e;
+  --font-color: #f2f2f2;
+  --font-secondary-color: #6e6e6e;
 
-    --card-color: #1E1D1C;
-    --card-hover-color: #444444;
-    --card-highlight-color: #555555;
+  --card-color: #1e1d1c;
+  --card-hover-color: #444444;
+  --card-highlight-color: #555555;
+
+  /* Start of new style guide */
+  --mobile-body-margin: 5px;
+
+  --content-border-size: 0.75px;
+  --content-border-color: #333333;
 }
 
 @font-face {
-    font-family: 'Baksoda';
-    font-weight: normal;
-    font-style: normal;
-    src: url("../fonts/Baksoda.ttf") format("truetype");
+  font-family: "Baksoda";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Baksoda.ttf") format("truetype");
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    font-weight: bold;
-    font-style: normal;
-    src: url("../fonts/PPNeueMontreal-Bold.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/PPNeueMontreal-Bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    font-weight: normal;
-    font-style: normal;
-    src: url("../fonts/PPNeueMontreal-Book.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/PPNeueMontreal-Book.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    font-weight: 500;
-    font-style: normal;
-    src: url("../fonts/PPNeueMontreal-Medium.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: 500;
+  font-style: normal;
+  src: url("../fonts/PPNeueMontreal-Medium.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    font-weight: 100;
-    font-style: normal;
-    src: url("../fonts/PPNeueMontreal-Thin.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: 100;
+  font-style: normal;
+  src: url("../fonts/PPNeueMontreal-Thin.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    font-weight: 600;
-    font-style: italic;
-    src: url("../fonts/PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: 600;
+  font-style: italic;
+  src: url("../fonts/PPNeueMontreal-SemiBoldItalic.otf") format("opentype");
 }
 
 @font-face {
-    font-family: 'Neue Montreal';
-    font-weight: normal;
-    font-style: italic;
-    src: url("../fonts/PPNeueMontreal-Italic.otf") format("opentype");
+  font-family: "Neue Montreal";
+  font-weight: normal;
+  font-style: italic;
+  src: url("../fonts/PPNeueMontreal-Italic.otf") format("opentype");
 }
 
 * {
-    font-family: Neue Montreal, Helvetica, sans-serif;
-    color: var(--font-color);
+  font-family: Neue Montreal, Helvetica, sans-serif;
+  color: var(--font-color);
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
-    background: var(--background-color);
-    overflow-x: hidden;
+  background: var(--background-color);
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 p {
-    font-size: 16px;
-    font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 h1 {
-    font-size: 55px;
-    margin-top: 0px;
-    font-weight: 500;
-    margin-bottom: 0px;
-    line-height: 70px;
-    text-align: left;
+  font-size: 55px;
+  margin-top: 0px;
+  font-weight: 500;
+  margin-bottom: 0px;
+  line-height: 70px;
+  text-align: left;
 }
 
 h2 {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 h3 {
-    font-weight: 600;
-    margin-block: 0px;
+  font-weight: 600;
+  margin-block: 0px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 header {
-    z-index: 990;
+  z-index: 990;
 }
 
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid #242424;
-    position: relative;
-    width: 100vw;
-    margin-left: -50vw;
-    left: 50%;
-    bottom: -10vw;
-    padding-block: 30px;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  border-top: var(--content-border-color) solid var(--content-border-size);
+  position: relative;
+  padding-top: 30px;
 }
 
 .footer-rights {
-    display: flex;
-    flex-direction: column;
-    width: max-content;
-    padding: 0px;
-    margin-left: 60px;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  padding: 0px;
+  margin-left: 60px;
 }
 
 .footer-rights p {
-    text-align: left;
-    margin-block: 0px;
+  text-align: left;
+  margin-block: 0px;
 }
 
-.footer-rights p:nth-of-type(1){
-    margin-top: 75px;
-    font-size: 16px;
+.footer-rights p:nth-of-type(1) {
+  margin-top: 75px;
+  font-size: 16px;
 }
 
-.footer-rights p:nth-of-type(2){
-    margin-top: 5px;
-    color: var(--font-secondary-color);
-    font-size: 14px;
+.footer-rights p:nth-of-type(2) {
+  margin-top: 5px;
+  color: var(--font-secondary-color);
+  font-size: 14px;
 }
 
 .footer-contact {
-    margin-right: 60px;
+  margin-right: 60px;
 }
 
-.footer-contact > p:first-child{
-    color: var(--font-secondary-color);
-    font-size: 11px;
-    text-align: right;
+.footer-contact > p:first-child {
+  color: var(--font-secondary-color);
+  font-size: 11px;
+  text-align: right;
 }
 
 .footer-contact a {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: right;
-    gap: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  gap: 8px;
 }
 
-.footer-contact a:hover{
-    text-decoration: underline;
+.footer-contact a:hover {
+  text-decoration: underline;
 }
 
 .footer-contact a:hover img {
-    transform: translate(2px, -2px);
+  transform: translate(2px, -2px);
 }
 
 .footer-contact a p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .footer-contact a img {
-    width: 18px;
-    height: 18px;
-    transition: transform .3s ease-in-out;
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease-in-out;
 }
 
-.footer-contact > p:last-child{
-    margin-top: 50px;
-    color: var(--font-secondary-color);
-    text-align: right;
-    font-size: 11px;
+.footer-contact > p:last-child {
+  margin-block: 0px;
+  color: var(--font-secondary-color);
+  text-align: right;
+  font-size: 11px;
 }
 
 footer img {
-    width: 100px;
+  width: 100px;
 }
 
 /** Media Queries **/
-@media only screen and (max-width: 918px) {    
-    footer {
-        padding-top: 10px;
-    }
-    
-    footer img {
-        width: 100px;
-    }
+@media only screen and (max-width: 918px) {
+  body {
+    /* border: red solid 0.5px; */
+    margin: var(--mobile-body-margin);
+  }
 
-    p {
-        font-size: 11px;
-    }
+  footer {
+    padding-top: 15px;
+  }
 
-    .footer-rights {
-        margin-left: 10px;
-    }
+  footer img {
+    width: 100px;
+  }
 
-    .footer-rights p:nth-of-type(1){
-        margin-top: 30px;
-        font-size: 13px;
-    }
-    
-    .footer-rights p:nth-of-type(2){
-        font-size: 10px;
-    }
+  p {
+    font-size: 11px;
+  }
 
-    .footer-contact {
-        margin-right: 10px;
-    }
+  .footer-rights {
+    margin-left: 0px;
+    padding-right: calc(var(--mobile-body-margin) * 3);
+  }
 
-    .footer-contact a p {
-        font-size: 13px;
-    }
+  .footer-rights p:nth-of-type(1) {
+    margin-top: 30px;
+    font-size: 13px;
+  }
 
-    .footer-contact > p:last-child{
-        font-size: 9px;
-    }
+  .footer-rights p:nth-of-type(2) {
+    font-size: 10px;
+  }
+
+  .footer-contact {
+    margin-right: 0px;
+    padding-left: calc(var(--mobile-body-margin) * 3);
+  }
+
+  .footer-contact a p {
+    font-size: 13px;
+  }
+
+  .footer-contact > p:last-child {
+    font-size: 9px;
+  }
 }

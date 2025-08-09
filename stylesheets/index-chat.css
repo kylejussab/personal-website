@@ -11,7 +11,7 @@
     -webkit-backdrop-filter: blur(14px);
 
     border-radius: 50%;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: var(--content-border-color) solid var(--content-border-size);
 
     transition: transform 500ms ease;
     cursor: pointer;
@@ -63,7 +63,7 @@
     box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-    border: #333333 solid .75px;
+    border: var(--content-border-color) solid var(--content-border-size);
     border-radius: 20px;
     padding: 8px 12px;
     
@@ -93,7 +93,7 @@
     z-index: 100;
 
     background: rgba(30, 29, 28);
-    border: #333333 solid .75px;
+    border: var(--content-border-color) solid var(--content-border-size);
     border-radius: 10px;
     
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -137,7 +137,7 @@
 
 .chat-option {
     background: rgba(255, 255, 255, 0.05);
-    border: #333333 solid .75px;
+    border: var(--content-border-color) solid var(--content-border-size);
     margin: 0px;
     padding: 10px;
     border-radius: 5px;
@@ -218,8 +218,12 @@
 }
 
 @media only screen and (max-width: 970px) {    
-    .chat-button, .chat-box-content{
-        right: 10px;
+    .chat-button, .chat-box-content {
+        right: var(--mobile-body-margin); /* Accounts for the chat border */
+    }
+
+    .chat-button:hover{
+        transform: scale(1);
     }
 
     .chat-button:hover .tooltip {

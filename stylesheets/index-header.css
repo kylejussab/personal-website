@@ -96,7 +96,7 @@ body::before {
   padding: 8px 12px;
 
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 400;
   white-space: nowrap;
 
   pointer-events: none;
@@ -152,7 +152,7 @@ label {
   z-index: 5;
   position: relative;
   cursor: pointer;
-  font-size: 14px;
+  font-size: var(--subheading-size);
   font-weight: 500;
 }
 
@@ -215,6 +215,7 @@ label {
 
 .desktop-nav a p {
   font-size: 14px;
+  font-weight: 500;
 }
 
 .desktop-nav a img {
@@ -282,7 +283,7 @@ label {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 920px) {
+@media only screen and (max-width: 970px) {
   @keyframes slideIn {
     0% {
       margin-top: calc(var(--mobile-body-margin)-85px);
@@ -388,7 +389,8 @@ label {
 
   /* Hide the rest of the header on scroll */
   .nav-toggle.collapsed ~ .nav-identity,
-  .nav-toggle.collapsed ~ .nav-button {
+  .nav-toggle.collapsed ~ .nav-button,
+  .nav-toggle.collapsed ~ .primary-navigation {
     opacity: 0;
     pointer-events: none;
   }
@@ -459,6 +461,7 @@ label {
 
   .nav-option p {
     text-align: left;
+    font-size: var(--subheading-size);
     width: 100%;
     padding-left: 10px;
   }

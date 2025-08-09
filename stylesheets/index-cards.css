@@ -343,14 +343,14 @@ input:checked + .slider:before {
   display: none;
 }
 
-@media only screen and (max-width: 918px) {
+@media only screen and (max-width: 970px) {
   .switch-wrapper {
     margin-top: var(--div-spacing);
   }
 
   .switch-label,
   #toggleLabel {
-    font-size: 11px;
+    font-size: var(--mobile-body-size);
   }
 
   .card-container {
@@ -366,7 +366,7 @@ input:checked + .slider:before {
   }
 
   .card-role {
-    font-size: 9px;
+    font-size: var(--mobile-body-caps-size);
     letter-spacing: 1.2px;
     margin-bottom: 25px;
     padding-inline: 10px;
@@ -375,11 +375,12 @@ input:checked + .slider:before {
   .card-details {
     flex-direction: column;
     margin-inline: 0px;
-    gap: 5px;
+    gap: 0px;
   }
 
   .card-details h2 {
-    font-size: 18px;
+    font-size: var(--subheading-size);
+    margin-top: 10px;
   }
 
   .card-image {
@@ -402,8 +403,24 @@ input:checked + .slider:before {
     margin-inline: 0px;
   }
 
+  .card-description {
+    font-size: var(--mobile-body-size);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
   .card-meta {
     padding-right: 40px;
+  }
+
+  .meta-heading {
+    font-size: var(--mobile-body-size);
+  }
+
+  .meta-text {
+    font-size: var(--mobile-body-size);
+    font-weight: 400;
+    line-height: 1.5;
   }
 
   .card-arrow {
@@ -413,7 +430,7 @@ input:checked + .slider:before {
 
   /* For collection cards */
   .collection-ribbon {
-    bottom: 175px;
+    bottom: 200px;
     font-size: 9px;
     padding: 5px 15px 15px 25px;
     right: 0;

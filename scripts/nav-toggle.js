@@ -78,3 +78,22 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   }
 });
+
+let lastScrollY = window.pageYOffset;
+const threshold = 150; // pixels to scroll before toggling
+const navToggle = document.querySelector(".nav-toggle");
+
+window.addEventListener("scroll", () => {
+  const currentScrollY = window.pageYOffset;
+  const scrollDiff = currentScrollY - lastScrollY;
+
+  if (scrollDiff > threshold) {
+    // Scrolled down more than threshold
+    navToggle.classList.add("collapsed");
+    lastScrollY = currentScrollY;
+  } else if (scrollDiff < -threshold) {
+    // Scrolled up more than threshold
+    navToggle.classList.remove("collapsed");
+    lastScrollY = currentScrollY;
+  }
+});

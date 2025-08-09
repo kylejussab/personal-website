@@ -1,81 +1,80 @@
-let gameElements = document.getElementsByClassName('games-content');
-let storyElements = document.getElementsByClassName('stories-content');
-let projectElements = document.getElementsByClassName('projects-content');
+let gameElements = document.getElementsByClassName("games-content");
+let storyElements = document.getElementsByClassName("stories-content");
+let projectElements = document.getElementsByClassName("projects-content");
 
-let aboutContent = document.getElementsByClassName('about-content');
+let aboutContent = document.getElementsByClassName("about-content");
 
-function selected(){
-    const selectedTab = document.querySelector('input[name="toggle"]:checked').value;
-    localStorage.setItem('selectedTab', selectedTab);
-    localStorage.setItem('selectedTabTime', Date.now());
+function selected() {
+  const selectedTab = document.querySelector(
+    'input[name="toggle"]:checked'
+  ).value;
+  localStorage.setItem("selectedTab", selectedTab);
+  localStorage.setItem("selectedTabTime", Date.now());
 
-    let toggleContent = document.getElementById("switch-content");
+  let toggleContent = document.getElementById("switch-content");
 
-    if(document.getElementById('games').checked){
-        for(let i = 0; i < gameElements.length; i++){
-            gameElements[i].style.display = 'flex';
-        }
-
-        for(let i = 0; i < projectElements.length; i++){
-            projectElements[i].style.display = 'none';
-        }
-
-        for(let i = 0; i < aboutContent.length; i++){
-            aboutContent[i].style.display = 'none';
-        }
-
-        toggleContent.style.display = 'flex';
+  if (document.getElementById("games").checked) {
+    for (let i = 0; i < gameElements.length; i++) {
+      gameElements[i].style.display = "flex";
     }
-    else if(document.getElementById('about').checked){
-        for(let i = 0; i < gameElements.length; i++){
-            gameElements[i].style.display = 'none';
-        }
 
-        for(let i = 0; i < projectElements.length; i++){
-            projectElements[i].style.display = 'none';
-        }
-
-        for(let i = 0; i < aboutContent.length; i++){
-            aboutContent[i].style.display = 'flex';
-        }
-
-        toggleContent.style.display = 'none';
+    for (let i = 0; i < projectElements.length; i++) {
+      projectElements[i].style.display = "none";
     }
-    else if(document.getElementById('projects').checked){
-        for(let i = 0; i < gameElements.length; i++){
-            gameElements[i].style.display = 'none';
-        }
 
-        for(let i = 0; i < projectElements.length; i++){
-            projectElements[i].style.display = 'flex';
-        }
-
-        for(let i = 0; i < aboutContent.length; i++){
-            aboutContent[i].style.display = 'none';
-        }
-
-        toggleContent.style.display = 'flex';
+    for (let i = 0; i < aboutContent.length; i++) {
+      aboutContent[i].style.display = "none";
     }
+
+    toggleContent.style.display = "flex";
+  } else if (document.getElementById("about").checked) {
+    for (let i = 0; i < gameElements.length; i++) {
+      gameElements[i].style.display = "none";
+    }
+
+    for (let i = 0; i < projectElements.length; i++) {
+      projectElements[i].style.display = "none";
+    }
+
+    for (let i = 0; i < aboutContent.length; i++) {
+      aboutContent[i].style.display = "flex";
+    }
+
+    toggleContent.style.display = "none";
+  } else if (document.getElementById("projects").checked) {
+    for (let i = 0; i < gameElements.length; i++) {
+      gameElements[i].style.display = "none";
+    }
+
+    for (let i = 0; i < projectElements.length; i++) {
+      projectElements[i].style.display = "flex";
+    }
+
+    for (let i = 0; i < aboutContent.length; i++) {
+      aboutContent[i].style.display = "none";
+    }
+
+    toggleContent.style.display = "flex";
+  }
 }
 
-window.addEventListener('DOMContentLoaded', () => {
-    const savedTab = localStorage.getItem('selectedTab');
-    const savedTime = localStorage.getItem('selectedTabTime');
+window.addEventListener("DOMContentLoaded", () => {
+  const savedTab = localStorage.getItem("selectedTab");
+  const savedTime = localStorage.getItem("selectedTabTime");
 
-    if (savedTab && savedTime) {
-        const now = Date.now();
-        const oneHour = 60 * 60 * 1000;
+  if (savedTab && savedTime) {
+    const now = Date.now();
+    const oneHour = 60 * 60 * 1000;
 
-        if (now - savedTime < oneHour) {
-            const radioButton = document.querySelector(`input[value="${savedTab}"]`);
-            if (radioButton) {
-                radioButton.checked = true;
-                selected();
-            }
-        } 
-        else {
-            localStorage.removeItem('selectedTab');
-            localStorage.removeItem('selectedTabTime');
-        }
+    if (now - savedTime < oneHour) {
+      const radioButton = document.querySelector(`input[value="${savedTab}"]`);
+      if (radioButton) {
+        radioButton.checked = true;
+        selected();
+      }
+    } else {
+      localStorage.removeItem("selectedTab");
+      localStorage.removeItem("selectedTabTime");
     }
+  }
 });

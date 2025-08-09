@@ -9,7 +9,8 @@
   --card-highlight-color: #555555;
 
   /* Start of new style guide */
-  --mobile-body-margin: 5px;
+  --mobile-body-margin: 10px;
+  --div-spacing: 30px;
 
   --content-border-size: 0.75px;
   --content-border-color: #333333;
@@ -117,6 +118,7 @@ footer {
   justify-content: space-between;
   border-top: var(--content-border-color) solid var(--content-border-size);
   position: relative;
+  margin-top: 30px;
   padding-top: 30px;
 }
 
@@ -199,7 +201,8 @@ footer img {
   }
 
   footer {
-    padding-top: 15px;
+    margin-top: calc(val(--div-spacing) / 2);
+    padding-top: calc(val(--div-spacing) / 2);
   }
 
   footer img {

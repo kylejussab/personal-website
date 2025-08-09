@@ -1,6 +1,6 @@
 .single-container {
   margin-top: var(--div-spacing);
-  padding-top: var(--div-spacing);
+  padding-top: calc(var(--div-spacing) * 2);
   border-top: var(--content-border-color) solid var(--content-border-size);
   width: 950px;
 }
@@ -17,8 +17,8 @@
 }
 
 .experience-container {
-  margin-top: var(--div-spacing);
-  padding-top: var(--div-spacing);
+  margin-top: calc(var(--div-spacing) * 2);
+  padding-top: calc(var(--div-spacing) * 2);
   border-top: var(--content-border-color) solid var(--content-border-size);
   width: 950px;
 }
@@ -41,6 +41,7 @@
 .about-heading > p:last-child {
   color: var(--font-secondary-color);
   font-size: 13px;
+  font-weight: 500;
 }
 
 .achievement-container {
@@ -64,6 +65,7 @@
 
 .experience-heading {
   font-size: 24px;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
@@ -109,6 +111,11 @@
   .single-container,
   .about-heading {
     width: 100%;
+  }
+  .single-container,
+  .experience-container {
+    margin-top: var(--div-spacing);
+    padding-top: var(--div-spacing);
   }
 
   .about-heading > p:last-child {

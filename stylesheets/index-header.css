@@ -462,6 +462,7 @@ label {
   .nav-option p {
     text-align: left;
     font-size: var(--subheading-size);
+    font-weight: 500;
     width: 100%;
     padding-left: 10px;
   }

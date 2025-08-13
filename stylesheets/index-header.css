@@ -138,7 +138,7 @@ body::before {
 }
 
 .nav-toggle:hover {
-  transform: scale(0.97);
+  transform: scale(0.95);
 }
 
 input[type="radio"] {
@@ -174,6 +174,7 @@ label {
   left: 5px;
   z-index: 1;
   opacity: 1;
+  transition: transform 0.25s ease-in-out;
 }
 
 .games:checked ~ .selector {
@@ -240,12 +241,11 @@ label {
   width: 50px;
 
   overflow: hidden;
-  transition: transform 500ms ease;
+  transition: transform 500ms ease, opacity 0.75s ease;
   -webkit-transition: transform 500ms ease;
   cursor: pointer;
 
   opacity: 1;
-  transition: opacity 0.75s ease;
   pointer-events: auto;
 }
 
@@ -317,11 +317,7 @@ label {
     margin: 0;
     position: relative;
     height: 15px;
-    transition: height 0s ease, padding-block 0.5s ease;
-  }
-
-  .nav-toggle:hover {
-    transform: scale(1);
+    transition: transform 500ms ease, height 0s ease, padding-block 0.5s ease;
   }
 
   .nav-toggle.collapsed {
@@ -399,11 +395,6 @@ label {
     display: block;
     padding: 0px;
     margin: 0px;
-  }
-
-  .nav-button:hover {
-    transform: scale(1);
-    -webkit-transform: scale(1);
   }
 
   .primary-navigation {

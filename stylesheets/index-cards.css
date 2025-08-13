@@ -362,6 +362,10 @@ input:checked + .slider:before {
     margin-top: var(--div-spacing);
   }
 
+  .card-container:hover {
+    transform: scale(1);
+  }
+
   .card-content {
     padding-inline: 0px;
     padding-bottom: 20px;

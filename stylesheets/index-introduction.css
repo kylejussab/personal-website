@@ -24,7 +24,7 @@
 .introduction > p:first-child {
   color: var(--font-secondary-color);
   text-align: left;
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   font-weight: 500;
   margin-bottom: -5px;
 }
@@ -32,7 +32,7 @@
 .introduction-details {
   margin-top: var(--div-spacing);
   margin-bottom: 0px;
-  font-size: 16px;
+  font-size: var(--subheading-size);
   font-weight: 500;
   text-align: right;
 }
@@ -43,7 +43,7 @@
 
 .main-heading {
   font-family: Baksoda, cursive;
-  font-size: 70px;
+  font-size: calc(var(--heading-size) * 1.5);
   animation: background-pan 10s linear infinite;
   background: linear-gradient(to right, #800080, #ee82ee, #ffc0cb, #800080);
   background-size: 200%;
@@ -73,11 +73,6 @@
   .introduction > p:first-child {
     margin-bottom: 0px;
     font-size: var(--mobile-body-caps-size);
-  }
-
-  h1 {
-    font-size: var(--mobile-heading-size);
-    line-height: 35px;
   }
 
   .main-heading {

@@ -89,13 +89,13 @@ body::before {
   left: 65px;
   opacity: 0;
 
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(30, 29, 28, 0.4);
 
   border: var(--content-border-color) solid var(--content-border-size);
   border-radius: 20px;
   padding: 8px 12px;
 
-  font-size: 14px;
+  font-size: var(--body-caps-size);
   font-weight: 400;
   white-space: nowrap;
 

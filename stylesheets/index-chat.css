@@ -59,16 +59,15 @@
   left: 50%;
   transform: translateX(-50%);
 
-  background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.05);
+  background: rgba(30, 29, 28, 0.4);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: var(--content-border-color) solid var(--content-border-size);
   border-radius: 20px;
   padding: 8px 12px;
 
-  font-size: 14px;
-  font-weight: 500;
+  font-size: var(--body-caps-size);
+  font-weight: 400;
   white-space: nowrap;
   transition: opacity 0.3s ease;
   pointer-events: none;
@@ -145,7 +144,7 @@
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   width: max-content;
   transition: background 0.2s ease;
 }
@@ -159,7 +158,7 @@
   background: #fff;
   border-radius: 5px;
   margin-top: 15px;
-  font-size: 14px;
+  font-size: var(--body-caps-size);
   color: #333;
   white-space: normal;
   overflow: hidden;
@@ -168,7 +167,7 @@
 }
 
 .kyle-message {
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   line-height: 1.5;
   letter-spacing: 0.02em;
   white-space: normal;
@@ -194,7 +193,7 @@
 }
 
 .user-message {
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   line-height: 1.5;
   letter-spacing: 0.02em;
   max-width: 70%;

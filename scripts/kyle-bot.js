@@ -1,6 +1,6 @@
 const messages = {
   "brief-breakdown":
-    "Hi! I’m Kyle, a passionate gameplay programmer whose journey began at 14. After completing The Last of Us and watching its “Making of” documentary, I discovered my calling to create meaningful and immersive video games. My path hasn’t been easy, but it's led me to California with a BSc in Computer Science, and an ASc in Games Design. Though I haven't broken into the video game industry yet, it's with Snap Inc. where I have been given the opportunity to grow and improve on my tech skills as a whole.",
+    "Hi! I’m Kyle, a passionate gameplay programmer whose journey began at 14. After completing The Last of Us and watching its 'Making of' documentary, I discovered my calling to create meaningful and immersive video games. My path has led me to California, where I’m completing a BSc in Computer Science and an ASc in Game Design. At Snap Inc., I’ve had the opportunity to contribute to production-ready projects and further develop my technical skills, preparing me to create engaging, high-quality gameplay experiences.",
   fact: [
     "I can solve a rubiks cube, and my fastest solve time is 18 seconds!",
     "I’m a huge soccer fan—I love to play and watch the sport. Fair warning though, you’ll probably see me being really upset if my team loses.",

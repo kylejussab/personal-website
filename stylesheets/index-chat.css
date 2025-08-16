@@ -190,7 +190,7 @@
   aspect-ratio: 1;
   width: 25px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: var(--content-border-color) solid var(--content-border-size);
 }
 
 .user-message {

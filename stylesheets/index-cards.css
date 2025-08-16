@@ -54,14 +54,14 @@ footer {
 }
 
 .switch-label {
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   color: var(--font-secondary-color);
 }
 
 #toggleLabel {
   width: 40px;
   text-align: left;
-  font-size: 12px;
+  font-size: var(--body-caps-size);
   color: var(--font-secondary-color);
 }
 
@@ -145,7 +145,7 @@ input:checked + .slider:before {
 }
 
 .card-role {
-  font-size: 12px;
+  font-size: var(--body-caps-size);
   font-weight: 500;
   letter-spacing: 1.2px;
   color: rgba(255, 255, 255, 0.5);
@@ -167,7 +167,7 @@ input:checked + .slider:before {
 
 .card-content h2 {
   margin-bottom: 0px;
-  font-size: 24px;
+  font-size: var(--card-heading);
 }
 
 .card-content span {
@@ -189,16 +189,16 @@ input:checked + .slider:before {
   transform: translate(5px, 0px);
 }
 
-.card-heading-subtext {
+/* .card-heading-subtext {
   margin-top: 10px;
   margin-bottom: 0px;
   font-size: 14px;
   color: var(--font-secondary-color);
-}
+} */
 
 .card-description {
   margin-top: 10px;
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   color: rgba(255, 255, 255, 0.5);
 }
 
@@ -231,14 +231,14 @@ input:checked + .slider:before {
 }
 
 .meta-heading {
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   font-weight: 500;
   color: rgba(255, 255, 255, 0.2);
   margin-block: 6px;
 }
 
 .meta-text {
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   color: rgba(255, 255, 255, 0.5);
   margin-block: 3px;
 }
@@ -302,7 +302,7 @@ input:checked + .slider:before {
   box-shadow: 0 calc(-1 * var(--f)) 0 inset #0005;
   color: white;
 
-  font-size: 12px;
+  font-size: var(--body-caps-size);
   font-weight: 500;
   letter-spacing: 1.2px;
   color: rgba(255, 255, 255, 0.8);

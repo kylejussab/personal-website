@@ -2,14 +2,14 @@
   margin-top: var(--div-spacing);
   padding-top: calc(var(--div-spacing) * 2);
   border-top: var(--content-border-color) solid var(--content-border-size);
-  width: 950px;
+  width: 1000px;
 }
 
 .about-text {
   color: var(--font-secondary-color);
   font-weight: 400;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: var(--body-size);
 }
 
 .highlighted-text {
@@ -20,14 +20,15 @@
   margin-top: calc(var(--div-spacing) * 2);
   padding-top: calc(var(--div-spacing) * 2);
   border-top: var(--content-border-color) solid var(--content-border-size);
-  width: 950px;
+  width: 1000px;
 }
 
 .about-heading {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 950px;
+  width: 1000px;
+  height: var(--body-caps-size);
 }
 
 .about-heading > div:first-child {
@@ -40,7 +41,7 @@
 
 .about-heading > p:last-child {
   color: var(--font-secondary-color);
-  font-size: 13px;
+  font-size: var(--body-caps-size);
   font-weight: 500;
 }
 
@@ -64,7 +65,7 @@
 }
 
 .experience-heading {
-  font-size: 24px;
+  font-size: var(--card-heading);
   font-weight: 500;
   margin-bottom: 5px;
 }
@@ -73,7 +74,7 @@
   color: var(--font-secondary-color);
   font-weight: 400;
   line-height: 1.5;
-  font-size: 14px;
+  font-size: var(--body-size);
 }
 
 .signature-container {
@@ -83,7 +84,7 @@
 }
 
 .about-signature {
-  width: 60px;
+  width: 40px;
 }
 
 .mentor-container {
@@ -98,7 +99,7 @@
 .mentor {
   width: 200px;
   text-align: center;
-  font-size: 18px;
+  font-size: var(--body-size);
 }
 
 .mentor:hover {

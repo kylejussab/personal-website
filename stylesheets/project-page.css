@@ -229,11 +229,11 @@ body::before {
 @media only screen and (max-width: 970px) {
   body {
     overflow-x: hidden !important;
+    /* border: 1px solid red; */
   }
 
-  .game-sub-overview .card-container {
-    height: max-content;
-    padding-bottom: 15px;
+  body::before {
+    display: none;
   }
 
   /* Opening section structure */

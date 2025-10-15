@@ -244,25 +244,60 @@ body::before {
     position: fixed;
     top: 15px;
     left: 15px;
-
     background: rgba(30, 29, 28, 0.4);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-radius: 50%;
     border: var(--content-border-color) solid var(--content-border-size);
-
-    padding: 16px;
     z-index: 99;
+
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    transform: scale(0);
+    pointer-events: none;
+
+    transition: width 0.35s ease, height 0.35s ease, opacity 0.4s ease,
+      transform 0.4s cubic-bezier(0.25, 0.8, 0.3, 1);
+    transform-origin: center center;
+  }
+
+  .back-button.visible {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
+
+  .back-button.shrunk {
+    width: 18px;
+    height: 18px;
+  }
+
+  .back-button img {
+    width: 16px;
+    height: 16px;
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .back-button.shrunk img {
+    opacity: 0;
+    transform: scale(0);
   }
 
   .opening {
-    padding-top: 60px;
+    padding-top: 15px;
   }
 
   .opening h1 {
     font-size: var(--mobile-heading-size);
     line-height: 1.2;
-    width: 98%;
+    width: 60%;
   }
 
   .intro-subheading {

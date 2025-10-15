@@ -124,7 +124,7 @@ input:checked + .slider:before {
   height: 360px;
   margin-top: calc(var(--div-spacing) * 2);
 
-  background: rgba(30, 29, 28);
+  background: rgba(30, 29, 28, 0.2);
   border: var(--content-border-color) solid var(--content-border-size);
   border-radius: 10px;
 
@@ -133,7 +133,6 @@ input:checked + .slider:before {
 
 .card-container:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 30px 10px rgba(30, 29, 28, 0.8);
 }
 
 #next-game-card {
@@ -189,17 +188,20 @@ input:checked + .slider:before {
   transform: translate(5px, 0px);
 }
 
-/* .card-heading-subtext {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  font-size: 14px;
-  color: var(--font-secondary-color);
-} */
-
 .card-description {
   margin-top: 10px;
+  margin-bottom: 0px;
   font-size: var(--body-caps-size);
   color: rgba(255, 255, 255, 0.5);
+}
+
+.additional-description {
+  font-weight: 100;
+  font-size: var(--body-caps-size);
+  color: var(--font-secondary-color);
+  border-left: var(--font-secondary-color) solid 0.5px;
+  padding-left: 10px;
+  margin-top: 20px;
 }
 
 .card-image {
@@ -213,6 +215,8 @@ input:checked + .slider:before {
   width: 35%;
   padding-right: 30px;
   padding-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-image img {
@@ -222,25 +226,47 @@ input:checked + .slider:before {
   border: var(--content-border-color) solid var(--content-border-size);
 }
 
-.card-meta {
+/* New changes */
+.stats-container,
+.additional-description-container {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  padding-right: 40px;
-  padding-top: 10px;
+  align-items: center;
+  height: 160px;
 }
 
-.meta-heading {
-  font-size: var(--body-caps-size);
-  font-weight: 500;
-  color: rgba(255, 255, 255, 0.2);
-  margin-block: 6px;
+.additional-description-container {
+  align-items: flex-start;
 }
 
-.meta-text {
+.stat {
+  width: 28%;
+  height: max-content;
+}
+
+.stat p {
+  text-align: center;
+}
+
+.stat p:first-child {
+  margin-block: 0;
+  font-size: calc(var(--card-heading) * 1);
+
+  font-family: Kalam, cursive;
+  animation: background-pan 20s linear infinite;
+  background: linear-gradient(to right, #800080, #ee82ee, #ffc0cb, #800080);
+  background-size: 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stat p:nth-child(2) {
+  margin-top: -8px;
+  margin-bottom: 0;
   font-size: var(--body-caps-size);
   color: rgba(255, 255, 255, 0.5);
-  margin-block: 3px;
+  height: 32px;
 }
 
 .games-content {
@@ -273,10 +299,6 @@ input:checked + .slider:before {
 .card-container.collection-card {
   background-color: #4b4123;
   position: relative;
-}
-
-.card-container.collection-card:hover {
-  box-shadow: 0 0 30px 10px rgba(75, 65, 35, 0.8);
 }
 
 .collection-ribbon {
@@ -407,6 +429,18 @@ input:checked + .slider:before {
     padding-right: 0px;
     padding-inline: 10px;
     margin-inline: 0px;
+  }
+
+  .stats-container,
+  .additional-description-container {
+    width: 103%;
+    height: max-content;
+    margin-top: 20px;
+    align-items: flex-start;
+  }
+
+  .additional-description-container {
+    margin-top: 0px;
   }
 
   .card-description {

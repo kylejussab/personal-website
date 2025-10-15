@@ -35,6 +35,27 @@
 }
 
 @font-face {
+  font-family: "Dirtylane";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Dirtylane.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Waterfall";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Waterfall.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Kalam";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Kalam-Bold.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Neue Montreal";
   font-weight: bold;
   font-style: normal;

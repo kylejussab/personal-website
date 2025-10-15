@@ -1,192 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylesheets/global.css">
-    <link rel="stylesheet" href="stylesheets/index-cards.css">
-    <link rel="stylesheet" href="stylesheets/project-page.css">
-    <link rel="stylesheet" href="stylesheets/deletion-project.css">
-    
-    <script src="scripts/data.js" defer ></script>
-    <script src="scripts/sort-data.js" defer ></script>
-    <script src="scripts/next-project.js" defer ></script>
-    <script src="scripts/project-page-navigation.js" defer ></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheets/global.css" />
+    <link rel="stylesheet" href="stylesheets/index-cards.css" />
+    <link rel="stylesheet" href="stylesheets/project-page.css" />
+    <link rel="stylesheet" href="stylesheets/deletion-project.css" />
+
+    <script src="scripts/data.js" defer></script>
+    <script src="scripts/sort-data.js" defer></script>
+    <script src="scripts/next-project.js" defer></script>
+    <script src="scripts/project-page-navigation.js" defer></script>
 
     <title>Kyle Jussab - PixelPulse</title>
-    <link rel="icon" href="assets/main-icon.png">
-</head>
+    <link rel="icon" href="assets/main-icon.png" />
+  </head>
 
-<body id="pixelpulse" data-project="PixelPulse" data-type="project">
+  <body id="pixelpulse" data-project="PixelPulse" data-type="project">
     <header>
-        <a href="https://kylejussab.com/" class="back-button">
-            <img src="assets/arrow_left.svg">
-            <p>Back</p>
-        </a>
+      <a href="https://kylejussab.com/" class="back-button">
+        <img src="assets/arrow_left.svg" />
+        <p>Back</p>
+      </a>
     </header>
 
     <nav class="page-navigation">
-        <p>CONTENTS</p>
-        <ul>
-            <li><a href="#artwork">Artwork</a></li>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#programming">Programming</a></li>
-            <li class="case-study-navigation"><a href="#next-game">Next Project</a></li>
-        </ul>
+      <p>CONTENTS</p>
+      <ul>
+        <li><a href="#artwork">Artwork</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#programming">Programming</a></li>
+        <li class="case-study-navigation">
+          <a href="#next-game">Next Project</a>
+        </li>
+      </ul>
 
-        <p class="extras-navigation-heading">EXTRAS</p>
-        <ul>
-            <li><a href="mailto:kylejussab@gmail.com" target="_blank">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/kylejussab/" target="_blank">LinkedIn</a></li>
-            <li><a href="resume.pdf" target="_blank">Resume</a></li>
-        </ul>
+      <p class="extras-navigation-heading">EXTRAS</p>
+      <ul>
+        <li><a href="mailto:kylejussab@gmail.com" target="_blank">Email</a></li>
+        <li>
+          <a href="https://www.linkedin.com/in/kylejussab/" target="_blank"
+            >LinkedIn</a
+          >
+        </li>
+        <li><a href="resume.pdf" target="_blank">Resume</a></li>
+      </ul>
     </nav>
 
     <section class="opening" id="artwork">
-        <h1>PixelPulse</h1>
-        <p class="intro-subheading">View and Share Coding Sketches - September 2023</p>
-       
-        <div class="deletion-container">
-            <img src="assets/kyle bot/bitmoji-timeout.png" />
-            <p><span>Time out!</span> <br> This project is scheduled for removal soon as I make room for new and improved work. Most of its content has already been removed, but thanks for stopping by in the meantime!</p>
-        </div>
+      <h1>PixelPulse</h1>
+      <p class="intro-subheading">View and Share your Coding Sketches.</p>
 
-        <div class="deleting-container">
-            <img src="assets/PixelPulse Cover Art.png" class="deleting-image">
-        </div>
+      <div class="deletion-container">
+        <img src="assets/kyle bot/bitmoji-timeout.png" />
+        <p>
+          <span>Time out!</span> <br />
+          This project is scheduled for removal soon as I make room for new and
+          improved work. Most of its content has already been removed, but
+          thanks for stopping by in the meantime!
+        </p>
+      </div>
 
-        <a href="https://github.com/riccovi/asp-team54" target="_blank" class="external-link">
-            <p>View on Github</p>
-            <img src="assets/open-in-new.svg">
-        </a>
+      <div class="deleting-container">
+        <img src="assets/PixelPulse Cover Art.png" class="deleting-image" />
+      </div>
+
+      <a
+        href="https://github.com/riccovi/asp-team54"
+        target="_blank"
+        class="external-link"
+      >
+        <p>View on Github</p>
+        <img src="assets/open-in-new.svg" />
+      </a>
     </section>
 
     <div class="game-sub-container">
-        <div class="game-sub-heading" id="overview">
-            <div></div>
-            <p>OVERVIEW</p>
-        </div>
+      <div class="game-sub-heading" id="overview">
+        <div></div>
+        <p>OVERVIEW</p>
+      </div>
     </div>
 
     <div class="game-sub-overview">
-        <div class="content">
-            <h4 class="content-heading">Description</h4>
-            <p>Designed to meet the lack of helpful resources available to UoL Computer Science, PixelPulse aims to serve as both inspiration (project based modules) and revision (theory based modules). Users can create an account, log in, and post their p5js sketches. Users can also like and comment on others’ posts. After extensive research ASP Team 54 found a lack of interactive educational resources and after multiple user tests we assured our assumptions that this is a product students would benefit from!</p>
-        </div>
+      <div class="content">
+        <h4 class="content-heading">Description</h4>
+        <p>
+          Designed to meet the lack of helpful resources available to UoL
+          Computer Science, PixelPulse aims to serve as both inspiration
+          (project based modules) and revision (theory based modules). Users can
+          create an account, log in, and post their p5js sketches. Users can
+          also like and comment on others’ posts. After extensive research ASP
+          Team 54 found a lack of interactive educational resources and after
+          multiple user tests we assured our assumptions that this is a product
+          students would benefit from!
+        </p>
+      </div>
     </div>
 
     <div class="game-sub-overview extra-space">
-        <div class="content">
-            <h4 class="content-heading">Retrospective</h4>
-            <p>The first meaningful team project I’ve been a part of. It was fun to add game elements to a web application and have a significant influence on the look and feel of this project. The team definitely wasn’t perfect, but we all fostered an environment of trust and honest work. We all grew with this application, learning along the way, keeping a schedule, and documenting all our progress. Seeing my visual design skills improve with this project compared to previous projects, and noticing my current design skills being better than they were when I did PixelPulse, is very motivating. I see tangible evidence of my growth as a creator and a designer. And though it can’t technically be seen, I’m getting much better as a programmer as well.</p>
-        </div>
+      <div class="content">
+        <h4 class="content-heading">Retrospective</h4>
+        <p>
+          The first meaningful team project I’ve been a part of. It was fun to
+          add game elements to a web application and have a significant
+          influence on the look and feel of this project. The team definitely
+          wasn’t perfect, but we all fostered an environment of trust and honest
+          work. We all grew with this application, learning along the way,
+          keeping a schedule, and documenting all our progress. Seeing my visual
+          design skills improve with this project compared to previous projects,
+          and noticing my current design skills being better than they were when
+          I did PixelPulse, is very motivating. I see tangible evidence of my
+          growth as a creator and a designer. And though it can’t technically be
+          seen, I’m getting much better as a programmer as well.
+        </p>
+      </div>
     </div>
 
     <div class="game-sub-overview extra-space">
-        <div class="content">
-            <h4 class="content-heading">Tech Stack</h4>
-            <p>HTML, CSS, JavaScript, SQLite3, Node.js</p>
-        </div>
+      <div class="content">
+        <h4 class="content-heading">Tech Stack</h4>
+        <p>HTML, CSS, JavaScript, SQLite3, Node.js</p>
+      </div>
     </div>
-
 
     <div class="game-sub-container">
-        <div class="game-sub-heading" id="programming">
-            <div></div>
-            <p>PROGRAMMING</p>
-        </div>
+      <div class="game-sub-heading" id="programming">
+        <div></div>
+        <p>PROGRAMMING</p>
+      </div>
     </div>
 
     <div class="game-sub-overview">
-        <div class="content">
-            <h4 class="content-heading">Make it look pretty</h4>
-            <p>My CSS skills were growing after the two prior web development classes I took. I found that CSS and JS were the more entertaining parts of building the website. Fortunately for me, the rest of the team was more comfortable with backend development, which gave me the platform to grow my skills even further.</p>
-            <p>This project was a place to experiment. I could have used libraries or frameworks that would make the process a lot easier, but I have a mindset of learning the core of it. Yes, you don’t need to reinvent the wheel, but that doesn’t mean having the knowledge of how to make the wheel is a bad thing. I think having a strong foundation in the most basic languages and techniques enables me to learn new frameworks much better and faster. While it’s impossible to be proficient at everything, I would like to make the process of learning something new much more streamlined and effective.</p>
-        </div>
+      <div class="content">
+        <h4 class="content-heading">Make it look pretty</h4>
+        <p>
+          My CSS skills were growing after the two prior web development classes
+          I took. I found that CSS and JS were the more entertaining parts of
+          building the website. Fortunately for me, the rest of the team was
+          more comfortable with backend development, which gave me the platform
+          to grow my skills even further.
+        </p>
+        <p>
+          This project was a place to experiment. I could have used libraries or
+          frameworks that would make the process a lot easier, but I have a
+          mindset of learning the core of it. Yes, you don’t need to reinvent
+          the wheel, but that doesn’t mean having the knowledge of how to make
+          the wheel is a bad thing. I think having a strong foundation in the
+          most basic languages and techniques enables me to learn new frameworks
+          much better and faster. While it’s impossible to be proficient at
+          everything, I would like to make the process of learning something new
+          much more streamlined and effective.
+        </p>
+      </div>
     </div>
 
     <div class="game-sub-container next-case-study-heading">
-        <div class="game-sub-heading" id="next-game">
-            <div></div>
-            <p>NEXT GAME</p>
-        </div>
+      <div class="game-sub-heading" id="next-game">
+        <div></div>
+        <p>NEXT GAME</p>
+      </div>
     </div>
 
     <div class="game-sub-overview next-case-study">
-        <a href="">
-            <div class="card-wrapper">
-                <div class="card-container">
-                    <div class="card-content">
-                        <p class="card-role"></p>
-                        <img src="assets/arrow-right.svg" class="card-arrow">
-        
-                        <div class="card-details">
-                            <div class="card-image"><img src="" alt="" /></div>
-        
-                            <div class="card-text">
-                                <h2></h2>
-                                <p class="card-description"></p>
-                                
-                                <div class="card-meta">
-                                    <div>
-                                        <p class="meta-heading"></p>
-                                        <p class="meta-text"></p>
-                                    </div>
-                                    <div>
-                                        <p class="meta-heading"></p>
-                                        <p class="meta-text"></p>
-                                        <p class="meta-text"></p>
-                                        <p class="meta-text"></p>
-                                    </div>
-                                    <div>
-                                        <p class="meta-heading"></p>
-                                        <p class="meta-text"></p>
-                                        <p class="meta-text"></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+      <a href="">
+        <div class="card-wrapper">
+          <div class="card-container">
+            <div class="card-content">
+              <p class="card-role"></p>
+              <img src="assets/arrow-right.svg" class="card-arrow" />
+
+              <div class="card-details">
+                <div class="card-image"><img src="" alt="" /></div>
+
+                <div class="card-text">
+                  <h2></h2>
+                  <p class="card-description"></p>
+
+                  <div class="card-meta">
+                    <div>
+                      <p class="meta-heading"></p>
+                      <p class="meta-text"></p>
                     </div>
+                    <div>
+                      <p class="meta-heading"></p>
+                      <p class="meta-text"></p>
+                      <p class="meta-text"></p>
+                      <p class="meta-text"></p>
+                    </div>
+                    <div>
+                      <p class="meta-heading"></p>
+                      <p class="meta-text"></p>
+                      <p class="meta-text"></p>
+                    </div>
+                  </div>
                 </div>
+              </div>
             </div>
-        </a>
+          </div>
+        </div>
+      </a>
     </div>
 
     <div class="unique-game-sub-container end-case-study-heading">
-        <div class="game-sub-heading">
-            <div></div>
-            <p>THE END</p>
-        </div>
+      <div class="game-sub-heading">
+        <div></div>
+        <p>THE END</p>
+      </div>
     </div>
 
     <footer>
-        <div class="footer-rights">
-            <img src="assets/footer-icon.png">
-            <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
-            <p>A promise kept to the dreams of my 14-year-old self.</p>
-        </div>
+      <div class="footer-rights">
+        <img src="assets/footer-icon.png" />
+        <p>© 2024 Kyle Jussab. All Rights Reserved.</p>
+        <p>A promise kept to the dreams of my 14-year-old self.</p>
+      </div>
 
-        <div class="footer-contact">
-            <p>CONTACT</p>
+      <div class="footer-contact">
+        <p>CONTACT</p>
 
-            <a href="mailto:kylejussab@gmail.com" target="_blank">
-                <p>Email</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="mailto:kylejussab@gmail.com" target="_blank">
+          <p>Email</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
-                <p>LinkedIn</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="https://www.linkedin.com/in/kylejussab/" target="_blank">
+          <p>LinkedIn</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <a href="resume.pdf" target="_blank">
-                <p>Resume</p>
-                <img src="assets/open-in-new.svg">
-            </a>
+        <a href="resume.pdf" target="_blank">
+          <p>Resume</p>
+          <img src="assets/open-in-new.svg" />
+        </a>
 
-            <p>Last updated by Kyle on May 1, 2025, 3:33 PM PDT</p>
-        </div>
+        <p>Last updated by Kyle on May 1, 2025, 3:33 PM PDT</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>

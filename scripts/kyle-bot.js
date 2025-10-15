@@ -321,3 +321,31 @@ const greetingMessage = checkFirstVisit();
 addBotMessage(greetingMessage);
 
 startCycling();
+
+// Shrinks the size of the chat if you start scrolling
+(function () {
+  const chatButton = document.querySelector(".chat-button");
+
+  let lastScrollY = window.pageYOffset;
+  const revealAfter = 100;
+  const deltaThreshold = 5;
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (!isChatOpen) {
+        const currentY = window.pageYOffset;
+        const diff = currentY - lastScrollY;
+
+        if (diff > deltaThreshold && currentY > revealAfter) {
+          chatButton.classList.add("shrunk");
+        } else if (diff < -deltaThreshold) {
+          chatButton.classList.remove("shrunk");
+        }
+
+        lastScrollY = currentY;
+      }
+    },
+    { passive: true }
+  );
+})();

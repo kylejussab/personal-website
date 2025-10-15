@@ -219,9 +219,30 @@
   color: #1a73e8;
 }
 
-@media only screen and (max-width: 970px) {
+@media only screen and (max-width: 920px) {
   .chat-button {
     bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: width 0.35s ease, height 0.35s ease, transform 0.35s ease,
+      background-color 0.35s ease;
+  }
+
+  .chat-button.shrunk {
+    width: 16px;
+    height: 16px;
+  }
+
+  .chat-button-images img {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .chat-button.shrunk .chat-button-images img {
+    opacity: 0;
+    transform: scale(0);
   }
 
   .chat-box-content {

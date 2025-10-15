@@ -140,6 +140,11 @@ body::before {
   text-align: center;
 }
 
+.intro-subheading {
+  color: var(--font-secondary-color);
+  text-align: center;
+}
+
 .external-link {
   display: flex;
   gap: 8px;
@@ -252,13 +257,18 @@ body::before {
   }
 
   .opening {
-    padding-top: 80px;
+    padding-top: 60px;
   }
 
   .opening h1 {
-    font-size: 42px;
+    font-size: var(--mobile-heading-size);
     line-height: 1.2;
     width: 98%;
+  }
+
+  .intro-subheading {
+    font-size: var(--mobile-body-size);
+    margin-top: 4px;
   }
 
   .opening img {
@@ -267,7 +277,7 @@ body::before {
   }
 
   .external-link {
-    margin-top: 20px;
+    margin-top: 10px;
   }
 
   .external-link p {
@@ -283,6 +293,11 @@ body::before {
     padding-top: 30px;
     gap: 10px;
     width: 98%;
+  }
+
+  .card-container {
+    margin-top: 0px;
+    margin-bottom: 10px;
   }
 }
 

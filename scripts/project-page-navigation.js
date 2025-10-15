@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (!backButton) return;
 
   let lastScrollY = window.pageYOffset;
-  const revealAfter = 100;
+  const revealAfter = 150;
   const deltaThreshold = 5;
   const initialDelay = 1500;
   let userHasScrolled = false;

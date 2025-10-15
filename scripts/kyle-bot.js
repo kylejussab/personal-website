@@ -327,7 +327,7 @@ startCycling();
   const chatButton = document.querySelector(".chat-button");
 
   let lastScrollY = window.pageYOffset;
-  const revealAfter = 100;
+  const revealAfter = 150;
   const deltaThreshold = 5;
 
   window.addEventListener(

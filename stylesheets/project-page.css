@@ -229,7 +229,6 @@ body::before {
 @media only screen and (max-width: 970px) {
   body {
     overflow-x: hidden !important;
-    /* border: 1px solid red; */
   }
 
   body::before {

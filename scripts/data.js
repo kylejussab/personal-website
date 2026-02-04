@@ -9,7 +9,7 @@ let gameData = [
     description2:
       "Crafted a linear narrative system featuring scripted events and animations, integrated alongside an endless mode with procedurally scaling modifiers, refined through simulation-driven data analysis to balance game feel with player metrics.",
     link: "#",
-    customOrder: 2,
+    customOrder: 1,
     dateOrder: 0,
   },
   {
@@ -35,7 +35,7 @@ let gameData = [
     description2:
       "Built the dialogue, quest, and interaction systems. Implemented event-driven logic for camera control, player input, and real-time UI updates.",
     link: "https://kylejussab.com/cpucity",
-    customOrder: 1,
+    customOrder: 2,
     dateOrder: 2,
   },
   {
@@ -99,7 +99,7 @@ let projectData = [
     description:
       "A collection of my fan-made projects that explore The Last of Us through my personal lens.",
     description2:
-      "Features the projects: The Last Stand, Between the Years, and The Data of Us.",
+      "Features the projects: The Last Stand, Between the Years, and an unannouced project.",
     link: "https://kylejussab.com/tributetrilogy",
     customOrder: 3,
     dateOrder: 0,

@@ -8,7 +8,7 @@ let gameData = [
       "A narrative-driven, tactical, 1v1, survival card game. Players deploy character and support cards to outlast and outsmart their opponent to survive. Built with Godot.",
     description2:
       "Crafted a linear narrative system featuring scripted events and animations, integrated alongside an endless mode with procedurally scaling modifiers, refined through simulation-driven data analysis to balance game feel with player metrics.",
-    link: "#",
+    link: "https://kylejussab.com/tloutls",
     customOrder: 1,
     dateOrder: 0,
   },

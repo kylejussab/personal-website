@@ -158,7 +158,9 @@
   width: 180px;
   height: 180px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease-in-out;
 }
 
 .design-block img {
@@ -434,7 +436,9 @@ code {
   width: 200px;
   height: 200px;
 
-  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease-in-out;
 }
 
 .feedback-block:hover img {
@@ -461,7 +465,7 @@ code {
   width: 85%;
 }
 
-@media only screen and (max-width: 918px) {
+@media only screen and (max-width: 970px) {
   .gameboy-container {
     width: 100%;
     height: max-content;

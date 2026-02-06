@@ -141,7 +141,9 @@
   align-items: center;
   text-align: center;
   border-radius: 50%;
-  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease-in-out;
 }
 
 .process-number:hover {
@@ -365,7 +367,9 @@ code {
   width: 400px;
   height: 200px;
 
-  transition: background 0.3s ease, transform 0.2s ease-in-out;
+  transition:
+    background 0.3s ease,
+    transform 0.2s ease-in-out;
 }
 
 .findings-block:hover img {
@@ -392,7 +396,7 @@ code {
   width: 85%;
 }
 
-@media only screen and (max-width: 918px) {
+@media only screen and (max-width: 970px) {
   .project-container {
     width: 98%;
     height: max-content;

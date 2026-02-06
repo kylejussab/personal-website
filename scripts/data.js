@@ -1,6 +1,19 @@
 let gameData = [
   {
     role: "00 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
+    image: "assets/The Last Stand Cover.png",
+    alt: "The Last Stand text, with 5 cards featuring Joel, a clicker, Yara, Marlene, and a Rage support.",
+    title: "The Last of Us: The Last Stand",
+    description:
+      "A narrative-driven, tactical, 1v1, survival card game. Players deploy character and support cards to outlast and outsmart their opponent to survive. Built with Godot.",
+    description2:
+      "Crafted a linear narrative system featuring scripted events and animations, integrated alongside an endless mode with procedurally scaling modifiers, refined through simulation-driven data analysis to balance game feel with player metrics.",
+    link: "https://kylejussab.com/tloutls",
+    customOrder: 1,
+    dateOrder: 0,
+  },
+  {
+    role: "01 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
     image: "assets/Absolute Minima.png",
     alt: "Linea being held on puppet strings.",
     title: "Absolute Minima",
@@ -10,7 +23,7 @@ let gameData = [
       "Made with a custom 'backbone and branching' generation system built on a constrained self-avoiding path algorithm. Core systems include AI state machines, turn-based boss logic, and a unified ‘Everything Bar’ resource mechanic.",
     link: "https://kylejussab.com/absoluteminima",
     customOrder: 3,
-    dateOrder: 0,
+    dateOrder: 1,
   },
   {
     role: "01 | GAMEPLAY PROGRAMMER & TEAM LEAD",
@@ -22,8 +35,8 @@ let gameData = [
     description2:
       "Built the dialogue, quest, and interaction systems. Implemented event-driven logic for camera control, player input, and real-time UI updates.",
     link: "https://kylejussab.com/cpucity",
-    customOrder: 1,
-    dateOrder: 1,
+    customOrder: 2,
+    dateOrder: 2,
   },
   {
     role: "02 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
@@ -34,7 +47,7 @@ let gameData = [
       "This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game. Built with GB Studio.",
     link: "https://kylejussab.com/tloubty",
     customOrder: 0,
-    dateOrder: 2,
+    dateOrder: 3,
     stats: {
       stat1: "8.1k+",
       stat2: "2.0k+",
@@ -53,19 +66,19 @@ let gameData = [
   //     "description": "Elian, a Rusthavener, is tired of the opression forced on him by Auravale. Little does he know, with each death he switches sides.",
   //     "link": "https://kylejussab.com/thearchitecthestia"
   // },
-  {
-    role: "03 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
-    image: "assets/pp2.png",
-    alt: "A ball on a tower",
-    title: "Project Phoebe",
-    description:
-      "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way. Built with Unity.",
-    description2:
-      "This game is scheduled for removal. So just between you and I lets pretend I spoke about the fine little details. Awesome sauce.",
-    link: "https://kylejussab.com/projectphoebe",
-    customOrder: 2,
-    dateOrder: 3,
-  },
+  // {
+  //   role: "03 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
+  //   image: "assets/pp2.png",
+  //   alt: "A ball on a tower",
+  //   title: "Project Phoebe",
+  //   description:
+  //     "Master your skills getting through rooms by competing in 5 different modes, all of which challenge you in a different and unique way. Built with Unity.",
+  //   description2:
+  //     "This game is scheduled for removal. So just between you and I lets pretend I spoke about the fine little details. Awesome sauce.",
+  //   link: "https://kylejussab.com/projectphoebe",
+  //   customOrder: 2,
+  //   dateOrder: 4,
+  // },
 ];
 
 let projectData = [
@@ -86,7 +99,7 @@ let projectData = [
     description:
       "A collection of my fan-made projects that explore The Last of Us through my personal lens.",
     description2:
-      "Features the projects: The Last Stand, Between the Years, and The Data of Us.",
+      "Features the projects: The Last Stand, Between the Years, and an unannouced project.",
     link: "https://kylejussab.com/tributetrilogy",
     customOrder: 3,
     dateOrder: 0,

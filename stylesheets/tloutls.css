@@ -24,7 +24,7 @@
   );
 }
 
-.motherboard-container {
+.cards-container {
   position: relative;
   display: flex;
   justify-content: center;
@@ -35,18 +35,19 @@
   pointer-events: none;
 }
 
-.motherboard-image {
+.cards-image {
+  display: block;
   width: 70%;
   opacity: 0.8;
 }
 
-.opening .cpucity-image {
+.opening .tloutls-image {
   position: absolute;
-  bottom: 48.5%;
-  left: 24.25%;
+  bottom: 59.5%;
+  left: 15.75%;
   transform: translate(50%, 50%);
   opacity: 0.9;
-  width: 26.5%;
+  width: 35%;
   height: auto;
 }
 
@@ -337,24 +338,24 @@ code {
   width: 85%;
 }
 
-@media only screen and (max-width: 918px) {
-  .project-container {
-    width: 98%;
+@media only screen and (max-width: 970px) {
+  .cards-container {
+    width: 100%;
     height: max-content;
   }
 
-  .opening .cpucity-image {
+  .opening .tloutls-image {
     display: block;
     position: relative;
     top: 0px;
     left: 0px;
     transform: translate(0px, 0px);
 
-    width: 98%;
+    width: 100%;
     height: auto;
   }
 
-  .motherboard-image {
+  .cards-image {
     display: none;
   }
 

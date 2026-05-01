@@ -3,11 +3,11 @@ let gameData = [
     role: "00 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
     image: "assets/The Last Stand Cover.png",
     alt: "The Last Stand text, with 5 cards featuring Joel, a clicker, Yara, Marlene, and a Rage support.",
-    title: "The Last of Us: The Last Stand",
+    title: "The Last Stand",
     description:
       "A narrative-driven, tactical, 1v1, survival card game. Players deploy character and support cards to outlast and outsmart their opponent to survive. Built with Godot.",
     description2:
-      "Crafted a linear narrative system featuring scripted events and animations, integrated alongside an endless mode with procedurally scaling modifiers, refined through simulation-driven data analysis to balance game feel with player metrics.",
+      "Engineered a modular framework supporting scripted narratives, procedural survival loops, and tactical deck-building, refined through simulation-driven data analysis and accessibility features to optimize player experience.",
     link: "https://kylejussab.com/tloutls",
     customOrder: 1,
     dateOrder: 0,
@@ -42,7 +42,7 @@ let gameData = [
     role: "02 | GAMEPLAY PROGRAMMER & GAME DESIGNER",
     image: "assets/The Last of Us Between The Years Page Cover.png",
     alt: "Joel looking in the distance",
-    title: "The Last of Us: Between The Years",
+    title: "Between The Years",
     description:
       "This Gameboy game explores Joel's character and grief during the 20 years between Sarah's death and the main events of the first game. Built with GB Studio.",
     link: "https://kylejussab.com/tloubty",
@@ -119,7 +119,7 @@ let projectData = [
   },
   {
     role: "02 | RESEARCHER",
-    image: "assets/The Data of Us.png",
+    image: "assets/The Data of Us Cover.png",
     alt: "A word cloud of a Clicker",
     title: "The Data of Us",
     description:
@@ -136,17 +136,17 @@ let projectData = [
       stat3supporting: "volatility<br>margin",
     },
   },
-  {
-    role: "03 | FRONTEND DEVELOPER",
-    image: "assets/PixelPulse Cover Art.png",
-    alt: "The homepage of the PixelPulse application",
-    title: "PixelPulse",
-    description:
-      "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.",
-    description2:
-      "This project is scheduled for removal. So just between you and I lets pretend I spoke about the fine little details. Awesome sauce.",
-    link: "https://kylejussab.com/pixelpulse",
-    customOrder: 2,
-    dateOrder: 3,
-  },
+  // {
+  //   role: "03 | FRONTEND DEVELOPER",
+  //   image: "assets/PixelPulse Cover Art.png",
+  //   alt: "The homepage of the PixelPulse application",
+  //   title: "PixelPulse",
+  //   description:
+  //     "A 'social media' platform for UoL Computer Science students to share their coding projects. Used for inspiration and revision. Built in a team of 4 using Agile methodologies.",
+  //   description2:
+  //     "This project is scheduled for removal. So just between you and I lets pretend I spoke about the fine little details. Awesome sauce.",
+  //   link: "https://kylejussab.com/pixelpulse",
+  //   customOrder: 2,
+  //   dateOrder: 3,
+  // },
 ];

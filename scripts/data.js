@@ -49,9 +49,9 @@ let gameData = [
     customOrder: 0,
     dateOrder: 3,
     stats: {
-      stat1: "8.1k+",
-      stat2: "2.0k+",
-      stat3: "1.8k+",
+      stat1: "8.7k+",
+      stat2: "2.1k+",
+      stat3: "2.0k+",
       stat1supporting: "views",
       stat2supporting: "plays",
       stat3supporting: "downloads",
